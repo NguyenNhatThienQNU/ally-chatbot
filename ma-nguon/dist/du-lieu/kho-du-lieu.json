@@ -1,0 +1,3226 @@
+{
+  "version": "2026-11-08T17:00:00+07:00",
+  "meta": {
+    "ten": "ALLY",
+    "moTa": "Chatbot hỗ trợ phòng, chống xâm hại trẻ em",
+    "ngayBienSoan": "2026-11-08",
+    "nguoiRaSoatMacDinh": "Nhóm NCKH (bản mẫu – cần chuyên gia rà soát)",
+    "chuKyRaSoat": {
+      "phap-luat": 90,
+      "mac-dinh": 180
+    },
+    "chuKyKiemTra": 30
+  },
+  "ages": [
+    {
+      "id": "nho",
+      "label": "Dưới 11 tuổi",
+      "sub": "Học sinh tiểu học"
+    },
+    {
+      "id": "thcs",
+      "label": "11–14 tuổi",
+      "sub": "Học sinh THCS"
+    },
+    {
+      "id": "thpt",
+      "label": "15–18 tuổi",
+      "sub": "Học sinh THPT"
+    },
+    {
+      "id": "lon",
+      "label": "Người lớn",
+      "sub": "Phụ huynh, thầy cô, người dân"
+    }
+  ],
+  "topics": [
+    {
+      "id": "kien-thuc",
+      "name": "Hiểu đúng về xâm hại",
+      "desc": "Xâm hại là gì, gồm những hình thức nào, ai có thể gây ra"
+    },
+    {
+      "id": "tu-bao-ve",
+      "name": "Tự bảo vệ bản thân",
+      "desc": "Vùng riêng tư, bí mật xấu, người tin cậy, người lạ"
+    },
+    {
+      "id": "ung-pho",
+      "name": "Khi chuyện xảy ra",
+      "desc": "Cần làm gì, kể với ai, gọi số nào"
+    },
+    {
+      "id": "tren-mang",
+      "name": "An toàn trên mạng",
+      "desc": "Người lạ trên mạng, ảnh riêng tư, bị đe dọa"
+    },
+    {
+      "id": "cam-xuc",
+      "name": "Cảm xúc và hỗ trợ",
+      "desc": "Khi thấy sợ hãi, buồn bã, tự trách"
+    },
+    {
+      "id": "phap-luat",
+      "name": "Pháp luật",
+      "desc": "Quyền trẻ em, xử lý vi phạm, trách nhiệm báo tin"
+    },
+    {
+      "id": "nguoi-lon",
+      "name": "Dành cho phụ huynh, thầy cô",
+      "desc": "Nhận biết dấu hiệu, phản ứng đúng, dạy trẻ tự bảo vệ"
+    },
+    {
+      "id": "ung-dung",
+      "name": "Về ứng dụng ALLY",
+      "desc": "ALLY là ai, thông tin có được giữ kín không"
+    }
+  ],
+  "hotlines": [
+    {
+      "so": "113",
+      "ten": "Công an",
+      "khiNao": "Khi bạn hoặc người khác đang gặp nguy hiểm, bị tấn công, đe dọa, bắt giữ."
+    },
+    {
+      "so": "111",
+      "ten": "Bảo vệ trẻ em",
+      "khiNao": "Tư vấn, hỗ trợ, tiếp nhận tin báo trẻ em bị xâm hại, bạo lực, bỏ rơi, mua bán người. Miễn phí, 24/7."
+    },
+    {
+      "so": "115",
+      "ten": "Cấp cứu y tế",
+      "khiNao": "Khi có người bị thương nặng, chảy máu nhiều, ngất, hoặc đã tự làm hại bản thân."
+    }
+  ],
+  "sources": {
+    "LTE": {
+      "t": "Luật Trẻ em 2016 (Luật số 102/2016/QH13)",
+      "by": "Thư Viện Pháp Luật",
+      "u": "https://thuvienphapluat.vn/van-ban/Giao-duc/Luat-tre-em-2016-303313.aspx"
+    },
+    "BLHS": {
+      "t": "Bộ luật Hình sự 2015 (sửa đổi, bổ sung)",
+      "by": "Thư Viện Pháp Luật",
+      "u": "https://thuvienphapluat.vn/van-ban/Trach-nhiem-hinh-su/Bo-luat-hinh-su-2015-296661.aspx"
+    },
+    "TVPL_BL": {
+      "t": "Hành vi nào được xem là bạo lực trẻ em?",
+      "by": "Thư Viện Pháp Luật",
+      "u": "https://thuvienphapluat.vn/hoi-dap-phap-luat/hanh-vi-nao-duoc-xem-la-bao-luc-tre-em-138067116.html"
+    },
+    "TN_QUEN": {
+      "t": "Phòng tránh nguy cơ trẻ bị xâm hại từ người thân quen",
+      "by": "Báo Thanh Niên",
+      "u": "https://thanhnien.vn/phong-tranh-nguy-co-tre-bi-xam-hai-tu-nguoi-than-quen-185241222212938592.htm"
+    },
+    "TN_4DH": {
+      "t": "Chuyên gia chỉ 4 dấu hiệu nhận biết nhanh trẻ bị xâm hại (9/2024)",
+      "by": "Báo Thanh Niên",
+      "u": "https://thanhnien.vn/chuyen-gia-chi-4-dau-hieu-nhan-biet-nhanh-tre-bi-xam-hai-18524092010312074.htm"
+    },
+    "TN_MANG": {
+      "t": "Nguy cơ xâm hại trực tuyến không chỉ đến từ người lạ (10/2026)",
+      "by": "Báo Thanh Niên",
+      "u": "https://thanhnien.vn/nguy-co-xam-hai-truc-tuyen-khong-chi-den-tu-nguoi-la-185261022134713873.htm"
+    },
+    "TN_BH": {
+      "t": "Ngăn chặn tội ác bạo hành trẻ em",
+      "by": "Báo Thanh Niên",
+      "u": "https://thanhnien.vn/ngan-chan-toi-ac-bao-hanh-tre-em-185260509204724006.htm"
+    },
+    "TN_DAY": {
+      "t": "Ba mẹ ơi: Dạy con cách tránh bị lạm dụng tình dục ngay từ nhỏ",
+      "by": "Báo Thanh Niên",
+      "u": "https://thanhnien.vn/ba-me-oi-day-con-cach-tranh-bi-lam-dung-tinh-duc-ngay-tu-nho-185550659.htm"
+    },
+    "CAND_KN": {
+      "t": "Một số kỹ năng giúp trẻ em thoát nguy cơ bị xâm hại tình dục",
+      "by": "Báo Công an Nhân dân",
+      "u": "https://cand.com.vn/doi-song/TRE-CAN-LAM-GI-KHI-BI-XAM-HAI-TINH-DUC-i408985/"
+    },
+    "CAND_DAY": {
+      "t": "Dạy con những kĩ năng tránh bị “xâm hại”",
+      "by": "Báo Công an Nhân dân",
+      "u": "https://cand.com.vn/cuoc-song-muon-mau/Day-con-nhung-ki-nang-tranh-bi-xam-hai-i425960/"
+    },
+    "CAND_BV": {
+      "t": "Làm gì để bảo vệ trẻ trước xâm hại tình dục?",
+      "by": "Báo Công an Nhân dân",
+      "u": "https://cand.com.vn/Phong-su-Tieu-diem/Hay-bao-ve-cac-em-mot-cach-an-toan-nhat-i385702/"
+    },
+    "CAND_SO": {
+      "t": "Trang bị “hệ miễn dịch số” để trẻ em tự bảo vệ mình trên không gian mạng",
+      "by": "Báo Công an Nhân dân",
+      "u": "https://cand.com.vn/Su-kien-Binh-luan-thoi-su/Trang-bi-he-mien-dich-so-de-tre-em-tu-bao-ve-minh-tren-khong-gian-mang-i615842/"
+    },
+    "CAND_UC": {
+      "t": "Thành lập Mạng lưới ứng cứu, bảo vệ trẻ em trên môi trường mạng",
+      "by": "Báo Công an Nhân dân",
+      "u": "https://cand.com.vn/Xa-hoi/Thanh-lap-Mang-luoi-ung-cuu-bao-ve-tre-em-tren-moi-truong-mang-i592586/"
+    },
+    "BYT_111": {
+      "t": "Tổng đài 111 tiếp nhận hơn 46.000 cuộc gọi trong một tháng (5/2026)",
+      "by": "Báo Sức khỏe & Đời sống – Bộ Y tế",
+      "u": "https://suckhoedoisong.vn/tong-dai-111-tiep-nhan-hon-46000-cuoc-goi-trong-mot-thang-nhieu-tre-cau-cuu-vi-khung-hoang-tam-ly-16926050907065846.htm"
+    },
+    "BYT_NB": {
+      "t": "Cách nhận biết và phòng tránh trẻ bị xâm hại tình dục",
+      "by": "Báo Sức khỏe & Đời sống – Bộ Y tế",
+      "u": "https://suckhoedoisong.vn/cach-nhan-biet-va-phong-tranh-tre-bi-xam-hai-tinh-duc-169250630112745772.htm"
+    },
+    "BYT": {
+      "t": "Tăng cường phòng chống xâm hại trẻ em",
+      "by": "Cổng thông tin Bộ Y tế",
+      "u": "https://moh.gov.vn/en/tin-lien-quan/-/asset_publisher/vjYyM7O9aWnX/content/tang-cuong-phong-chong-xam-hai-tre-em"
+    },
+    "T111": {
+      "t": "Trang thông tin Tổng đài quốc gia bảo vệ trẻ em 111",
+      "by": "tongdai111.vn",
+      "u": "https://tongdai111.vn"
+    },
+    "VNE_111": {
+      "t": "Khai trương Tổng đài quốc gia miễn phí về phòng, chống mua bán người 111 (9/2025)",
+      "by": "VnEconomy",
+      "u": "https://vneconomy.vn/khai-truong-tong-dai-quoc-gia-mien-phi-ve-phong-chong-mua-ban-nguoi.htm"
+    },
+    "TT_111": {
+      "t": "Tổng đài quốc gia bảo vệ trẻ em tiếp nhận 300.000 cuộc gọi/năm (6/2026)",
+      "by": "Báo Tuổi Trẻ",
+      "u": "https://tuoitre.vn/tong-dai-quoc-gia-bao-ve-tre-em-tiep-nhan-300-000-cuoc-goi-nam-nhieu-truong-hop-can-can-thiep-20260603175748185.htm"
+    },
+    "PLO_111": {
+      "t": "Tổng đài 111: Quy trình tiếp nhận và xử lý khi trẻ có nguy cơ bị xâm hại",
+      "by": "Báo Pháp Luật TP.HCM",
+      "u": "https://plo.vn/tong-dai-111-quy-trinh-tiep-nhan-va-xu-ly-khi-tre-co-nguy-co-bi-xam-hai-post872019.html"
+    },
+    "LSVN_DL": {
+      "t": "Công bố dữ liệu cá nhân của trẻ từ 07 tuổi phải được người đại diện đồng ý",
+      "by": "Tạp chí Luật sư Việt Nam",
+      "u": "https://lsvn.vn/cong-bo-du-lieu-ca-nhan-cua-tre-tu-07-tuoi-phai-duoc-nguoi-dai-dien-dong-y-a167752.html"
+    }
+  },
+  "kb": [
+    {
+      "id": "xam-hai-la-gi",
+      "topic": "kien-thuc",
+      "title": "Xâm hại trẻ em là gì?",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "xâm hại",
+        "xâm hại trẻ em",
+        "xâm hại là gì",
+        "lạm dụng trẻ em",
+        "bị xâm hại là sao",
+        "thế nào là xâm hại",
+        "các hình thức xâm hại",
+        "xâm hại nghĩa là gì"
+      ],
+      "q": [
+        "Xâm hại trẻ em là gì?",
+        "Thế nào là bị xâm hại?",
+        "Xâm hại gồm những hình thức nào?"
+      ],
+      "a": {
+        "nho": "Xâm hại là khi có người làm đau cơ thể bạn, làm bạn sợ hãi hay buồn tủi, hoặc chạm vào vùng riêng tư của bạn.\n\nNgười đó có thể là người lạ, cũng có thể là người quen. Dù là ai thì làm vậy cũng là **sai**. Bạn có quyền nói KHÔNG, chạy đi, rồi kể ngay cho người lớn mà bạn tin.",
+        "thcs": "Xâm hại trẻ em là bất kỳ hành vi nào làm tổn hại đến cơ thể, cảm xúc, tâm lý, danh dự hay nhân phẩm của trẻ em.\n\nCác hình thức thường gặp:\n- **Bạo lực**: đánh đập, hành hạ, lăng mạ, cô lập, xua đuổi.\n- **Xâm hại tình dục**: ép buộc, đe dọa, dụ dỗ trẻ vào các hành vi liên quan đến tình dục, kể cả qua mạng.\n- **Bóc lột**: bắt làm việc trái quy định, lợi dụng trẻ để kiếm lợi.\n- **Bỏ rơi, bỏ mặc**: không chăm sóc, nuôi dưỡng trẻ.\n- **Mua bán, bắt cóc** trẻ em.\n\nNgười xâm hại có thể là người quen, thậm chí người trong gia đình. Dù là ai, bạn vẫn có quyền được bảo vệ.",
+        "thpt": "Theo Luật Trẻ em 2016, xâm hại trẻ em là hành vi gây tổn hại về thể chất, tình cảm, tâm lý, danh dự, nhân phẩm của trẻ em, dưới các hình thức: bạo lực, bóc lột, xâm hại tình dục, mua bán, bỏ rơi, bỏ mặc và các hình thức gây tổn hại khác.\n\nLuật này áp dụng cho người dưới 16 tuổi. Nếu bạn từ 16 đến dưới 18 tuổi, bạn là người chưa thành niên và vẫn được pháp luật bảo vệ trước bạo lực, quấy rối, xâm hại.\n\nXâm hại có thể xảy ra trực tiếp hoặc qua mạng, và người gây ra có thể là người lạ, bạn bè, người yêu hay người thân.",
+        "lon": "Khoản 5 Điều 4 Luật Trẻ em 2016 quy định: “Xâm hại trẻ em là hành vi gây tổn hại về thể chất, tình cảm, tâm lý, danh dự, nhân phẩm của trẻ em dưới các hình thức bạo lực, bóc lột, xâm hại tình dục, mua bán, bỏ rơi, bỏ mặc trẻ em và các hình thức gây tổn hại khác.”\n\nTrẻ em theo luật này là người dưới 16 tuổi (Điều 1). Nhiều vụ việc do chính người quen của trẻ gây ra, nên việc trò chuyện cởi mở trong gia đình và dạy trẻ kỹ năng tự bảo vệ là lớp bảo vệ đầu tiên."
+      },
+      "src": [
+        "LTE",
+        "TN_QUEN"
+      ],
+      "next": [
+        "xam-hai-tinh-duc",
+        "bao-luc",
+        "khi-bi-xam-hai"
+      ]
+    },
+    {
+      "id": "xam-hai-tinh-duc",
+      "topic": "kien-thuc",
+      "title": "Xâm hại tình dục là gì?",
+      "titleNho": "Khi ai đó chạm vào vùng riêng tư của bạn",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "xâm hại tình dục",
+        "lạm dụng tình dục",
+        "quấy rối tình dục",
+        "dâm ô là gì",
+        "ấu dâm",
+        "sàm sỡ",
+        "quấy rối",
+        "xâm hại tình dục là gì",
+        "gạ gẫm"
+      ],
+      "q": [
+        "Xâm hại tình dục là gì?",
+        "Thế nào là bị quấy rối tình dục?",
+        "Dâm ô là gì?"
+      ],
+      "a": {
+        "nho": "Nếu có ai làm những điều sau với bạn thì đó là **sai**:\n- Chạm vào vùng riêng tư của bạn.\n- Bắt bạn chạm vào vùng riêng tư của họ.\n- Bắt bạn cởi quần áo.\n- Cho bạn xem hình ảnh làm bạn khó chịu.\n\nĐiều đó vẫn sai dù người đó là người quen, cho bạn quà hay bảo bạn giữ bí mật.\n\nHãy nói KHÔNG, chạy đi và kể ngay cho người lớn bạn tin.",
+        "thcs": "Xâm hại tình dục là khi ai đó dùng vũ lực, đe dọa, ép buộc, lôi kéo hoặc dụ dỗ trẻ em tham gia vào các hành vi liên quan đến tình dục.\n\nVí dụ:\n- Đụng chạm, sờ vào vùng riêng tư, hoặc bắt bạn chạm vào người họ.\n- Bắt bạn xem, chụp hoặc gửi hình ảnh, video nhạy cảm.\n- Nói chuyện, nhắn tin gạ gẫm, khiến bạn khó chịu.\n\nHành vi này có thể xảy ra trực tiếp hoặc trên mạng, do người lạ hoặc người quen gây ra. Đó luôn là lỗi của người làm, **không bao giờ** là lỗi của bạn.",
+        "thpt": "Xâm hại tình dục là việc dùng vũ lực, đe dọa, ép buộc, lôi kéo, dụ dỗ người khác tham gia hành vi liên quan đến tình dục mà họ không muốn, hoặc chưa đủ tuổi để đồng ý.\n\nNó bao gồm: đụng chạm, sàm sỡ; ép quan hệ; gạ gẫm qua tin nhắn; xin, ép gửi hoặc phát tán ảnh, video nhạy cảm; dùng ảnh để đe dọa, tống tiền.\n\nNếu một người từ đủ 18 tuổi có hành vi dâm ô hoặc quan hệ tình dục với người dưới 16 tuổi thì có thể bị xử lý hình sự, kể cả khi người dưới 16 tuổi nói là “đồng ý”.",
+        "lon": "Khoản 8 Điều 4 Luật Trẻ em 2016: “Xâm hại tình dục trẻ em là việc dùng vũ lực, đe dọa dùng vũ lực, ép buộc, lôi kéo, dụ dỗ trẻ em tham gia vào các hành vi liên quan đến tình dục, bao gồm hiếp dâm, cưỡng dâm, giao cấu, dâm ô với trẻ em và sử dụng trẻ em vào mục đích mại dâm, khiêu dâm dưới mọi hình thức.”\n\nXâm hại qua mạng (gạ gẫm, xin ảnh nhạy cảm, đe dọa phát tán) đang tăng và không chỉ đến từ người lạ. Xem thêm mục “Pháp luật xử lý thế nào?”."
+      },
+      "src": [
+        "LTE",
+        "TN_MANG",
+        "CAND_KN"
+      ],
+      "next": [
+        "vung-rieng-tu",
+        "khi-bi-xam-hai",
+        "phap-luat-hinh-su"
+      ]
+    },
+    {
+      "id": "bao-luc",
+      "topic": "kien-thuc",
+      "title": "Bạo lực trẻ em là gì?",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "bạo lực",
+        "bạo hành",
+        "bạo lực trẻ em",
+        "đánh đập",
+        "đánh mắng",
+        "mắng chửi",
+        "chửi mắng",
+        "lăng mạ",
+        "xúc phạm",
+        "hành hạ",
+        "ngược đãi",
+        "bị chửi"
+      ],
+      "q": [
+        "Bạo lực trẻ em là gì?",
+        "Bị đánh mắng có phải là bạo lực không?",
+        "Thế nào là bạo hành trẻ em?"
+      ],
+      "a": {
+        "nho": "Bạo lực là khi có người đánh, đá, tát, làm đau bạn, hoặc chửi mắng, đe dọa làm bạn sợ hãi.\n\nKhông ai được phép làm đau bạn, kể cả người lớn trong nhà. Nếu bị như vậy, hãy kể với người lớn bạn tin như thầy cô, ông bà, hoặc gọi **111**.",
+        "chung": "Bạo lực trẻ em gồm:\n- Đánh đập, hành hạ, ngược đãi, làm tổn thương cơ thể.\n- Lăng mạ, chửi bới, xúc phạm, làm nhục.\n- Cô lập, xua đuổi, đe dọa.\n\nDạy dỗ không có nghĩa là được đánh đập hay sỉ nhục. Nếu bạn thường xuyên bị đánh hoặc bị xúc phạm nặng nề, ở nhà hay ở trường, đó là bạo lực và bạn có quyền được giúp đỡ. Bạn có thể gọi **111** (miễn phí, 24/7) để được tư vấn.",
+        "lon": "Khoản 6 Điều 4 Luật Trẻ em 2016: “Bạo lực trẻ em là hành vi hành hạ, ngược đãi, đánh đập; xâm hại thân thể, sức khỏe; lăng mạ, xúc phạm danh dự, nhân phẩm; cô lập, xua đuổi và các hành vi cố ý khác gây tổn hại về thể chất, tinh thần của trẻ em.”\n\nĐánh đòn, sỉ nhục với lý do “dạy con” vẫn có thể là bạo lực. Nếu biết trẻ đang bị bạo lực, hãy báo Tổng đài 111 hoặc công an, chính quyền nơi gần nhất."
+      },
+      "src": [
+        "LTE",
+        "TVPL_BL",
+        "TN_BH"
+      ],
+      "next": [
+        "bi-danh-o-nha",
+        "bat-nat",
+        "goi-111"
+      ]
+    },
+    {
+      "id": "bo-mac-boc-lot",
+      "topic": "kien-thuc",
+      "title": "Bỏ rơi, bỏ mặc và bóc lột trẻ em",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "bỏ rơi",
+        "bỏ mặc",
+        "bóc lột",
+        "bóc lột sức lao động",
+        "lao động trẻ em",
+        "bỏ đói",
+        "không cho ăn",
+        "không cho đi học",
+        "bắt bỏ học",
+        "bắt đi làm",
+        "bắt làm việc",
+        "không ai chăm sóc",
+        "bắt đi xin tiền"
+      ],
+      "q": [
+        "Bỏ rơi, bỏ mặc trẻ em là gì?",
+        "Bị bắt đi làm thay vì đi học có sao không?",
+        "Bóc lột trẻ em là gì?"
+      ],
+      "a": {
+        "nho": "Bạn cần được ăn no, ngủ đủ, được đi học và được chăm sóc khi ốm.\n\nHãy kể với thầy cô hoặc người lớn bạn tin nếu bạn thường:\n- Bị bỏ đói.\n- Bị để ở nhà một mình nhiều ngày.\n- Bị bắt làm việc nặng.\n- Không được đi học.\n\nBạn cũng có thể gọi **111**.",
+        "chung": "Bỏ rơi, bỏ mặc là khi cha mẹ hoặc người chăm sóc không lo cho trẻ những điều cần thiết: ăn uống, chỗ ở, chăm sóc sức khỏe, học hành, sự an toàn.\n\nBóc lột là bắt trẻ lao động trái quy định của pháp luật hoặc lợi dụng trẻ để kiếm lợi, ví dụ bắt đi xin tiền, làm việc nặng nhọc thay vì đi học.\n\nNếu bạn hay bạn bè đang gặp cảnh này, hãy báo với thầy cô hoặc gọi **111** để được hỗ trợ.",
+        "lon": "Theo khoản 7 và khoản 9 Điều 4 Luật Trẻ em 2016:\n- Bóc lột trẻ em gồm các hành vi như bắt trẻ lao động trái quy định của pháp luật về lao động, sử dụng trẻ vào hoạt động khiêu dâm, mại dâm và các hành vi khác sử dụng trẻ em để trục lợi.\n- Bỏ rơi, bỏ mặc trẻ em là hành vi của cha, mẹ, người chăm sóc không thực hiện hoặc thực hiện không đầy đủ nghĩa vụ, trách nhiệm chăm sóc, nuôi dưỡng trẻ.\n\nKhi phát hiện, hãy báo Tổng đài 111 hoặc chính quyền, công an cấp xã."
+      },
+      "src": [
+        "LTE"
+      ],
+      "next": [
+        "goi-111",
+        "quyen-tre-em"
+      ]
+    },
+    {
+      "id": "nguoi-xam-hai",
+      "topic": "kien-thuc",
+      "title": "Ai có thể là người xâm hại?",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "ai có thể xâm hại",
+        "người xâm hại là ai",
+        "kẻ xâm hại",
+        "người quen xâm hại",
+        "người thân xâm hại",
+        "thủ phạm",
+        "yêu râu xanh",
+        "kẻ xấu",
+        "người quen có thể"
+      ],
+      "q": [
+        "Ai có thể là người xâm hại trẻ em?",
+        "Người quen có thể xâm hại không?",
+        "Kẻ xâm hại thường là ai?"
+      ],
+      "a": {
+        "nho": "Người làm hại trẻ em có thể là người lạ. Nhưng cũng có thể là người quen: hàng xóm, họ hàng, thậm chí người trong nhà.\n\nVì vậy, nếu ai làm bạn thấy sợ, khó chịu, hay bảo bạn giữ bí mật xấu, hãy kể với người lớn bạn tin.",
+        "chung": "Người xâm hại có thể là bất kỳ ai: người lạ, hàng xóm, họ hàng, người trong gia đình, thầy cô, huấn luyện viên, bạn bè, người yêu hay người quen trên mạng.\n\nNhiều vụ việc do chính người quen của trẻ gây ra, vì họ dễ tiếp cận và dễ khiến trẻ tin tưởng. Vì vậy hãy để ý **hành vi**, không chỉ để ý người đó là ai: ai làm bạn thấy sợ, khó chịu, ép bạn giữ bí mật hay vượt qua ranh giới của bạn, đều cần được kể cho người lớn tin cậy."
+      },
+      "src": [
+        "TN_QUEN",
+        "TN_MANG"
+      ],
+      "next": [
+        "dau-hieu-canh-giac",
+        "bi-mat",
+        "ban-tay-tin-cay"
+      ]
+    },
+    {
+      "id": "vung-rieng-tu",
+      "topic": "tu-bao-ve",
+      "title": "Vùng riêng tư trên cơ thể",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "vùng riêng tư",
+        "vùng kín",
+        "vùng nhạy cảm",
+        "bộ phận riêng tư",
+        "quy tắc đồ lót",
+        "chỗ kín",
+        "cơ thể của em",
+        "cơ thể của mình",
+        "chạm vào người"
+      ],
+      "q": [
+        "Vùng riêng tư là gì?",
+        "Quy tắc đồ lót là gì?",
+        "Ai được chạm vào vùng kín của mình?"
+      ],
+      "a": {
+        "nho": "Vùng riêng tư là những chỗ được che bởi đồ bơi, đồ lót, và cả miệng của bạn.\n\nQuy tắc cần nhớ:\n- Không ai được nhìn hay chạm vào vùng riêng tư của bạn.\n- Bạn cũng không chạm vào vùng riêng tư của người khác.\n- Chỉ trừ khi bố mẹ giúp bạn tắm rửa, vệ sinh, hoặc bác sĩ khám bệnh khi có bố mẹ ở bên.\n\nCơ thể là của bạn. Bạn có quyền nói KHÔNG.",
+        "chung": "Vùng riêng tư gồm miệng, ngực, vùng giữa hai chân (bộ phận sinh dục) và mông, tức những vùng thường được che bởi đồ bơi, đồ lót.\n\n- Không ai được nhìn, chạm, chụp ảnh vùng riêng tư của bạn, hay bắt bạn chạm vào vùng riêng tư của họ.\n- Ngoại lệ là khi khám chữa bệnh hoặc chăm sóc vệ sinh cần thiết, có cha mẹ hoặc người tin cậy ở bên và bạn được giải thích rõ.\n- Không ai được xin hay ép bạn gửi ảnh vùng riêng tư qua mạng.\n\nBạn có quyền từ chối bất kỳ cái chạm nào làm bạn khó chịu, kể cả từ người quen.",
+        "lon": "Dạy trẻ “quy tắc đồ lót”: vùng được che bởi đồ lót (cùng với miệng) là vùng riêng tư; không ai được nhìn, chạm vào hay chụp ảnh vùng này, và trẻ cũng không chạm vào vùng riêng tư của người khác. Ngoại lệ là khi vệ sinh cho trẻ nhỏ hoặc khám bệnh, có cha mẹ ở bên và được giải thích rõ.\n\nHãy gọi đúng tên các bộ phận cơ thể, dạy trẻ rằng cơ thể là của trẻ, trẻ có quyền nói “không”, kể cả với người thân, và không có “bí mật” nào về cơ thể phải giấu cha mẹ."
+      },
+      "src": [
+        "CAND_KN",
+        "TN_DAY"
+      ],
+      "next": [
+        "dong-cham",
+        "bi-mat",
+        "khi-bi-xam-hai"
+      ]
+    },
+    {
+      "id": "dong-cham",
+      "topic": "tu-bao-ve",
+      "title": "Đụng chạm an toàn và không an toàn",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "đụng chạm",
+        "chạm an toàn",
+        "cái chạm",
+        "ôm hôn",
+        "hôn má",
+        "bị ôm",
+        "bị hôn",
+        "đụng chạm không an toàn",
+        "không thích bị ôm",
+        "không thích bị hôn"
+      ],
+      "q": [
+        "Thế nào là đụng chạm không an toàn?",
+        "Mình không thích bị ôm hôn thì sao?",
+        "Cái chạm nào là an toàn?"
+      ],
+      "a": {
+        "nho": "Cái chạm **an toàn** làm bạn thấy vui, ấm áp, như mẹ ôm, bạn bè bắt tay.\n\nCái chạm **không an toàn** làm bạn thấy sợ, đau, xấu hổ hay khó chịu. Chạm vào vùng riêng tư, hay bị dặn phải giữ bí mật, cũng là cái chạm không an toàn.\n\nKhi gặp cái chạm không an toàn: nói to “KHÔNG!”, chạy đi, rồi kể ngay cho người lớn bạn tin.",
+        "chung": "Hãy tin vào cảm giác của bạn:\n- Cái chạm **an toàn**: bạn thấy thoải mái, được tôn trọng, có thể từ chối mà không bị ép.\n- Cái chạm **không an toàn**: làm bạn sợ, đau, xấu hổ, bối rối; chạm vào vùng riêng tư; đi kèm lời dặn giữ bí mật, quà tặng hay đe dọa.\n- Cái chạm **gây bối rối**: lúc đầu bình thường rồi dần khác đi. Bạn vẫn có quyền nói dừng lại.\n\nBạn có quyền từ chối ôm, hôn, đụng chạm từ bất kỳ ai, kể cả người quen, họ hàng."
+      },
+      "src": [
+        "CAND_KN",
+        "CAND_DAY"
+      ],
+      "next": [
+        "vung-rieng-tu",
+        "sau-vong-tron",
+        "khi-bi-xam-hai"
+      ]
+    },
+    {
+      "id": "bi-mat",
+      "topic": "tu-bao-ve",
+      "title": "Bí mật an toàn và bí mật không an toàn",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "bí mật",
+        "giữ bí mật",
+        "đừng nói với ai",
+        "không được kể",
+        "bí mật xấu",
+        "bí mật tốt",
+        "hứa không nói",
+        "bắt giữ bí mật",
+        "bí mật của hai"
+      ],
+      "q": [
+        "Có phải giữ bí mật không?",
+        "Bí mật xấu là gì?",
+        "Người lớn bảo mình giữ bí mật thì sao?"
+      ],
+      "a": {
+        "nho": "Có hai loại bí mật:\n- Bí mật **vui**: như món quà bất ngờ tặng mẹ. Bí mật này rồi sẽ được kể ra và làm mọi người vui.\n- Bí mật **xấu**: làm bạn sợ, buồn, khó chịu, hoặc người lớn dặn “đừng nói với bố mẹ”.\n\nBí mật xấu thì **không phải giữ**. Hãy kể ngay cho người lớn bạn tin, kể cả khi bạn đã lỡ hứa.",
+        "chung": "Người có ý xấu thường yêu cầu trẻ giữ bí mật, đôi khi bằng quà tặng, lời khen hoặc lời đe dọa (“nếu kể ra thì sẽ…”).\n\n- Bí mật an toàn: mang lại niềm vui và sớm được nói ra (ví dụ quà sinh nhật bất ngờ).\n- Bí mật không an toàn: khiến bạn lo lắng, sợ hãi, xấu hổ, hoặc bị dặn không được nói với cha mẹ, thầy cô.\n\nBạn **không có nghĩa vụ** giữ bí mật không an toàn, kể cả khi đã hứa. Kể ra không phải là “mách lẻo”, mà là bảo vệ bản thân."
+      },
+      "src": [
+        "CAND_DAY",
+        "TN_DAY"
+      ],
+      "next": [
+        "dau-hieu-canh-giac",
+        "ke-cho-ai",
+        "ban-tay-tin-cay"
+      ]
+    },
+    {
+      "id": "sau-vong-tron",
+      "topic": "tu-bao-ve",
+      "title": "Quy tắc 6 vòng tròn giao tiếp",
+      "tool": "vong-tron",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "6 vòng tròn",
+        "sáu vòng tròn",
+        "vòng tròn giao tiếp",
+        "khoảng cách giao tiếp",
+        "quy tắc vòng tròn",
+        "giữ khoảng cách"
+      ],
+      "q": [
+        "Quy tắc 6 vòng tròn là gì?",
+        "Nên giữ khoảng cách với ai?"
+      ],
+      "a": {
+        "nho": "Quy tắc 6 vòng tròn giúp bạn biết nên gần gũi với ai đến mức nào:\n1. **Tím** là chính bạn.\n2. **Xanh dương** là người thân nhất (ông bà, bố mẹ, anh chị em ruột): có thể ôm chặt.\n3. **Xanh lá** là họ hàng, bạn thân: ôm nhẹ.\n4. **Vàng** là bạn bè, thầy cô, người quen: bắt tay.\n5. **Cam** là người mới quen: vẫy tay chào.\n6. **Đỏ** là người lạ: giữ khoảng cách, không đi theo.\n\nNhớ nhé: dù ở vòng nào, cũng không ai được chạm vào vùng riêng tư của bạn.",
+        "chung": "Quy tắc 6 vòng tròn là cách giữ khoảng cách phù hợp với từng nhóm người, tính từ trong ra ngoài:\n1. **Tím**: bản thân bạn.\n2. **Xanh dương**: người thân nhất (ông bà, cha mẹ, anh chị em ruột), có thể ôm chặt.\n3. **Xanh lá**: họ hàng, bạn thân, ôm nhẹ.\n4. **Vàng**: bạn bè, thầy cô, người quen, bắt tay.\n5. **Cam**: người mới quen, vẫy tay chào từ xa.\n6. **Đỏ**: người lạ, giữ khoảng cách, không đi theo, không nhận quà.\n\nVòng tròn chỉ gợi ý mức độ thân mật. Người ở vòng gần vẫn **không** được chạm vào vùng riêng tư của bạn hay bắt bạn giữ bí mật xấu.",
+        "lon": "Quy tắc 6 vòng tròn (tím – bản thân; xanh dương – ôm chặt; xanh lá – ôm nhẹ; vàng – bắt tay; cam – vẫy tay; đỏ – tránh xa người lạ) giúp trẻ hình dung khoảng cách phù hợp.\n\nGợi ý: cùng trẻ vẽ các vòng tròn và điền tên những người cụ thể trong cuộc sống của trẻ. Luôn nhắc rằng ngay cả người ở vòng gần cũng không được chạm vào vùng riêng tư hay bắt trẻ giữ bí mật, vì nhiều vụ việc xảy ra từ người thân quen."
+      },
+      "src": [
+        "CAND_DAY",
+        "TN_QUEN"
+      ],
+      "next": [
+        "dong-cham",
+        "nguoi-la",
+        "ban-tay-tin-cay"
+      ]
+    },
+    {
+      "id": "ban-tay-tin-cay",
+      "topic": "tu-bao-ve",
+      "title": "Bàn tay tin cậy",
+      "tool": "ban-tay",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "bàn tay tin cậy",
+        "người tin cậy",
+        "người lớn tin cậy",
+        "tin ai",
+        "người đáng tin",
+        "ai đáng tin",
+        "5 người tin cậy",
+        "năm người tin cậy"
+      ],
+      "q": [
+        "Bàn tay tin cậy là gì?",
+        "Người lớn đáng tin là ai?",
+        "Mình nên tin ai?"
+      ],
+      "a": {
+        "nho": "Hãy xòe bàn tay và nghĩ ra **5 người lớn** mà bạn tin, mỗi ngón tay là một người. Ví dụ: bố, mẹ, ông bà, cô giáo chủ nhiệm, cô hàng xóm thân thiết.\n\nKhi có chuyện làm bạn sợ hay buồn, hãy kể với một người trong bàn tay. Nếu người đầu tiên chưa giúp được, hãy kể tiếp với người khác.\n\nBạn có thể ghi tên 5 người đó ở mục **Hỗ trợ → Bàn tay tin cậy**.",
+        "chung": "Người lớn tin cậy là người biết lắng nghe, tôn trọng bạn và có khả năng giúp bạn an toàn: cha mẹ, ông bà, thầy cô chủ nhiệm, giáo viên tư vấn tâm lý, cán bộ Đoàn, hàng xóm thân thiết…\n\nHãy chọn sẵn 5 người như vậy (mỗi ngón tay một người). Nếu người đầu tiên không tin hoặc không giúp, đừng bỏ cuộc, hãy kể với người tiếp theo, hoặc gọi **111**.\n\nBạn có thể lưu danh sách ở mục **Hỗ trợ → Bàn tay tin cậy**. Danh sách chỉ lưu trên máy của bạn."
+      },
+      "src": [
+        "CAND_DAY"
+      ],
+      "next": [
+        "ke-cho-ai",
+        "goi-111"
+      ]
+    },
+    {
+      "id": "dau-hieu-canh-giac",
+      "topic": "tu-bao-ve",
+      "title": "Dấu hiệu cần cảnh giác",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "dấu hiệu cảnh giác",
+        "cảnh giác",
+        "dụ dỗ",
+        "lôi kéo",
+        "tặng quà",
+        "cho tiền",
+        "quan tâm đặc biệt",
+        "nhận biết kẻ xấu",
+        "rủ đi chơi riêng",
+        "thao túng",
+        "gặp riêng"
+      ],
+      "q": [
+        "Làm sao nhận biết người có ý xấu?",
+        "Dấu hiệu dụ dỗ là gì?",
+        "Có người hay cho mình quà có sao không?"
+      ],
+      "a": {
+        "nho": "Hãy cẩn thận khi có người:\n- Cho bạn quà, tiền hay đồ ăn rồi dặn “đừng kể với ai”.\n- Muốn ở riêng với bạn ở chỗ vắng, trong phòng kín.\n- Chạm vào bạn làm bạn khó chịu, rồi nói đó là trò chơi.\n- Rủ bạn đi đâu đó mà không xin phép bố mẹ.\n\nKhi đó, hãy từ chối, tránh xa và kể với người lớn bạn tin.",
+        "chung": "Kẻ xâm hại thường đi từng bước để lấy lòng tin rồi kiểm soát. Một số dấu hiệu cần cảnh giác:\n- Quan tâm, khen ngợi, tặng quà, cho tiền một cách đặc biệt, khác thường.\n- Tìm cách ở riêng với bạn; tách bạn khỏi bạn bè, gia đình.\n- Thử vượt ranh giới từng chút: đùa cợt, đụng chạm “vô tình”, nói chuyện về cơ thể, tình dục.\n- Yêu cầu giữ bí mật, nói rằng không ai hiểu bạn bằng họ.\n- Trên mạng: rủ chuyển sang nhắn tin riêng, xin ảnh, hẹn gặp ngoài đời.\n\nNếu thấy những dấu hiệu này, hãy dừng liên lạc, giữ lại bằng chứng và kể với người lớn tin cậy."
+      },
+      "src": [
+        "TN_MANG",
+        "TN_QUEN"
+      ],
+      "next": [
+        "bi-mat",
+        "nguoi-la-tren-mang",
+        "ke-cho-ai"
+      ]
+    },
+    {
+      "id": "nguoi-la",
+      "topic": "tu-bao-ve",
+      "title": "An toàn với người lạ",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "người lạ",
+        "người lạ rủ",
+        "đi theo người lạ",
+        "người lạ cho kẹo",
+        "người lạ cho quà",
+        "người lạ đón",
+        "đón hộ",
+        "bắt cóc",
+        "người lạ nhờ giúp",
+        "bị lạc",
+        "lạc đường",
+        "bị đi theo",
+        "mật khẩu gia đình"
+      ],
+      "q": [
+        "Người lạ rủ đi thì làm sao?",
+        "Người lạ nói bố mẹ nhờ đón thì sao?",
+        "Làm sao tránh bị bắt cóc?"
+      ],
+      "a": {
+        "nho": "Với người lạ, hãy nhớ:\n- Không nhận quà, bánh kẹo, nước uống từ người lạ.\n- Không đi theo người lạ, kể cả khi họ nói “bố mẹ nhờ đến đón”. Hãy cùng bố mẹ đặt một **mật khẩu gia đình**: người đến đón phải nói đúng mật khẩu.\n- Người lớn cần giúp thường nhờ người lớn khác, không nhờ trẻ em dẫn đường.\n- Nếu bị kéo đi: la thật to “Cứu với! Tôi không quen người này!” và chạy đến chỗ đông người.",
+        "chung": "- Không đi theo, không lên xe người lạ, kể cả khi họ nói được người nhà nhờ đón. Thống nhất với gia đình một mật khẩu riêng.\n- Không nhận đồ ăn, nước uống, quà từ người lạ.\n- Đi theo nhóm, tránh nơi vắng; báo cho người nhà biết bạn đi đâu, với ai, khi nào về.\n- Nếu bị đi theo: vào nơi đông người (cửa hàng, trường học, trụ sở công an) và nhờ giúp.\n- Nếu bị kéo đi: la to “Cứu với! Tôi không quen người này!” để người xung quanh hiểu đây là nguy hiểm, rồi gọi **113**."
+      },
+      "src": [
+        "CAND_KN"
+      ],
+      "next": [
+        "sau-vong-tron",
+        "khi-nao-goi-113-115",
+        "mua-ban-nguoi"
+      ]
+    },
+    {
+      "id": "tinh-yeu-an-toan",
+      "topic": "tu-bao-ve",
+      "title": "Khi người yêu ép buộc, kiểm soát",
+      "ages": [
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "người yêu ép",
+        "bạn trai ép",
+        "bạn gái ép",
+        "người yêu bắt",
+        "người yêu đánh",
+        "người yêu kiểm soát",
+        "ép quan hệ",
+        "yêu đương",
+        "hẹn hò",
+        "người yêu đòi",
+        "người yêu cũ dọa",
+        "đồng thuận",
+        "sự đồng ý",
+        "chia tay bị dọa"
+      ],
+      "q": [
+        "Người yêu ép mình làm điều mình không muốn thì sao?",
+        "Thế nào là đồng ý thật sự?",
+        "Người yêu kiểm soát điện thoại có bình thường không?"
+      ],
+      "a": {
+        "thcs": "Một mối quan hệ tốt phải có sự tôn trọng. Không ai được ép bạn làm điều bạn không muốn, kể cả người bạn thích hay người yêu.\n\nDấu hiệu không ổn: kiểm soát điện thoại, cấm bạn chơi với bạn bè, giận dữ, đe dọa, đòi ảnh riêng tư, bắt bạn giữ bí mật với gia đình.\n\nBạn luôn có quyền nói “không” và kết thúc mối quan hệ. Hãy kể với người lớn tin cậy hoặc gọi **111** để được tư vấn.",
+        "thpt": "Một mối quan hệ lành mạnh có sự tôn trọng, tin tưởng và quyền nói “không”.\n\nDấu hiệu không lành mạnh: kiểm soát điện thoại, cấm bạn gặp bạn bè, ghen tuông quá mức, đe dọa, đánh, ép bạn làm điều bạn không muốn, đòi ảnh riêng tư, dọa tung ảnh khi chia tay.\n\n- Sự đồng ý phải rõ ràng, tự nguyện và có thể rút lại bất cứ lúc nào. Im lặng hay sợ hãi không phải là đồng ý.\n- Bạn có quyền từ chối và rời khỏi mối quan hệ khiến bạn sợ hãi.\n- Kể với người lớn tin cậy, giáo viên tư vấn; gọi **111** để được tư vấn, **113** khi bị đe dọa, tấn công.",
+        "lon": "Bạo lực trong quan hệ yêu đương ở tuổi vị thành niên thường bắt đầu bằng kiểm soát (theo dõi điện thoại, cô lập khỏi bạn bè), rồi đến đe dọa, ép buộc, đòi ảnh riêng tư và dọa phát tán khi chia tay.\n\nCha mẹ, thầy cô nên trò chuyện với trẻ về sự tôn trọng và sự đồng ý; lắng nghe, không chế giễu chuyện tình cảm của trẻ, để trẻ dám kể khi gặp nguy hiểm."
+      },
+      "src": [
+        "TN_MANG"
+      ],
+      "next": [
+        "bi-de-doa-anh",
+        "xin-anh",
+        "ke-cho-ai"
+      ]
+    },
+    {
+      "id": "mua-ban-nguoi",
+      "topic": "tu-bao-ve",
+      "title": "Cảnh giác mua bán người",
+      "ages": [
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "mua bán người",
+        "buôn người",
+        "bị bán",
+        "việc nhẹ lương cao",
+        "đi làm xa",
+        "sang nước ngoài làm việc",
+        "lừa đi làm",
+        "bị lừa bán",
+        "môi giới việc làm",
+        "lấy chồng nước ngoài",
+        "bắt cóc trực tuyến",
+        "tự xưng công an"
+      ],
+      "q": [
+        "Làm sao để không bị lừa bán?",
+        "Lời mời việc nhẹ lương cao có đáng tin không?",
+        "Bắt cóc trực tuyến là gì?"
+      ],
+      "a": {
+        "chung": "Kẻ mua bán người thường dụ dỗ bằng lời hứa việc nhẹ lương cao, đi chơi, đi làm xa, du học; hoặc làm quen, yêu đương qua mạng rồi rủ đi gặp.\n\n- Không đi theo lời mời làm việc, đi chơi xa của người mới quen, kể cả quen qua mạng.\n- Luôn báo gia đình nơi bạn đến, đi cùng ai; giữ giấy tờ và điện thoại bên mình.\n- Cảnh giác với “bắt cóc trực tuyến”: kẻ gian gọi điện tự xưng công an, viện kiểm sát, dọa bạn liên quan vụ án, bắt bạn tự đến ở một mình và cắt liên lạc với gia đình để tống tiền. Cơ quan chức năng không làm việc như vậy qua điện thoại.\n- Nghi ngờ mua bán người: gọi **111** (tổng đài quốc gia về phòng, chống mua bán người) hoặc **113**."
+      },
+      "src": [
+        "VNE_111",
+        "TN_MANG"
+      ],
+      "next": [
+        "nguoi-la-tren-mang",
+        "goi-111"
+      ]
+    },
+    {
+      "id": "khi-bi-xam-hai",
+      "topic": "ung-pho",
+      "title": "Khi có người định xâm hại, mình làm gì?",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "làm gì khi bị xâm hại",
+        "bị xâm hại thì làm gì",
+        "nên làm gì|0.6",
+        "phải làm sao|0.6",
+        "cần làm gì|0.6",
+        "làm gì bây giờ|0.6",
+        "ứng phó",
+        "tự vệ",
+        "có người định",
+        "bị sàm sỡ thì làm gì",
+        "bị quấy rối thì làm gì",
+        "làm sao để thoát",
+        "nói không chạy đi kể ngay"
+      ],
+      "q": [
+        "Khi bị xâm hại phải làm gì?",
+        "Có người định làm hại mình thì làm sao?",
+        "Bị sàm sỡ thì nên làm gì?"
+      ],
+      "a": {
+        "nho": "Hãy nhớ 3 bước:\n1. **Nói KHÔNG** thật to và dứt khoát.\n2. **Chạy đi** đến chỗ có người lớn, chỗ đông người.\n3. **Kể ngay** cho người lớn bạn tin, dù người kia dọa hay bảo giữ bí mật.\n\nNếu đang gặp nguy hiểm, hãy nhờ người lớn gọi **113**. Bạn đã làm đúng khi tìm cách giữ an toàn cho mình.",
+        "chung": "Hãy ưu tiên an toàn của bạn:\n1. **Nói KHÔNG** rõ ràng, dứt khoát. Bạn không cần lịch sự với người đang làm hại mình.\n2. **Rời đi** ngay đến nơi an toàn, đông người. Nếu bị giữ lại, la to để gây chú ý.\n3. **Kể** với người lớn tin cậy càng sớm càng tốt.\n4. **Gọi** 113 nếu đang nguy hiểm, hoặc 111 (miễn phí, 24/7) để được tư vấn, hỗ trợ.\n5. Nếu chuyện xảy ra trên mạng: **giữ bằng chứng** (chụp màn hình tin nhắn, tên tài khoản), đừng xóa, đừng đáp trả.\n\nNếu lúc đó bạn sợ quá không phản ứng được, điều đó là bình thường và không phải lỗi của bạn. Bạn vẫn có thể kể và được giúp bất cứ lúc nào."
+      },
+      "src": [
+        "CAND_KN",
+        "CAND_BV"
+      ],
+      "next": [
+        "ke-cho-ai",
+        "goi-111",
+        "sau-khi-bi-xam-hai"
+      ]
+    },
+    {
+      "id": "ke-cho-ai",
+      "topic": "ung-pho",
+      "title": "Mình sợ kể với người lớn",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "sợ kể",
+        "không dám kể",
+        "sợ bố mẹ không tin",
+        "sợ bị mắng",
+        "kể với ai",
+        "có nên kể",
+        "sợ bị trả thù",
+        "bố mẹ không tin",
+        "sợ bố mẹ buồn",
+        "ngại kể",
+        "không dám nói",
+        "không ai tin",
+        "nói với bố mẹ thế nào"
+      ],
+      "q": [
+        "Mình sợ kể với bố mẹ thì sao?",
+        "Kể với ai bây giờ?",
+        "Sợ không ai tin mình thì làm sao?"
+      ],
+      "a": {
+        "nho": "Mình hiểu là bạn đang sợ. Nhưng kể ra là việc **đúng** và **dũng cảm**.\n\n- Bạn có thể bắt đầu bằng câu: “Con có chuyện muốn kể, nhưng con hơi sợ.”\n- Nếu người lớn đầu tiên chưa tin, hãy kể với người khác trong bàn tay tin cậy.\n- Bạn cũng có thể gọi **111**, các cô chú ở đó sẽ lắng nghe bạn.",
+        "chung": "Sợ hãi, ngại ngùng khi kể là cảm giác rất bình thường. Một vài cách giúp bạn dễ bắt đầu hơn:\n- Chọn người bạn tin nhất và lúc chỉ có hai người.\n- Mở đầu bằng: “Con/em có chuyện khó nói, mong mọi người nghe hết rồi hãy nói.”\n- Nếu khó nói thành lời, hãy viết ra giấy hoặc nhắn tin.\n- Nhờ một người bạn thân đi cùng.\n- Nếu người đầu tiên không tin, đừng dừng lại, hãy kể với người khác.\n\nBạn cũng có thể gọi **111** trước để được tư vấn cách nói với gia đình. Tổng đài viên được đào tạo để lắng nghe trẻ em. Bạn có thể hỏi họ thông tin của bạn sẽ được xử lý thế nào."
+      },
+      "src": [
+        "CAND_DAY"
+      ],
+      "next": [
+        "ban-tay-tin-cay",
+        "goi-111",
+        "khong-phai-loi"
+      ]
+    },
+    {
+      "id": "ban-be-ke",
+      "topic": "ung-pho",
+      "title": "Khi bạn bè kể mình bị xâm hại",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "bạn em bị",
+        "bạn mình bị",
+        "bạn tôi bị",
+        "bạn thân bị",
+        "bạn bè bị xâm hại",
+        "giúp bạn",
+        "bạn bị đánh",
+        "bạn bị quấy rối",
+        "bạn em kể",
+        "một người bạn",
+        "bạn cùng lớp bị",
+        "bạn kể với mình"
+      ],
+      "q": [
+        "Bạn mình bị xâm hại thì mình giúp thế nào?",
+        "Bạn kể với mình bị đánh, mình làm gì?",
+        "Bạn bắt mình giữ bí mật chuyện bị xâm hại thì sao?"
+      ],
+      "a": {
+        "nho": "Nếu bạn của bạn kể rằng có người làm bạn ấy sợ hay làm đau bạn ấy:\n- Hãy nghe bạn ấy nói và tin bạn ấy.\n- Nói với bạn ấy: “Không phải lỗi của cậu.”\n- Cùng bạn ấy kể với thầy cô hoặc người lớn tin cậy.\n\nĐây là bí mật xấu, nên không phải giữ đâu nhé.",
+        "chung": "Bạn đang làm một việc rất tốt khi muốn giúp bạn mình.\n- **Lắng nghe** và **tin** bạn ấy. Đừng hỏi dồn hay trách móc.\n- Nói: “Cảm ơn cậu đã tin tớ. Đây không phải lỗi của cậu.”\n- Đừng hứa giữ bí mật nếu bạn ấy đang bị hại. Hãy giải thích rằng cần người lớn giúp mới an toàn.\n- Cùng bạn ấy tìm người lớn tin cậy, hoặc cùng gọi **111**.\n- Không kể chuyện cho người khác, không đăng lên mạng, để bảo vệ bạn ấy.\n- Nếu bạn ấy nói muốn tự làm hại bản thân, hãy báo ngay cho người lớn."
+      },
+      "src": [
+        "CAND_BV"
+      ],
+      "next": [
+        "ke-cho-ai",
+        "goi-111",
+        "bao-mat-thong-tin"
+      ]
+    },
+    {
+      "id": "sau-khi-bi-xam-hai",
+      "topic": "ung-pho",
+      "title": "Nếu vừa bị xâm hại tình dục",
+      "titleNho": "Nếu ai đó vừa làm hại cơ thể bạn",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "vừa bị xâm hại",
+        "vừa bị hiếp",
+        "sau khi bị xâm hại",
+        "bị xâm hại xong",
+        "có nên tắm",
+        "đi khám",
+        "giữ chứng cứ",
+        "giữ bằng chứng",
+        "72 giờ",
+        "thuốc tránh thai khẩn cấp",
+        "bị cưỡng ép quan hệ",
+        "khám sau khi bị xâm hại"
+      ],
+      "q": [
+        "Vừa bị xâm hại thì phải làm gì?",
+        "Có nên tắm sau khi bị xâm hại không?",
+        "Cần đi khám trong bao lâu?"
+      ],
+      "a": {
+        "nho": "Nếu có ai vừa làm đau hay chạm vào vùng riêng tư của bạn:\n- Hãy đến ngay chỗ an toàn, ở gần người lớn bạn tin.\n- Kể ngay cho người lớn đó biết. Người lớn sẽ đưa bạn đi khám và báo công an.\n- Nếu chưa tìm được ai, hãy gọi **111** hoặc **113**.\n\nBạn không có lỗi gì cả.",
+        "thcs": "Mình rất tiếc vì điều đó đã xảy ra. Những việc nên làm:\n1. Đến nơi an toàn và kể ngay với người lớn tin cậy, hoặc gọi **113**, **111**.\n2. Nếu có thể, **chưa tắm, chưa thay hay giặt quần áo** trước khi đi khám, vì điều này giúp giữ bằng chứng. Nếu bạn đã làm rồi cũng không sao, bạn vẫn được giúp đỡ.\n3. Đi khám ở cơ sở y tế càng sớm càng tốt, tốt nhất trong vòng 72 giờ, để được chăm sóc và phòng ngừa các nguy cơ cho sức khỏe.\n4. Giữ lại tin nhắn, hình ảnh liên quan.\n\nĐây không phải lỗi của bạn. Bạn xứng đáng được chăm sóc.",
+        "thpt": "Mình rất tiếc vì điều đó đã xảy ra với bạn. Trước hết hãy đến nơi an toàn.\n1. **Tìm người hỗ trợ**: người lớn tin cậy, hoặc gọi **113** (công an), **111** (miễn phí, 24/7).\n2. **Đi khám sớm**, tốt nhất trong vòng 72 giờ: bác sĩ có thể điều trị tổn thương, dự phòng mang thai ngoài ý muốn và các bệnh lây truyền.\n3. **Giữ bằng chứng nếu có thể**: chưa tắm, chưa giặt quần áo, cho quần áo vào túi giấy; lưu tin nhắn, hình ảnh. Nếu đã tắm rửa rồi, bạn vẫn có thể trình báo.\n4. **Chăm sóc tinh thần**: phản ứng sốc, sợ hãi, tê liệt cảm xúc là bình thường. Hãy tìm hỗ trợ tâm lý.\n\nDù bạn đã làm gì hay chưa làm gì, đây không phải lỗi của bạn.",
+        "lon": "Ưu tiên theo thứ tự:\n1. **An toàn**: đưa trẻ ra khỏi nơi có người gây hại; gọi 113 nếu khẩn cấp.\n2. **Y tế**: đưa trẻ đi khám càng sớm càng tốt, lý tưởng trong 72 giờ, để được điều trị tổn thương, dự phòng mang thai và các bệnh lây truyền (theo chỉ định của bác sĩ).\n3. **Chứng cứ**: nếu có thể, chưa tắm rửa, chưa giặt quần áo; cho quần áo vào túi giấy; không dọn dẹp hiện trường; lưu tin nhắn, hình ảnh.\n4. **Trình báo**: báo công an nơi gần nhất và Tổng đài 111 để được hỗ trợ, can thiệp.\n5. **Tâm lý**: tin trẻ, không trách mắng, không bắt trẻ kể lại nhiều lần; tìm hỗ trợ tâm lý chuyên môn.\n6. **Bảo mật**: không đăng tải, chia sẻ thông tin, hình ảnh của trẻ lên mạng xã hội."
+      },
+      "src": [
+        "CAND_KN",
+        "BYT_NB"
+      ],
+      "next": [
+        "cam-xuc",
+        "goi-111",
+        "khi-tre-ke"
+      ]
+    },
+    {
+      "id": "bi-danh-o-nha",
+      "topic": "ung-pho",
+      "title": "Bị đánh, mắng chửi ở nhà",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "bố đánh",
+        "mẹ đánh",
+        "bị bố đánh",
+        "bị mẹ đánh",
+        "ba đánh",
+        "má đánh",
+        "bố mẹ đánh",
+        "bị đánh ở nhà",
+        "bố mẹ chửi",
+        "bố say rượu",
+        "bố nhậu",
+        "bạo lực gia đình",
+        "bố đánh mẹ",
+        "dượng đánh",
+        "bị chửi mắng",
+        "bị nhốt ở nhà",
+        "người nhà đánh"
+      ],
+      "q": [
+        "Bị bố mẹ đánh thì phải làm sao?",
+        "Bố say rượu hay đánh mình thì sao?",
+        "Bạo lực gia đình phải làm gì?"
+      ],
+      "a": {
+        "nho": "Không ai được đánh đập hay làm đau bạn, kể cả bố mẹ hay người lớn trong nhà.\n\n- Khi người lớn đang nổi giận, hãy tránh ra chỗ an toàn: sang nhà hàng xóm thân, nhà ông bà.\n- Kể với thầy cô hoặc người lớn bạn tin.\n- Gọi **111** để được giúp. Nếu đang bị đánh và rất nguy hiểm, gọi **113**.",
+        "chung": "Mình rất tiếc nếu bạn đang phải trải qua điều này. Bị đánh đập, chửi mắng nặng nề, đe dọa ở nhà là bạo lực, dù người làm là cha mẹ hay người thân. Đó không phải là cách dạy dỗ đúng, và không phải lỗi của bạn.\n\n- Khi có xung đột, hãy tránh đến nơi an toàn (phòng có khóa, nhà hàng xóm, người thân).\n- Lên trước một kế hoạch: mang theo điện thoại, nhớ số 111 và 113, biết nhà ai có thể chạy sang.\n- Kể với thầy cô chủ nhiệm, giáo viên tư vấn hoặc người lớn tin cậy.\n- Gọi **111** (miễn phí, 24/7) để được tư vấn và hỗ trợ. Gọi **113** khi đang nguy hiểm.\n\nNếu bạn chứng kiến bạo lực giữa bố mẹ, điều đó cũng ảnh hưởng đến bạn, và bạn cũng xứng đáng được giúp."
+      },
+      "src": [
+        "LTE",
+        "TN_BH"
+      ],
+      "next": [
+        "goi-111",
+        "cam-xuc",
+        "khi-nao-goi-113-115"
+      ]
+    },
+    {
+      "id": "bat-nat",
+      "topic": "ung-pho",
+      "title": "Bị bắt nạt ở trường",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "bắt nạt",
+        "bị bắt nạt",
+        "bạo lực học đường",
+        "bị bạn đánh",
+        "bị đánh hội đồng",
+        "bị cô lập",
+        "bị tẩy chay",
+        "bị trêu chọc",
+        "bị chế giễu",
+        "bị xin đểu",
+        "bị đe dọa ở trường",
+        "bị bạn bè chửi"
+      ],
+      "q": [
+        "Bị bắt nạt ở trường thì làm sao?",
+        "Bị cả lớp tẩy chay phải làm gì?",
+        "Bị bạn đánh có nên đánh lại không?"
+      ],
+      "a": {
+        "nho": "Bị bạn trêu chọc, đánh, giấu đồ, không cho chơi cùng nhiều lần là bị **bắt nạt**. Đó không phải lỗi của bạn.\n\n- Nói to: “Dừng lại! Mình không thích thế!” rồi đi chỗ khác.\n- Chơi gần bạn bè và gần thầy cô.\n- Kể ngay với thầy cô chủ nhiệm và bố mẹ.",
+        "chung": "Bắt nạt là khi một người hoặc một nhóm cố ý làm tổn thương bạn nhiều lần: đánh, đe dọa, chế giễu, tẩy chay, xin tiền, tung tin đồn, kể cả trên mạng.\n\n- Giữ bình tĩnh, nói rõ “Dừng lại”, rồi rời đi; tránh đánh trả vì có thể khiến bạn gặp nguy hiểm hơn.\n- Đi cùng bạn bè, ở nơi có thầy cô, camera.\n- Ghi lại sự việc: ngày, giờ, ai, chuyện gì; chụp màn hình nếu xảy ra trên mạng.\n- Báo với giáo viên chủ nhiệm, giáo viên tư vấn tâm lý, ban giám hiệu và gia đình.\n- Gọi **111** nếu bạn cần tư vấn, hoặc **113** khi bị đe dọa nghiêm trọng.\n\nNếu bạn chứng kiến bạn khác bị bắt nạt, hãy đứng về phía bạn ấy và báo người lớn."
+      },
+      "src": [
+        "TN_BH"
+      ],
+      "next": [
+        "bat-nat-tren-mang",
+        "cam-xuc",
+        "ke-cho-ai"
+      ]
+    },
+    {
+      "id": "goi-111",
+      "topic": "ung-pho",
+      "title": "Tổng đài 111 là gì?",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "111",
+        "tổng đài 111",
+        "gọi 111",
+        "số 111",
+        "tổng đài bảo vệ trẻ em",
+        "đường dây nóng",
+        "hotline",
+        "có mất tiền không",
+        "gọi có mất phí",
+        "gọi có tốn tiền",
+        "gọi 111 nói gì",
+        "khi gọi 111",
+        "tổng đài viên"
+      ],
+      "q": [
+        "Tổng đài 111 là gì?",
+        "Gọi 111 có mất tiền không?",
+        "Gọi 111 thì nói gì?"
+      ],
+      "a": {
+        "nho": "**111** là số điện thoại để bảo vệ trẻ em.\n\n- Gọi **không mất tiền**, gọi được cả ngày lẫn đêm.\n- Các cô chú ở đó sẽ lắng nghe và tìm cách giúp bạn.\n- Bạn chỉ cần nói: “Cháu cần giúp đỡ” rồi kể điều đang xảy ra.",
+        "chung": "**111** là Tổng đài điện thoại quốc gia bảo vệ trẻ em, đồng thời là tổng đài quốc gia về phòng, chống mua bán người. Tổng đài hoạt động **24/7** và **miễn phí**.\n\nKhi gọi, bạn có thể:\n- Nói bạn bao nhiêu tuổi, chuyện gì đang xảy ra, bạn có đang nguy hiểm không.\n- Cho biết bạn đang ở tỉnh, thành nào nếu bạn muốn được hỗ trợ trực tiếp.\n- Hỏi tổng đài viên thông tin của bạn sẽ được xử lý thế nào.\n\nTrường hợp khẩn cấp, tổng đài phối hợp ngay với công an và người làm công tác bảo vệ trẻ em ở địa phương. Ngoài gọi điện, tổng đài còn nhận thông báo qua Zalo và ứng dụng di động.\n\nMục **Chuẩn bị nội dung gọi 111** trong ứng dụng này giúp bạn sắp xếp điều cần nói.",
+        "lon": "Tổng đài 111 là Tổng đài điện thoại quốc gia bảo vệ trẻ em, từ tháng 9/2025 đồng thời là Tổng đài quốc gia về phòng, chống mua bán người, hoạt động 24/7, miễn phí, do Bộ Y tế phụ trách.\n\n- Theo Cục Bà mẹ và Trẻ em (Bộ Y tế), tổng đài tiếp nhận khoảng 300.000 cuộc gọi mỗi năm; trường hợp cần thiết, nhân viên công tác xã hội hoặc lực lượng chức năng có thể tiếp cận trẻ trong khoảng 30 phút đến 1 giờ (Tuổi Trẻ, 6/2026).\n- Quy trình gồm: tiếp nhận, đánh giá ban đầu, xác định nhu cầu, lập và thực hiện kế hoạch hỗ trợ, rà soát sau can thiệp. Khi trẻ có thể bị đe dọa tính mạng, sức khỏe, tổng đài chuyển ngay thông tin cho công an.\n- Ngoài điện thoại, tổng đài nhận thông báo qua Zalo và ứng dụng di động."
+      },
+      "src": [
+        "VNE_111",
+        "TT_111",
+        "PLO_111",
+        "BYT_111",
+        "T111"
+      ],
+      "next": [
+        "khi-nao-goi-113-115",
+        "ke-cho-ai"
+      ]
+    },
+    {
+      "id": "khi-nao-goi-113-115",
+      "topic": "ung-pho",
+      "title": "Khi nào gọi 113, 115?",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "113",
+        "115",
+        "gọi công an",
+        "gọi cảnh sát",
+        "gọi cấp cứu",
+        "số khẩn cấp",
+        "số điện thoại khẩn cấp",
+        "gọi ai khi nguy hiểm",
+        "cấp cứu",
+        "công an",
+        "cảnh sát"
+      ],
+      "q": [
+        "Khi nào gọi 113?",
+        "Số cấp cứu là số mấy?",
+        "Gặp nguy hiểm thì gọi số nào?"
+      ],
+      "a": {
+        "nho": "- **113**: gọi Công an khi có người đang làm hại bạn hoặc bạn đang gặp nguy hiểm.\n- **115**: gọi Cấp cứu khi có người bị thương, chảy máu nhiều, ngất xỉu.\n- **111**: gọi khi bạn cần được giúp đỡ, bảo vệ, hoặc muốn kể chuyện.\n\nCả ba số đều gọi **miễn phí**.",
+        "chung": "- **113 – Công an**: khi bạn hoặc người khác đang bị tấn công, đe dọa, bắt giữ, theo dõi, hoặc có nguy hiểm ngay lúc này.\n- **115 – Cấp cứu y tế**: khi có người bị thương nặng, chảy máu nhiều, khó thở, ngất, hoặc đã tự làm hại bản thân.\n- **111 – Bảo vệ trẻ em**: khi cần tư vấn, hỗ trợ, báo tin trẻ em bị xâm hại, bạo lực, bỏ rơi, hay nghi ngờ mua bán người.\n\nCác số này gọi miễn phí. Khi gọi, hãy nói rõ: chuyện gì đang xảy ra, ở đâu (địa chỉ, mốc dễ nhận ra), có ai bị thương không."
+      },
+      "src": [
+        "VNE_111"
+      ],
+      "next": [
+        "goi-111",
+        "khi-bi-xam-hai"
+      ]
+    },
+    {
+      "id": "nguoi-la-tren-mang",
+      "topic": "tren-mang",
+      "title": "Người lạ làm quen trên mạng",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "người lạ trên mạng",
+        "làm quen trên mạng",
+        "bạn trên mạng",
+        "quen qua mạng",
+        "kết bạn facebook",
+        "nhắn tin làm quen",
+        "game online",
+        "chơi game",
+        "rủ gặp mặt",
+        "hẹn gặp ngoài đời",
+        "người yêu qua mạng",
+        "kết bạn tiktok",
+        "nhắn tin riêng",
+        "nạp thẻ game"
+      ],
+      "q": [
+        "Có người lạ trên mạng làm quen thì sao?",
+        "Bạn trên mạng rủ gặp mặt có nên đi không?",
+        "Người lạ nhắn tin cho mình trong game"
+      ],
+      "a": {
+        "nho": "Người trên mạng có thể không phải là người như họ nói.\n- Không cho người lạ biết tên thật, trường học, địa chỉ, số điện thoại.\n- Không gửi ảnh của mình cho người lạ.\n- Không đi gặp người quen trên mạng.\n- Ai nhắn tin làm bạn sợ hay khó chịu, hãy cho bố mẹ, thầy cô xem ngay.",
+        "chung": "Trên mạng, ai cũng có thể giả danh: giả làm bạn cùng tuổi, người tuyển mẫu ảnh, “anh chị” hỗ trợ game… Nguy cơ không chỉ đến từ người lạ mà cả người quen.\n\n- Giữ kín thông tin cá nhân: tên trường, địa chỉ, lịch sinh hoạt, ảnh mặc đồng phục.\n- Cảnh giác khi được khen quá mức, tặng quà, nạp thẻ game, rồi rủ chuyển sang nhắn tin riêng.\n- Không bật camera, không gửi ảnh, video riêng tư cho bất kỳ ai.\n- Không đi gặp người chỉ quen qua mạng khi chưa có sự đồng ý và đi cùng của cha mẹ.\n- Biết cách chặn, báo cáo tài khoản xấu và lưu bằng chứng.\n\nKhi thấy bất an, hãy dừng lại và kể với người lớn tin cậy."
+      },
+      "src": [
+        "TN_MANG",
+        "CAND_SO"
+      ],
+      "next": [
+        "xin-anh",
+        "bi-de-doa-anh",
+        "dau-hieu-canh-giac"
+      ]
+    },
+    {
+      "id": "xin-anh",
+      "topic": "tren-mang",
+      "title": "Có người xin ảnh riêng tư",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "xin ảnh",
+        "đòi ảnh",
+        "gửi ảnh",
+        "ảnh nóng",
+        "ảnh nhạy cảm",
+        "ảnh khỏa thân",
+        "ảnh riêng tư",
+        "gửi clip",
+        "gọi video",
+        "bật camera",
+        "chụp ảnh gửi",
+        "lỡ gửi ảnh",
+        "đã gửi ảnh"
+      ],
+      "q": [
+        "Có người xin ảnh nhạy cảm thì sao?",
+        "Mình lỡ gửi ảnh rồi phải làm gì?",
+        "Người yêu đòi ảnh riêng tư"
+      ],
+      "a": {
+        "nho": "Nếu có ai xin ảnh bạn không mặc quần áo, hay ảnh vùng riêng tư, hãy **từ chối**.\n\nĐừng trả lời người đó nữa. Hãy cho bố mẹ, thầy cô xem tin nhắn đó ngay.\n\nBạn sẽ không bị mắng vì đã kể.",
+        "chung": "**Không gửi** ảnh, video nhạy cảm cho bất kỳ ai, kể cả bạn thân, người yêu. Khi đã gửi đi, bạn không còn kiểm soát được hình ảnh đó.\n\nNếu có người xin hoặc ép bạn gửi:\n- Từ chối dứt khoát, ngừng trò chuyện, chặn tài khoản.\n- Chụp màn hình tin nhắn, lưu tên tài khoản làm bằng chứng.\n- Kể với người lớn tin cậy, báo cáo tài khoản với nền tảng mạng xã hội.\n\nNếu bạn **đã lỡ gửi**: đừng hoảng sợ và đừng tự trách. Bạn không có lỗi khi bị lừa. Đừng gửi thêm, đừng chuyển tiền. Hãy kể với người lớn tin cậy và gọi **111** hoặc **113** để được giúp."
+      },
+      "src": [
+        "TN_MANG"
+      ],
+      "next": [
+        "bi-de-doa-anh",
+        "nguoi-la-tren-mang"
+      ]
+    },
+    {
+      "id": "bi-de-doa-anh",
+      "topic": "tren-mang",
+      "title": "Bị dọa tung ảnh, tống tiền",
+      "titleNho": "Khi có người đe dọa bạn trên mạng",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "dọa tung ảnh",
+        "tung ảnh",
+        "phát tán ảnh",
+        "dọa đăng ảnh",
+        "tống tiền",
+        "đòi tiền",
+        "bị đe dọa",
+        "bị dọa",
+        "bị tống tiền",
+        "nếu không gửi tiền",
+        "bị cắt ghép ảnh",
+        "ghép ảnh",
+        "dọa gửi cho bố mẹ",
+        "bị hack tài khoản"
+      ],
+      "q": [
+        "Bị dọa tung ảnh thì làm sao?",
+        "Có người đòi tiền nếu không sẽ đăng ảnh",
+        "Bị cắt ghép ảnh nhạy cảm phải làm gì?"
+      ],
+      "a": {
+        "nho": "Nếu có ai dọa đăng ảnh của bạn hay bắt bạn làm điều gì đó, bạn **không phải sợ một mình**.\n\nHãy cho bố mẹ, thầy cô xem ngay tin nhắn đó. Đừng làm theo lời người đó. Người lớn sẽ giúp bạn.",
+        "chung": "Đe dọa tung ảnh là hành vi phạm tội, và người có lỗi là kẻ đe dọa, không phải bạn.\n\n1. **Không làm theo**: không gửi thêm ảnh, không chuyển tiền. Làm theo thường khiến kẻ xấu đòi thêm.\n2. **Giữ bằng chứng**: chụp màn hình tin nhắn, tên tài khoản, đường link, số tài khoản ngân hàng (nếu có). Không xóa cuộc trò chuyện.\n3. **Chặn và báo cáo** tài khoản với mạng xã hội, sau khi đã lưu bằng chứng.\n4. **Kể** với người lớn tin cậy và gọi **113** hoặc **111** để được hỗ trợ.\n\nBạn không đơn độc. Chuyện này có thể giải quyết được."
+      },
+      "src": [
+        "TN_MANG",
+        "BYT_111",
+        "CAND_UC"
+      ],
+      "next": [
+        "xin-anh",
+        "cam-xuc"
+      ]
+    },
+    {
+      "id": "bat-nat-tren-mang",
+      "topic": "tren-mang",
+      "title": "Bị bắt nạt, bôi nhọ trên mạng",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "bắt nạt trên mạng",
+        "bị bêu xấu",
+        "bị nói xấu trên mạng",
+        "bị đăng ảnh xấu",
+        "lập nhóm nói xấu",
+        "bị chửi trên mạng",
+        "bị bóc phốt",
+        "tin đồn trên mạng",
+        "bị giả mạo tài khoản",
+        "lập facebook giả",
+        "bị bình luận xấu"
+      ],
+      "q": [
+        "Bị nói xấu trên mạng thì sao?",
+        "Có người lập tài khoản giả mạo mình",
+        "Bị bắt nạt trên mạng phải làm gì?"
+      ],
+      "a": {
+        "nho": "Nếu có ai nói xấu, đăng ảnh xấu về bạn trên mạng, đừng trả lời lại. Hãy cho bố mẹ, thầy cô xem ngay để được giúp.",
+        "chung": "- Không đáp trả, không đôi co, vì có thể làm sự việc căng thẳng hơn.\n- Chụp màn hình, lưu đường link, ghi lại thời gian.\n- Chặn, báo cáo bài viết, tài khoản với mạng xã hội; nhờ bạn bè cùng báo cáo.\n- Báo với giáo viên chủ nhiệm, gia đình; nếu bị cắt ghép ảnh, đe dọa, hãy báo công an hoặc gọi **111**.\n- Tạm nghỉ mạng xã hội nếu thấy quá áp lực. Những gì người khác viết không quyết định con người bạn."
+      },
+      "src": [
+        "BYT_111",
+        "CAND_SO"
+      ],
+      "next": [
+        "bi-de-doa-anh",
+        "cam-xuc",
+        "bat-nat"
+      ]
+    },
+    {
+      "id": "khong-phai-loi",
+      "topic": "cam-xuc",
+      "title": "Có phải lỗi của mình không?",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "lỗi của em",
+        "lỗi của mình",
+        "lỗi của con",
+        "tại em",
+        "tại mình",
+        "có phải lỗi",
+        "em có lỗi",
+        "mình có lỗi",
+        "tự trách",
+        "đáng bị",
+        "em thấy bẩn",
+        "mình thấy bẩn",
+        "ghê tởm bản thân",
+        "xấu hổ quá"
+      ],
+      "q": [
+        "Có phải lỗi của mình không?",
+        "Mình thấy xấu hổ và tự trách",
+        "Tại mình nên mới bị như vậy?"
+      ],
+      "a": {
+        "nho": "Đó **không phải** lỗi của bạn. Không bao giờ là lỗi của bạn.\n\nNgười lớn làm sai thì người lớn phải chịu trách nhiệm. Bạn đã rất dũng cảm khi nói ra. Hãy kể cho người lớn bạn tin để được giúp nhé.",
+        "chung": "Nếu ai đó làm tổn thương bạn, đó **không phải** lỗi của bạn, dù bạn đã mặc gì, đã đi đâu, đã tin ai, đã im lặng hay chưa kể ngay.\n\nNhiều người bị xâm hại cảm thấy xấu hổ hoặc tự trách mình. Cảm giác đó là bình thường, nhưng không có nghĩa là bạn có lỗi. Trách nhiệm hoàn toàn thuộc về người đã làm hại bạn.\n\nBạn xứng đáng được lắng nghe và giúp đỡ. Nếu muốn, hãy kể với mình thêm, hoặc gọi **111** để nói chuyện với người thật."
+      },
+      "src": [
+        "CAND_BV"
+      ],
+      "next": [
+        "cam-xuc",
+        "ke-cho-ai",
+        "goi-111"
+      ]
+    },
+    {
+      "id": "cam-xuc",
+      "topic": "cam-xuc",
+      "title": "Mình thấy sợ, buồn, không ngủ được",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "buồn",
+        "sợ hãi",
+        "lo lắng",
+        "căng thẳng",
+        "mất ngủ",
+        "ác mộng",
+        "khóc",
+        "cô đơn",
+        "không ai hiểu",
+        "tâm lý",
+        "trầm cảm",
+        "áp lực",
+        "hoảng loạn",
+        "không vui",
+        "mệt mỏi",
+        "tủi thân",
+        "muốn khóc"
+      ],
+      "q": [
+        "Mình thấy buồn và sợ quá",
+        "Mình hay gặp ác mộng, không ngủ được",
+        "Làm sao để bớt lo lắng?"
+      ],
+      "a": {
+        "nho": "Khi gặp chuyện đáng sợ, bạn có thể thấy buồn, sợ, muốn khóc, khó ngủ. Điều đó là **bình thường**.\n\n- Hãy thử hít thật sâu, thở ra thật chậm vài lần.\n- Ôm một món đồ bạn thích, ở gần người bạn tin.\n- Kể cho người lớn nghe cảm giác của bạn.\n\nBạn có muốn thử bài tập hít thở cùng mình không?",
+        "chung": "Sau một chuyện đáng sợ, nhiều người thấy lo âu, buồn bã, giận dữ, xấu hổ, khó ngủ, hay giật mình, khó tập trung. Đó là phản ứng bình thường của cơ thể và tâm trí, không phải vì bạn yếu đuối.\n\nNhững điều có thể giúp:\n- Chia sẻ với người bạn tin, hoặc giáo viên tư vấn tâm lý ở trường.\n- Giữ nếp sinh hoạt: ăn uống, ngủ nghỉ đều đặn; vận động nhẹ.\n- Thử bài tập hít thở trong mục **Hỗ trợ**.\n- Viết ra giấy những gì bạn cảm thấy.\n\nNếu cảm giác này kéo dài, ngày càng nặng hoặc bạn có ý nghĩ làm hại bản thân, hãy nói ngay với người lớn và gọi **111**. Tổng đài cũng hỗ trợ cả những bạn đang khủng hoảng tâm lý."
+      },
+      "src": [
+        "BYT_111"
+      ],
+      "next": [
+        "hit-tho",
+        "khong-phai-loi",
+        "goi-111"
+      ]
+    },
+    {
+      "id": "hit-tho",
+      "topic": "cam-xuc",
+      "title": "Bài tập hít thở cho bình tĩnh",
+      "tool": "hit-tho",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "hít thở",
+        "bình tĩnh",
+        "thở sâu",
+        "thư giãn",
+        "bài tập thở",
+        "làm sao bình tĩnh",
+        "tim đập nhanh",
+        "run rẩy",
+        "hoảng"
+      ],
+      "q": [
+        "Làm sao để bình tĩnh lại?",
+        "Hướng dẫn hít thở"
+      ],
+      "a": {
+        "nho": "Mình cùng thở nhé:\n1. Hít vào thật chậm, đếm 1, 2, 3, 4.\n2. Thở ra thật chậm, như đang thổi bong bóng xà phòng.\n\nLàm 5 lần nhé. Bạn có thể mở **Hỗ trợ → Hít thở cùng ALLY** để thở theo vòng tròn.",
+        "chung": "Khi thấy hoảng sợ, hãy thử:\n1. Hít vào bằng mũi, đếm chậm đến 4.\n2. Giữ hơi, đếm đến 2.\n3. Thở ra từ từ bằng miệng, đếm đến 6.\n\nLặp lại 5 lần. Bạn có thể mở **Hỗ trợ → Hít thở cùng ALLY** để có vòng tròn hướng dẫn nhịp thở."
+      },
+      "src": [],
+      "next": [
+        "cam-xuc"
+      ]
+    },
+    {
+      "id": "quyen-tre-em",
+      "topic": "phap-luat",
+      "title": "Quyền được bảo vệ của trẻ em",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "quyền trẻ em",
+        "quyền của trẻ em",
+        "quyền được bảo vệ",
+        "trẻ em có quyền",
+        "luật trẻ em",
+        "quyền bí mật đời sống riêng tư",
+        "quyền riêng tư của trẻ"
+      ],
+      "q": [
+        "Trẻ em có những quyền gì?",
+        "Luật Trẻ em bảo vệ trẻ thế nào?"
+      ],
+      "a": {
+        "nho": "Mọi trẻ em đều có quyền được an toàn, được yêu thương, được đi học, được vui chơi và được bảo vệ khỏi những người làm hại mình.\n\nKhi bị làm hại, bạn có quyền được giúp đỡ. Người lớn và các cô chú ở số **111** có trách nhiệm giúp bạn.",
+        "chung": "Luật Trẻ em 2016 quy định trẻ em có các quyền được bảo vệ, trong đó có:\n- Quyền bí mật đời sống riêng tư (Điều 21).\n- Quyền được bảo vệ để không bị xâm hại tình dục (Điều 25).\n- Quyền được bảo vệ để không bị bóc lột sức lao động (Điều 26).\n- Quyền được bảo vệ để không bị bạo lực, bỏ rơi, bỏ mặc (Điều 27).\n- Quyền được bảo vệ để không bị mua bán, bắt cóc, đánh tráo, chiếm đoạt (Điều 28).\n\nGia đình, nhà trường, cơ quan, tổ chức và mọi người đều có trách nhiệm bảo vệ các quyền này."
+      },
+      "src": [
+        "LTE"
+      ],
+      "next": [
+        "trach-nhiem-bao-tin",
+        "bao-mat-thong-tin"
+      ]
+    },
+    {
+      "id": "phap-luat-hinh-su",
+      "topic": "phap-luat",
+      "title": "Pháp luật xử lý xâm hại tình dục trẻ em thế nào?",
+      "titleNho": "Người làm hại trẻ em có bị phạt không?",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "bị phạt",
+        "đi tù",
+        "bao nhiêu năm tù",
+        "xử lý hình sự",
+        "bộ luật hình sự",
+        "điều 146",
+        "điều 142",
+        "điều 145",
+        "tội dâm ô",
+        "tội hiếp dâm",
+        "khung hình phạt",
+        "mức án",
+        "có bị bắt không",
+        "bị xử lý thế nào",
+        "pháp luật xử lý"
+      ],
+      "q": [
+        "Xâm hại tình dục trẻ em bị phạt thế nào?",
+        "Tội dâm ô bị đi tù bao nhiêu năm?",
+        "Kẻ xâm hại có bị bắt không?"
+      ],
+      "a": {
+        "nho": "Người làm hại trẻ em là làm sai pháp luật và sẽ bị công an xử lý.\n\nViệc quan trọng nhất của bạn là kể với người lớn bạn tin, để người lớn và công an bảo vệ bạn.",
+        "thcs": "Có. Xâm hại tình dục trẻ em là **tội phạm**. Người làm có thể bị công an điều tra và bị phạt tù nhiều năm, có trường hợp bị phạt rất nặng.\n\nVì vậy, việc bạn kể ra không phải là “làm lớn chuyện”, mà là giúp bảo vệ bạn và những bạn khác.",
+        "chung": "Bộ luật Hình sự 2015 (sửa đổi, bổ sung năm 2017 và 2025) có nhóm tội xâm hại tình dục người dưới 16 tuổi:\n- Điều 142: Tội hiếp dâm người dưới 16 tuổi. Mức cao nhất là tù chung thân hoặc tử hình.\n- Điều 144: Tội cưỡng dâm người từ đủ 13 tuổi đến dưới 16 tuổi.\n- Điều 145: Tội giao cấu hoặc thực hiện hành vi quan hệ tình dục khác với người từ đủ 13 tuổi đến dưới 16 tuổi.\n- Điều 146: Tội dâm ô đối với người dưới 16 tuổi. Mức cao nhất là 12 năm tù.\n- Điều 147: Tội sử dụng người dưới 16 tuổi vào mục đích khiêu dâm.\n\nCác hành vi hành hạ, đánh đập, xúc phạm trẻ em cũng có thể bị xử phạt hành chính hoặc xử lý hình sự tùy mức độ. Mức hình phạt cụ thể do tòa án quyết định; hãy tra cứu văn bản đầy đủ ở nguồn bên dưới."
+      },
+      "src": [
+        "BLHS"
+      ],
+      "next": [
+        "trach-nhiem-bao-tin",
+        "quyen-tre-em"
+      ]
+    },
+    {
+      "id": "trach-nhiem-bao-tin",
+      "topic": "phap-luat",
+      "title": "Ai có trách nhiệm báo tin khi trẻ bị xâm hại?",
+      "ages": [
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "trách nhiệm báo tin",
+        "tố giác",
+        "báo tin",
+        "có phải báo",
+        "phải báo ai",
+        "báo công an",
+        "thông báo xâm hại",
+        "biết mà không báo",
+        "che giấu",
+        "người biết chuyện",
+        "tố cáo"
+      ],
+      "q": [
+        "Biết trẻ bị xâm hại thì có phải báo không?",
+        "Báo tin xâm hại cho ai?",
+        "Ai có trách nhiệm tố giác?"
+      ],
+      "a": {
+        "chung": "Theo Luật Trẻ em, mọi người, gia đình, nhà trường, cơ quan, tổ chức đều có trách nhiệm thông tin, thông báo, tố giác hành vi xâm hại trẻ em cho cơ quan có thẩm quyền.\n\nNếu bạn biết một bạn đang bị xâm hại, bạn có thể báo cho thầy cô, gọi **111** hoặc **113**. Việc báo tin là để bảo vệ bạn ấy, không phải “mách lẻo”.",
+        "lon": "Theo khoản 1 Điều 51 Luật Trẻ em 2016, cơ quan, tổ chức, cơ sở giáo dục, gia đình, cá nhân có trách nhiệm thông tin, thông báo, tố giác hành vi xâm hại trẻ em, các trường hợp trẻ em bị xâm hại hoặc có nguy cơ bị xâm hại cho cơ quan có thẩm quyền.\n\nKênh báo tin: Tổng đài 111 (miễn phí, 24/7), công an nơi gần nhất (113 khi khẩn cấp), Ủy ban nhân dân hoặc người làm công tác bảo vệ trẻ em cấp xã. Không tự điều tra, không đối chất với người bị nghi ngờ trước mặt trẻ, và không đăng tải sự việc lên mạng xã hội."
+      },
+      "src": [
+        "LTE"
+      ],
+      "next": [
+        "khi-tre-ke",
+        "bao-mat-thong-tin"
+      ]
+    },
+    {
+      "id": "bao-mat-thong-tin",
+      "topic": "phap-luat",
+      "title": "Bảo vệ thông tin của trẻ bị xâm hại",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "đăng lên mạng",
+        "chia sẻ lên mạng",
+        "đăng facebook",
+        "lộ danh tính",
+        "bảo mật thông tin",
+        "thông tin của nạn nhân",
+        "quay video",
+        "đăng ảnh trẻ",
+        "dữ liệu cá nhân",
+        "bí mật đời tư",
+        "ai được biết chuyện"
+      ],
+      "q": [
+        "Có được đăng chuyện trẻ bị xâm hại lên mạng không?",
+        "Thông tin của nạn nhân có được giữ kín không?"
+      ],
+      "a": {
+        "nho": "Chuyện của bạn là chuyện riêng của bạn. Không ai được tự ý đăng chuyện hay ảnh của bạn lên mạng khi bạn và bố mẹ chưa đồng ý.",
+        "chung": "Thông tin về đời sống riêng tư, bí mật cá nhân của trẻ em được pháp luật bảo vệ. Luật Trẻ em cấm công bố, tiết lộ những thông tin này mà không có sự đồng ý của trẻ từ đủ 7 tuổi trở lên và của cha mẹ, người giám hộ.\n\nVì vậy, khi biết một bạn bị xâm hại: không chụp ảnh, quay video, không đăng hay chia sẻ lên mạng, không bàn tán. Điều đó có thể làm bạn ấy tổn thương thêm.",
+        "lon": "Khoản 11 Điều 6 Luật Trẻ em 2016 nghiêm cấm công bố, tiết lộ thông tin về đời sống riêng tư, bí mật cá nhân của trẻ em mà không được sự đồng ý của trẻ em từ đủ 7 tuổi trở lên và của cha, mẹ, người giám hộ. Luật Bảo vệ dữ liệu cá nhân 2025 (hiệu lực từ 01/01/2026, Điều 24) cũng yêu cầu sự đồng ý của trẻ từ đủ 7 tuổi và người đại diện theo pháp luật khi xử lý dữ liệu cá nhân của trẻ nhằm công bố, tiết lộ thông tin đời sống riêng tư.\n\nKhi trẻ bị xâm hại: không đăng hình ảnh, tên, trường lớp, địa chỉ của trẻ lên mạng xã hội, kể cả với ý tốt “để cảnh báo”. Hãy báo cơ quan chức năng và để họ xử lý."
+      },
+      "src": [
+        "LTE",
+        "LSVN_DL"
+      ],
+      "next": [
+        "trach-nhiem-bao-tin",
+        "an-danh"
+      ]
+    },
+    {
+      "id": "dau-hieu-tre-bi-xam-hai",
+      "topic": "nguoi-lon",
+      "title": "Dấu hiệu trẻ có thể đang bị xâm hại",
+      "ages": [
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "dấu hiệu trẻ bị xâm hại",
+        "nhận biết trẻ bị xâm hại",
+        "con có dấu hiệu",
+        "con thay đổi",
+        "biểu hiện trẻ bị xâm hại",
+        "con không muốn đi học",
+        "nghi ngờ con bị",
+        "làm sao biết con bị",
+        "dấu hiệu bị xâm hại",
+        "học sinh có dấu hiệu"
+      ],
+      "q": [
+        "Dấu hiệu nhận biết trẻ bị xâm hại?",
+        "Làm sao biết con mình bị xâm hại?",
+        "Con thay đổi tính nết có phải bị xâm hại không?"
+      ],
+      "a": {
+        "thpt": "Nếu em nhỏ trong nhà hoặc bạn bè có những thay đổi sau, hãy để ý và báo người lớn:\n- Bỗng nhiên sợ hãi, né tránh một người cụ thể; không muốn đến một nơi nào đó.\n- Thu mình, cáu gắt, hay khóc, gặp ác mộng, học sa sút.\n- Có vết thương không rõ lý do; đau ở vùng kín.\n- Có hiểu biết hoặc hành vi về tình dục không phù hợp với tuổi.\n- Có quà, tiền, điện thoại không rõ nguồn gốc; giấu giếm tin nhắn.\n\nMột dấu hiệu riêng lẻ chưa khẳng định điều gì, nhưng là lý do để quan tâm, hỏi han nhẹ nhàng và tìm người lớn giúp đỡ.",
+        "lon": "Theo một chuyên gia giáo dục chia sẻ trên Báo Thanh Niên (9/2024), có thể để ý 4 nhóm dấu hiệu:\n- **Tâm lý**: thay đổi tính nết đột ngột, cáu gắt, lo âu, thu mình, có cảm giác tội lỗi, xấu hổ.\n- **Thể chất**: vết bầm, trầy xước, thương tích không rõ lý do, kể cả ở vùng nhạy cảm; đau, viêm nhiễm vùng kín, tiểu buốt, tiểu nhiều. Cần đưa trẻ đi khám ngay.\n- **Hành vi**: có hành vi, hiểu biết về tình dục không phù hợp lứa tuổi; giảm sút tập trung, học tập.\n- **Xã hội**: tránh né bạn bè, hoạt động từng yêu thích; mất lòng tin vào người lớn, hoặc sợ một người cụ thể.\n\nMột dấu hiệu riêng lẻ chưa khẳng định trẻ bị xâm hại, nhưng là lý do để quan tâm, trò chuyện nhẹ nhàng và tìm hỗ trợ (Tổng đài 111)."
+      },
+      "src": [
+        "TN_4DH",
+        "BYT_NB",
+        "TN_BH"
+      ],
+      "next": [
+        "khi-tre-ke",
+        "day-con"
+      ]
+    },
+    {
+      "id": "khi-tre-ke",
+      "topic": "nguoi-lon",
+      "title": "Khi trẻ kể bị xâm hại, người lớn nên làm gì?",
+      "ages": [
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "con kể bị",
+        "con nói bị",
+        "học sinh kể",
+        "trẻ kể",
+        "khi trẻ kể",
+        "con tâm sự",
+        "con nói với tôi",
+        "cháu kể",
+        "phụ huynh nên làm gì",
+        "giáo viên nên làm gì",
+        "con bị xâm hại phải làm sao",
+        "phát hiện con bị",
+        "con tôi bị",
+        "con tôi kể",
+        "cháu tôi kể",
+        "con tôi nói",
+        "học sinh tôi kể",
+        "học sinh của tôi bị",
+        "con mình bị"
+      ],
+      "q": [
+        "Con kể bị xâm hại thì cha mẹ nên làm gì?",
+        "Học sinh tâm sự bị xâm hại, giáo viên xử lý thế nào?",
+        "Phát hiện con bị xâm hại phải làm sao?"
+      ],
+      "a": {
+        "lon": "Cách người lớn phản ứng trong lần đầu trẻ kể ảnh hưởng rất lớn đến việc trẻ có tiếp tục chia sẻ và hồi phục hay không.\n- **Giữ bình tĩnh**, lắng nghe, không tỏ ra hoảng hốt hay giận dữ trước mặt trẻ.\n- **Tin trẻ** và nói: “Con đã làm đúng khi kể. Đây không phải lỗi của con.”\n- **Không tra hỏi dồn dập**, không bắt trẻ kể lại nhiều lần, không gợi ý câu trả lời. Ghi lại những gì trẻ tự kể, kèm thời gian.\n- **Không hứa giữ bí mật**; giải thích rằng cần người khác giúp để con an toàn.\n- **Bảo đảm an toàn**: không để trẻ tiếp xúc với người bị nghi ngờ; không tự đối chất với người đó trước mặt trẻ.\n- **Báo tin**: gọi Tổng đài 111 hoặc báo công an; đưa trẻ đi khám nếu cần.\n- **Bảo mật**: không chia sẻ lên mạng xã hội.\n- **Đồng hành lâu dài**: tìm hỗ trợ tâm lý cho trẻ và cho cả gia đình."
+      },
+      "src": [
+        "CAND_BV",
+        "TN_QUEN"
+      ],
+      "next": [
+        "sau-khi-bi-xam-hai",
+        "trach-nhiem-bao-tin"
+      ]
+    },
+    {
+      "id": "day-con",
+      "topic": "nguoi-lon",
+      "title": "Dạy trẻ kỹ năng phòng tránh xâm hại",
+      "ages": [
+        "lon"
+      ],
+      "k": [
+        "dạy con",
+        "dạy trẻ",
+        "dạy học sinh",
+        "giáo dục giới tính",
+        "kỹ năng phòng tránh",
+        "phòng tránh xâm hại",
+        "phòng chống xâm hại",
+        "bảo vệ con",
+        "cách dạy con tự bảo vệ",
+        "nói chuyện với con"
+      ],
+      "q": [
+        "Dạy con phòng tránh xâm hại thế nào?",
+        "Nên dạy trẻ những kỹ năng gì?"
+      ],
+      "a": {
+        "lon": "Một số gợi ý theo độ tuổi:\n- **Mầm non, tiểu học**: gọi đúng tên các bộ phận cơ thể; quy tắc đồ lót; bí mật an toàn và không an toàn; bàn tay 5 người tin cậy; mật khẩu gia đình khi có người lạ đón.\n- **THCS**: quy tắc 6 vòng tròn; nhận biết dấu hiệu dụ dỗ; an toàn trên mạng; kỹ năng từ chối và kể lại.\n- **THPT**: sự đồng ý và tôn trọng ranh giới; an toàn trong các mối quan hệ, hẹn hò; xử lý khi bị đe dọa, tống tiền qua mạng; giúp đỡ bạn bè.\n\nQuan trọng nhất là giữ kênh trò chuyện cởi mở hằng ngày, để trẻ biết rằng kể với cha mẹ, thầy cô điều gì cũng sẽ được lắng nghe, không bị mắng."
+      },
+      "src": [
+        "TN_DAY",
+        "CAND_DAY"
+      ],
+      "next": [
+        "an-toan-mang-cho-con",
+        "sau-vong-tron",
+        "vung-rieng-tu"
+      ]
+    },
+    {
+      "id": "an-toan-mang-cho-con",
+      "topic": "nguoi-lon",
+      "title": "Bảo vệ con trên môi trường mạng",
+      "ages": [
+        "lon"
+      ],
+      "k": [
+        "con dùng điện thoại",
+        "con chơi game",
+        "quản lý con trên mạng",
+        "bảo vệ con trên mạng",
+        "con dùng mạng xã hội",
+        "kiểm soát của phụ huynh",
+        "con lên mạng",
+        "con xem tiktok",
+        "môi trường mạng"
+      ],
+      "q": [
+        "Làm sao bảo vệ con khi dùng mạng?",
+        "Con chơi game online có nguy hiểm không?"
+      ],
+      "a": {
+        "lon": "- Đặt thiết bị ở không gian chung; thống nhất thời gian và quy tắc sử dụng.\n- Bật chế độ kiểm soát của phụ huynh, giới hạn độ tuổi trên ứng dụng; kiểm tra cài đặt riêng tư cùng con.\n- Trò chuyện với con về người lạ trên mạng, việc không gửi ảnh riêng tư và không đi gặp người quen qua mạng.\n- Để ý dấu hiệu: con giấu điện thoại, có quà, thẻ nạp game không rõ nguồn gốc, lo âu khi nhận tin nhắn.\n- Dạy con lưu bằng chứng và kể ngay khi bị đe dọa; cam kết không phạt con khi con kể.\n\nNguy cơ xâm hại trực tuyến không chỉ đến từ người lạ mà cả người quen. Khi phát hiện, hãy báo Tổng đài 111 hoặc công an."
+      },
+      "src": [
+        "TN_MANG",
+        "CAND_SO",
+        "CAND_UC"
+      ],
+      "next": [
+        "bi-de-doa-anh",
+        "day-con"
+      ]
+    },
+    {
+      "id": "ve-ban-an",
+      "topic": "ung-dung",
+      "title": "ALLY là ai?",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "bạn là ai",
+        "ally là ai",
+        "ally",
+        "ally nghĩa là gì",
+        "an là ai",
+        "bạn là người hay máy",
+        "bạn là robot",
+        "chatbot",
+        "bạn có phải người thật",
+        "ai làm ra bạn",
+        "bạn tên gì"
+      ],
+      "q": [
+        "ALLY là ai?",
+        "Bạn có phải người thật không?",
+        "Tên ALLY có ý nghĩa gì?"
+      ],
+      "a": {
+        "nho": "Mình là **ALLY** (nghĩa là **“Người bạn đồng hành”**), một người bạn nhỏ trên máy luôn sẵn sàng lắng nghe bạn.\n\nMình không phải người thật. Khi cần giúp đỡ, bạn hãy tìm người lớn mà bạn tin, hoặc gọi số **111**. Gọi số này không mất tiền.",
+        "chung": "Mình là **ALLY** (trong tiếng Anh nghĩa là **“Người bạn đồng hành / Liên minh bảo vệ”**), một chatbot do nhóm học sinh nghiên cứu khoa học xây dựng để hỗ trợ phòng, chống xâm hại trẻ em.\n\nMình không phải người thật và **không thay thế** cho bất kỳ chuyên gia tâm lý, bác sĩ, công an hay cơ quan nào. Mình chỉ mang tính chất hỗ trợ, lắng nghe chia sẻ, cung cấp thông tin chính thống và hỗ trợ kết nối.\n\nNếu bạn cần nói chuyện với người thật hoặc cần can thiệp bảo vệ, hãy gọi **111** (miễn phí, 24/7) hoặc **113** khi khẩn cấp."
+      },
+      "src": [],
+      "next": [
+        "an-danh",
+        "cach-dung"
+      ]
+    },
+    {
+      "id": "an-danh",
+      "topic": "ung-dung",
+      "title": "Thông tin của mình có bị lộ không?",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "lộ thông tin",
+        "bị lộ",
+        "ẩn danh",
+        "danh tính",
+        "app có lưu",
+        "có lưu lại không",
+        "có ai đọc được",
+        "ai đọc được",
+        "thông tin của mình",
+        "thông tin của em",
+        "quyền riêng tư",
+        "có ai biết không"
+      ],
+      "q": [
+        "Thông tin của mình có bị lộ không?",
+        "Ứng dụng có lưu lại cuộc trò chuyện không?",
+        "Có ai đọc được tin nhắn của mình không?"
+      ],
+      "a": {
+        "nho": "Bạn không cần nói tên hay địa chỉ với mình.\n\nMình không kể chuyện của bạn cho ai cả. Khi nói chuyện xong, bạn có thể bấm nút **Thoát nhanh** ở trên cùng để xóa hết.",
+        "chung": "Bạn không cần cho mình biết tên, địa chỉ hay số điện thoại.\n\n- Cuộc trò chuyện chỉ nằm trên máy của bạn. Mặc định ứng dụng không lưu lại khi bạn đóng ứng dụng.\n- Ứng dụng **không tự gửi** thông tin của bạn cho bất kỳ ai. Nếu muốn nhờ Tổng đài 111 giúp, chính bạn quyết định có gọi hay gửi thông tin hay không.\n- Nút **Thoát nhanh** ở góc trên giúp bạn rời ứng dụng ngay và xóa cuộc trò chuyện.\n\nNếu bạn dùng chung điện thoại với người khác, hãy bấm Thoát nhanh khi trò chuyện xong nhé."
+      },
+      "src": [],
+      "next": [
+        "ve-ban-an",
+        "goi-111"
+      ]
+    },
+    {
+      "id": "cach-dung",
+      "topic": "ung-dung",
+      "title": "Ứng dụng có những gì?",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "hướng dẫn sử dụng",
+        "cách dùng",
+        "app có gì",
+        "ứng dụng có gì",
+        "bạn giúp được gì",
+        "bạn làm được gì",
+        "chức năng",
+        "tính năng"
+      ],
+      "q": [
+        "Bạn giúp được gì cho mình?",
+        "Ứng dụng này có những gì?"
+      ],
+      "a": {
+        "nho": "Mình có thể:\n- Trả lời câu hỏi của bạn về cách giữ an toàn.\n- Nghe bạn kể chuyện.\n- Cho bạn chơi trả lời tình huống.\n- Giúp bạn gọi nhanh số **111**, **113** bằng nút **SOS** ở góc trên.",
+        "chung": "Mình có thể giúp bạn:\n- **Trò chuyện**: hỏi bất cứ điều gì về phòng, chống xâm hại, hoặc kể chuyện bạn đang gặp.\n- **Tìm hiểu**: thư viện kiến thức theo lứa tuổi, có nguồn chính thống.\n- **Tình huống**: luyện cách ứng phó và tự kiểm tra định kỳ.\n- **Hỗ trợ**: số điện thoại khẩn cấp, bàn tay tin cậy, bài tập hít thở, chuẩn bị nội dung gọi 111.\n- Nút **SOS** luôn ở góc trên để gọi giúp đỡ nhanh. Nút **Thoát nhanh** giúp bạn rời ứng dụng ngay."
+      },
+      "src": [],
+      "next": [
+        "ve-ban-an",
+        "an-danh"
+      ]
+    },
+    {
+      "id": "chao",
+      "topic": "ung-dung",
+      "title": "Chào hỏi",
+      "hidden": true,
+      "action": "greet",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "xin chào",
+        "chào bạn",
+        "chào ally",
+        "hi ally",
+        "hello ally",
+        "ally ơi",
+        "chào an",
+        "chào",
+        "hello",
+        "hi",
+        "alo",
+        "hế lô",
+        "chào buổi sáng",
+        "chào buổi tối"
+      ],
+      "q": [
+        "Xin chào",
+        "Chào ALLY"
+      ],
+      "a": {
+        "chung": ""
+      },
+      "src": [],
+      "next": []
+    },
+    {
+      "id": "cam-on",
+      "topic": "ung-dung",
+      "title": "Cảm ơn",
+      "hidden": true,
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "cảm ơn",
+        "cám ơn",
+        "cảm ơn bạn",
+        "thanks",
+        "thank you",
+        "tks",
+        "camon"
+      ],
+      "q": [
+        "Cảm ơn bạn"
+      ],
+      "a": {
+        "chung": "Không có gì đâu. Mình luôn ở đây khi bạn cần. Nếu có chuyện gì làm bạn lo lắng, cứ quay lại kể với mình nhé."
+      },
+      "src": [],
+      "next": []
+    },
+    {
+      "id": "tam-biet",
+      "topic": "ung-dung",
+      "title": "Tạm biệt",
+      "hidden": true,
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "tạm biệt",
+        "bye",
+        "bai bai",
+        "hẹn gặp lại",
+        "mình đi đây",
+        "đi ngủ đây"
+      ],
+      "q": [
+        "Tạm biệt"
+      ],
+      "a": {
+        "chung": "Tạm biệt bạn! Hãy nhớ: bạn luôn có quyền được an toàn. Khi cần, hãy gọi **111** (miễn phí, 24/7) hoặc quay lại tìm mình nhé."
+      },
+      "src": [],
+      "next": []
+    },
+    {
+      "id": "vang",
+      "topic": "ung-dung",
+      "title": "Đồng ý",
+      "hidden": true,
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "ok",
+        "oke",
+        "okay",
+        "ừ",
+        "ừm",
+        "vâng",
+        "dạ",
+        "uk",
+        "ukm",
+        "được rồi",
+        "mình hiểu rồi",
+        "em hiểu rồi"
+      ],
+      "q": [
+        "Ok"
+      ],
+      "a": {
+        "chung": "Bạn còn muốn hỏi gì nữa không? Bạn có thể chọn một chủ đề bên dưới, hoặc kể cho mình nghe điều bạn đang nghĩ."
+      },
+      "src": [],
+      "next": [
+        "khi-bi-xam-hai",
+        "goi-111"
+      ]
+    },
+    {
+      "id": "muon-ke",
+      "topic": "ung-dung",
+      "title": "Muốn kể chuyện",
+      "hidden": true,
+      "action": "disclose",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "muốn kể",
+        "kể cho bạn nghe",
+        "có chuyện muốn nói",
+        "tâm sự",
+        "muốn tâm sự",
+        "muốn chia sẻ",
+        "em có chuyện",
+        "mình có chuyện",
+        "tôi có chuyện",
+        "con có chuyện",
+        "không biết nói với ai",
+        "nghe em kể",
+        "cần người nghe",
+        "chuyện khó nói"
+      ],
+      "q": [
+        "Mình muốn kể chuyện",
+        "Em có chuyện muốn kể"
+      ],
+      "a": {
+        "chung": ""
+      },
+      "src": [],
+      "next": []
+    },
+    {
+      "id": "tinh-huong-chat",
+      "topic": "ung-dung",
+      "title": "Luyện tình huống",
+      "hidden": true,
+      "action": "scenario",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "tình huống",
+        "câu hỏi tình huống",
+        "đố mình",
+        "đố em",
+        "kiểm tra kiến thức",
+        "câu đố",
+        "luyện tập",
+        "cho mình một tình huống"
+      ],
+      "q": [
+        "Cho mình một tình huống"
+      ],
+      "a": {
+        "chung": ""
+      },
+      "src": [],
+      "next": []
+    },
+    {
+      "id": "khan-cap",
+      "topic": "ung-dung",
+      "title": "Khẩn cấp",
+      "hidden": true,
+      "action": "emergency",
+      "ages": [
+        "nho",
+        "thcs",
+        "thpt",
+        "lon"
+      ],
+      "k": [
+        "khẩn cấp",
+        "sos",
+        "cứu hộ",
+        "cần giúp ngay",
+        "gọi giúp",
+        "số điện thoại khẩn cấp"
+      ],
+      "q": [
+        "Khẩn cấp"
+      ],
+      "a": {
+        "chung": ""
+      },
+      "src": [],
+      "next": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "n1",
+      "ages": [
+        "nho"
+      ],
+      "kind": "up",
+      "ref": "nguoi-la",
+      "q": "Một người lạ ở cổng trường nói: “Mẹ cháu bận, nhờ chú đến đón cháu.” Bạn nên làm gì?",
+      "o": [
+        "Đi theo chú vì chú biết tên mẹ",
+        "Không đi theo, hỏi mật khẩu gia đình và báo ngay cô giáo",
+        "Đứng chờ chú mua kem rồi đi"
+      ],
+      "a": 1,
+      "e": "Người lạ có thể nói dối. Chỉ đi với người bố mẹ đã dặn trước hoặc người nói đúng mật khẩu gia đình. Hãy báo ngay cho cô giáo hoặc bác bảo vệ."
+    },
+    {
+      "id": "n2",
+      "ages": [
+        "nho"
+      ],
+      "kind": "kt",
+      "ref": "vung-rieng-tu",
+      "q": "Vùng riêng tư trên cơ thể là ở đâu?",
+      "o": [
+        "Những chỗ được che bởi đồ bơi, đồ lót, và miệng",
+        "Bàn tay",
+        "Mái tóc"
+      ],
+      "a": 0,
+      "e": "Vùng riêng tư là những chỗ được che bởi đồ bơi, đồ lót và cả miệng. Không ai được nhìn hay chạm vào những chỗ đó."
+    },
+    {
+      "id": "n3",
+      "ages": [
+        "nho"
+      ],
+      "kind": "up",
+      "ref": "bi-mat",
+      "q": "Có người chạm vào vùng riêng tư của bạn rồi dặn: “Đây là bí mật của hai chú cháu mình.” Bạn làm gì?",
+      "o": [
+        "Giữ bí mật vì đã hứa",
+        "Nói KHÔNG, chạy đi và kể ngay cho người lớn bạn tin",
+        "Không làm gì cả"
+      ],
+      "a": 1,
+      "e": "Đây là bí mật xấu, không phải giữ. Hãy nói KHÔNG, chạy đi và kể ngay cho người lớn bạn tin."
+    },
+    {
+      "id": "n4",
+      "ages": [
+        "nho"
+      ],
+      "kind": "kt",
+      "ref": "bi-mat",
+      "q": "Bí mật nào là bí mật VUI?",
+      "o": [
+        "Món quà bất ngờ để tặng sinh nhật mẹ",
+        "Người lớn dặn đừng kể với bố mẹ chuyện họ chạm vào bạn",
+        "Một bạn dọa nếu kể ra sẽ đánh bạn"
+      ],
+      "a": 0,
+      "e": "Bí mật vui làm mọi người vui và sẽ sớm được kể ra. Bí mật làm bạn sợ hãi, khó chịu là bí mật xấu, cần kể ngay."
+    },
+    {
+      "id": "n5",
+      "ages": [
+        "nho"
+      ],
+      "kind": "up",
+      "ref": "ban-tay-tin-cay",
+      "q": "Nếu bị ai đó làm đau, bạn có thể kể với ai?",
+      "o": [
+        "Không kể với ai cả",
+        "Người lớn bạn tin như bố mẹ, ông bà, cô giáo, hoặc gọi 111",
+        "Chỉ kể với con mèo"
+      ],
+      "a": 1,
+      "e": "Hãy kể với người lớn bạn tin trong bàn tay tin cậy, hoặc gọi số 111. Gọi số này không mất tiền."
+    },
+    {
+      "id": "n6",
+      "ages": [
+        "nho"
+      ],
+      "kind": "kt",
+      "ref": "goi-111",
+      "q": "Số điện thoại 111 dùng để làm gì?",
+      "o": [
+        "Gọi đặt đồ ăn",
+        "Gọi khi trẻ em cần được giúp đỡ, bảo vệ",
+        "Gọi để hỏi giờ"
+      ],
+      "a": 1,
+      "e": "111 là tổng đài bảo vệ trẻ em. Gọi miễn phí, cả ngày lẫn đêm."
+    },
+    {
+      "id": "n7",
+      "ages": [
+        "nho"
+      ],
+      "kind": "up",
+      "ref": "nguoi-la-tren-mang",
+      "q": "Bạn đang chơi game thì có người lạ nhắn: “Gửi ảnh của em cho anh xem đi.” Bạn làm gì?",
+      "o": [
+        "Gửi ảnh vì anh ấy tốt bụng",
+        "Không gửi, không trả lời nữa và cho bố mẹ xem tin nhắn",
+        "Gửi ảnh của bạn khác"
+      ],
+      "a": 1,
+      "e": "Không gửi ảnh cho người lạ trên mạng. Hãy cho bố mẹ hoặc thầy cô xem tin nhắn đó."
+    },
+    {
+      "id": "n8",
+      "ages": [
+        "nho"
+      ],
+      "kind": "kt",
+      "ref": "khong-phai-loi",
+      "q": "Nếu có người làm hại bạn, đó có phải lỗi của bạn không?",
+      "o": [
+        "Có, vì mình đã không chạy",
+        "Không bao giờ là lỗi của bạn",
+        "Có, nếu mình đã nhận quà"
+      ],
+      "a": 1,
+      "e": "Người làm hại trẻ em mới là người có lỗi. Bạn không bao giờ có lỗi."
+    },
+    {
+      "id": "n9",
+      "ages": [
+        "nho"
+      ],
+      "kind": "up",
+      "ref": "dau-hieu-canh-giac",
+      "q": "Một người hàng xóm rủ bạn vào nhà một mình để xem đồ chơi mới. Bố mẹ không biết. Bạn nên làm gì?",
+      "o": [
+        "Vào ngay vì đồ chơi đẹp",
+        "Từ chối, về nhà và kể với bố mẹ",
+        "Vào nhưng không nói với ai"
+      ],
+      "a": 1,
+      "e": "Không vào nhà ai một mình khi bố mẹ không biết. Hãy từ chối và kể lại với bố mẹ."
+    },
+    {
+      "id": "n10",
+      "ages": [
+        "nho"
+      ],
+      "kind": "kt",
+      "ref": "sau-vong-tron",
+      "q": "Theo quy tắc 6 vòng tròn, với người lạ bạn nên làm gì?",
+      "o": [
+        "Ôm chặt",
+        "Giữ khoảng cách, không đi theo",
+        "Nắm tay đi chơi"
+      ],
+      "a": 1,
+      "e": "Người lạ ở vòng tròn màu đỏ: giữ khoảng cách, không nói chuyện riêng, không đi theo."
+    },
+    {
+      "id": "c1",
+      "ages": [
+        "thcs"
+      ],
+      "kind": "up",
+      "ref": "dau-hieu-canh-giac",
+      "q": "Một tài khoản lạ khen bạn xinh, tặng thẻ nạp game, rồi rủ chuyển sang nhắn tin riêng và xin ảnh. Cách xử lý tốt nhất là gì?",
+      "o": [
+        "Gửi ảnh vì người ta đã tặng quà",
+        "Dừng trò chuyện, chụp màn hình làm bằng chứng, chặn tài khoản và kể với người lớn tin cậy",
+        "Gửi ảnh nhưng che mặt"
+      ],
+      "a": 1,
+      "e": "Khen ngợi, tặng quà rồi xin ảnh là dấu hiệu dụ dỗ quen thuộc. Hãy dừng lại, lưu bằng chứng, chặn tài khoản và kể với người lớn."
+    },
+    {
+      "id": "c2",
+      "ages": [
+        "thcs"
+      ],
+      "kind": "up",
+      "ref": "bi-de-doa-anh",
+      "q": "Bạn lỡ gửi ảnh riêng tư và giờ bị dọa: “Không chuyển tiền thì tao tung ảnh.” Bạn nên làm gì?",
+      "o": [
+        "Chuyển tiền cho xong chuyện",
+        "Không chuyển tiền, giữ bằng chứng, kể với người lớn và gọi 111 hoặc 113",
+        "Xóa tài khoản và im lặng"
+      ],
+      "a": 1,
+      "e": "Chuyển tiền thường khiến kẻ xấu đòi thêm. Hãy giữ bằng chứng và nhờ người lớn, công an giúp. Bạn không có lỗi."
+    },
+    {
+      "id": "c3",
+      "ages": [
+        "thcs"
+      ],
+      "kind": "up",
+      "ref": "ban-be-ke",
+      "q": "Bạn thân kể bị một người lớn sàm sỡ và xin bạn giữ bí mật. Bạn làm gì?",
+      "o": [
+        "Giữ bí mật vì đã hứa",
+        "Lắng nghe, nói đó không phải lỗi của bạn ấy và cùng bạn ấy tìm người lớn tin cậy",
+        "Kể chuyện lên nhóm chat của lớp"
+      ],
+      "a": 1,
+      "e": "Đừng giữ bí mật khi bạn mình đang bị hại. Hãy lắng nghe, tin bạn ấy và cùng tìm người lớn giúp đỡ. Không chia sẻ chuyện của bạn ấy cho người khác."
+    },
+    {
+      "id": "c4",
+      "ages": [
+        "thcs"
+      ],
+      "kind": "kt",
+      "ref": "bao-luc",
+      "q": "Trường hợp nào là bạo lực trẻ em?",
+      "o": [
+        "Bố mẹ nhắc nhở con học bài",
+        "Thường xuyên bị đánh đập, chửi mắng, sỉ nhục",
+        "Thầy cô giao bài tập về nhà"
+      ],
+      "a": 1,
+      "e": "Đánh đập, chửi mắng, sỉ nhục là bạo lực, kể cả khi người làm nói là “dạy dỗ”."
+    },
+    {
+      "id": "c5",
+      "ages": [
+        "thcs"
+      ],
+      "kind": "kt",
+      "ref": "goi-111",
+      "q": "Tổng đài 111 có đặc điểm nào sau đây?",
+      "o": [
+        "Chỉ làm việc giờ hành chính và tính phí",
+        "Miễn phí, hoạt động 24/7",
+        "Chỉ dành cho người lớn"
+      ],
+      "a": 1,
+      "e": "111 là Tổng đài quốc gia bảo vệ trẻ em, miễn phí và hoạt động 24/7. Trẻ em có thể tự gọi."
+    },
+    {
+      "id": "c6",
+      "ages": [
+        "thcs"
+      ],
+      "kind": "up",
+      "ref": "nguoi-la",
+      "q": "Có người lạ bám theo bạn trên đường về nhà. Bạn nên làm gì?",
+      "o": [
+        "Đi vào ngõ vắng để cắt đuôi",
+        "Đi vào nơi đông người như cửa hàng, nhờ người lớn giúp và gọi 113 nếu cần",
+        "Dừng lại hỏi người đó muốn gì"
+      ],
+      "a": 1,
+      "e": "Nơi đông người an toàn hơn. Hãy nhờ người lớn giúp và gọi 113 nếu bạn thấy nguy hiểm."
+    },
+    {
+      "id": "c7",
+      "ages": [
+        "thcs"
+      ],
+      "kind": "kt",
+      "ref": "dau-hieu-canh-giac",
+      "q": "Dấu hiệu nào cho thấy một người có thể đang có ý đồ xấu?",
+      "o": [
+        "Tìm cách ở riêng với bạn, tặng quà và dặn giữ bí mật",
+        "Chào hỏi lịch sự khi gặp",
+        "Nhắc bạn đội mũ bảo hiểm"
+      ],
+      "a": 0,
+      "e": "Quà tặng đặc biệt, tìm cách ở riêng và yêu cầu giữ bí mật là các dấu hiệu dụ dỗ cần cảnh giác."
+    },
+    {
+      "id": "c8",
+      "ages": [
+        "thcs"
+      ],
+      "kind": "up",
+      "ref": "bat-nat-tren-mang",
+      "q": "Một nhóm bạn trong lớp liên tục chế giễu, cô lập và đăng ảnh xấu về bạn lên mạng. Việc nên làm trước tiên là gì?",
+      "o": [
+        "Đăng bài chửi lại",
+        "Lưu bằng chứng, không đáp trả và báo với giáo viên chủ nhiệm, gia đình",
+        "Nghỉ học luôn"
+      ],
+      "a": 1,
+      "e": "Đáp trả có thể làm sự việc tệ hơn. Hãy lưu bằng chứng và báo người lớn để được giúp."
+    },
+    {
+      "id": "c9",
+      "ages": [
+        "thcs"
+      ],
+      "kind": "kt",
+      "ref": "nguoi-xam-hai",
+      "q": "Ai có thể là người xâm hại trẻ em?",
+      "o": [
+        "Chỉ người lạ",
+        "Bất kỳ ai, kể cả người quen, người thân",
+        "Chỉ người ở nơi khác đến"
+      ],
+      "a": 1,
+      "e": "Nhiều vụ việc do người quen gây ra. Hãy để ý hành vi, không chỉ để ý người đó là ai."
+    },
+    {
+      "id": "c10",
+      "ages": [
+        "thcs"
+      ],
+      "kind": "up",
+      "ref": "ke-cho-ai",
+      "q": "Bạn muốn kể chuyện bị xâm hại nhưng sợ bố mẹ không tin. Cách nào phù hợp?",
+      "o": [
+        "Không kể với ai nữa",
+        "Kể với một người khác trong bàn tay tin cậy hoặc gọi 111 để được tư vấn",
+        "Tự giải quyết một mình"
+      ],
+      "a": 1,
+      "e": "Nếu người đầu tiên chưa tin, hãy kể với người tiếp theo, hoặc gọi 111 để được tư vấn cách nói với gia đình."
+    },
+    {
+      "id": "p1",
+      "ages": [
+        "thpt"
+      ],
+      "kind": "kt",
+      "ref": "tinh-yeu-an-toan",
+      "q": "Trong một mối quan hệ yêu đương, điều nào là sự đồng ý thực sự?",
+      "o": [
+        "Im lặng không phản đối",
+        "Đồng ý rõ ràng, tự nguyện và có thể rút lại bất cứ lúc nào",
+        "Đã từng đồng ý một lần thì luôn đồng ý"
+      ],
+      "a": 1,
+      "e": "Sự đồng ý phải rõ ràng, tự nguyện và có thể rút lại. Im lặng hay sợ hãi không phải là đồng ý."
+    },
+    {
+      "id": "p2",
+      "ages": [
+        "thpt"
+      ],
+      "kind": "up",
+      "ref": "bi-de-doa-anh",
+      "q": "Người yêu cũ dọa tung ảnh riêng tư nếu bạn không quay lại. Bạn nên làm gì?",
+      "o": [
+        "Quay lại để giữ an toàn",
+        "Không làm theo, lưu bằng chứng, báo người lớn tin cậy và công an (113) hoặc gọi 111",
+        "Đe dọa lại người đó"
+      ],
+      "a": 1,
+      "e": "Đe dọa phát tán ảnh là hành vi vi phạm pháp luật. Làm theo không làm bạn an toàn hơn. Hãy giữ bằng chứng và tìm hỗ trợ."
+    },
+    {
+      "id": "p3",
+      "ages": [
+        "thpt"
+      ],
+      "kind": "kt",
+      "ref": "xam-hai-la-gi",
+      "q": "Theo Luật Trẻ em 2016, trẻ em là người:",
+      "o": [
+        "Dưới 16 tuổi",
+        "Dưới 18 tuổi",
+        "Dưới 14 tuổi"
+      ],
+      "a": 0,
+      "e": "Điều 1 Luật Trẻ em 2016: trẻ em là người dưới 16 tuổi. Người từ 16 đến dưới 18 tuổi là người chưa thành niên, vẫn được pháp luật bảo vệ."
+    },
+    {
+      "id": "p4",
+      "ages": [
+        "thpt"
+      ],
+      "kind": "up",
+      "ref": "mua-ban-nguoi",
+      "q": "Một người mới quen qua mạng mời bạn “việc nhẹ lương cao” ở tỉnh khác, yêu cầu đi ngay và giữ kín. Bạn nên làm gì?",
+      "o": [
+        "Đi ngay kẻo lỡ cơ hội",
+        "Từ chối, bàn với gia đình và gọi 111 nếu nghi ngờ mua bán người",
+        "Đi nhưng không mang điện thoại"
+      ],
+      "a": 1,
+      "e": "Đây là thủ đoạn dụ dỗ thường gặp của kẻ mua bán người. 111 cũng là tổng đài quốc gia về phòng, chống mua bán người."
+    },
+    {
+      "id": "p5",
+      "ages": [
+        "thpt"
+      ],
+      "kind": "up",
+      "ref": "mua-ban-nguoi",
+      "q": "Một người gọi điện tự xưng công an, nói bạn liên quan vụ án, yêu cầu thuê phòng ở một mình và không liên lạc với gia đình. Đây có thể là gì?",
+      "o": [
+        "Yêu cầu bình thường của cơ quan điều tra",
+        "Thủ đoạn “bắt cóc trực tuyến” để tống tiền, cần báo ngay cho gia đình và gọi 113",
+        "Một trò đùa vô hại"
+      ],
+      "a": 1,
+      "e": "Cơ quan chức năng không làm việc qua điện thoại theo cách này. Hãy báo gia đình và gọi 113 ngay."
+    },
+    {
+      "id": "p6",
+      "ages": [
+        "thpt"
+      ],
+      "kind": "up",
+      "ref": "bao-mat-thong-tin",
+      "q": "Bạn của bạn đăng lên mạng chuyện một bạn khác bị xâm hại, kèm ảnh, để “cảnh báo”. Bạn nên làm gì?",
+      "o": [
+        "Chia sẻ thêm cho nhiều người biết",
+        "Khuyên gỡ bài, không chia sẻ, vì làm vậy xâm phạm quyền riêng tư và gây tổn thương thêm",
+        "Bình luận tên trường của bạn ấy"
+      ],
+      "a": 1,
+      "e": "Luật Trẻ em cấm tiết lộ thông tin đời sống riêng tư của trẻ khi chưa có sự đồng ý. Hãy báo kênh chính thức thay vì đăng lên mạng."
+    },
+    {
+      "id": "p7",
+      "ages": [
+        "thpt"
+      ],
+      "kind": "kt",
+      "ref": "sau-khi-bi-xam-hai",
+      "q": "Nếu vừa bị xâm hại tình dục, điều nào sau đây là đúng?",
+      "o": [
+        "Nên tắm rửa, giặt sạch quần áo ngay",
+        "Nếu có thể, chưa tắm, chưa giặt quần áo và đi khám sớm, tốt nhất trong 72 giờ",
+        "Chờ vài tuần xem có sao không"
+      ],
+      "a": 1,
+      "e": "Đi khám sớm giúp được điều trị và phòng ngừa kịp thời; giữ nguyên quần áo giúp giữ bằng chứng. Nếu đã tắm rồi, bạn vẫn có thể được giúp và trình báo."
+    },
+    {
+      "id": "p8",
+      "ages": [
+        "thpt"
+      ],
+      "kind": "kt",
+      "ref": "phap-luat-hinh-su",
+      "q": "Tội dâm ô đối với người dưới 16 tuổi được quy định tại điều nào của Bộ luật Hình sự?",
+      "o": [
+        "Điều 146",
+        "Điều 51",
+        "Điều 21"
+      ],
+      "a": 0,
+      "e": "Điều 146 Bộ luật Hình sự 2015 quy định tội dâm ô đối với người dưới 16 tuổi, mức cao nhất là 12 năm tù."
+    },
+    {
+      "id": "p9",
+      "ages": [
+        "thpt"
+      ],
+      "kind": "up",
+      "ref": "trach-nhiem-bao-tin",
+      "q": "Bạn thấy một em lớp dưới thường xuyên có vết bầm và có vẻ sợ hãi khi về nhà. Bạn nên làm gì?",
+      "o": [
+        "Coi như không biết",
+        "Báo giáo viên chủ nhiệm, giáo viên tư vấn hoặc gọi 111",
+        "Quay video em đó đăng lên mạng"
+      ],
+      "a": 1,
+      "e": "Mọi người đều có trách nhiệm báo tin khi trẻ em có thể bị xâm hại. Báo qua kênh chính thức giúp bảo vệ em ấy."
+    },
+    {
+      "id": "p10",
+      "ages": [
+        "thpt"
+      ],
+      "kind": "up",
+      "ref": "cam-xuc",
+      "q": "Khi một người đang có ý nghĩ muốn làm hại bản thân, lựa chọn nào giúp họ an toàn hơn?",
+      "o": [
+        "Giữ kín một mình",
+        "Nói với người lớn tin cậy và gọi 111; gọi 115 nếu đã bị thương",
+        "Chờ cảm giác tự qua đi"
+      ],
+      "a": 1,
+      "e": "Nói ra và tìm người hỗ trợ là bước quan trọng nhất. Tổng đài 111 hỗ trợ cả các trường hợp khủng hoảng tâm lý."
+    },
+    {
+      "id": "l1",
+      "ages": [
+        "lon"
+      ],
+      "kind": "up",
+      "ref": "khi-tre-ke",
+      "q": "Con bạn kể bị một người họ hàng đụng chạm. Phản ứng đầu tiên phù hợp nhất là gì?",
+      "o": [
+        "Hỏi dồn: “Sao con không nói sớm?”",
+        "Giữ bình tĩnh, tin con, nói con đã làm đúng và không phải lỗi của con",
+        "Bảo con đừng nói chuyện này với ai"
+      ],
+      "a": 1,
+      "e": "Phản ứng bình tĩnh, tin tưởng giúp trẻ tiếp tục chia sẻ. Sau đó bảo đảm an toàn cho trẻ và báo tin cho 111 hoặc công an."
+    },
+    {
+      "id": "l2",
+      "ages": [
+        "lon"
+      ],
+      "kind": "kt",
+      "ref": "dau-hieu-tre-bi-xam-hai",
+      "q": "Dấu hiệu nào cần được quan tâm như một khả năng trẻ bị xâm hại?",
+      "o": [
+        "Trẻ đột ngột sợ hãi một người cụ thể, thu mình, giảm sút học tập",
+        "Trẻ thích vẽ tranh",
+        "Trẻ ăn ngon miệng"
+      ],
+      "a": 0,
+      "e": "Thay đổi đột ngột về tâm lý, hành vi, xã hội là tín hiệu cần quan tâm, trò chuyện và tìm hỗ trợ."
+    },
+    {
+      "id": "l3",
+      "ages": [
+        "lon"
+      ],
+      "kind": "kt",
+      "ref": "trach-nhiem-bao-tin",
+      "q": "Theo Luật Trẻ em 2016, ai có trách nhiệm thông báo, tố giác hành vi xâm hại trẻ em?",
+      "o": [
+        "Chỉ công an",
+        "Cơ quan, tổ chức, cơ sở giáo dục, gia đình và cá nhân",
+        "Chỉ cha mẹ của trẻ"
+      ],
+      "a": 1,
+      "e": "Khoản 1 Điều 51 Luật Trẻ em 2016 giao trách nhiệm này cho cơ quan, tổ chức, cơ sở giáo dục, gia đình, cá nhân."
+    },
+    {
+      "id": "l4",
+      "ages": [
+        "lon"
+      ],
+      "kind": "up",
+      "ref": "bao-mat-thong-tin",
+      "q": "Bạn nghi ngờ một học sinh bị bạo hành ở nhà. Việc nào KHÔNG nên làm?",
+      "o": [
+        "Ghi lại những gì quan sát được",
+        "Báo Tổng đài 111 hoặc ban giám hiệu",
+        "Đăng ảnh vết thương của em lên mạng để kêu gọi"
+      ],
+      "a": 2,
+      "e": "Không đăng tải hình ảnh, thông tin của trẻ lên mạng. Hãy báo qua kênh chính thức như Tổng đài 111, nhà trường, công an."
+    },
+    {
+      "id": "l5",
+      "ages": [
+        "lon"
+      ],
+      "kind": "kt",
+      "ref": "phap-luat-hinh-su",
+      "q": "Tội dâm ô đối với người dưới 16 tuổi (Điều 146 BLHS) có mức hình phạt cao nhất là:",
+      "o": [
+        "Phạt tiền",
+        "12 năm tù",
+        "Cảnh cáo"
+      ],
+      "a": 1,
+      "e": "Khung cao nhất của Điều 146 là phạt tù từ 7 đến 12 năm."
+    },
+    {
+      "id": "l6",
+      "ages": [
+        "lon"
+      ],
+      "kind": "up",
+      "ref": "sau-khi-bi-xam-hai",
+      "q": "Trẻ vừa bị xâm hại tình dục. Thứ tự ưu tiên nào hợp lý?",
+      "o": [
+        "Đăng lên mạng tìm thủ phạm",
+        "Bảo đảm an toàn, đưa đi khám sớm (trong 72 giờ), giữ chứng cứ, báo công an và 111",
+        "Tắm rửa sạch sẽ cho trẻ rồi để trẻ nghỉ ngơi vài ngày"
+      ],
+      "a": 1,
+      "e": "An toàn – y tế – chứng cứ – trình báo – hỗ trợ tâm lý. Không đăng tải thông tin của trẻ."
+    },
+    {
+      "id": "l7",
+      "ages": [
+        "lon"
+      ],
+      "kind": "kt",
+      "ref": "vung-rieng-tu",
+      "q": "Quy tắc “đồ lót” dạy trẻ điều gì?",
+      "o": [
+        "Vùng được che bởi đồ lót là vùng riêng tư, không ai được nhìn, chạm vào",
+        "Phải mặc đồ lót màu sáng",
+        "Không được thay đồ một mình"
+      ],
+      "a": 0,
+      "e": "Quy tắc đồ lót giúp trẻ nhận biết vùng riêng tư và quyền từ chối mọi đụng chạm không an toàn."
+    },
+    {
+      "id": "l8",
+      "ages": [
+        "lon"
+      ],
+      "kind": "up",
+      "ref": "bi-de-doa-anh",
+      "q": "Con bạn bị đe dọa tung ảnh nhạy cảm. Cha mẹ nên làm gì?",
+      "o": [
+        "Mắng con và tịch thu điện thoại",
+        "Trấn an con, không trách mắng, lưu bằng chứng, không chuyển tiền, báo công an hoặc 111",
+        "Tự nhắn tin chửi kẻ đe dọa"
+      ],
+      "a": 1,
+      "e": "Trẻ cần được che chở, không bị trách mắng. Giữ bằng chứng và để cơ quan chức năng xử lý."
+    },
+    {
+      "id": "l9",
+      "ages": [
+        "lon"
+      ],
+      "kind": "kt",
+      "ref": "goi-111",
+      "q": "Tổng đài 111 hiện nay là:",
+      "o": [
+        "Tổng đài quốc gia bảo vệ trẻ em và phòng, chống mua bán người, miễn phí 24/7",
+        "Tổng đài tra cứu điểm thi",
+        "Tổng đài chăm sóc khách hàng của nhà mạng"
+      ],
+      "a": 0,
+      "e": "Từ tháng 9/2025, 111 đồng thời là tổng đài quốc gia về phòng, chống mua bán người."
+    },
+    {
+      "id": "l10",
+      "ages": [
+        "lon"
+      ],
+      "kind": "up",
+      "ref": "day-con",
+      "q": "Khi trò chuyện với trẻ về an toàn cơ thể, cách nào hiệu quả?",
+      "o": [
+        "Chỉ nói một lần khi trẻ lớn",
+        "Nói thường xuyên, đúng độ tuổi, gọi đúng tên bộ phận cơ thể và cam kết không mắng khi trẻ kể",
+        "Dọa trẻ để trẻ sợ"
+      ],
+      "a": 1,
+      "e": "Trò chuyện thường xuyên, phù hợp lứa tuổi và tạo cảm giác an toàn giúp trẻ dám kể khi gặp nguy hiểm."
+    }
+  ],
+  "risk": {
+    "rules": [
+      {
+        "cat": "tu-hai",
+        "label": "Có ý nghĩ tự làm hại bản thân",
+        "w": 5,
+        "k": [
+          "muốn chết",
+          "muốn tự tử",
+          "tự tử",
+          "tự sát",
+          "không muốn sống",
+          "chẳng muốn sống",
+          "chán sống",
+          "kết thúc cuộc đời",
+          "kết liễu",
+          "tự làm đau",
+          "tự làm hại",
+          "rạch tay",
+          "cắt tay",
+          "nhảy lầu",
+          "nhảy cầu",
+          "uống thuốc ngủ",
+          "chết đi cho xong",
+          "không muốn tồn tại",
+          "biến mất mãi mãi",
+          "muốn đi theo"
+        ]
+      },
+      {
+        "cat": "nguy-hiem",
+        "label": "Có thể đang gặp nguy hiểm",
+        "w": 4,
+        "k": [
+          "cứu em",
+          "cứu mình",
+          "cứu tôi",
+          "cứu con",
+          "cứu cháu",
+          "cứu với",
+          "cứu tớ",
+          "đang đánh em",
+          "đang đánh con",
+          "đang đánh mình",
+          "đang bị đánh",
+          "đang đuổi theo",
+          "đang đi theo em",
+          "đang đi theo mình",
+          "bị nhốt",
+          "nhốt em",
+          "nhốt con",
+          "nhốt mình",
+          "không thoát được",
+          "không ra được",
+          "đang chảy máu",
+          "chảy máu nhiều",
+          "bị bắt cóc",
+          "bị bắt đi",
+          "đang đập cửa",
+          "dọa giết",
+          "giết em",
+          "giết con",
+          "giết mình",
+          "cầm dao",
+          "có dao"
+        ]
+      },
+      {
+        "cat": "tinh-duc",
+        "label": "Có dấu hiệu xâm hại tình dục",
+        "w": 2.5,
+        "k": [
+          "sờ vào người",
+          "sờ người em",
+          "sờ người con",
+          "sờ người mình",
+          "sờ soạng",
+          "sờ mó",
+          "sờ vào vùng kín",
+          "sờ vùng kín",
+          "chạm vào vùng kín",
+          "chạm vào vùng riêng tư",
+          "sờ ngực",
+          "sờ mông",
+          "sờ đùi",
+          "bắt em cởi",
+          "bắt con cởi",
+          "bắt mình cởi",
+          "bắt cởi",
+          "cởi đồ em",
+          "cởi quần em",
+          "bắt em xem phim",
+          "phim người lớn",
+          "hiếp",
+          "hiếp dâm",
+          "dâm ô",
+          "quấy rối em",
+          "quấy rối mình",
+          "xâm hại em",
+          "xâm hại mình",
+          "xâm hại con",
+          "bị xâm hại",
+          "lạm dụng em",
+          "bị lạm dụng",
+          "ép quan hệ",
+          "bắt quan hệ",
+          "bị sàm sỡ",
+          "sàm sỡ em",
+          "đè lên người"
+        ]
+      },
+      {
+        "cat": "ranh-gioi",
+        "label": "Có hành vi vượt ranh giới",
+        "w": 1.2,
+        "k": [
+          "hôn em",
+          "hôn mình",
+          "ôm em chặt",
+          "nhìn em tắm",
+          "nhìn mình tắm",
+          "chụp ảnh em",
+          "ngủ cùng em",
+          "vào phòng em",
+          "gửi ảnh nóng",
+          "xem ảnh nóng",
+          "rủ em vào phòng",
+          "kéo em vào"
+        ]
+      },
+      {
+        "cat": "bao-luc",
+        "label": "Có dấu hiệu bạo lực",
+        "w": 2,
+        "k": [
+          "bị đánh",
+          "đánh em",
+          "đánh con",
+          "đánh mình",
+          "đánh cháu",
+          "đánh tớ",
+          "đánh mẹ",
+          "đánh bố",
+          "đánh vợ",
+          "đánh em gái",
+          "đánh em trai",
+          "đánh đập",
+          "bạo hành",
+          "bị đá",
+          "đá em",
+          "tát em",
+          "bị tát",
+          "dùng roi",
+          "bị roi",
+          "bầm tím",
+          "vết bầm",
+          "bị bỏng",
+          "dí thuốc lá",
+          "bóp cổ",
+          "túm tóc",
+          "ném đồ vào",
+          "bị hành hạ",
+          "hành hạ em",
+          "đánh hội đồng"
+        ]
+      },
+      {
+        "cat": "de-doa",
+        "label": "Bị đe dọa, tống tiền",
+        "w": 2,
+        "k": [
+          "đe dọa",
+          "dọa",
+          "tung ảnh",
+          "phát tán ảnh",
+          "đăng ảnh em",
+          "tống tiền",
+          "đòi tiền",
+          "nếu không gửi",
+          "không gửi thì",
+          "bắt em gửi ảnh",
+          "đòi ảnh",
+          "xin ảnh nóng",
+          "ảnh nhạy cảm",
+          "ảnh khỏa thân",
+          "video nhạy cảm",
+          "cắt ghép ảnh"
+        ]
+      },
+      {
+        "cat": "bo-mac",
+        "label": "Có dấu hiệu bị bỏ mặc, bóc lột",
+        "w": 1.5,
+        "k": [
+          "bỏ đói",
+          "không cho ăn",
+          "nhịn đói",
+          "đuổi ra khỏi nhà",
+          "đuổi khỏi nhà",
+          "bỏ rơi",
+          "bỏ mặc",
+          "không cho đi học",
+          "bắt nghỉ học",
+          "bắt đi làm",
+          "bắt đi xin",
+          "bắt bán hàng",
+          "làm việc cả ngày",
+          "ở nhà một mình mấy ngày"
+        ]
+      },
+      {
+        "cat": "bi-mat",
+        "label": "Bị yêu cầu giữ bí mật, bị dụ dỗ",
+        "w": 1,
+        "k": [
+          "giữ bí mật",
+          "đừng nói với ai",
+          "không được nói với ai",
+          "không được kể",
+          "cấm kể",
+          "bí mật của hai",
+          "cho em tiền",
+          "cho em quà",
+          "mua quà cho em",
+          "rủ em đi",
+          "rủ đi riêng",
+          "gặp riêng",
+          "hẹn gặp",
+          "đi khách sạn",
+          "qua nhà một mình"
+        ]
+      },
+      {
+        "cat": "can-giup",
+        "label": "Đang cầu cứu",
+        "w": 1.5,
+        "k": [
+          "giúp em với",
+          "giúp mình với",
+          "giúp tôi với",
+          "giúp con với",
+          "giúp cháu với",
+          "làm ơn giúp"
+        ]
+      },
+      {
+        "cat": "cam-xuc",
+        "label": "Đang có cảm xúc tiêu cực",
+        "w": 0.8,
+        "k": [
+          "sợ",
+          "sợ lắm",
+          "sợ hãi",
+          "hoảng",
+          "run",
+          "khóc",
+          "buồn",
+          "cô đơn",
+          "không ai tin",
+          "không ai hiểu",
+          "xấu hổ",
+          "nhục",
+          "ghê tởm",
+          "bẩn thỉu",
+          "lỗi của em",
+          "tại em",
+          "mất ngủ",
+          "ác mộng",
+          "không dám về nhà",
+          "không dám đi học",
+          "áp lực",
+          "trầm cảm",
+          "tuyệt vọng"
+        ]
+      }
+    ],
+    "passive": [
+      {
+        "cat": "bao-luc",
+        "w": 2,
+        "verbs": [
+          "đánh",
+          "đá",
+          "tát",
+          "đập",
+          "hành hạ",
+          "bóp cổ",
+          "cắn",
+          "quất",
+          "trói",
+          "đánh đập"
+        ]
+      },
+      {
+        "cat": "tinh-duc",
+        "w": 2.5,
+        "verbs": [
+          "sờ",
+          "hiếp",
+          "sàm sỡ",
+          "cưỡng hiếp",
+          "lạm dụng",
+          "xâm hại",
+          "quấy rối",
+          "dâm ô",
+          "sờ soạng"
+        ]
+      },
+      {
+        "cat": "de-doa",
+        "w": 2,
+        "verbs": [
+          "dọa",
+          "đe dọa",
+          "tống tiền",
+          "uy hiếp"
+        ]
+      },
+      {
+        "cat": "bo-mac",
+        "w": 1.5,
+        "verbs": [
+          "bỏ đói",
+          "bỏ rơi",
+          "nhốt",
+          "đuổi ra khỏi nhà"
+        ]
+      }
+    ],
+    "pairs": [
+      {
+        "cat": "tinh-duc",
+        "w": 2.5,
+        "gap": 3,
+        "a": [
+          "ép",
+          "bắt",
+          "dụ"
+        ],
+        "b": [
+          "quan hệ",
+          "cởi đồ",
+          "cởi quần",
+          "cởi áo",
+          "ngủ cùng",
+          "xem phim người lớn"
+        ]
+      },
+      {
+        "cat": "de-doa",
+        "w": 2,
+        "gap": 4,
+        "a": [
+          "dọa",
+          "đe dọa",
+          "bắt",
+          "ép",
+          "đòi"
+        ],
+        "b": [
+          "tung ảnh",
+          "đăng ảnh",
+          "gửi ảnh",
+          "phát tán",
+          "chuyển tiền",
+          "gửi tiền",
+          "ảnh nóng",
+          "gửi video"
+        ]
+      },
+      {
+        "cat": "nguy-hiem",
+        "w": 4,
+        "gap": 3,
+        "a": [
+          "đang"
+        ],
+        "b": [
+          "đánh em",
+          "đánh con",
+          "đánh mình",
+          "đánh cháu",
+          "đánh mẹ",
+          "đánh bố",
+          "đánh em gái",
+          "đánh em trai",
+          "đuổi theo em",
+          "đi theo em",
+          "đập cửa",
+          "sờ em",
+          "sờ người em"
+        ]
+      }
+    ],
+    "idioms": [
+      {
+        "k": "muốn chết",
+        "before": [
+          "mệt",
+          "đói",
+          "nóng",
+          "lạnh",
+          "khát",
+          "cười",
+          "vui",
+          "ngủ",
+          "sướng",
+          "ngại",
+          "bụng",
+          "nhột"
+        ]
+      }
+    ],
+    "firstPerson": [
+      "em",
+      "mình",
+      "con",
+      "cháu",
+      "tôi",
+      "tớ",
+      "tui",
+      "tao",
+      "bé"
+    ],
+    "thirdParty": [
+      "bạn em",
+      "bạn mình",
+      "bạn tôi",
+      "bạn tớ",
+      "em gái em",
+      "em trai em",
+      "em gái mình",
+      "con tôi",
+      "con mình",
+      "con của tôi",
+      "học sinh của tôi",
+      "học sinh em",
+      "cháu tôi",
+      "bé nhà",
+      "đứa bạn",
+      "một bạn"
+    ],
+    "urgent": [
+      "đang",
+      "bây giờ",
+      "ngay bây giờ",
+      "ngay lúc này",
+      "lúc này",
+      "tối nay",
+      "đêm nay",
+      "hiện tại",
+      "ở đây"
+    ],
+    "negation": [
+      "không",
+      "chưa",
+      "chẳng",
+      "chả",
+      "chưa từng",
+      "không hề",
+      "đâu có"
+    ],
+    "info": [
+      "là gì",
+      "nghĩa là gì",
+      "thế nào là",
+      "như thế nào",
+      "làm sao để",
+      "làm thế nào để",
+      "bị phạt",
+      "phạt bao nhiêu",
+      "có bị phạt",
+      "điều luật",
+      "luật",
+      "dấu hiệu",
+      "cách phòng",
+      "phòng tránh",
+      "phòng chống",
+      "tìm hiểu",
+      "cho mình hỏi",
+      "cho em hỏi",
+      "cho tôi hỏi",
+      "nếu bị",
+      "nếu có",
+      "giả sử",
+      "khi bị",
+      "khi nào"
+    ]
+  }
+}

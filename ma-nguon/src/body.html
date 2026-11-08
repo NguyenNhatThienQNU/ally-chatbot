@@ -1,0 +1,89 @@
+<div class="app" id="app">
+  <header class="topbar">
+    <div class="topbar-in">
+      <button class="brand" id="brandBtn" type="button" aria-label="ALLY – về trang trò chuyện">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M9 4h22a7 7 0 0 1 7 7v14a7 7 0 0 1-7 7H18l-8 6v-6H9a7 7 0 0 1-7-7V11a7 7 0 0 1 7-7z" fill="var(--brand)"/>
+          <path d="M20 26.5c-5.2-3.5-8.2-6.4-8.2-9.8A4.3 4.3 0 0 1 20 14.4a4.3 4.3 0 0 1 8.2 2.3c0 3.4-3 6.3-8.2 9.8z" fill="var(--on-brand)"/>
+          <circle cx="33" cy="7" r="4.5" fill="var(--sun)" stroke="var(--surface)" stroke-width="2"/>
+        </svg>
+        <span><span class="brand-name">ALLY</span><span class="brand-sub">Người bạn đồng hành bảo vệ trẻ em</span></span>
+      </button>
+      <button class="age-pill" id="agePill" type="button" aria-label="Đổi nhóm tuổi" title="Đổi nhóm tuổi">Chọn nhóm tuổi</button>
+      <button class="icon-btn" id="ttsQuickBtn" type="button" aria-label="Bật/tắt giọng đọc tự nhiên của ALLY" aria-pressed="false" title="Giọng đọc tự nhiên của ALLY">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg>
+      </button>
+      <button class="icon-btn" id="camoBtn" type="button" aria-label="Ngụy trang màn hình học tập" title="Màn hình ngụy trang nhanh (Sổ tay học tập)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/><path d="m3 3 18 18"/></svg>
+      </button>
+      <button class="exit-btn" id="exitBtn" type="button" aria-label="Thoát nhanh: rời ứng dụng ngay và xóa cuộc trò chuyện" title="Thoát nhanh (Esc 2 lần)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></svg>
+        <span class="lbl">Thoát nhanh</span>
+      </button>
+      <button class="icon-btn" id="settingsBtn" type="button" aria-label="Cài đặt" title="Cài đặt">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+      </button>
+      <button class="sos-btn" id="sosBtn" type="button" aria-label="Khẩn cấp: gọi 111, 113, 115">SOS<span class="lbl">111 · 113</span></button>
+    </div>
+  </header>
+  <div class="riskbar" id="riskbar" hidden aria-live="polite"></div>
+
+  <main class="views" id="views">
+    <section class="view" id="view-tro-chuyen" aria-label="Trò chuyện">
+      <div class="scroll" id="chatScroll">
+        <div class="chat-log" id="chatLog" aria-live="polite" aria-relevant="additions"></div>
+      </div>
+      <form class="composer" id="composer" autocomplete="off">
+        <div class="quick" id="quick" aria-label="Gợi ý nhanh"></div>
+        <div class="input-row">
+          <label for="msgInput" class="sr-only">Nhập tin nhắn</label>
+          <textarea id="msgInput" rows="1" maxlength="800" placeholder="Hỏi ALLY hoặc tâm sự chuyện bạn đang gặp…" enterkeyhint="send"></textarea>
+          <button class="round-btn" id="micBtn" type="button" aria-label="Nói thay cho gõ chữ" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v4M8 21h8"/></svg>
+          </button>
+          <button class="round-btn send" id="sendBtn" type="submit" aria-label="Gửi" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+          </button>
+        </div>
+        <div class="privacy-note">Ẩn danh 100% · Không thay thế chuyên gia/cơ quan chức năng · Hỗ trợ kết nối trực tiếp Tổng đài 111 &amp; 113.</div>
+      </form>
+    </section>
+
+    <section class="view" id="view-tim-hieu" aria-label="Tìm hiểu" hidden>
+      <div class="scroll" id="learnScroll"><div class="pad" id="learnRoot"></div></div>
+    </section>
+
+    <section class="view" id="view-tinh-huong" aria-label="Tình huống" hidden>
+      <div class="scroll" id="quizScroll"><div class="pad" id="quizRoot"></div></div>
+    </section>
+
+    <section class="view" id="view-ho-tro" aria-label="Hỗ trợ" hidden>
+      <div class="scroll" id="helpScroll"><div class="pad" id="helpRoot"></div></div>
+    </section>
+  </main>
+
+  <nav class="tabbar" aria-label="Điều hướng chính">
+    <div class="tabbar-in" role="tablist">
+      <button class="tab" role="tab" type="button" data-tab="tro-chuyen" aria-selected="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L3.5 21l1.4-4.6A8.5 8.5 0 1 1 21 12z"/></svg>
+        <span>Trò chuyện</span>
+      </button>
+      <button class="tab" role="tab" type="button" data-tab="tim-hieu" aria-selected="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5h6a4 4 0 0 1 4 4v11a3 3 0 0 0-3-3H2z"/><path d="M22 5h-6a4 4 0 0 0-4 4v11a3 3 0 0 1 3-3h7z"/></svg>
+        <span>Tìm hiểu</span>
+      </button>
+      <button class="tab" role="tab" type="button" data-tab="tinh-huong" aria-selected="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2.8h6V4"/><path d="m9 13 2 2 4-4.5"/></svg>
+        <span>Tình huống</span>
+        <i class="dot" id="quizDot" hidden></i>
+      </button>
+      <button class="tab" role="tab" type="button" data-tab="ho-tro" aria-selected="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="m5.6 5.6 3.6 3.6M14.8 14.8l3.6 3.6M14.8 9.2l3.6-3.6M5.6 18.4l3.6-3.6"/></svg>
+        <span>Hỗ trợ</span>
+      </button>
+    </div>
+  </nav>
+</div>
+<div id="sheetHost"></div>
+<div id="adminHost"></div>
+<div id="toastHost" aria-live="polite"></div>

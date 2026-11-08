@@ -1,0 +1,38 @@
+{
+  "name": "ALLY – Người bạn đồng hành phòng, chống xâm hại trẻ em",
+  "short_name": "ALLY",
+  "description": "ALLY – Người bạn đồng hành hỗ trợ nạn nhân, học sinh và người dân phòng, chống xâm hại trẻ em. Ẩn danh, bảo mật thông tin, kết nối Tổng đài 111 và 113.",
+  "lang": "vi",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#EEF4F2",
+  "theme_color": "#0B7A69",
+  "categories": [
+    "education",
+    "health",
+    "lifestyle"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
