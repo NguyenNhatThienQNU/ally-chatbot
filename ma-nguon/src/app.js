@@ -999,24 +999,28 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
   }
 
   /* ---------------------------------------------------------------------
-     11. ĐỌC TO & NÓI (Giọng đọc tự nhiên ALLY)
+     11. ĐỌC TO & NÓI (Giọng đọc tiếng Việt tự nhiên ALLY)
      --------------------------------------------------------------------- */
   const TTS = { ok: false, voice: null, speaking: false };
+  function pickVoice() {
+    try {
+      if (!('speechSynthesis' in window)) return;
+      const vs = speechSynthesis.getVoices() || [];
+      const vi = vs.filter((v) => /^vi/i.test(v.lang) || /vietnam|tiếng việt|hoaimy|namminh|linh/i.test(v.name || ''));
+      vi.sort((a, b) => {
+        const score = (v) => (/hoaimy|natural|online/i.test(v.name) ? 4 : 0) + (/google|linh|namminh/i.test(v.name) ? 2 : 0) + (v.localService ? 0 : 1);
+        return score(b) - score(a);
+      });
+      TTS.voice = vi[0] || null;
+    } catch (e) { /* bỏ qua */ }
+  }
   function initTTS() {
     try {
       if (!('speechSynthesis' in window)) return;
       TTS.ok = true;
-      const pick = () => {
-        const vs = speechSynthesis.getVoices() || [];
-        const vi = vs.filter((v) => /^vi/i.test(v.lang) || /vietnam|tiếng việt|hoaimy|namminh|linh/i.test(v.name || ''));
-        vi.sort((a, b) => {
-          const score = (v) => (/hoaimy|natural|online/i.test(v.name) ? 4 : 0) + (/google|linh|namminh/i.test(v.name) ? 2 : 0) + (v.localService ? 0 : 1);
-          return score(b) - score(a);
-        });
-        TTS.voice = vi[0] || null;
-      };
-      pick();
-      speechSynthesis.addEventListener && speechSynthesis.addEventListener('voiceschanged', pick);
+      pickVoice();
+      speechSynthesis.onvoiceschanged = pickVoice;
+      if (speechSynthesis.addEventListener) speechSynthesis.addEventListener('voiceschanged', pickVoice);
     } catch (e) { /* không hỗ trợ */ }
   }
   function cleanSpeechText(text) {
@@ -1037,6 +1041,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     if (!TTS.ok || (!SET.tts && !force)) return;
     try {
       speechSynthesis.cancel();
+      if (!TTS.voice) pickVoice();
       const u = new SpeechSynthesisUtterance(cleanSpeechText(text));
       if (TTS.voice) { u.voice = TTS.voice; u.lang = TTS.voice.lang || 'vi-VN'; }
       else u.lang = 'vi-VN';
