@@ -4261,6 +4261,19 @@ em muốn tự tử | 3 |`;
   /* ---------------------------------------------------------------------
      20. THANH CẢM BIẾN ĐÁNH GIÁ TÌNH TRẠNG & CHUYỂN TIẾP 111
      --------------------------------------------------------------------- */
+  function resetChatSession() {
+    stopSpeech();
+    store.del('chat');
+    S.transcript = [];
+    S.mode = 'normal';
+    S.listenTurns = 0;
+    S.risk = { session: 0, level: 0, cats: {}, lastSheetAt: 0 };
+    chatLog().innerHTML = '';
+    welcome();
+    renderRiskbar();
+    toast('Đã làm mới cuộc trò chuyện.');
+  }
+
   function renderRiskbar(last) {
     const bar = $('#riskbar');
     if (!ADMIN.demoRisk) { bar.hidden = true; return; }
@@ -4359,7 +4372,7 @@ em muốn tự tử | 3 |`;
     renderRiskbar();
     registerSW();
     if (ADMIN.autoSync) syncRemote(false).then((st) => { if (st === 'updated') { toast('Đã cập nhật kho kiến thức mới.'); refreshQuizDot(); } });
-    window.ALLY = window.BANAN = { analyze: (t) => analyze(t), assessRisk: (t) => assessRisk(analyze(t)), retrieve: (t, a) => retrieve(analyze(t), a || ageOf()).slice(0, 5).map((m) => [m.e.id, +m.s.toFixed(2)]), audit: () => runAudit(), guardCheck, version: CONFIG.version };
+    window.ALLY = window.BANAN = { analyze: (t) => analyze(t), assessRisk: (t) => assessRisk(analyze(t)), retrieve: (t, a) => retrieve(analyze(t), a || ageOf()).slice(0, 5).map((m) => [m.e.id, +m.s.toFixed(2)]), audit: () => runAudit(), guardCheck, submitText: (t) => submitText(t), version: CONFIG.version };
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
