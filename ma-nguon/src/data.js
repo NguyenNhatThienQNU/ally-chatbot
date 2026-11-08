@@ -8,7 +8,7 @@
    - Từ khóa có thể kèm trọng số: "nên làm gì|0.5".
    ========================================================================= */
 window.ALLY_DEFAULT = window.BANAN_DEFAULT = {
-  version: "2026-11-08T22:00:00+07:00",
+  version: "2026-11-08T22:35:00+07:00",
   meta: {
     ten: "ALLY",
     moTa: "Chatbot hỗ trợ phòng, chống xâm hại trẻ em",
@@ -993,6 +993,104 @@ Nếu bạn dùng chung điện thoại với người khác, hãy bấm Thoát 
 - Nút **SOS** luôn ở góc trên để gọi giúp đỡ nhanh. Nút **Thoát nhanh** giúp bạn rời ứng dụng ngay.`
       },
       src: [], next: ["ve-ban-an", "an-danh"]
+    },
+    {
+      id: "nguyen-nhan-hau-qua", topic: "kien-thuc", title: "Nguyên nhân, hậu quả và thực trạng xâm hại trẻ em",
+      ages: ["thcs", "thpt", "lon"],
+      k: [
+        "nguyên nhân xâm hại", "hậu quả xâm hại", "hậu quả của xâm hại", "tác hại của xâm hại",
+        "ảnh hưởng của xâm hại", "vì sao trẻ bị xâm hại", "tại sao trẻ bị xâm hại", "thực trạng xâm hại",
+        "số liệu thống kê", "nghiên cứu khoa học", "đề tài nghiên cứu", "tài liệu nghiên cứu", "nguyên nhân và hậu quả"
+      ],
+      q: ["Nguyên nhân và hậu quả của xâm hại trẻ em là gì?", "Thực trạng xâm hại trẻ em hiện nay như thế nào?", "Vì sao trẻ em dễ bị xâm hại?"],
+      a: {
+        chung: `**1. Nguyên nhân chính khiến trẻ em dễ bị xâm hại:**
+- Kẻ xấu lợi dụng sự non nớt, lòng tin hoặc mối quan hệ thân quen để thao túng, dụ dỗ, đe dọa.
+- Nguy cơ trên không gian mạng tăng nhanh qua mạng xã hội, game trực tuyến.
+- Nhiều bạn còn ngại ngùng, thiếu kỹ năng nhận diện ranh giới hoặc sợ bị mắng nên không dám kể sớm.
+
+**2. Hậu quả:**
+- Tổn thương sức khỏe thể chất, tinh thần kéo dài (lo âu, mất ngủ, tự trách, giảm tập trung học tập).
+- Theo Tổng đài quốc gia **111**, mỗi năm tổng đài tiếp nhận khoảng 300.000 cuộc gọi tư vấn và hỗ trợ can thiệp bảo vệ trẻ em.`,
+        lon: `**1. Thực trạng & Số liệu tham khảo (phục vụ nghiên cứu, tuyên truyền):**
+- Theo Cục Bà mẹ và Trẻ em (Bộ Y tế), Tổng đài quốc gia **111** tiếp nhận khoảng 300.000 cuộc gọi/năm; riêng tháng 5/2026 ghi nhận hơn 46.000 cuộc gọi, trong đó nhiều trẻ cầu cứu vì bạo lực, xâm hại và khủng hoảng tâm lý.
+- Đáng chú ý, phần lớn vụ việc do **người quen** (hàng xóm, họ hàng, người quen qua mạng) gây ra chứ không chỉ người lạ.
+
+**2. Nguyên nhân:**
+- Sự bất cân xứng về quyền lực, thể chất và nhận thức giữa người lớn và trẻ em.
+- Thiếu hụt kỹ năng giáo dục giới tính, quy tắc an toàn cơ thể và kỹ năng số trong gia đình, nhà trường.
+- Tâm lý e ngại “giữ thể diện” khiến việc phát hiện, tố giác bị chậm trễ.
+
+**3. Hậu quả:**
+- Gây sang chấn tâm lý nặng nề (PTSD, trầm cảm, lo âu, suy giảm lòng tin), tổn hại thể chất và ảnh hưởng lâu dài đến sự phát triển nhân cách của trẻ.`
+      },
+      src: ["TT_111", "BYT_111", "TN_QUEN", "TN_MANG"], next: ["xam-hai-la-gi", "dau-hieu-tre-bi-xam-hai", "day-con"]
+    },
+    {
+      id: "xam-hai-tinh-than", topic: "kien-thuc", title: "Bạo lực tinh thần, ngôn từ và miệt thị ngoại hình",
+      ages: ["nho", "thcs", "thpt", "lon"],
+      k: [
+        "bạo lực tinh thần", "xâm hại tinh thần", "bạo lực ngôn từ", "miệt thị ngoại hình", "body shaming",
+        "chê béo", "chê xấu", "chê lùn", "bodyshaming", "sỉ nhục", "lăng mạ", "tổn thương tinh thần",
+        "lời nói làm tổn thương", "bị chê bai", "bị so sánh"
+      ],
+      q: ["Bạo lực tinh thần là gì?", "Bị miệt thị ngoại hình (body shaming) phải làm sao?", "Lời nói xúc phạm có phải là xâm hại không?"],
+      a: {
+        nho: `Không ai được dùng lời nói ác ý để chê bai cơ thể bạn, chửi mắng hay làm bạn xấu hổ trước mặt người khác.
+
+Nếu có người thường xuyên trêu chọc làm bạn buồn khóc, bạn hãy nói với thầy cô và bố mẹ nhé.`,
+        chung: `**Bạo lực tinh thần và ngôn từ** (bao gồm cả miệt thị ngoại hình – *body shaming*, lăng mạ, sỉ nhục, cô lập, so sánh ác ý) được Luật Trẻ em 2016 xếp vào hành vi bạo lực, xâm hại trẻ em.
+
+Cách ứng phó khi bị miệt thị, xúc phạm:
+- Hiểu rõ giá trị của bản thân: ngoại hình hay điểm số không cho phép bất kỳ ai xúc phạm nhân phẩm của bạn.
+- Bày tỏ thái độ rõ ràng: “Mình không thích cách nói đó, hãy dừng lại.”
+- Không hùa theo đám đông chê bai người khác; lưu lại bằng chứng nếu xảy ra trên mạng.
+- Chia sẻ với giáo viên chủ nhiệm, phòng tư vấn tâm lý học đường hoặc gọi **111** khi bạn cảm thấy quá áp lực.`
+      },
+      src: ["LTE", "TVPL_BL"], next: ["bat-nat", "bat-nat-tren-mang", "cam-xuc"]
+    },
+    {
+      id: "quay-roi-cong-cong", topic: "tu-bao-ve", title: "Quấy rối nơi công cộng, xe buýt, quay lén, nhìn lén",
+      ages: ["nho", "thcs", "thpt", "lon"],
+      k: [
+        "nơi công cộng", "trên xe buýt", "xe bus", "thang máy", "nhà vệ sinh", "phòng thay đồ",
+        "quay lén", "chụp lén", "nhìn lén", "camera giấu kín", "sờ mông", "cố tình đụng chạm",
+        "biến thái", "khoe thân nơi công cộng", "quấy rối nơi công cộng"
+      ],
+      q: ["Bị sàm sỡ trên xe buýt hoặc nơi công cộng thì làm gì?", "Phát hiện bị quay lén, nhìn lén phải xử lý thế nào?"],
+      a: {
+        nho: `Khi đi thang máy, xe buýt hay ở chỗ đông người, nếu có ai cố tình chạm vào người bạn hoặc nhìn lén trong nhà vệ sinh:
+- Hãy tránh ra xa ngay lập tức và đứng gần người lớn đáng tin.
+- Nói to lên để bác tài xế, bác bảo vệ và mọi người xung quanh giúp bạn.`,
+        chung: `Khi gặp hành vi **quấy rối nơi công cộng** (cố tình cọ sát, sờ mó trên xe buýt, thang máy) hoặc **nhìn lén, quay lén** trong nhà vệ sinh, phòng thay đồ:
+
+1. **Lên tiếng dứt khoát**: nói to “Anh/chị đang làm gì đấy? Đứng dịch ra!” để kẻ xấu chùn bước và thu hút sự chú ý của người xung quanh.
+2. **Di chuyển ngay** đến gần tài xế, phụ xe, bảo vệ hoặc nhóm đông người và nhờ họ hỗ trợ giữ khoảng cách.
+3. **Khi phát hiện bị quay lén, chụp lén**: giữ khoảng cách an toàn, hô hoán nhờ bảo vệ/người xung quanh giữ đối tượng, **không tự ý giằng co ở nơi vắng** và báo ngay công an (**113**).`
+      },
+      src: ["CAND_KN"], next: ["dong-cham", "khi-bi-xam-hai", "khi-nao-goi-113-115"]
+    },
+    {
+      id: "ap-luc-hoc-tap-gia-dinh", topic: "cam-xuc", title: "Áp lực học tập, gia đình và tâm sự tuổi mới lớn",
+      ages: ["nho", "thcs", "thpt", "lon"],
+      k: [
+        "áp lực học tập", "điểm kém", "thi trượt", "sợ điểm kém", "chán học", "học hành căng thẳng",
+        "bố mẹ không hiểu", "gia đình không hiểu", "bố mẹ cãi nhau", "bố mẹ ly hôn", "không ai lắng nghe",
+        "thất tình", "chia tay buồn", "cô đơn ở trường", "không có bạn thân", "mệt mỏi cuộc sống"
+      ],
+      q: ["Mình bị áp lực học tập và gia đình không hiểu mình", "Bố mẹ hay cãi nhau làm mình rất buồn", "Làm sao vượt qua cảm giác cô đơn, căng thẳng?"],
+      a: {
+        nho: `Khi bạn bị điểm chưa cao hay thấy bố mẹ giận nhau, chắc bạn buồn và lo lắm.
+
+Đó không phải lỗi của bạn đâu. Bạn hãy hít thở sâu hoặc viết điều mình nghĩ ra giấy nhé. Bạn cũng có thể tâm sự với thầy cô, ông bà hoặc gọi **111** để có người lắng nghe.`,
+        chung: `Áp lực điểm số, kỳ vọng từ gia đình, chuyện bố mẹ bất hòa hay cảm giác cô đơn là điều rất nhiều bạn học sinh, sinh viên gặp phải. Cảm xúc buồn bã hay mệt mỏi của bạn hoàn toàn có thật và đáng được lắng nghe.
+
+Một vài cách giúp bạn nhẹ lòng hơn:
+- **Đừng giữ một mình**: hãy viết nhật ký hoặc nhắn tin cho bố mẹ về cảm nhận của bạn (“Con đang thấy rất áp lực, mong bố mẹ lắng nghe con”).
+- **Tìm điểm tựa tâm lý**: trò chuyện với giáo viên tư vấn tâm lý ở trường, người thân tin cậy, hoặc gọi Tổng đài **111** (miễn phí, 24/7).
+- **Nghỉ ngơi ngắn**: thử bài tập **Hít thở cùng ALLY** trong mục Hỗ trợ để làm dịu nhịp tim và sự căng thẳng.`
+      },
+      src: ["BYT_111"], next: ["cam-xuc", "hit-tho", "goi-111"]
     },
 
     /* ===== HỘI THOẠI (ẩn khỏi thư viện) ===== */

@@ -663,6 +663,10 @@
     if (/\b(113|115|cong an|canh sat|cap cuu)\b/.test(p) && /\b(goi|so|khi nao|bao)\b/.test(p)) add('khi-nao-goi-113-115', 2.3);
     if (/\b(di tu|bi phat|muc an|xu ly hinh su|bo luat hinh su|co bi bat|bao nhieu nam tu)\b/.test(p)) add('phap-luat-hinh-su', 2.3);
     if (/\b(quyen tre em|luat tre em|bao nhieu tuoi la tre em|duoi 16 tuoi)\b/.test(p)) add('quyen-tre-em', 2.2);
+    if (/\b(nguyen nhan|hau qua|tac hai|thuc trang|so lieu|thong ke|nghien cuu khoa hoc|de tai)\b/.test(p)) add('nguyen-nhan-hau-qua', 2.5);
+    if (/\b(bao luc tinh than|xam hai tinh than|bao luc ngon tu|miet thi ngoai hinh|body shaming|bodyshaming|che beo|che xau)\b/.test(p)) add('xam-hai-tinh-than', 2.5);
+    if (/\b(noi cong cong|xe buyt|xe bus|thang may|nha ve sinh|phong thay do|quay len|chup len|nhin len|camera giau kin)\b/.test(p)) add('quay-roi-cong-cong', 2.5);
+    if (/\b(ap luc hoc tap|diem kem|thi truot|chan hoc|bo me khong hieu|bo me cai nhau|bo me ly hon|that tinh|co don)\b/.test(p)) add('ap-luc-hoc-tap-gia-dinh', 2.4);
 
     return boosts;
   }
@@ -977,10 +981,100 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     await respond(t);
   }
 
-  async function respond(text) {
+  // Phân tích khi người dùng tự giới thiệu bản thân (độ tuổi, lớp, sinh viên, giáo viên, phụ huynh, tên...)
+  function detectUserProfile(A) {
+    const p = A.plain;
+    const acc = A.acc;
+    let role = null;
+    let targetAge = null;
+    let userName = null;
+
+    // 1. Trích xuất tên người dùng nếu họ tự giới thiệu ("tôi tên là Thảo", "mình tên Nam")
+    const nameMatch = acc.match(/\b(?:tôi|mình|em|con|tớ)\s+tên\s+(?:là\s+)?([a-zA-ZÀ-ỹ]{2,15})\b/i);
+    if (nameMatch && !/^(gì|ai|là|gọi|như|thế|nào|vậy|đó|này|ally)$/i.test(nameMatch[1])) {
+      userName = nameMatch[1].charAt(0).toUpperCase() + nameMatch[1].slice(1);
+      S.userName = userName;
+    }
+
+    // 2. Nhận diện vai trò / cấp học / độ tuổi của người dùng (khi chủ ngữ là người dùng hoặc câu khai báo ngắn)
+    const isAboutBot = /\b(ban|cau|ally|bot)\b.*\b(may tuoi|bao nhieu tuoi|hoc lop|la ai|ten)\b/.test(p);
+    if (!isAboutBot) {
+      const ageNum = p.match(/\b(\d{1,2})\s*tuoi\b/);
+      const gradeNum = p.match(/\blop\s*(\d{1,2})\b/);
+
+      if (/\b(sinh vien|dai hoc|cao dang|nam nhat|nam hai|nam ba|nam tu|nam cuoi)\b/.test(p)) {
+        role = 'sinh-vien'; targetAge = 'lon';
+      } else if (/\b(giao vien|thay giao|co giao|giang vien|nha giao|tong phu trach|can bo doan|tu van tam ly)\b/.test(p) && /\b(toi|minh|la)\b/.test(p)) {
+        role = 'giao-vien'; targetAge = 'lon';
+      } else if (/\b(phu huynh|lam cha|lam me|bo cua|me cua|co con nho|nguoi lon|di lam roi)\b/.test(p) && /\b(toi|minh|la)\b/.test(p)) {
+        role = 'phu-huynh'; targetAge = 'lon';
+      } else if (gradeNum) {
+        const g = parseInt(gradeNum[1], 10);
+        if (g >= 1 && g <= 5) { role = 'hoc-sinh-nho'; targetAge = 'nho'; }
+        else if (g >= 6 && g <= 9) { role = 'hoc-sinh-thcs'; targetAge = 'thcs'; }
+        else if (g >= 10 && g <= 12) { role = 'hoc-sinh-thpt'; targetAge = 'thpt'; }
+      } else if (ageNum) {
+        const y = parseInt(ageNum[1], 10);
+        if (y >= 4 && y < 11) { role = 'hoc-sinh-nho'; targetAge = 'nho'; }
+        else if (y >= 11 && y <= 14) { role = 'hoc-sinh-thcs'; targetAge = 'thcs'; }
+        else if (y >= 15 && y <= 17) { role = 'hoc-sinh-thpt'; targetAge = 'thpt'; }
+        else if (y >= 18) { role = 'nguoi-lon'; targetAge = 'lon'; }
+      } else if (/\b(tieu hoc|cap 1|mam non)\b/.test(p) && A.plainT.length <= 8) {
+        role = 'hoc-sinh-nho'; targetAge = 'nho';
+      } else if (/\b(cap 2|thcs|trung hoc co so)\b/.test(p) && A.plainT.length <= 8) {
+        role = 'hoc-sinh-thcs'; targetAge = 'thcs';
+      } else if (/\b(cap 3|thpt|trung hoc pho thong)\b/.test(p) && A.plainT.length <= 8) {
+        role = 'hoc-sinh-thpt'; targetAge = 'thpt';
+      } else if (/\b(hoc sinh)\b/.test(p) && /\b(toi|minh|em|con|to|la)\b/.test(p) && A.plainT.length <= 7) {
+        role = 'hoc-sinh'; targetAge = SET.age || 'thcs';
+      }
+    }
+
+    if (!role && !userName) return null;
+    return { role, targetAge, userName };
+  }
+
+  async function replyUserProfile(prof) {
+    if (prof.targetAge) setAge(prof.targetAge);
     const age = ageOf();
+    const greetName = prof.userName ? `Chào bạn **${prof.userName}**! ` : 'Chào bạn! ';
+    let msg = '';
+    let chips = chipsFrom(POPULAR[age]);
+
+    if (prof.role === 'sinh-vien') {
+      msg = `${greetName}Rất vui được đồng hành cùng một bạn **sinh viên**. Mình đã tự động chuyển chế độ trò chuyện sang nhóm **Người lớn** để cung cấp đầy đủ góc nhìn chuyên sâu nhất cho bạn.\n\nVới sinh viên, ALLY có thể hỗ trợ bạn:\n- **Học tập & Nghiên cứu khoa học:** Tra cứu quy định pháp luật (Luật Trẻ em 2016, Bộ luật Hình sự), nguyên nhân, hậu quả và số liệu thực trạng bảo vệ trẻ em.\n- **Hoạt động tình nguyện & Cộng đồng:** Kỹ năng nhận biết dấu hiệu trẻ bị xâm hại, cách lắng nghe trẻ và quy trình báo tin qua Tổng đài **111**.\n- **An toàn cá nhân:** Cách xử lý khi bị quấy rối nơi công cộng, đe dọa phát tán ảnh riêng tư, bắt nạt trên mạng hoặc kiểm soát trong tình cảm.\n\nBạn đang quan tâm đến nội dung nào, cứ chia sẻ cụ thể với mình nhé!`;
+      chips = [
+        { label: 'Nguyên nhân & thực trạng xâm hại', act: 'entry', val: 'nguyen-nhan-hau-qua' },
+        { label: 'Pháp luật xử lý thế nào?', act: 'entry', val: 'phap-luat-hinh-su' },
+        { label: 'Dấu hiệu trẻ bị xâm hại', act: 'entry', val: 'dau-hieu-tre-bi-xam-hai' },
+        { label: 'Trách nhiệm báo tin (Điều 51)', act: 'entry', val: 'trach-nhiem-bao-tin' }
+      ];
+    } else if (prof.role === 'giao-vien') {
+      msg = `${greetName}Rất vinh hạnh được đồng hành cùng **thầy/cô giáo**. Mình đã chuyển chế độ sang nhóm **Người lớn (Phụ huynh, thầy cô)**.\n\nALLY có thể hỗ trợ thầy/cô:\n- Quy trình lắng nghe, trấn an và bảo mật khi học sinh tâm sự bị xâm hại.\n- Nhận diện sớm 4 nhóm dấu hiệu học sinh gặp nguy cơ.\n- Trách nhiệm thông báo, tố giác theo Luật Trẻ em 2016 và kết nối Tổng đài **111**.\n- Bộ câu hỏi tình huống phân hóa theo độ tuổi để lồng ghép vào giờ sinh hoạt lớp.`;
+    } else if (prof.role === 'phu-huynh' || prof.role === 'nguoi-lon') {
+      msg = `${greetName}Mình đã chuyển chế độ trò chuyện sang nhóm **Người lớn**. ALLY sẵn sàng đồng hành cùng bạn trong việc dạy trẻ kỹ năng tự bảo vệ theo từng độ tuổi, bảo vệ con trên môi trường mạng, nhận biết dấu hiệu bất thường và cách phản ứng đúng khi trẻ kể chuyện.`;
+    } else if (prof.role === 'hoc-sinh-thpt') {
+      msg = `${greetName}Mình đã điều chỉnh nội dung phù hợp với lứa tuổi **15–18 tuổi (THPT)** của bạn. Bạn có thể hỏi mình về sự đồng thuận và ranh giới trong tình cảm, an toàn trên mạng, quy định pháp luật, hoặc tâm sự chuyện học tập, gia đình nhé!`;
+    } else if (prof.role === 'hoc-sinh-thcs') {
+      msg = `${greetName}Mình đã điều chỉnh nội dung phù hợp với lứa tuổi **11–14 tuổi (THCS)** của bạn. Bạn có thể tìm hiểu cách ứng phó bắt nạt học đường, cảnh giác người lạ trên mạng, bảo vệ vùng riêng tư, hoặc kể chuyện làm bạn lo lắng nhé!`;
+    } else if (prof.role === 'hoc-sinh-nho') {
+      msg = `${greetName}Mình đã chọn chế độ dành cho các bạn **Dưới 11 tuổi (Tiểu học)** để nói chuyện thật dễ hiểu với bạn nhé. Bạn có muốn tìm hiểu về Vùng riêng tư, Bí mật xấu, Bàn tay tin cậy hay chơi câu đố tình huống cùng ALLY không?`;
+    } else if (prof.role === 'hoc-sinh') {
+      msg = `${greetName}Rất vui được làm người bạn đồng hành của bạn. Bạn có thể cho mình biết thêm bạn đang học lớp mấy (hoặc bao nhiêu tuổi) để mình điều chỉnh nội dung sát nhất, hoặc chọn ngay một chủ đề bạn đang quan tâm bên dưới nhé!`;
+    } else {
+      msg = `${greetName}Rất vui được làm quen với bạn! Mình là **ALLY** – người bạn đồng hành luôn sẵn sàng lắng nghe và hỗ trợ bạn. Hôm nay bạn muốn tìm hiểu kiến thức hay có chuyện gì muốn tâm sự cùng mình không?`;
+    }
+    return botSay(msg, { chips });
+  }
+
+  async function respond(text) {
     const A = analyze(text);
     const r = assessRisk(A);
+    const prof = detectUserProfile(A);
+    if (prof && prof.targetAge && prof.targetAge !== SET.age) {
+      setAge(prof.targetAge);
+    }
+    const age = ageOf();
     const level = updateSessionRisk(r);
     const matches = retrieve(A, age, r);
     const top = matches[0];
@@ -991,44 +1085,81 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     if (r.type === 'tu-hai-khac') return botSay(MSG.crisisOther, { alert: 'tu-hai', chips: [{ label: 'Gọi 111 nói gì?', act: 'entry', val: 'goi-111' }, { label: 'Bạn bè kể bị xâm hại', act: 'entry', val: 'ban-be-ke' }] });
     if (r.type === 'nguy-hiem') return respondDanger();
 
-    // 2) Đang lắng nghe (người dùng đang kể)
+    // 1b) Nếu đang có câu hỏi tình huống đang chờ trả lời và người dùng gõ đáp án A / B / C
+    if (S.activeScenario) {
+      const scMatch = A.plain.match(/^(?:chon\s+|dap an\s+|cau\s+|y\s+|phuong an\s+)?([abc])(?:\b|\.)/i);
+      if (scMatch && A.plainT.length <= 4) {
+        const idx = scMatch[1].toLowerCase().charCodeAt(0) - 97;
+        const scId = S.activeScenario;
+        S.activeScenario = null;
+        return answerScenario({ id: scId, i: idx, fromText: true });
+      }
+      S.activeScenario = null;
+    }
+
+    // 2) Nếu người dùng tự giới thiệu bản thân (ví dụ: "tôi là sinh viên", "em học lớp 7", "mình tên Thảo") mà chưa kèm câu hỏi chuyên môn khác
+    if (prof && r.level === 0 && (!top || top.s < thr * 1.1) && A.plainT.length <= 10) {
+      S.mode = 'normal'; setQuick();
+      return replyUserProfile(prof);
+    }
+
+    // 3) Đang lắng nghe (người dùng đang kể) — tự thoát chế độ lắng nghe nếu người dùng chuyển sang hỏi chủ đề cụ thể hoặc phản hồi về bot
     if (S.mode === 'listening' || S.mode === 'safety') {
-      if (top && top.s >= thr && r.level === 0 && (top.e.topic === 'ung-dung' || top.e.small || isQuestion(A) || top.s >= thr * 1.3)) {
-        if (top.e.id === 'tam-biet') { S.mode = 'normal'; setQuick(); }
-        await answerEntry(top.e);
+      if (/\b(van do|do qua|do ec|te qua|sai roi|khong hieu y|chua hieu y|ma pin|trang quan tri)\b/.test(A.plain)) {
+        S.mode = 'normal'; setQuick();
+        return fallback(text, r, matches, A);
+      }
+      if (S.mode === 'safety' && A.plainT.length <= 7) {
+        if (/\b(khong an toan|dang nguy hiem|rat so|cuu)\b/.test(A.plain)) return respondDanger();
+        if (/\b(an toan|dang an toan|on roi|minh on)\b/.test(A.plain) && !/\bkhong\b/.test(A.plain)) {
+          S.mode = 'listening'; S.listenTurns = 0; setQuick();
+          return botSay(age === 'lon' ? MSG.safe.lon : kidOr(MSG.safe, age), { chips: age === 'lon' ? [{ label: 'Các bước nên làm', act: 'nextsteps' }, { label: 'Khi trẻ kể bị xâm hại', act: 'entry', val: 'khi-tre-ke' }, { label: 'Chuẩn bị nội dung gọi 111', act: 'package' }] : [{ label: 'Mình chưa muốn kể', act: 'stop', cls: 'ghost' }] });
+        }
+      }
+      if (top && top.s >= 0.65 && (r.level === 0 || isQuestion(A) || top.s >= 1.5)) {
+        if (top.e.id === 'tam-biet' || top.s >= 1.2) { S.mode = 'normal'; setQuick(); }
+        await answerEntry(top.e, { alert: r.level >= 2 ? 'manual' : null });
         return;
       }
       return respondListening(r, top && top.s >= thr && !top.e.small && !top.e.action ? top.e : null);
     }
 
-    // 3) Đang hỏi để giúp người khác (bạn bè, con, học sinh)
+    // 4) Đang hỏi để giúp người khác (bạn bè, con, học sinh)
     if (r.tp && r.level >= 2) {
       const helper = KB.byId.get(age === 'lon' ? 'khi-tre-ke' : 'ban-be-ke');
       const best = (top && top.s >= thr && HELPER.has(top.e.id)) ? top.e : helper;
       if (best && isServable(best, age)) return answerEntry(best, { alert: 'manual' });
     }
 
-    // 4) Có dấu hiệu bị xâm hại → chuyển sang lắng nghe, hỏi về an toàn
-    if (r.level >= 2 || level >= 2 && r.level >= 1) return startDisclosure('detected', r);
+    // 5) Có dấu hiệu bị xâm hại: nếu khớp rõ một bài hướng dẫn cụ thể (hoặc là câu hỏi cách xử lý) thì trả lời ngay bài đó kèm lời đồng cảm & thẻ khẩn cấp; nếu chỉ mới bộc lộ chung thì hỏi thăm an toàn
+    if (r.level >= 2) {
+      if (top && top.s >= 0.9 && !top.e.small && !top.e.action && (isQuestion(A) || !r.fp || top.s >= 1.4)) {
+        const cat = topCat(r);
+        const ack = (r.fp && cat && MSG.listen[cat]) ? kidOr(MSG.listen[cat], age) : null;
+        return answerEntry(top.e, { prefix: ack, alert: 'manual' });
+      }
+      return startDisclosure('detected', r);
+    }
 
-    // 5) Trả lời theo kho kiến thức & phân tích ý định
-    if (top && top.s >= thr * 0.72) {
+    // 6) Trả lời theo kho kiến thức & phân tích ý định (kể cả khi khớp ngữ nghĩa mức vừa >= 0.45)
+    if (top && top.s >= 0.45) {
       const second = matches[1];
-      const alt = (second && second.s >= thr && second.s >= top.s * 0.82 && !second.e.small && !second.e.action) ? second.e : null;
+      const alt = (second && second.s >= 0.5 && second.s >= top.s * 0.8 && !second.e.small && !second.e.action) ? second.e : null;
       let prefix = null;
       if (r.level === 1 && !top.e.action && !top.e.small) prefix = r.cats['cam-xuc'] ? MSG.prefix1['cam-xuc'] : MSG.prefix1.generic;
       return answerEntry(top.e, { prefix, alt });
     }
 
-    // 6) Câu hỏi nối tiếp theo ngữ cảnh chủ đề vừa trao đổi
-    if (S.lastEntry && /\b(con gi nua|tiep theo|noi ro hon|cu the hon|vay phai lam sao|vay nen lam gi|the thi sao|roi sao nua)\b/.test(A.plain)) {
+    // 7) Câu hỏi nối tiếp theo ngữ cảnh chủ đề vừa trao đổi
+    if (S.lastEntry && /\b(con gi nua|tiep theo|noi ro hon|cu the hon|vay phai lam sao|vay nen lam gi|the thi sao|roi sao nua|sao nua)\b/.test(A.plain)) {
       const prev = KB.byId.get(S.lastEntry);
       const nextId = prev && (prev.next || []).find((id) => KB.byId.get(id) && isServable(KB.byId.get(id), age));
       if (nextId) return answerEntry(KB.byId.get(nextId));
     }
 
+    if (prof) return replyUserProfile(prof);
     if (r.cats['cam-xuc'] && KB.byId.get('cam-xuc')) return answerEntry(KB.byId.get('cam-xuc'), { prefix: MSG.prefix1['cam-xuc'] });
-    return fallback(text, r, matches);
+    return fallback(text, r, matches, A);
   }
 
   async function answerEntry(e, opts = {}) {
@@ -1059,19 +1190,45 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     return fallback();
   }
 
-  async function fallback(text, r, matches) {
+  async function fallback(text, r, matches, A) {
     const age = ageOf();
     if (text && ADMIN.logUnanswered) {
       const log = store.get('unanswered', []);
       log.unshift({ ts: Date.now(), age, text: scrub(text).slice(0, 200) });
       store.set('unanswered', log.slice(0, 300));
     }
-    const suggested = (matches || []).filter((m) => m.s >= 0.32 && !m.e.small && !m.e.action).slice(0, 3)
+    const p = A ? A.plain : stripVN(normText(text || ''));
+    const suggested = (matches || []).filter((m) => m.s >= 0.22 && !m.e.small && !m.e.action).slice(0, 3)
       .map((m) => ({ label: titleFor(m.e, age), act: 'entry', val: m.e.id }));
     const chips = suggested.length ? [...suggested, ...chipsFrom(POPULAR[age]).slice(0, 2)] : chipsFrom(POPULAR[age]).slice(0, 4);
+
+    // 1. Khi người dùng nhận xét / phàn nàn về câu trả lời của chatbot ("vẫn dở", "dở quá", "sai rồi", "không hiểu ý")
+    if (/\b(van do|do qua|do ec|te qua|sai roi|khong hieu y|chua hieu y|may moc|ngu qua|ngoc qua|chan qua|khong dung)\b/.test(p)) {
+      return botSay(
+        'Mình xin lỗi vì câu trả lời vừa rồi chưa thật sự đúng ý bạn nhé! Mình vẫn đang cố gắng hoàn thiện hơn.\n\nBạn có thể nói cụ thể hơn một chút về vấn đề bạn muốn trao đổi (ví dụ: **kiến thức pháp luật**, **kỹ năng phòng tránh**, **an toàn trên mạng**, hay **một tình huống thực tế** bạn đang gặp) để mình hỗ trợ chính xác nhất được không?',
+        { chips }
+      );
+    }
+
+    // 2. Khi người dùng hỏi về mã PIN hoặc trang quản trị
+    if (/\b(ma pin|trang quan tri|vao quan tri|admin)\b/.test(p)) {
+      return botSay(
+        'Để mở **Trang Quản trị nội dung** (dành cho nhóm nghiên cứu và giáo viên), bạn có thể gõ lệnh `/quantri` vào ô chat hoặc nhấn giữ vào chữ **ALLY** ở góc trên bên trái màn hình (mã PIN mặc định: **2026**).',
+        { chips }
+      );
+    }
+
+    // 3. Khi người dùng chia sẻ một câu trần thuật cá nhân ("tôi đang...", "mình muốn...", "hôm nay mình...")
+    if (/\b(toi|minh|em|con|to)\b/.test(p) && !isQuestion(A || analyze(text || ''))) {
+      return botSay(
+        'Mình đang lắng nghe bạn đây. Bạn cứ chia sẻ cụ thể hơn câu chuyện hoặc điều bạn đang băn khoăn nhé (chuyện ở trường, ở nhà, trên mạng hay một thắc mắc bạn muốn tìm lời giải). Bạn cũng có thể chọn nhanh một chủ đề gợi ý bên dưới:',
+        { chips, alert: r && r.level >= 1 ? 'manual' : null }
+      );
+    }
+
     const msg = suggested.length
-      ? 'Mình phân tích thấy câu hỏi của bạn có thể liên quan đến các chủ đề bên dưới. Bạn bấm vào nội dung muốn xem, hoặc diễn đạt cụ thể hơn nhé:'
-      : kidOr(MSG.fallback, age);
+      ? 'Mình phân tích thấy điều bạn hỏi có liên quan đến các nội dung dưới đây. Bạn hãy bấm vào chủ đề đúng ý bạn nhất, hoặc nói thêm vài chi tiết để mình giải đáp ngay nhé:'
+      : 'Mình đang lắng nghe bạn. Để mình hỗ trợ sát nhất, bạn có thể nói rõ hơn tình huống bạn đang quan tâm (về an toàn cơ thể, mạng xã hội, quy định pháp luật hay tâm lý), hoặc chọn một chủ đề bên dưới nhé:';
     return botSay(msg, { chips, alert: r && r.level >= 1 ? 'manual' : null });
   }
 
@@ -1155,13 +1312,15 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     if (!rest.length) { S.scenarioAsked = []; rest = pool; }
     const q = rest[Math.floor(Math.random() * rest.length)];
     S.scenarioAsked.push(q.id);
+    S.activeScenario = q.id;
     const chips = q.o.map((o, i) => ({ label: String.fromCharCode(65 + i) + '. ' + o, act: 'sc-answer', val: { id: q.id, i } }));
     return botSay('**Tình huống:** ' + q.q, { chips });
   }
   async function answerScenario(v) {
     const q = (DATA.quiz || []).find((x) => x.id === v.id);
-    if (!q) return;
-    addUser(String.fromCharCode(65 + v.i) + '. ' + q.o[v.i]);
+    if (!q || !q.o[v.i]) return;
+    S.activeScenario = null;
+    if (!v.fromText) addUser(String.fromCharCode(65 + v.i) + '. ' + q.o[v.i]);
     const ok = v.i === q.a;
     const ref = KB.byId.get(q.ref);
     const chips = [{ label: 'Thêm một tình huống', act: 'scenario' }];

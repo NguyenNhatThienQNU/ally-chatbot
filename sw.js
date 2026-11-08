@@ -1,5 +1,5 @@
 /* Service worker của ứng dụng ALLY: cho phép cài đặt trên Android & iOS và dùng khi không có mạng. */
-const VERSION = 'ally-v1.2.0';
+const VERSION = 'ally-v1.3.0';
 const SHELL = [
   './',
   './index.html',
