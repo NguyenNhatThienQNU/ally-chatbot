@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-08T17:00:00+07:00",
+  "version": "2026-11-08T22:00:00+07:00",
   "meta": {
     "ten": "ALLY",
     "moTa": "Chatbot hỗ trợ phòng, chống xâm hại trẻ em",
@@ -1599,6 +1599,8 @@
       "topic": "nguoi-lon",
       "title": "Dấu hiệu trẻ có thể đang bị xâm hại",
       "ages": [
+        "nho",
+        "thcs",
         "thpt",
         "lon"
       ],
@@ -1612,7 +1614,9 @@
         "nghi ngờ con bị",
         "làm sao biết con bị",
         "dấu hiệu bị xâm hại",
-        "học sinh có dấu hiệu"
+        "học sinh có dấu hiệu",
+        "biểu hiện bị xâm hại",
+        "nhận biết bị xâm hại"
       ],
       "q": [
         "Dấu hiệu nhận biết trẻ bị xâm hại?",
@@ -1620,7 +1624,8 @@
         "Con thay đổi tính nết có phải bị xâm hại không?"
       ],
       "a": {
-        "thpt": "Nếu em nhỏ trong nhà hoặc bạn bè có những thay đổi sau, hãy để ý và báo người lớn:\n- Bỗng nhiên sợ hãi, né tránh một người cụ thể; không muốn đến một nơi nào đó.\n- Thu mình, cáu gắt, hay khóc, gặp ác mộng, học sa sút.\n- Có vết thương không rõ lý do; đau ở vùng kín.\n- Có hiểu biết hoặc hành vi về tình dục không phù hợp với tuổi.\n- Có quà, tiền, điện thoại không rõ nguồn gốc; giấu giếm tin nhắn.\n\nMột dấu hiệu riêng lẻ chưa khẳng định điều gì, nhưng là lý do để quan tâm, hỏi han nhẹ nhàng và tìm người lớn giúp đỡ.",
+        "nho": "Nếu bạn hoặc bạn bè có những chuyện sau thì cần kể ngay với người lớn đáng tin:\n- Có người làm đau hoặc chạm vào vùng riêng tư.\n- Bỗng nhiên thấy rất sợ một người hoặc một nơi nào đó.\n- Hay khóc, khó ngủ, gặp ác mộng vì một bí mật xấu.\n\nHãy kể với bố mẹ, thầy cô hoặc gọi **111** nhé.",
+        "chung": "Nếu em nhỏ trong nhà hoặc bạn bè có những thay đổi sau, hãy để ý và báo người lớn:\n- Bỗng nhiên sợ hãi, né tránh một người cụ thể; không muốn đến một nơi nào đó.\n- Thu mình, cáu gắt, hay khóc, gặp ác mộng, học sa sút.\n- Có vết thương không rõ lý do; đau ở vùng kín.\n- Có hiểu biết hoặc hành vi về tình dục không phù hợp với tuổi.\n- Có quà, tiền, điện thoại không rõ nguồn gốc; giấu giếm tin nhắn.\n\nMột dấu hiệu riêng lẻ chưa khẳng định điều gì, nhưng là lý do để quan tâm, hỏi han nhẹ nhàng và tìm người lớn giúp đỡ.",
         "lon": "Theo một chuyên gia giáo dục chia sẻ trên Báo Thanh Niên (9/2024), có thể để ý 4 nhóm dấu hiệu:\n- **Tâm lý**: thay đổi tính nết đột ngột, cáu gắt, lo âu, thu mình, có cảm giác tội lỗi, xấu hổ.\n- **Thể chất**: vết bầm, trầy xước, thương tích không rõ lý do, kể cả ở vùng nhạy cảm; đau, viêm nhiễm vùng kín, tiểu buốt, tiểu nhiều. Cần đưa trẻ đi khám ngay.\n- **Hành vi**: có hành vi, hiểu biết về tình dục không phù hợp lứa tuổi; giảm sút tập trung, học tập.\n- **Xã hội**: tránh né bạn bè, hoạt động từng yêu thích; mất lòng tin vào người lớn, hoặc sợ một người cụ thể.\n\nMột dấu hiệu riêng lẻ chưa khẳng định trẻ bị xâm hại, nhưng là lý do để quan tâm, trò chuyện nhẹ nhàng và tìm hỗ trợ (Tổng đài 111)."
       },
       "src": [
@@ -1638,6 +1643,7 @@
       "topic": "nguoi-lon",
       "title": "Khi trẻ kể bị xâm hại, người lớn nên làm gì?",
       "ages": [
+        "thcs",
         "thpt",
         "lon"
       ],
@@ -1660,7 +1666,9 @@
         "con tôi nói",
         "học sinh tôi kể",
         "học sinh của tôi bị",
-        "con mình bị"
+        "con mình bị",
+        "em gái kể bị",
+        "em trai kể bị"
       ],
       "q": [
         "Con kể bị xâm hại thì cha mẹ nên làm gì?",
@@ -1668,6 +1676,7 @@
         "Phát hiện con bị xâm hại phải làm sao?"
       ],
       "a": {
+        "chung": "Khi một em nhỏ hoặc người thân kể rằng mình bị xâm hại:\n- **Giữ bình tĩnh**, lắng nghe và tin lời em kể.\n- Khẳng định ngay: “Em đã làm đúng khi kể ra. Đây không phải lỗi của em.”\n- Không trách mắng, không hứa giữ bí mật xấu.\n- Cùng báo ngay cho cha mẹ, thầy cô tin cậy hoặc gọi **111** (miễn phí, 24/7).",
         "lon": "Cách người lớn phản ứng trong lần đầu trẻ kể ảnh hưởng rất lớn đến việc trẻ có tiếp tục chia sẻ và hồi phục hay không.\n- **Giữ bình tĩnh**, lắng nghe, không tỏ ra hoảng hốt hay giận dữ trước mặt trẻ.\n- **Tin trẻ** và nói: “Con đã làm đúng khi kể. Đây không phải lỗi của con.”\n- **Không tra hỏi dồn dập**, không bắt trẻ kể lại nhiều lần, không gợi ý câu trả lời. Ghi lại những gì trẻ tự kể, kèm thời gian.\n- **Không hứa giữ bí mật**; giải thích rằng cần người khác giúp để con an toàn.\n- **Bảo đảm an toàn**: không để trẻ tiếp xúc với người bị nghi ngờ; không tự đối chất với người đó trước mặt trẻ.\n- **Báo tin**: gọi Tổng đài 111 hoặc báo công an; đưa trẻ đi khám nếu cần.\n- **Bảo mật**: không chia sẻ lên mạng xã hội.\n- **Đồng hành lâu dài**: tìm hỗ trợ tâm lý cho trẻ và cho cả gia đình."
       },
       "src": [
@@ -1682,8 +1691,11 @@
     {
       "id": "day-con",
       "topic": "nguoi-lon",
-      "title": "Dạy trẻ kỹ năng phòng tránh xâm hại",
+      "title": "Kỹ năng phòng tránh xâm hại và dạy trẻ tự bảo vệ",
       "ages": [
+        "nho",
+        "thcs",
+        "thpt",
         "lon"
       ],
       "k": [
@@ -1696,13 +1708,21 @@
         "phòng chống xâm hại",
         "bảo vệ con",
         "cách dạy con tự bảo vệ",
-        "nói chuyện với con"
+        "nói chuyện với con",
+        "cách tự bảo vệ",
+        "kỹ năng tự bảo vệ",
+        "tự bảo vệ bản thân",
+        "làm sao để không bị xâm hại",
+        "cách phòng tránh"
       ],
       "q": [
         "Dạy con phòng tránh xâm hại thế nào?",
-        "Nên dạy trẻ những kỹ năng gì?"
+        "Nên dạy trẻ những kỹ năng gì?",
+        "Làm sao để tự bảo vệ bản thân khỏi bị xâm hại?"
       ],
       "a": {
+        "nho": "Để tự bảo vệ mình, bạn hãy nhớ 5 quy tắc vàng nhé:\n1. Không cho ai nhìn hay chạm vào vùng riêng tư (vùng đồ bơi).\n2. Không đi theo hay nhận quà từ người lạ.\n3. Không ở riêng trong phòng kín với người làm bạn lo sợ.\n4. Không giữ bí mật xấu làm bạn sợ hãi.\n5. Nhớ 5 người lớn trong **Bàn tay tin cậy** và số **111** để kể ngay khi cần.",
+        "chung": "Các kỹ năng tự bảo vệ và phòng tránh xâm hại quan trọng:\n- **Hiểu rõ ranh giới cơ thể**: nắm vững quy tắc vùng riêng tư và quy tắc 6 vòng tròn giao tiếp.\n- **Nhận diện sớm dấu hiệu dụ dỗ**: cảnh giác khi ai đó tặng quà bất thường, rủ đi riêng, đòi giữ bí mật hoặc xin ảnh nhạy cảm.\n- **An toàn trên mạng**: không gửi ảnh riêng tư, không hẹn gặp người chỉ quen qua mạng.\n- **Kỹ năng phản ứng**: nói KHÔNG dứt khoát, rời khỏi nơi nguy hiểm, kể ngay với người lớn tin cậy hoặc gọi **111**.",
         "lon": "Một số gợi ý theo độ tuổi:\n- **Mầm non, tiểu học**: gọi đúng tên các bộ phận cơ thể; quy tắc đồ lót; bí mật an toàn và không an toàn; bàn tay 5 người tin cậy; mật khẩu gia đình khi có người lạ đón.\n- **THCS**: quy tắc 6 vòng tròn; nhận biết dấu hiệu dụ dỗ; an toàn trên mạng; kỹ năng từ chối và kể lại.\n- **THPT**: sự đồng ý và tôn trọng ranh giới; an toàn trong các mối quan hệ, hẹn hò; xử lý khi bị đe dọa, tống tiền qua mạng; giúp đỡ bạn bè.\n\nQuan trọng nhất là giữ kênh trò chuyện cởi mở hằng ngày, để trẻ biết rằng kể với cha mẹ, thầy cô điều gì cũng sẽ được lắng nghe, không bị mắng."
       },
       "src": [
@@ -1761,26 +1781,58 @@
         "lon"
       ],
       "k": [
+        "bạn tên là gì",
+        "tên bạn là gì",
+        "tên của bạn là gì",
+        "bạn tên gì",
+        "tên là gì",
+        "tên gì",
+        "cậu tên là gì",
+        "cậu tên gì",
+        "em tên là gì",
+        "chị tên là gì",
+        "anh tên là gì",
+        "gọi bạn là gì",
+        "cho hỏi tên",
+        "cho mình hỏi tên",
         "bạn là ai",
+        "cậu là ai",
         "ally là ai",
+        "ally là gì",
         "ally",
         "ally nghĩa là gì",
+        "tên ally",
+        "ý nghĩa tên ally",
         "an là ai",
+        "bạn an là ai",
         "bạn là người hay máy",
         "bạn là robot",
         "chatbot",
         "bạn có phải người thật",
         "ai làm ra bạn",
-        "bạn tên gì"
+        "ai tạo ra bạn",
+        "ai viết ra bạn",
+        "bạn bao nhiêu tuổi",
+        "bạn mấy tuổi",
+        "bạn ở đâu",
+        "bạn là nam hay nữ",
+        "bạn là trai hay gái",
+        "giới thiệu về bạn",
+        "giới thiệu bản thân"
       ],
       "q": [
+        "Bạn tên là gì?",
+        "Tên của bạn là gì?",
+        "Bạn tên gì?",
         "ALLY là ai?",
+        "Bạn là ai?",
         "Bạn có phải người thật không?",
-        "Tên ALLY có ý nghĩa gì?"
+        "Tên ALLY có ý nghĩa gì?",
+        "Ai tạo ra bạn?"
       ],
       "a": {
-        "nho": "Mình là **ALLY** (nghĩa là **“Người bạn đồng hành”**), một người bạn nhỏ trên máy luôn sẵn sàng lắng nghe bạn.\n\nMình không phải người thật. Khi cần giúp đỡ, bạn hãy tìm người lớn mà bạn tin, hoặc gọi số **111**. Gọi số này không mất tiền.",
-        "chung": "Mình là **ALLY** (trong tiếng Anh nghĩa là **“Người bạn đồng hành / Liên minh bảo vệ”**), một chatbot do nhóm học sinh nghiên cứu khoa học xây dựng để hỗ trợ phòng, chống xâm hại trẻ em.\n\nMình không phải người thật và **không thay thế** cho bất kỳ chuyên gia tâm lý, bác sĩ, công an hay cơ quan nào. Mình chỉ mang tính chất hỗ trợ, lắng nghe chia sẻ, cung cấp thông tin chính thống và hỗ trợ kết nối.\n\nNếu bạn cần nói chuyện với người thật hoặc cần can thiệp bảo vệ, hãy gọi **111** (miễn phí, 24/7) hoặc **113** khi khẩn cấp."
+        "nho": "Mình tên là **ALLY** (nghĩa là **“Người bạn đồng hành”**), một người bạn nhỏ trên máy luôn sẵn sàng lắng nghe bạn.\n\nMình không phải người thật. Khi cần giúp đỡ, bạn hãy tìm người lớn mà bạn tin, hoặc gọi số **111**. Gọi số này không mất tiền.",
+        "chung": "Mình tên là **ALLY** (trong tiếng Anh nghĩa là **“Người bạn đồng hành / Liên minh bảo vệ”**), một chatbot do nhóm học sinh nghiên cứu khoa học xây dựng để hỗ trợ phòng, chống xâm hại trẻ em.\n\nMình không phải người thật và **không thay thế** cho bất kỳ chuyên gia tâm lý, bác sĩ, công an hay cơ quan nào. Mình chỉ mang tính chất hỗ trợ, lắng nghe chia sẻ, cung cấp thông tin chính thống và hỗ trợ kết nối.\n\nNếu bạn cần nói chuyện với người thật hoặc cần can thiệp bảo vệ, hãy gọi **111** (miễn phí, 24/7) hoặc **113** khi khẩn cấp."
       },
       "src": [],
       "next": [
@@ -1801,21 +1853,31 @@
       "k": [
         "lộ thông tin",
         "bị lộ",
+        "có bị lộ không",
         "ẩn danh",
         "danh tính",
         "app có lưu",
         "có lưu lại không",
+        "có lưu tin nhắn không",
         "có ai đọc được",
         "ai đọc được",
         "thông tin của mình",
         "thông tin của em",
         "quyền riêng tư",
-        "có ai biết không"
+        "có ai biết không",
+        "bố mẹ có biết không",
+        "người khác có biết không",
+        "xóa tin nhắn",
+        "xóa cuộc trò chuyện",
+        "xóa lịch sử",
+        "có bảo mật không",
+        "có an toàn không"
       ],
       "q": [
         "Thông tin của mình có bị lộ không?",
         "Ứng dụng có lưu lại cuộc trò chuyện không?",
-        "Có ai đọc được tin nhắn của mình không?"
+        "Có ai đọc được tin nhắn của mình không?",
+        "Bố mẹ có biết mình nhắn ở đây không?"
       ],
       "a": {
         "nho": "Bạn không cần nói tên hay địa chỉ với mình.\n\nMình không kể chuyện của bạn cho ai cả. Khi nói chuyện xong, bạn có thể bấm nút **Thoát nhanh** ở trên cùng để xóa hết.",
@@ -1840,16 +1902,27 @@
       "k": [
         "hướng dẫn sử dụng",
         "cách dùng",
+        "cách sử dụng",
+        "dùng thế nào",
         "app có gì",
         "ứng dụng có gì",
+        "web có gì",
         "bạn giúp được gì",
         "bạn làm được gì",
+        "bạn biết làm gì",
+        "ally làm được gì",
+        "ally giúp được gì",
         "chức năng",
-        "tính năng"
+        "tính năng",
+        "có tác dụng gì",
+        "dùng để làm gì",
+        "hỏi được gì"
       ],
       "q": [
         "Bạn giúp được gì cho mình?",
-        "Ứng dụng này có những gì?"
+        "Ứng dụng này có những gì?",
+        "Bạn làm được những gì?",
+        "Cách sử dụng ứng dụng này như thế nào?"
       ],
       "a": {
         "nho": "Mình có thể:\n- Trả lời câu hỏi của bạn về cách giữ an toàn.\n- Nghe bạn kể chuyện.\n- Cho bạn chơi trả lời tình huống.\n- Giúp bạn gọi nhanh số **111**, **113** bằng nút **SOS** ở góc trên.",
@@ -1891,13 +1964,21 @@
         "alo",
         "hế lô",
         "he lo",
+        "hế nhô",
+        "helu",
         "cậu ơi",
         "cau oi",
+        "anh ơi",
+        "chị ơi",
+        "em ơi",
         "chào cậu",
         "chao cau",
         "bạn ơi cho mình hỏi",
         "cho mình hỏi",
         "cho em hỏi",
+        "cho tôi hỏi",
+        "mình muốn hỏi",
+        "em muốn hỏi",
         "bạn có đó không",
         "ban co do khong",
         "có ai ở đó không",
@@ -1915,6 +1996,8 @@
         "chào chị",
         "chào cháu",
         "chào buổi sáng",
+        "chào buổi trưa",
+        "chào buổi chiều",
         "chào buổi tối"
       ],
       "q": [
@@ -1954,12 +2037,19 @@
         "dạo này thế nào",
         "bạn thế nào rồi",
         "bạn ổn không",
-        "ban on khong"
+        "ban on khong",
+        "bạn đang làm gì",
+        "đang làm gì đó",
+        "bạn ăn cơm chưa",
+        "hôm nay bạn thế nào",
+        "bạn có vui không",
+        "bạn có mệt không"
       ],
       "q": [
         "Bạn có khỏe không?",
         "Bạn khỏe không?",
-        "Dạo này bạn thế nào?"
+        "Dạo này bạn thế nào?",
+        "Bạn đang làm gì đó?"
       ],
       "a": {
         "nho": "Mình khỏe lắm, cảm ơn bạn nhiều nhé! Mình là ALLY, luôn ở đây sẵn sàng lắng nghe và bảo vệ bạn. Bạn có chuyện gì muốn kể với mình không?",
@@ -1986,13 +2076,19 @@
         "cảm ơn",
         "cám ơn",
         "cảm ơn bạn",
+        "cảm ơn ally",
+        "cảm ơn nhiều",
         "thanks",
         "thank you",
         "tks",
-        "camon"
+        "camon",
+        "biết ơn bạn",
+        "bạn tốt quá",
+        "hay quá cảm ơn"
       ],
       "q": [
-        "Cảm ơn bạn"
+        "Cảm ơn bạn",
+        "Cảm ơn ALLY nhiều nhé"
       ],
       "a": {
         "chung": "Không có gì đâu. Mình luôn ở đây khi bạn cần. Nếu có chuyện gì làm bạn lo lắng, cứ quay lại kể với mình nhé."
@@ -2013,14 +2109,20 @@
       ],
       "k": [
         "tạm biệt",
+        "tạm biệt bạn",
+        "tạm biệt ally",
         "bye",
         "bai bai",
+        "good bye",
         "hẹn gặp lại",
         "mình đi đây",
-        "đi ngủ đây"
+        "đi ngủ đây",
+        "mình nghỉ đây",
+        "chúc ngủ ngon"
       ],
       "q": [
-        "Tạm biệt"
+        "Tạm biệt",
+        "Tạm biệt bạn nhé"
       ],
       "a": {
         "chung": "Tạm biệt bạn! Hãy nhớ: bạn luôn có quyền được an toàn. Khi cần, hãy gọi **111** (miễn phí, 24/7) hoặc quay lại tìm mình nhé."
@@ -2051,10 +2153,15 @@
         "ukm",
         "được rồi",
         "mình hiểu rồi",
-        "em hiểu rồi"
+        "em hiểu rồi",
+        "hiểu rồi",
+        "đã hiểu",
+        "vâng ạ",
+        "dạ vâng"
       ],
       "q": [
-        "Ok"
+        "Ok",
+        "Mình hiểu rồi"
       ],
       "a": {
         "chung": "Bạn còn muốn hỏi gì nữa không? Bạn có thể chọn một chủ đề bên dưới, hoặc kể cho mình nghe điều bạn đang nghĩ."
@@ -2090,12 +2197,18 @@
         "con có chuyện",
         "không biết nói với ai",
         "nghe em kể",
+        "nghe mình kể",
         "cần người nghe",
-        "chuyện khó nói"
+        "chuyện khó nói",
+        "cứu mình với",
+        "giúp mình với",
+        "giúp em với",
+        "cứu em với"
       ],
       "q": [
         "Mình muốn kể chuyện",
-        "Em có chuyện muốn kể"
+        "Em có chuyện muốn kể",
+        "Mình có chuyện khó nói muốn tâm sự"
       ],
       "a": {
         "chung": ""
@@ -2123,10 +2236,13 @@
         "kiểm tra kiến thức",
         "câu đố",
         "luyện tập",
-        "cho mình một tình huống"
+        "cho mình một tình huống",
+        "trắc nghiệm",
+        "chơi tình huống"
       ],
       "q": [
-        "Cho mình một tình huống"
+        "Cho mình một tình huống",
+        "Làm câu hỏi tình huống"
       ],
       "a": {
         "chung": ""
@@ -2152,10 +2268,12 @@
         "cứu hộ",
         "cần giúp ngay",
         "gọi giúp",
-        "số điện thoại khẩn cấp"
+        "số điện thoại khẩn cấp",
+        "đang nguy hiểm"
       ],
       "q": [
-        "Khẩn cấp"
+        "Khẩn cấp",
+        "Cần giúp đỡ khẩn cấp"
       ],
       "a": {
         "chung": ""

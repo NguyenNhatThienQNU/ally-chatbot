@@ -148,24 +148,46 @@
   function newer(a, b) { const x = Date.parse(a || ''), y = Date.parse(b || ''); return (isNaN(x) ? 0 : x) > (isNaN(y) ? 0 : y); }
 
   /* ---------------------------------------------------------------------
-     2. XỬ LÝ TIẾNG VIỆT
+     2. XỬ LÝ TIẾNG VIỆT & PHÂN TÍCH NGỮ NGHĨA
      --------------------------------------------------------------------- */
   const COMBINING = /[\u0300-\u036f]/g;
   function stripVN(s) { return String(s).normalize('NFD').replace(COMBINING, '').replace(/đ/g, 'd').replace(/Đ/g, 'D'); }
   function hasVN(s) { return /[\u0300-\u036f]/.test(String(s).normalize('NFD')) || /[đĐ]/.test(s); }
   function normText(s) { return String(s || '').toLowerCase().normalize('NFC').replace(/[^\p{L}\p{N}]+/gu, ' ').trim().replace(/\s+/g, ' '); }
-  // Chữ viết tắt, "teen code" thường gặp
+  // Chữ viết tắt, "teen code", khẩu ngữ thường gặp
   const TEEN = {
-    k: 'không', ko: 'không', kh: 'không', hok: 'không', hong: 'không', khg: 'không', kg: 'không', hk: 'không', khum: 'không', hem: 'không',
-    dc: 'được', 'đc': 'được', dk: 'được', 'đk': 'được', j: 'gì', ng: 'người', ngta: 'người ta', bme: 'bố mẹ', bm: 'bố mẹ', ny: 'người yêu',
-    e: 'em', a: 'anh', c: 'chị', cj: 'chị', t: 'tôi', mk: 'mình', mik: 'mình', mh: 'mình', b: 'bạn', bn: 'bạn', r: 'rồi', ntn: 'như thế nào',
-    lm: 'làm', ns: 'nói', nc: 'nói chuyện', vs: 'với', cx: 'cũng', trc: 'trước', bt: 'biết', bik: 'biết', sdt: 'số điện thoại', tn: 'tin nhắn',
-    ib: 'nhắn tin', fb: 'facebook', dt: 'điện thoại', 'đt': 'điện thoại', zl: 'zalo', mn: 'mọi người', bh: 'bây giờ', bjo: 'bây giờ', bgio: 'bây giờ',
-    h: 'giờ', vk: 'vợ', ck: 'chồng', tks: 'cảm ơn', thank: 'cảm ơn', thanks: 'cảm ơn', oke: 'ok', okie: 'ok', okela: 'ok', uk: 'ừ', um: 'ừm', ukm: 'ừm', sos: 'sos'
+    k: 'không', ko: 'không', kh: 'không', hok: 'không', hong: 'không', khg: 'không', kg: 'không', hk: 'không', khum: 'không', hem: 'không', hông: 'không',
+    dc: 'được', 'đc': 'được', dk: 'được', 'đk': 'được', 'đx': 'được', j: 'gì', gj: 'gì', z: 'vậy', v: 'vậy', zậy: 'vậy', zay: 'vậy',
+    ng: 'người', ngta: 'người ta', bme: 'bố mẹ', bm: 'bố mẹ', bame: 'bố mẹ', ny: 'người yêu', nyc: 'người yêu cũ',
+    e: 'em', a: 'anh', c: 'chị', cj: 'chị', chj: 'chị', t: 'tôi', mk: 'mình', mik: 'mình', mh: 'mình', mjh: 'mình', b: 'bạn', bn: 'bạn',
+    r: 'rồi', ntn: 'như thế nào', lm: 'làm', lms: 'làm sao', ns: 'nói', nc: 'nói chuyện', nch: 'nói chuyện', vs: 'với', cx: 'cũng', cug: 'cũng',
+    trc: 'trước', bt: 'biết', bik: 'biết', bjt: 'biết', sdt: 'số điện thoại', 'sđt': 'số điện thoại', tn: 'tin nhắn',
+    ib: 'nhắn tin', inb: 'nhắn tin', fb: 'facebook', dt: 'điện thoại', 'đt': 'điện thoại', zl: 'zalo', mn: 'mọi người', mng: 'mọi người',
+    bh: 'bây giờ', bjo: 'bây giờ', bgio: 'bây giờ', h: 'giờ', vk: 'vợ', ck: 'chồng',
+    tks: 'cảm ơn', thank: 'cảm ơn', thanks: 'cảm ơn', thks: 'cảm ơn', camon: 'cảm ơn',
+    oke: 'ok', okie: 'ok', okela: 'ok', uk: 'ừ', um: 'ừm', ukm: 'ừm', uh: 'ừ', uhm: 'ừm',
+    hs: 'học sinh', hsinh: 'học sinh', gv: 'giáo viên', gvien: 'giáo viên', ph: 'phụ huynh', sos: 'sos',
+    app: 'ứng dụng', web: 'ứng dụng', bot: 'ally'
   };
-  const STOP = new Set(['la', 'gi', 'thi', 'ma', 'cua', 'va', 'co', 'khong', 'em', 'minh', 'ban', 'toi', 'to', 'tui', 'a', 'oi', 'nhe', 'nha', 'vay', 'the', 'nao', 'nhu',
-    'duoc', 'cho', 'voi', 'den', 'di', 've', 'o', 'tai', 'vi', 'sao', 'lam', 'nen', 'phai', 'can', 'hay', 'hoac', 'nhung', 'cac', 'mot', 'nhieu', 'rat', 'qua', 'lai',
-    'ra', 'vao', 'len', 'xuong', 'roi', 'se', 'da', 'dang', 'neu', 'thuong', 'ai', 'day', 'do', 'nay', 'kia', 'anh', 'chi', 'ah', 'u', 'ha', 'hoi', 'muon', 'biet']);
+  // Chỉ lọc bỏ hư từ thuần ngữ pháp; giữ lại các từ để hỏi và từ mang ý định (tên, ai, gì, sao, nào, làm, nên, phải, cần, kể, gọi...)
+  const STOP = new Set(['la', 'thi', 'ma', 'cua', 'va', 'nhung', 'cac', 'mot', 'nhieu', 'rat', 'qua', 'lai',
+    'ra', 'vao', 'len', 'xuong', 'roi', 'se', 'da', 'dang', 'van', 'cung', 'nhe', 'nha', 'nhen', 'vay', 'the',
+    'a', 'oi', 'ah', 'u', 'ha', 'nhi', 'chu', 'luon', 'thoi', 'day', 'do', 'nay', 'kia']);
+
+  // Mở rộng đồng nghĩa ngữ nghĩa để hiểu nhiều cách diễn đạt tự nhiên
+  const SYNONYM_MAP = [
+    [/\b(ba mẹ|cha mẹ|bố má|ba má|tía má|phụ huynh)\b/g, 'bố mẹ'],
+    [/\b(thầy giáo|cô giáo|giáo viên|nhà trường)\b/g, 'thầy cô'],
+    [/\b(chỗ kín|vùng kín|vùng nhạy cảm|chỗ nhạy cảm|bộ phận sinh dục|vùng đồ bơi|vùng đồ lót)\b/g, 'vùng riêng tư'],
+    [/\b(sờ mó|sờ vào|đụng vào|mò mẫm|sàm sỡ|cởi đồ|cởi quần áo|lột đồ|nhìn lén|quay lén)\b/g, 'đụng chạm xâm hại tình dục'],
+    [/\b(ảnh nóng|hình nhạy cảm|ảnh khỏa thân|ảnh không mặc đồ|clip nóng|video nhạy cảm|hình riêng tư|ảnh kín|lộ ảnh|lộ clip)\b/g, 'ảnh riêng tư xin ảnh'],
+    [/\b(dọa đăng|dọa phát tán|dọa gửi|tung clip|đăng ảnh|ghép ảnh|ghép mặt|cắt ghép|tống tiền|uy hiếp|bắt chẹt|đòi tiền)\b/g, 'dọa tung ảnh bị đe dọa'],
+    [/\b(bóc phốt|nói xấu|bêu rếu|bêu xấu|lập nhóm anti|nick giả|giả mạo|bình luận xấu)\b/g, 'bắt nạt trên mạng'],
+    [/\b(tẩy chay|cô lập|đánh hội đồng|trêu chọc|xin đểu|trấn lột|bạo lực học đường)\b/g, 'bị bắt nạt'],
+    [/\b(đánh đòn|bạo hành|hành hạ|ngược đãi|đánh đập|chửi mắng)\b/g, 'bạo lực bị đánh'],
+    [/\b(stress|trầm cảm|hoảng loạn|sợ quá|buồn quá|chán nản|tuyệt vọng|mất ngủ|ác mộng|cô đơn|tủi thân|huhu|hic)\b/g, 'buồn sợ hãi tâm lý'],
+    [/\b(đường dây nóng|hotline|gọi số nào|gọi số mấy|liên hệ ai|báo cho ai)\b/g, 'tổng đài 111 số khẩn cấp']
+  ];
 
   function analyze(text) {
     const raw = String(text || '');
@@ -174,12 +196,22 @@
     const acc = toks.join(' ');
     const plain = stripVN(acc);
     const plainT = plain.split(' ').filter(Boolean);
-    return { raw, accented: hasVN(raw), acc, plain, accT: toks, plainT, set: tokenSet(plainT) };
+    let semAcc = acc;
+    for (const [re, rep] of SYNONYM_MAP) {
+      if (re.test(acc)) semAcc += ' ' + rep;
+    }
+    const semPlain = stripVN(semAcc);
+    const semAccT = semAcc.split(' ').filter(Boolean);
+    const semPlainT = semPlain.split(' ').filter(Boolean);
+    return { raw, accented: hasVN(raw), acc, plain, accT: toks, plainT, semAccT, semPlainT, set: tokenSet(semPlainT) };
   }
   function tokenSet(plainT) {
     const content = plainT.filter((t) => !STOP.has(t));
-    const s = new Set(content);
-    for (let i = 0; i + 1 < content.length; i++) s.add(content[i] + ' ' + content[i + 1]);
+    const base = content.length ? content : plainT;
+    const s = new Set(base);
+    for (let i = 0; i + 1 < base.length; i++) s.add(base[i] + ' ' + base[i + 1]);
+    for (let i = 0; i + 2 < base.length; i++) s.add(base[i] + ' ' + base[i + 2]);
+    for (let i = 0; i + 1 < plainT.length; i++) s.add(plainT[i] + ' ' + plainT[i + 1]);
     return s;
   }
   function dice(a, b) { if (!a.size || !b.size) return 0; let n = 0; a.forEach((x) => { if (b.has(x)) n++; }); return (2 * n) / (a.size + b.size); }
@@ -200,13 +232,62 @@
     }
     return res;
   }
-  function matchKw(A, kw) {
+  // So khớp cụm từ cho phép chèn tối đa maxGap từ đệm ở giữa (ví dụ: "bạn tên [là] gì" khớp "bạn tên gì")
+  function findGappedSeq(hay, needle, maxGap) {
+    const res = [];
+    if (needle.length < 2 || hay.length < needle.length) return res;
+    for (let i = 0; i <= hay.length - needle.length; i++) {
+      if (hay[i] !== needle[0]) continue;
+      let cur = i;
+      let ok = true;
+      for (let k = 1; k < needle.length; k++) {
+        let found = -1;
+        const limit = Math.min(hay.length - 1, cur + maxGap + 1);
+        for (let p = cur + 1; p <= limit; p++) {
+          if (hay[p] === needle[k]) { found = p; break; }
+        }
+        if (found < 0) { ok = false; break; }
+        cur = found;
+      }
+      if (ok) res.push(i);
+    }
+    return res;
+  }
+  // So khớp cửa sổ từ không phụ thuộc thứ tự (ví dụ: "tên của bạn là gì" khớp "bạn tên gì")
+  function findWindowMatch(hay, needle, extra) {
+    if (needle.length < 2 || hay.length < needle.length) return [];
+    const winLen = needle.length + (extra || 2);
+    const res = [];
+    for (let i = 0; i < hay.length; i++) {
+      if (!needle.includes(hay[i])) continue;
+      const slice = hay.slice(i, i + winLen);
+      if (needle.every((tok) => slice.includes(tok))) res.push(i);
+    }
+    return res;
+  }
+  function matchKw(A, kw, flex) {
     let pos = findSeq(A.accT, kw.accT);
-    if (pos.length) return { pos, mode: 'acc' };
-    if (kw.n === 1 && kw.hasAcc) return { pos: [], mode: null }; // từ một tiếng có dấu: chỉ so khớp khi gõ có dấu
+    if (pos.length) return { pos, mode: 'acc', factor: 1 };
+    if (kw.n === 1 && kw.hasAcc) return { pos: [], mode: null, factor: 0 }; // từ một tiếng có dấu: chỉ so khớp khi gõ có dấu
     pos = findSeq(A.plainT, kw.plainT);
-    if (pos.length) return { pos, mode: 'plain' };
-    return { pos: [], mode: null };
+    if (pos.length) return { pos, mode: 'plain', factor: 1 };
+    if (flex && kw.n >= 2) {
+      pos = findGappedSeq(A.accT, kw.accT, 2);
+      if (pos.length) return { pos, mode: 'acc', factor: 0.9 };
+      pos = findGappedSeq(A.plainT, kw.plainT, 2);
+      if (pos.length) return { pos, mode: 'plain', factor: 0.88 };
+      pos = findWindowMatch(A.accT, kw.accT, 2);
+      if (pos.length) return { pos, mode: 'acc', factor: 0.82 };
+      pos = findWindowMatch(A.plainT, kw.plainT, 2);
+      if (pos.length) return { pos, mode: 'plain', factor: 0.8 };
+      if (A.semAccT) {
+        pos = findSeq(A.semAccT, kw.accT);
+        if (pos.length) return { pos, mode: 'acc', factor: 0.85 };
+        pos = findSeq(A.semPlainT, kw.plainT);
+        if (pos.length) return { pos, mode: 'plain', factor: 0.82 };
+      }
+    }
+    return { pos: [], mode: null, factor: 0 };
   }
   const hit = (A, kws) => kws.some((kw) => matchKw(A, kw).pos.length > 0);
 
@@ -488,26 +569,123 @@
   }
 
   /* ---------------------------------------------------------------------
-     7. TÌM CÂU TRẢ LỜI TRONG KHO
+     7. PHÂN TÍCH Ý ĐỊNH & TÌM CÂU TRẢ LỜI TRONG KHO
      --------------------------------------------------------------------- */
   const HELPER = new Set(['ban-be-ke', 'khi-tre-ke', 'trach-nhiem-bao-tin', 'dau-hieu-tre-bi-xam-hai']);
+
+  function analyzeIntent(A, age, r) {
+    const boosts = {};
+    const add = (id, v) => { boosts[id] = (boosts[id] || 0) + v; };
+    const p = A.plain;
+    const n = A.plainT.length;
+
+    // 1) Hỏi tên, danh tính, thông tin về ALLY
+    if (/\b(ban|cau|em|chi|anh|ally|bot)\b.*\b(ten|la ai|nghia la gi|may tuoi|bao nhieu tuoi|o dau|nam hay nu|trai hay gai|nguoi hay may|robot|nguoi that)\b/.test(p) ||
+        /\b(ten)\b.*\b(ban|cau|ally|la gi|gi)\b/.test(p) ||
+        /\b(ai)\b.*\b(tao ra|lam ra|viet ra|xay dung|phat trien)\b/.test(p) ||
+        /\b(gioi thieu)\b.*\b(ban than|ve ban|ve ally)\b/.test(p) ||
+        /^(ban ten gi|ten la gi|ten gi|ban la ai|ally la ai|ally la gi)$/.test(p)) {
+      add('ve-ban-an', 3.0);
+    }
+
+    // 2) Hỏi chức năng, cách dùng, ALLY giúp được gì
+    if (/\b(ban|cau|ally|ung dung)\b.*\b(lam duoc gi|giup duoc gi|biet lam gi|co the giup|tac dung|chuc nang|tinh nang|de lam gi|ho tro gi)\b/.test(p) ||
+        /\b(cach dung|cach su dung|huong dan su dung|dung the nao|hoi nhung gi|hoi duoc gi)\b/.test(p)) {
+      add('cach-dung', 2.8);
+    }
+
+    // 3) Hỏi về ẩn danh, bảo mật, lộ thông tin, xóa lịch sử
+    if (/\b(bi lo|lo thong tin|co ai biet|bo me co biet|nguoi khac biet|ai doc duoc|luu tin nhan|luu cuoc tro chuyen|xoa tin nhan|xoa lich su|an danh|bao mat|giu kin)\b/.test(p)) {
+      add('an-danh', 2.6);
+    }
+
+    // 4) Hỏi thăm sức khỏe, trạng thái ALLY
+    if (/\b(ban|cau|ally|dao nay|hom nay)\b.*\b(khoe khong|on khong|the nao|dang lam gi|an com chua|vui khong|met khong)\b/.test(p) ||
+        /^(khoe khong|ban khoe khong|dang lam gi do)$/.test(p)) {
+      add('khoe', 2.8);
+    }
+
+    // 5) Chào hỏi, gọi ALLY mở đầu
+    if (n <= 6 && (!r || r.level === 0) &&
+        /^(xin chao|chao|chao ban|chao ally|chao cau|hello|hi|alo|he lo|he nho|helu|ban oi|ally oi|cau oi|anh oi|chi oi|em oi|co ai khong|co ai o do khong|ban co do khong|cho minh hoi|cho em hoi|minh muon hoi|em muon hoi)$/.test(p)) {
+      add('chao', 2.8);
+    }
+
+    // 6) Cảm ơn, tạm biệt, đồng ý ngắn
+    if (n <= 7 && /\b(cam on|tks|thank|thanks|biet on ban)\b/.test(p)) add('cam-on', 2.6);
+    if (n <= 7 && /\b(tam biet|bye|bai bai|good bye|hen gap lai|di ngu day|minh nghi day|chuc ngu ngon)\b/.test(p)) add('tam-biet', 2.8);
+    if (n <= 4 && /^(ok|oke|okay|u|um|uh|vang|da|duoc roi|hieu roi|minh hieu roi|em hieu roi|da hieu|vang a|da vang)$/.test(p)) add('vang', 2.5);
+
+    // 7) Muốn tâm sự, kể chuyện, cầu cứu chung
+    if (/\b(muon ke|muon tam su|muon chia se|co chuyen muon noi|co chuyen kho noi|nghe minh ke|nghe em ke|khong biet noi voi ai|khong biet ke voi ai)\b/.test(p)) {
+      add('muon-ke', 2.6);
+    }
+
+    // 8) Kỹ năng phòng tránh, tự bảo vệ
+    if (/\b(phong tranh|phong chong|tu bao ve|ky nang bao ve|lam sao de khong bi|cach tranh bi)\b/.test(p)) {
+      add('day-con', 2.2);
+      add('dau-hieu-canh-giac', 1.8);
+      add('khi-bi-xam-hai', 1.6);
+    }
+
+    // 9) Phân tích cấu trúc câu hỏi theo chủ đề chuyên biệt
+    if (/\b(so|ngai|khong dam|lo)\b.*\b(ke|noi|tam su|bao|bo me|thay co|nguoi lon|mang|khong tin|tra thu)\b/.test(p) || /\b(ke voi ai|noi voi ai bay gio)\b/.test(p)) {
+      add('ke-cho-ai', 2.4);
+    }
+    if (/\b(loi|tai|trach|xau ho|do ban|ghe tom)\b.*\b(minh|em|con|toi|ban than)\b/.test(p)) {
+      add('khong-phai-loi', 2.4);
+    }
+    if (/\b(anh|hinh|clip|video|camera|cam)\b.*\b(xin|doi|gui|chup|nhay cam|nong|khoa than|rieng tu|coi)\b/.test(p) || /\b(lo gui anh|da gui anh)\b/.test(p)) {
+      add('xin-anh', 2.4);
+    }
+    if (/\b(doa|tong tien|doi tien|uy hiep|ep)\b.*\b(anh|hinh|clip|video|tung|dang|phat tan|ghep)\b/.test(p) || /\b(ghep anh|cat ghep anh|ghep mat)\b/.test(p)) {
+      add('bi-de-doa-anh', 2.5);
+    }
+    if (/\b(mang|facebook|zalo|tiktok|game|online)\b.*\b(nguoi la|lam quen|ket ban|ru gap|hen gap|nap the|tang qua)\b/.test(p)) {
+      add('nguoi-la-tren-mang', 2.3);
+    }
+    if (/\b(mang|facebook|lop|nhom)\b.*\b(noi xau|boc phot|beu reu|beu xau|gia mao|nick gia|chui)\b/.test(p)) {
+      add('bat-nat-tren-mang', 2.4);
+    }
+    if (/\b(nguoi yeu|ban trai|ban gai|hen ho|yeu duong)\b.*\b(ep|doi|kiem soat|ghen|danh|doa|chia tay|dong y|dong thuan)\b/.test(p)) {
+      add('tinh-yeu-an-toan', 2.4);
+    }
+    if (/\b(ban than|ban minh|ban em|ban cung lop|ban be)\b.*\b(bi|ke|xam hai|danh|quay roi|sam so)\b/.test(p)) {
+      add('ban-be-ke', 2.4);
+    }
+    if (/\b(bo|me|ba|ma|nguoi nha|gia dinh|duong)\b.*\b(danh|chui|mang|nhot|say ruou|bao hanh|bao luc)\b/.test(p)) {
+      add('bi-danh-o-nha', 2.3);
+    }
+    if (/\b(bat nat|tay chay|co lap|danh hoi dong|treu choc|xin deu|bao luc hoc duong)\b/.test(p)) {
+      add('bat-nat', 2.4);
+    }
+    if (/\b(111|tong dai|duong day nong|hotline)\b/.test(p)) add('goi-111', 2.3);
+    if (/\b(113|115|cong an|canh sat|cap cuu)\b/.test(p) && /\b(goi|so|khi nao|bao)\b/.test(p)) add('khi-nao-goi-113-115', 2.3);
+    if (/\b(di tu|bi phat|muc an|xu ly hinh su|bo luat hinh su|co bi bat|bao nhieu nam tu)\b/.test(p)) add('phap-luat-hinh-su', 2.3);
+    if (/\b(quyen tre em|luat tre em|bao nhieu tuoi la tre em|duoi 16 tuoi)\b/.test(p)) add('quyen-tre-em', 2.2);
+
+    return boosts;
+  }
+
   function retrieve(A, age, r) {
     const out = [];
+    const boosts = analyzeIntent(A, age, r);
     for (const e of KB.list) {
       if (!isServable(e, age)) continue;
       const ks = [];
       for (const kw of e._k) {
-        const m = matchKw(A, kw);
-        if (m.pos.length) ks.push(kw.w * (1 + 0.45 * (kw.n - 1)) * (m.mode === 'plain' ? (A.accented ? 0.6 : 0.9) : 1));
+        const m = matchKw(A, kw, true);
+        if (m.pos.length) ks.push(kw.w * (m.factor || 1) * (1 + 0.45 * (kw.n - 1)) * (m.mode === 'plain' ? (A.accented ? 0.65 : 0.9) : 1));
       }
       ks.sort((a, b) => b - a);
       const kwScore = (ks[0] || 0) + 0.5 * (ks[1] || 0) + 0.25 * (ks[2] || 0);
       let qScore = 0;
       for (const qs of e._q) qScore = Math.max(qScore, dice(A.set, qs));
-      let s = kwScore + 2.6 * qScore;
-      if (e.small && A.accT.length > 5) s *= 0.3; // câu dài thì không coi là chào hỏi
+      const intentScore = boosts[e.id] || 0;
+      let s = kwScore + 2.6 * qScore + intentScore;
+      if (e.small && A.accT.length > 7 && !intentScore) s *= 0.35; // câu dài thì không coi là chào hỏi xã giao trừ khi đúng ý định
       if (r && r.tp && HELPER.has(e.id) && s > 0) s += 1.5; // đang hỏi để giúp người khác
-      if (s > 0) out.push({ e, s, kwScore, qScore });
+      if (s > 0) out.push({ e, s, kwScore, qScore, intentScore });
     }
     out.sort((a, b) => b.s - a.s);
     return out;
@@ -815,11 +993,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
 
     // 2) Đang lắng nghe (người dùng đang kể)
     if (S.mode === 'listening' || S.mode === 'safety') {
-      if (top && top.s >= thr * 1.4 && !top.e.small && !top.e.action && r.level === 0 && isQuestion(A)) {
-        await answerEntry(top.e);
-        return;
-      }
-      if (top && top.e.small && A.accT.length <= 3 && top.s >= thr && r.level < 1) {
+      if (top && top.s >= thr && r.level === 0 && (top.e.topic === 'ung-dung' || top.e.small || isQuestion(A) || top.s >= thr * 1.3)) {
         if (top.e.id === 'tam-biet') { S.mode = 'normal'; setQuick(); }
         await answerEntry(top.e);
         return;
@@ -837,16 +1011,24 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     // 4) Có dấu hiệu bị xâm hại → chuyển sang lắng nghe, hỏi về an toàn
     if (r.level >= 2 || level >= 2 && r.level >= 1) return startDisclosure('detected', r);
 
-    // 5) Trả lời theo kho kiến thức
-    if (top && top.s >= thr) {
+    // 5) Trả lời theo kho kiến thức & phân tích ý định
+    if (top && top.s >= thr * 0.72) {
       const second = matches[1];
       const alt = (second && second.s >= thr && second.s >= top.s * 0.82 && !second.e.small && !second.e.action) ? second.e : null;
       let prefix = null;
       if (r.level === 1 && !top.e.action && !top.e.small) prefix = r.cats['cam-xuc'] ? MSG.prefix1['cam-xuc'] : MSG.prefix1.generic;
       return answerEntry(top.e, { prefix, alt });
     }
+
+    // 6) Câu hỏi nối tiếp theo ngữ cảnh chủ đề vừa trao đổi
+    if (S.lastEntry && /\b(con gi nua|tiep theo|noi ro hon|cu the hon|vay phai lam sao|vay nen lam gi|the thi sao|roi sao nua)\b/.test(A.plain)) {
+      const prev = KB.byId.get(S.lastEntry);
+      const nextId = prev && (prev.next || []).find((id) => KB.byId.get(id) && isServable(KB.byId.get(id), age));
+      if (nextId) return answerEntry(KB.byId.get(nextId));
+    }
+
     if (r.cats['cam-xuc'] && KB.byId.get('cam-xuc')) return answerEntry(KB.byId.get('cam-xuc'), { prefix: MSG.prefix1['cam-xuc'] });
-    return fallback(text, r);
+    return fallback(text, r, matches);
   }
 
   async function answerEntry(e, opts = {}) {
@@ -877,15 +1059,20 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     return fallback();
   }
 
-  async function fallback(text, r) {
+  async function fallback(text, r, matches) {
     const age = ageOf();
     if (text && ADMIN.logUnanswered) {
       const log = store.get('unanswered', []);
       log.unshift({ ts: Date.now(), age, text: scrub(text).slice(0, 200) });
       store.set('unanswered', log.slice(0, 300));
     }
-    const chips = chipsFrom(POPULAR[age]).slice(0, 4);
-    return botSay(kidOr(MSG.fallback, age), { chips, alert: r && r.level >= 1 ? 'manual' : null });
+    const suggested = (matches || []).filter((m) => m.s >= 0.32 && !m.e.small && !m.e.action).slice(0, 3)
+      .map((m) => ({ label: titleFor(m.e, age), act: 'entry', val: m.e.id }));
+    const chips = suggested.length ? [...suggested, ...chipsFrom(POPULAR[age]).slice(0, 2)] : chipsFrom(POPULAR[age]).slice(0, 4);
+    const msg = suggested.length
+      ? 'Mình phân tích thấy câu hỏi của bạn có thể liên quan đến các chủ đề bên dưới. Bạn bấm vào nội dung muốn xem, hoặc diễn đạt cụ thể hơn nhé:'
+      : kidOr(MSG.fallback, age);
+    return botSay(msg, { chips, alert: r && r.level >= 1 ? 'manual' : null });
   }
 
   async function startDisclosure(trigger, r) {

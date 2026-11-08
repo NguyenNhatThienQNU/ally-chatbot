@@ -560,7 +560,7 @@ textarea.mono { width: 100%; min-height: 220px; border: 1px solid var(--line); b
    - Từ khóa có thể kèm trọng số: "nên làm gì|0.5".
    ========================================================================= */
 window.ALLY_DEFAULT = window.BANAN_DEFAULT = {
-  version: "2026-11-08T17:00:00+07:00",
+  version: "2026-11-08T22:00:00+07:00",
   meta: {
     ten: "ALLY",
     moTa: "Chatbot hỗ trợ phòng, chống xâm hại trẻ em",
@@ -1375,11 +1375,17 @@ Khi trẻ bị xâm hại: không đăng hình ảnh, tên, trường lớp, đ�
     /* ===== DÀNH CHO NGƯỜI LỚN ===== */
     {
       id: "dau-hieu-tre-bi-xam-hai", topic: "nguoi-lon", title: "Dấu hiệu trẻ có thể đang bị xâm hại",
-      ages: ["thpt", "lon"],
-      k: ["dấu hiệu trẻ bị xâm hại", "nhận biết trẻ bị xâm hại", "con có dấu hiệu", "con thay đổi", "biểu hiện trẻ bị xâm hại", "con không muốn đi học", "nghi ngờ con bị", "làm sao biết con bị", "dấu hiệu bị xâm hại", "học sinh có dấu hiệu"],
+      ages: ["nho", "thcs", "thpt", "lon"],
+      k: ["dấu hiệu trẻ bị xâm hại", "nhận biết trẻ bị xâm hại", "con có dấu hiệu", "con thay đổi", "biểu hiện trẻ bị xâm hại", "con không muốn đi học", "nghi ngờ con bị", "làm sao biết con bị", "dấu hiệu bị xâm hại", "học sinh có dấu hiệu", "biểu hiện bị xâm hại", "nhận biết bị xâm hại"],
       q: ["Dấu hiệu nhận biết trẻ bị xâm hại?", "Làm sao biết con mình bị xâm hại?", "Con thay đổi tính nết có phải bị xâm hại không?"],
       a: {
-        thpt: `Nếu em nhỏ trong nhà hoặc bạn bè có những thay đổi sau, hãy để ý và báo người lớn:
+        nho: `Nếu bạn hoặc bạn bè có những chuyện sau thì cần kể ngay với người lớn đáng tin:
+- Có người làm đau hoặc chạm vào vùng riêng tư.
+- Bỗng nhiên thấy rất sợ một người hoặc một nơi nào đó.
+- Hay khóc, khó ngủ, gặp ác mộng vì một bí mật xấu.
+
+Hãy kể với bố mẹ, thầy cô hoặc gọi **111** nhé.`,
+        chung: `Nếu em nhỏ trong nhà hoặc bạn bè có những thay đổi sau, hãy để ý và báo người lớn:
 - Bỗng nhiên sợ hãi, né tránh một người cụ thể; không muốn đến một nơi nào đó.
 - Thu mình, cáu gắt, hay khóc, gặp ác mộng, học sa sút.
 - Có vết thương không rõ lý do; đau ở vùng kín.
@@ -1399,10 +1405,15 @@ Một dấu hiệu riêng lẻ chưa khẳng định trẻ bị xâm hại, như
     },
     {
       id: "khi-tre-ke", topic: "nguoi-lon", title: "Khi trẻ kể bị xâm hại, người lớn nên làm gì?",
-      ages: ["thpt", "lon"],
-      k: ["con kể bị", "con nói bị", "học sinh kể", "trẻ kể", "khi trẻ kể", "con tâm sự", "con nói với tôi", "cháu kể", "phụ huynh nên làm gì", "giáo viên nên làm gì", "con bị xâm hại phải làm sao", "phát hiện con bị", "con tôi bị", "con tôi kể", "cháu tôi kể", "con tôi nói", "học sinh tôi kể", "học sinh của tôi bị", "con mình bị"],
+      ages: ["thcs", "thpt", "lon"],
+      k: ["con kể bị", "con nói bị", "học sinh kể", "trẻ kể", "khi trẻ kể", "con tâm sự", "con nói với tôi", "cháu kể", "phụ huynh nên làm gì", "giáo viên nên làm gì", "con bị xâm hại phải làm sao", "phát hiện con bị", "con tôi bị", "con tôi kể", "cháu tôi kể", "con tôi nói", "học sinh tôi kể", "học sinh của tôi bị", "con mình bị", "em gái kể bị", "em trai kể bị"],
       q: ["Con kể bị xâm hại thì cha mẹ nên làm gì?", "Học sinh tâm sự bị xâm hại, giáo viên xử lý thế nào?", "Phát hiện con bị xâm hại phải làm sao?"],
       a: {
+        chung: `Khi một em nhỏ hoặc người thân kể rằng mình bị xâm hại:
+- **Giữ bình tĩnh**, lắng nghe và tin lời em kể.
+- Khẳng định ngay: “Em đã làm đúng khi kể ra. Đây không phải lỗi của em.”
+- Không trách mắng, không hứa giữ bí mật xấu.
+- Cùng báo ngay cho cha mẹ, thầy cô tin cậy hoặc gọi **111** (miễn phí, 24/7).`,
         lon: `Cách người lớn phản ứng trong lần đầu trẻ kể ảnh hưởng rất lớn đến việc trẻ có tiếp tục chia sẻ và hồi phục hay không.
 - **Giữ bình tĩnh**, lắng nghe, không tỏ ra hoảng hốt hay giận dữ trước mặt trẻ.
 - **Tin trẻ** và nói: “Con đã làm đúng khi kể. Đây không phải lỗi của con.”
@@ -1416,11 +1427,22 @@ Một dấu hiệu riêng lẻ chưa khẳng định trẻ bị xâm hại, như
       src: ["CAND_BV", "TN_QUEN"], next: ["sau-khi-bi-xam-hai", "trach-nhiem-bao-tin"]
     },
     {
-      id: "day-con", topic: "nguoi-lon", title: "Dạy trẻ kỹ năng phòng tránh xâm hại",
-      ages: ["lon"],
-      k: ["dạy con", "dạy trẻ", "dạy học sinh", "giáo dục giới tính", "kỹ năng phòng tránh", "phòng tránh xâm hại", "phòng chống xâm hại", "bảo vệ con", "cách dạy con tự bảo vệ", "nói chuyện với con"],
-      q: ["Dạy con phòng tránh xâm hại thế nào?", "Nên dạy trẻ những kỹ năng gì?"],
+      id: "day-con", topic: "nguoi-lon", title: "Kỹ năng phòng tránh xâm hại và dạy trẻ tự bảo vệ",
+      ages: ["nho", "thcs", "thpt", "lon"],
+      k: ["dạy con", "dạy trẻ", "dạy học sinh", "giáo dục giới tính", "kỹ năng phòng tránh", "phòng tránh xâm hại", "phòng chống xâm hại", "bảo vệ con", "cách dạy con tự bảo vệ", "nói chuyện với con", "cách tự bảo vệ", "kỹ năng tự bảo vệ", "tự bảo vệ bản thân", "làm sao để không bị xâm hại", "cách phòng tránh"],
+      q: ["Dạy con phòng tránh xâm hại thế nào?", "Nên dạy trẻ những kỹ năng gì?", "Làm sao để tự bảo vệ bản thân khỏi bị xâm hại?"],
       a: {
+        nho: `Để tự bảo vệ mình, bạn hãy nhớ 5 quy tắc vàng nhé:
+1. Không cho ai nhìn hay chạm vào vùng riêng tư (vùng đồ bơi).
+2. Không đi theo hay nhận quà từ người lạ.
+3. Không ở riêng trong phòng kín với người làm bạn lo sợ.
+4. Không giữ bí mật xấu làm bạn sợ hãi.
+5. Nhớ 5 người lớn trong **Bàn tay tin cậy** và số **111** để kể ngay khi cần.`,
+        chung: `Các kỹ năng tự bảo vệ và phòng tránh xâm hại quan trọng:
+- **Hiểu rõ ranh giới cơ thể**: nắm vững quy tắc vùng riêng tư và quy tắc 6 vòng tròn giao tiếp.
+- **Nhận diện sớm dấu hiệu dụ dỗ**: cảnh giác khi ai đó tặng quà bất thường, rủ đi riêng, đòi giữ bí mật hoặc xin ảnh nhạy cảm.
+- **An toàn trên mạng**: không gửi ảnh riêng tư, không hẹn gặp người chỉ quen qua mạng.
+- **Kỹ năng phản ứng**: nói KHÔNG dứt khoát, rời khỏi nơi nguy hiểm, kể ngay với người lớn tin cậy hoặc gọi **111**.`,
         lon: `Một số gợi ý theo độ tuổi:
 - **Mầm non, tiểu học**: gọi đúng tên các bộ phận cơ thể; quy tắc đồ lót; bí mật an toàn và không an toàn; bàn tay 5 người tin cậy; mật khẩu gia đình khi có người lạ đón.
 - **THCS**: quy tắc 6 vòng tròn; nhận biết dấu hiệu dụ dỗ; an toàn trên mạng; kỹ năng từ chối và kể lại.
@@ -1451,13 +1473,24 @@ Nguy cơ xâm hại trực tuyến không chỉ đến từ người lạ mà c�
     {
       id: "ve-ban-an", topic: "ung-dung", title: "ALLY là ai?",
       ages: ["nho", "thcs", "thpt", "lon"],
-      k: ["bạn là ai", "ally là ai", "ally", "ally nghĩa là gì", "an là ai", "bạn là người hay máy", "bạn là robot", "chatbot", "bạn có phải người thật", "ai làm ra bạn", "bạn tên gì"],
-      q: ["ALLY là ai?", "Bạn có phải người thật không?", "Tên ALLY có ý nghĩa gì?"],
+      k: [
+        "bạn tên là gì", "tên bạn là gì", "tên của bạn là gì", "bạn tên gì", "tên là gì", "tên gì",
+        "cậu tên là gì", "cậu tên gì", "em tên là gì", "chị tên là gì", "anh tên là gì", "gọi bạn là gì",
+        "cho hỏi tên", "cho mình hỏi tên", "bạn là ai", "cậu là ai", "ally là ai", "ally là gì",
+        "ally", "ally nghĩa là gì", "tên ally", "ý nghĩa tên ally", "an là ai", "bạn an là ai",
+        "bạn là người hay máy", "bạn là robot", "chatbot", "bạn có phải người thật", "ai làm ra bạn",
+        "ai tạo ra bạn", "ai viết ra bạn", "bạn bao nhiêu tuổi", "bạn mấy tuổi", "bạn ở đâu",
+        "bạn là nam hay nữ", "bạn là trai hay gái", "giới thiệu về bạn", "giới thiệu bản thân"
+      ],
+      q: [
+        "Bạn tên là gì?", "Tên của bạn là gì?", "Bạn tên gì?", "ALLY là ai?", "Bạn là ai?",
+        "Bạn có phải người thật không?", "Tên ALLY có ý nghĩa gì?", "Ai tạo ra bạn?"
+      ],
       a: {
-        nho: `Mình là **ALLY** (nghĩa là **“Người bạn đồng hành”**), một người bạn nhỏ trên máy luôn sẵn sàng lắng nghe bạn.
+        nho: `Mình tên là **ALLY** (nghĩa là **“Người bạn đồng hành”**), một người bạn nhỏ trên máy luôn sẵn sàng lắng nghe bạn.
 
 Mình không phải người thật. Khi cần giúp đỡ, bạn hãy tìm người lớn mà bạn tin, hoặc gọi số **111**. Gọi số này không mất tiền.`,
-        chung: `Mình là **ALLY** (trong tiếng Anh nghĩa là **“Người bạn đồng hành / Liên minh bảo vệ”**), một chatbot do nhóm học sinh nghiên cứu khoa học xây dựng để hỗ trợ phòng, chống xâm hại trẻ em.
+        chung: `Mình tên là **ALLY** (trong tiếng Anh nghĩa là **“Người bạn đồng hành / Liên minh bảo vệ”**), một chatbot do nhóm học sinh nghiên cứu khoa học xây dựng để hỗ trợ phòng, chống xâm hại trẻ em.
 
 Mình không phải người thật và **không thay thế** cho bất kỳ chuyên gia tâm lý, bác sĩ, công an hay cơ quan nào. Mình chỉ mang tính chất hỗ trợ, lắng nghe chia sẻ, cung cấp thông tin chính thống và hỗ trợ kết nối.
 
@@ -1468,8 +1501,13 @@ Nếu bạn cần nói chuyện với người thật hoặc cần can thiệp b
     {
       id: "an-danh", topic: "ung-dung", title: "Thông tin của mình có bị lộ không?",
       ages: ["nho", "thcs", "thpt", "lon"],
-      k: ["lộ thông tin", "bị lộ", "ẩn danh", "danh tính", "app có lưu", "có lưu lại không", "có ai đọc được", "ai đọc được", "thông tin của mình", "thông tin của em", "quyền riêng tư", "có ai biết không"],
-      q: ["Thông tin của mình có bị lộ không?", "Ứng dụng có lưu lại cuộc trò chuyện không?", "Có ai đọc được tin nhắn của mình không?"],
+      k: [
+        "lộ thông tin", "bị lộ", "có bị lộ không", "ẩn danh", "danh tính", "app có lưu", "có lưu lại không",
+        "có lưu tin nhắn không", "có ai đọc được", "ai đọc được", "thông tin của mình", "thông tin của em",
+        "quyền riêng tư", "có ai biết không", "bố mẹ có biết không", "người khác có biết không",
+        "xóa tin nhắn", "xóa cuộc trò chuyện", "xóa lịch sử", "có bảo mật không", "có an toàn không"
+      ],
+      q: ["Thông tin của mình có bị lộ không?", "Ứng dụng có lưu lại cuộc trò chuyện không?", "Có ai đọc được tin nhắn của mình không?", "Bố mẹ có biết mình nhắn ở đây không?"],
       a: {
         nho: `Bạn không cần nói tên hay địa chỉ với mình.
 
@@ -1487,8 +1525,12 @@ Nếu bạn dùng chung điện thoại với người khác, hãy bấm Thoát 
     {
       id: "cach-dung", topic: "ung-dung", title: "Ứng dụng có những gì?",
       ages: ["nho", "thcs", "thpt", "lon"],
-      k: ["hướng dẫn sử dụng", "cách dùng", "app có gì", "ứng dụng có gì", "bạn giúp được gì", "bạn làm được gì", "chức năng", "tính năng"],
-      q: ["Bạn giúp được gì cho mình?", "Ứng dụng này có những gì?"],
+      k: [
+        "hướng dẫn sử dụng", "cách dùng", "cách sử dụng", "dùng thế nào", "app có gì", "ứng dụng có gì",
+        "web có gì", "bạn giúp được gì", "bạn làm được gì", "bạn biết làm gì", "ally làm được gì",
+        "ally giúp được gì", "chức năng", "tính năng", "có tác dụng gì", "dùng để làm gì", "hỏi được gì"
+      ],
+      q: ["Bạn giúp được gì cho mình?", "Ứng dụng này có những gì?", "Bạn làm được những gì?", "Cách sử dụng ứng dụng này như thế nào?"],
       a: {
         nho: `Mình có thể:
 - Trả lời câu hỏi của bạn về cách giữ an toàn.
@@ -1511,11 +1553,12 @@ Nếu bạn dùng chung điện thoại với người khác, hãy bấm Thoát 
       ages: ["nho", "thcs", "thpt", "lon"],
       k: [
         "bạn ơi", "ban oi", "ally ơi", "ally oi", "chào bạn", "chao ban", "chào ally", "chao ally",
-        "xin chào", "xin chao", "chào", "chao", "hello", "hi", "alo", "hế lô", "he lo", "cậu ơi", "cau oi",
-        "chào cậu", "chao cau", "bạn ơi cho mình hỏi", "cho mình hỏi", "cho em hỏi", "bạn có đó không",
+        "xin chào", "xin chao", "chào", "chao", "hello", "hi", "alo", "hế lô", "he lo", "hế nhô", "helu",
+        "cậu ơi", "cau oi", "anh ơi", "chị ơi", "em ơi", "chào cậu", "chao cau", "bạn ơi cho mình hỏi",
+        "cho mình hỏi", "cho em hỏi", "cho tôi hỏi", "mình muốn hỏi", "em muốn hỏi", "bạn có đó không",
         "ban co do khong", "có ai ở đó không", "co ai o do khong", "có ai không", "co ai khong", "có đó không",
         "co do khong", "bạn có ở đây không", "nói chuyện với mình đi", "tâm sự với mình đi", "nói chuyện với em đi",
-        "chào em", "chào anh", "chào chị", "chào cháu", "chào buổi sáng", "chào buổi tối"
+        "chào em", "chào anh", "chào chị", "chào cháu", "chào buổi sáng", "chào buổi trưa", "chào buổi chiều", "chào buổi tối"
       ],
       q: [
         "Bạn ơi", "ALLY ơi", "Chào bạn", "Xin chào", "Chào ALLY", "Cậu ơi",
@@ -1526,8 +1569,12 @@ Nếu bạn dùng chung điện thoại với người khác, hãy bấm Thoát 
     {
       id: "khoe", topic: "ung-dung", title: "Hỏi thăm ALLY", hidden: true,
       ages: ["nho", "thcs", "thpt", "lon"],
-      k: ["bạn khỏe không", "ban khoe khong", "khoe khong", "bạn có khỏe không", "dạo này thế nào", "bạn thế nào rồi", "bạn ổn không", "ban on khong"],
-      q: ["Bạn có khỏe không?", "Bạn khỏe không?", "Dạo này bạn thế nào?"],
+      k: [
+        "bạn khỏe không", "ban khoe khong", "khoe khong", "bạn có khỏe không", "dạo này thế nào",
+        "bạn thế nào rồi", "bạn ổn không", "ban on khong", "bạn đang làm gì", "đang làm gì đó",
+        "bạn ăn cơm chưa", "hôm nay bạn thế nào", "bạn có vui không", "bạn có mệt không"
+      ],
+      q: ["Bạn có khỏe không?", "Bạn khỏe không?", "Dạo này bạn thế nào?", "Bạn đang làm gì đó?"],
       a: {
         nho: `Mình khỏe lắm, cảm ơn bạn nhiều nhé! Mình là ALLY, luôn ở đây sẵn sàng lắng nghe và bảo vệ bạn. Bạn có chuyện gì muốn kể với mình không?`,
         chung: `Cảm ơn bạn đã hỏi thăm! Mình là ALLY và mình luôn sẵn sàng đồng hành, lắng nghe bạn. Bạn đang có điều gì muốn tâm sự hay tìm hiểu cùng mình không?`
@@ -1537,44 +1584,44 @@ Nếu bạn dùng chung điện thoại với người khác, hãy bấm Thoát 
     {
       id: "cam-on", topic: "ung-dung", title: "Cảm ơn", hidden: true,
       ages: ["nho", "thcs", "thpt", "lon"],
-      k: ["cảm ơn", "cám ơn", "cảm ơn bạn", "thanks", "thank you", "tks", "camon"],
-      q: ["Cảm ơn bạn"],
+      k: ["cảm ơn", "cám ơn", "cảm ơn bạn", "cảm ơn ally", "cảm ơn nhiều", "thanks", "thank you", "tks", "camon", "biết ơn bạn", "bạn tốt quá", "hay quá cảm ơn"],
+      q: ["Cảm ơn bạn", "Cảm ơn ALLY nhiều nhé"],
       a: { chung: `Không có gì đâu. Mình luôn ở đây khi bạn cần. Nếu có chuyện gì làm bạn lo lắng, cứ quay lại kể với mình nhé.` },
       src: [], next: []
     },
     {
       id: "tam-biet", topic: "ung-dung", title: "Tạm biệt", hidden: true,
       ages: ["nho", "thcs", "thpt", "lon"],
-      k: ["tạm biệt", "bye", "bai bai", "hẹn gặp lại", "mình đi đây", "đi ngủ đây"],
-      q: ["Tạm biệt"],
+      k: ["tạm biệt", "tạm biệt bạn", "tạm biệt ally", "bye", "bai bai", "good bye", "hẹn gặp lại", "mình đi đây", "đi ngủ đây", "mình nghỉ đây", "chúc ngủ ngon"],
+      q: ["Tạm biệt", "Tạm biệt bạn nhé"],
       a: { chung: `Tạm biệt bạn! Hãy nhớ: bạn luôn có quyền được an toàn. Khi cần, hãy gọi **111** (miễn phí, 24/7) hoặc quay lại tìm mình nhé.` },
       src: [], next: []
     },
     {
       id: "vang", topic: "ung-dung", title: "Đồng ý", hidden: true,
       ages: ["nho", "thcs", "thpt", "lon"],
-      k: ["ok", "oke", "okay", "ừ", "ừm", "vâng", "dạ", "uk", "ukm", "được rồi", "mình hiểu rồi", "em hiểu rồi"],
-      q: ["Ok"],
+      k: ["ok", "oke", "okay", "ừ", "ừm", "vâng", "dạ", "uk", "ukm", "được rồi", "mình hiểu rồi", "em hiểu rồi", "hiểu rồi", "đã hiểu", "vâng ạ", "dạ vâng"],
+      q: ["Ok", "Mình hiểu rồi"],
       a: { chung: `Bạn còn muốn hỏi gì nữa không? Bạn có thể chọn một chủ đề bên dưới, hoặc kể cho mình nghe điều bạn đang nghĩ.` },
       src: [], next: ["khi-bi-xam-hai", "goi-111"]
     },
     {
       id: "muon-ke", topic: "ung-dung", title: "Muốn kể chuyện", hidden: true, action: "disclose",
       ages: ["nho", "thcs", "thpt", "lon"],
-      k: ["muốn kể", "kể cho bạn nghe", "có chuyện muốn nói", "tâm sự", "muốn tâm sự", "muốn chia sẻ", "em có chuyện", "mình có chuyện", "tôi có chuyện", "con có chuyện", "không biết nói với ai", "nghe em kể", "cần người nghe", "chuyện khó nói"],
-      q: ["Mình muốn kể chuyện", "Em có chuyện muốn kể"], a: { chung: "" }, src: [], next: []
+      k: ["muốn kể", "kể cho bạn nghe", "có chuyện muốn nói", "tâm sự", "muốn tâm sự", "muốn chia sẻ", "em có chuyện", "mình có chuyện", "tôi có chuyện", "con có chuyện", "không biết nói với ai", "nghe em kể", "nghe mình kể", "cần người nghe", "chuyện khó nói", "cứu mình với", "giúp mình với", "giúp em với", "cứu em với"],
+      q: ["Mình muốn kể chuyện", "Em có chuyện muốn kể", "Mình có chuyện khó nói muốn tâm sự"], a: { chung: "" }, src: [], next: []
     },
     {
       id: "tinh-huong-chat", topic: "ung-dung", title: "Luyện tình huống", hidden: true, action: "scenario",
       ages: ["nho", "thcs", "thpt", "lon"],
-      k: ["tình huống", "câu hỏi tình huống", "đố mình", "đố em", "kiểm tra kiến thức", "câu đố", "luyện tập", "cho mình một tình huống"],
-      q: ["Cho mình một tình huống"], a: { chung: "" }, src: [], next: []
+      k: ["tình huống", "câu hỏi tình huống", "đố mình", "đố em", "kiểm tra kiến thức", "câu đố", "luyện tập", "cho mình một tình huống", "trắc nghiệm", "chơi tình huống"],
+      q: ["Cho mình một tình huống", "Làm câu hỏi tình huống"], a: { chung: "" }, src: [], next: []
     },
     {
       id: "khan-cap", topic: "ung-dung", title: "Khẩn cấp", hidden: true, action: "emergency",
       ages: ["nho", "thcs", "thpt", "lon"],
-      k: ["khẩn cấp", "sos", "cứu hộ", "cần giúp ngay", "gọi giúp", "số điện thoại khẩn cấp"],
-      q: ["Khẩn cấp"], a: { chung: "" }, src: [], next: []
+      k: ["khẩn cấp", "sos", "cứu hộ", "cần giúp ngay", "gọi giúp", "số điện thoại khẩn cấp", "đang nguy hiểm"],
+      q: ["Khẩn cấp", "Cần giúp đỡ khẩn cấp"], a: { chung: "" }, src: [], next: []
     }
   ],
 
@@ -1953,24 +2000,46 @@ Nếu bạn dùng chung điện thoại với người khác, hãy bấm Thoát 
   function newer(a, b) { const x = Date.parse(a || ''), y = Date.parse(b || ''); return (isNaN(x) ? 0 : x) > (isNaN(y) ? 0 : y); }
 
   /* ---------------------------------------------------------------------
-     2. XỬ LÝ TIẾNG VIỆT
+     2. XỬ LÝ TIẾNG VIỆT & PHÂN TÍCH NGỮ NGHĨA
      --------------------------------------------------------------------- */
   const COMBINING = /[\u0300-\u036f]/g;
   function stripVN(s) { return String(s).normalize('NFD').replace(COMBINING, '').replace(/đ/g, 'd').replace(/Đ/g, 'D'); }
   function hasVN(s) { return /[\u0300-\u036f]/.test(String(s).normalize('NFD')) || /[đĐ]/.test(s); }
   function normText(s) { return String(s || '').toLowerCase().normalize('NFC').replace(/[^\p{L}\p{N}]+/gu, ' ').trim().replace(/\s+/g, ' '); }
-  // Chữ viết tắt, "teen code" thường gặp
+  // Chữ viết tắt, "teen code", khẩu ngữ thường gặp
   const TEEN = {
-    k: 'không', ko: 'không', kh: 'không', hok: 'không', hong: 'không', khg: 'không', kg: 'không', hk: 'không', khum: 'không', hem: 'không',
-    dc: 'được', 'đc': 'được', dk: 'được', 'đk': 'được', j: 'gì', ng: 'người', ngta: 'người ta', bme: 'bố mẹ', bm: 'bố mẹ', ny: 'người yêu',
-    e: 'em', a: 'anh', c: 'chị', cj: 'chị', t: 'tôi', mk: 'mình', mik: 'mình', mh: 'mình', b: 'bạn', bn: 'bạn', r: 'rồi', ntn: 'như thế nào',
-    lm: 'làm', ns: 'nói', nc: 'nói chuyện', vs: 'với', cx: 'cũng', trc: 'trước', bt: 'biết', bik: 'biết', sdt: 'số điện thoại', tn: 'tin nhắn',
-    ib: 'nhắn tin', fb: 'facebook', dt: 'điện thoại', 'đt': 'điện thoại', zl: 'zalo', mn: 'mọi người', bh: 'bây giờ', bjo: 'bây giờ', bgio: 'bây giờ',
-    h: 'giờ', vk: 'vợ', ck: 'chồng', tks: 'cảm ơn', thank: 'cảm ơn', thanks: 'cảm ơn', oke: 'ok', okie: 'ok', okela: 'ok', uk: 'ừ', um: 'ừm', ukm: 'ừm', sos: 'sos'
+    k: 'không', ko: 'không', kh: 'không', hok: 'không', hong: 'không', khg: 'không', kg: 'không', hk: 'không', khum: 'không', hem: 'không', hông: 'không',
+    dc: 'được', 'đc': 'được', dk: 'được', 'đk': 'được', 'đx': 'được', j: 'gì', gj: 'gì', z: 'vậy', v: 'vậy', zậy: 'vậy', zay: 'vậy',
+    ng: 'người', ngta: 'người ta', bme: 'bố mẹ', bm: 'bố mẹ', bame: 'bố mẹ', ny: 'người yêu', nyc: 'người yêu cũ',
+    e: 'em', a: 'anh', c: 'chị', cj: 'chị', chj: 'chị', t: 'tôi', mk: 'mình', mik: 'mình', mh: 'mình', mjh: 'mình', b: 'bạn', bn: 'bạn',
+    r: 'rồi', ntn: 'như thế nào', lm: 'làm', lms: 'làm sao', ns: 'nói', nc: 'nói chuyện', nch: 'nói chuyện', vs: 'với', cx: 'cũng', cug: 'cũng',
+    trc: 'trước', bt: 'biết', bik: 'biết', bjt: 'biết', sdt: 'số điện thoại', 'sđt': 'số điện thoại', tn: 'tin nhắn',
+    ib: 'nhắn tin', inb: 'nhắn tin', fb: 'facebook', dt: 'điện thoại', 'đt': 'điện thoại', zl: 'zalo', mn: 'mọi người', mng: 'mọi người',
+    bh: 'bây giờ', bjo: 'bây giờ', bgio: 'bây giờ', h: 'giờ', vk: 'vợ', ck: 'chồng',
+    tks: 'cảm ơn', thank: 'cảm ơn', thanks: 'cảm ơn', thks: 'cảm ơn', camon: 'cảm ơn',
+    oke: 'ok', okie: 'ok', okela: 'ok', uk: 'ừ', um: 'ừm', ukm: 'ừm', uh: 'ừ', uhm: 'ừm',
+    hs: 'học sinh', hsinh: 'học sinh', gv: 'giáo viên', gvien: 'giáo viên', ph: 'phụ huynh', sos: 'sos',
+    app: 'ứng dụng', web: 'ứng dụng', bot: 'ally'
   };
-  const STOP = new Set(['la', 'gi', 'thi', 'ma', 'cua', 'va', 'co', 'khong', 'em', 'minh', 'ban', 'toi', 'to', 'tui', 'a', 'oi', 'nhe', 'nha', 'vay', 'the', 'nao', 'nhu',
-    'duoc', 'cho', 'voi', 'den', 'di', 've', 'o', 'tai', 'vi', 'sao', 'lam', 'nen', 'phai', 'can', 'hay', 'hoac', 'nhung', 'cac', 'mot', 'nhieu', 'rat', 'qua', 'lai',
-    'ra', 'vao', 'len', 'xuong', 'roi', 'se', 'da', 'dang', 'neu', 'thuong', 'ai', 'day', 'do', 'nay', 'kia', 'anh', 'chi', 'ah', 'u', 'ha', 'hoi', 'muon', 'biet']);
+  // Chỉ lọc bỏ hư từ thuần ngữ pháp; giữ lại các từ để hỏi và từ mang ý định (tên, ai, gì, sao, nào, làm, nên, phải, cần, kể, gọi...)
+  const STOP = new Set(['la', 'thi', 'ma', 'cua', 'va', 'nhung', 'cac', 'mot', 'nhieu', 'rat', 'qua', 'lai',
+    'ra', 'vao', 'len', 'xuong', 'roi', 'se', 'da', 'dang', 'van', 'cung', 'nhe', 'nha', 'nhen', 'vay', 'the',
+    'a', 'oi', 'ah', 'u', 'ha', 'nhi', 'chu', 'luon', 'thoi', 'day', 'do', 'nay', 'kia']);
+
+  // Mở rộng đồng nghĩa ngữ nghĩa để hiểu nhiều cách diễn đạt tự nhiên
+  const SYNONYM_MAP = [
+    [/\b(ba mẹ|cha mẹ|bố má|ba má|tía má|phụ huynh)\b/g, 'bố mẹ'],
+    [/\b(thầy giáo|cô giáo|giáo viên|nhà trường)\b/g, 'thầy cô'],
+    [/\b(chỗ kín|vùng kín|vùng nhạy cảm|chỗ nhạy cảm|bộ phận sinh dục|vùng đồ bơi|vùng đồ lót)\b/g, 'vùng riêng tư'],
+    [/\b(sờ mó|sờ vào|đụng vào|mò mẫm|sàm sỡ|cởi đồ|cởi quần áo|lột đồ|nhìn lén|quay lén)\b/g, 'đụng chạm xâm hại tình dục'],
+    [/\b(ảnh nóng|hình nhạy cảm|ảnh khỏa thân|ảnh không mặc đồ|clip nóng|video nhạy cảm|hình riêng tư|ảnh kín|lộ ảnh|lộ clip)\b/g, 'ảnh riêng tư xin ảnh'],
+    [/\b(dọa đăng|dọa phát tán|dọa gửi|tung clip|đăng ảnh|ghép ảnh|ghép mặt|cắt ghép|tống tiền|uy hiếp|bắt chẹt|đòi tiền)\b/g, 'dọa tung ảnh bị đe dọa'],
+    [/\b(bóc phốt|nói xấu|bêu rếu|bêu xấu|lập nhóm anti|nick giả|giả mạo|bình luận xấu)\b/g, 'bắt nạt trên mạng'],
+    [/\b(tẩy chay|cô lập|đánh hội đồng|trêu chọc|xin đểu|trấn lột|bạo lực học đường)\b/g, 'bị bắt nạt'],
+    [/\b(đánh đòn|bạo hành|hành hạ|ngược đãi|đánh đập|chửi mắng)\b/g, 'bạo lực bị đánh'],
+    [/\b(stress|trầm cảm|hoảng loạn|sợ quá|buồn quá|chán nản|tuyệt vọng|mất ngủ|ác mộng|cô đơn|tủi thân|huhu|hic)\b/g, 'buồn sợ hãi tâm lý'],
+    [/\b(đường dây nóng|hotline|gọi số nào|gọi số mấy|liên hệ ai|báo cho ai)\b/g, 'tổng đài 111 số khẩn cấp']
+  ];
 
   function analyze(text) {
     const raw = String(text || '');
@@ -1979,12 +2048,22 @@ Nếu bạn dùng chung điện thoại với người khác, hãy bấm Thoát 
     const acc = toks.join(' ');
     const plain = stripVN(acc);
     const plainT = plain.split(' ').filter(Boolean);
-    return { raw, accented: hasVN(raw), acc, plain, accT: toks, plainT, set: tokenSet(plainT) };
+    let semAcc = acc;
+    for (const [re, rep] of SYNONYM_MAP) {
+      if (re.test(acc)) semAcc += ' ' + rep;
+    }
+    const semPlain = stripVN(semAcc);
+    const semAccT = semAcc.split(' ').filter(Boolean);
+    const semPlainT = semPlain.split(' ').filter(Boolean);
+    return { raw, accented: hasVN(raw), acc, plain, accT: toks, plainT, semAccT, semPlainT, set: tokenSet(semPlainT) };
   }
   function tokenSet(plainT) {
     const content = plainT.filter((t) => !STOP.has(t));
-    const s = new Set(content);
-    for (let i = 0; i + 1 < content.length; i++) s.add(content[i] + ' ' + content[i + 1]);
+    const base = content.length ? content : plainT;
+    const s = new Set(base);
+    for (let i = 0; i + 1 < base.length; i++) s.add(base[i] + ' ' + base[i + 1]);
+    for (let i = 0; i + 2 < base.length; i++) s.add(base[i] + ' ' + base[i + 2]);
+    for (let i = 0; i + 1 < plainT.length; i++) s.add(plainT[i] + ' ' + plainT[i + 1]);
     return s;
   }
   function dice(a, b) { if (!a.size || !b.size) return 0; let n = 0; a.forEach((x) => { if (b.has(x)) n++; }); return (2 * n) / (a.size + b.size); }
@@ -2005,13 +2084,62 @@ Nếu bạn dùng chung điện thoại với người khác, hãy bấm Thoát 
     }
     return res;
   }
-  function matchKw(A, kw) {
+  // So khớp cụm từ cho phép chèn tối đa maxGap từ đệm ở giữa (ví dụ: "bạn tên [là] gì" khớp "bạn tên gì")
+  function findGappedSeq(hay, needle, maxGap) {
+    const res = [];
+    if (needle.length < 2 || hay.length < needle.length) return res;
+    for (let i = 0; i <= hay.length - needle.length; i++) {
+      if (hay[i] !== needle[0]) continue;
+      let cur = i;
+      let ok = true;
+      for (let k = 1; k < needle.length; k++) {
+        let found = -1;
+        const limit = Math.min(hay.length - 1, cur + maxGap + 1);
+        for (let p = cur + 1; p <= limit; p++) {
+          if (hay[p] === needle[k]) { found = p; break; }
+        }
+        if (found < 0) { ok = false; break; }
+        cur = found;
+      }
+      if (ok) res.push(i);
+    }
+    return res;
+  }
+  // So khớp cửa sổ từ không phụ thuộc thứ tự (ví dụ: "tên của bạn là gì" khớp "bạn tên gì")
+  function findWindowMatch(hay, needle, extra) {
+    if (needle.length < 2 || hay.length < needle.length) return [];
+    const winLen = needle.length + (extra || 2);
+    const res = [];
+    for (let i = 0; i < hay.length; i++) {
+      if (!needle.includes(hay[i])) continue;
+      const slice = hay.slice(i, i + winLen);
+      if (needle.every((tok) => slice.includes(tok))) res.push(i);
+    }
+    return res;
+  }
+  function matchKw(A, kw, flex) {
     let pos = findSeq(A.accT, kw.accT);
-    if (pos.length) return { pos, mode: 'acc' };
-    if (kw.n === 1 && kw.hasAcc) return { pos: [], mode: null }; // từ một tiếng có dấu: chỉ so khớp khi gõ có dấu
+    if (pos.length) return { pos, mode: 'acc', factor: 1 };
+    if (kw.n === 1 && kw.hasAcc) return { pos: [], mode: null, factor: 0 }; // từ một tiếng có dấu: chỉ so khớp khi gõ có dấu
     pos = findSeq(A.plainT, kw.plainT);
-    if (pos.length) return { pos, mode: 'plain' };
-    return { pos: [], mode: null };
+    if (pos.length) return { pos, mode: 'plain', factor: 1 };
+    if (flex && kw.n >= 2) {
+      pos = findGappedSeq(A.accT, kw.accT, 2);
+      if (pos.length) return { pos, mode: 'acc', factor: 0.9 };
+      pos = findGappedSeq(A.plainT, kw.plainT, 2);
+      if (pos.length) return { pos, mode: 'plain', factor: 0.88 };
+      pos = findWindowMatch(A.accT, kw.accT, 2);
+      if (pos.length) return { pos, mode: 'acc', factor: 0.82 };
+      pos = findWindowMatch(A.plainT, kw.plainT, 2);
+      if (pos.length) return { pos, mode: 'plain', factor: 0.8 };
+      if (A.semAccT) {
+        pos = findSeq(A.semAccT, kw.accT);
+        if (pos.length) return { pos, mode: 'acc', factor: 0.85 };
+        pos = findSeq(A.semPlainT, kw.plainT);
+        if (pos.length) return { pos, mode: 'plain', factor: 0.82 };
+      }
+    }
+    return { pos: [], mode: null, factor: 0 };
   }
   const hit = (A, kws) => kws.some((kw) => matchKw(A, kw).pos.length > 0);
 
@@ -2293,26 +2421,123 @@ Nếu bạn dùng chung điện thoại với người khác, hãy bấm Thoát 
   }
 
   /* ---------------------------------------------------------------------
-     7. TÌM CÂU TRẢ LỜI TRONG KHO
+     7. PHÂN TÍCH Ý ĐỊNH & TÌM CÂU TRẢ LỜI TRONG KHO
      --------------------------------------------------------------------- */
   const HELPER = new Set(['ban-be-ke', 'khi-tre-ke', 'trach-nhiem-bao-tin', 'dau-hieu-tre-bi-xam-hai']);
+
+  function analyzeIntent(A, age, r) {
+    const boosts = {};
+    const add = (id, v) => { boosts[id] = (boosts[id] || 0) + v; };
+    const p = A.plain;
+    const n = A.plainT.length;
+
+    // 1) Hỏi tên, danh tính, thông tin về ALLY
+    if (/\b(ban|cau|em|chi|anh|ally|bot)\b.*\b(ten|la ai|nghia la gi|may tuoi|bao nhieu tuoi|o dau|nam hay nu|trai hay gai|nguoi hay may|robot|nguoi that)\b/.test(p) ||
+        /\b(ten)\b.*\b(ban|cau|ally|la gi|gi)\b/.test(p) ||
+        /\b(ai)\b.*\b(tao ra|lam ra|viet ra|xay dung|phat trien)\b/.test(p) ||
+        /\b(gioi thieu)\b.*\b(ban than|ve ban|ve ally)\b/.test(p) ||
+        /^(ban ten gi|ten la gi|ten gi|ban la ai|ally la ai|ally la gi)$/.test(p)) {
+      add('ve-ban-an', 3.0);
+    }
+
+    // 2) Hỏi chức năng, cách dùng, ALLY giúp được gì
+    if (/\b(ban|cau|ally|ung dung)\b.*\b(lam duoc gi|giup duoc gi|biet lam gi|co the giup|tac dung|chuc nang|tinh nang|de lam gi|ho tro gi)\b/.test(p) ||
+        /\b(cach dung|cach su dung|huong dan su dung|dung the nao|hoi nhung gi|hoi duoc gi)\b/.test(p)) {
+      add('cach-dung', 2.8);
+    }
+
+    // 3) Hỏi về ẩn danh, bảo mật, lộ thông tin, xóa lịch sử
+    if (/\b(bi lo|lo thong tin|co ai biet|bo me co biet|nguoi khac biet|ai doc duoc|luu tin nhan|luu cuoc tro chuyen|xoa tin nhan|xoa lich su|an danh|bao mat|giu kin)\b/.test(p)) {
+      add('an-danh', 2.6);
+    }
+
+    // 4) Hỏi thăm sức khỏe, trạng thái ALLY
+    if (/\b(ban|cau|ally|dao nay|hom nay)\b.*\b(khoe khong|on khong|the nao|dang lam gi|an com chua|vui khong|met khong)\b/.test(p) ||
+        /^(khoe khong|ban khoe khong|dang lam gi do)$/.test(p)) {
+      add('khoe', 2.8);
+    }
+
+    // 5) Chào hỏi, gọi ALLY mở đầu
+    if (n <= 6 && (!r || r.level === 0) &&
+        /^(xin chao|chao|chao ban|chao ally|chao cau|hello|hi|alo|he lo|he nho|helu|ban oi|ally oi|cau oi|anh oi|chi oi|em oi|co ai khong|co ai o do khong|ban co do khong|cho minh hoi|cho em hoi|minh muon hoi|em muon hoi)$/.test(p)) {
+      add('chao', 2.8);
+    }
+
+    // 6) Cảm ơn, tạm biệt, đồng ý ngắn
+    if (n <= 7 && /\b(cam on|tks|thank|thanks|biet on ban)\b/.test(p)) add('cam-on', 2.6);
+    if (n <= 7 && /\b(tam biet|bye|bai bai|good bye|hen gap lai|di ngu day|minh nghi day|chuc ngu ngon)\b/.test(p)) add('tam-biet', 2.8);
+    if (n <= 4 && /^(ok|oke|okay|u|um|uh|vang|da|duoc roi|hieu roi|minh hieu roi|em hieu roi|da hieu|vang a|da vang)$/.test(p)) add('vang', 2.5);
+
+    // 7) Muốn tâm sự, kể chuyện, cầu cứu chung
+    if (/\b(muon ke|muon tam su|muon chia se|co chuyen muon noi|co chuyen kho noi|nghe minh ke|nghe em ke|khong biet noi voi ai|khong biet ke voi ai)\b/.test(p)) {
+      add('muon-ke', 2.6);
+    }
+
+    // 8) Kỹ năng phòng tránh, tự bảo vệ
+    if (/\b(phong tranh|phong chong|tu bao ve|ky nang bao ve|lam sao de khong bi|cach tranh bi)\b/.test(p)) {
+      add('day-con', 2.2);
+      add('dau-hieu-canh-giac', 1.8);
+      add('khi-bi-xam-hai', 1.6);
+    }
+
+    // 9) Phân tích cấu trúc câu hỏi theo chủ đề chuyên biệt
+    if (/\b(so|ngai|khong dam|lo)\b.*\b(ke|noi|tam su|bao|bo me|thay co|nguoi lon|mang|khong tin|tra thu)\b/.test(p) || /\b(ke voi ai|noi voi ai bay gio)\b/.test(p)) {
+      add('ke-cho-ai', 2.4);
+    }
+    if (/\b(loi|tai|trach|xau ho|do ban|ghe tom)\b.*\b(minh|em|con|toi|ban than)\b/.test(p)) {
+      add('khong-phai-loi', 2.4);
+    }
+    if (/\b(anh|hinh|clip|video|camera|cam)\b.*\b(xin|doi|gui|chup|nhay cam|nong|khoa than|rieng tu|coi)\b/.test(p) || /\b(lo gui anh|da gui anh)\b/.test(p)) {
+      add('xin-anh', 2.4);
+    }
+    if (/\b(doa|tong tien|doi tien|uy hiep|ep)\b.*\b(anh|hinh|clip|video|tung|dang|phat tan|ghep)\b/.test(p) || /\b(ghep anh|cat ghep anh|ghep mat)\b/.test(p)) {
+      add('bi-de-doa-anh', 2.5);
+    }
+    if (/\b(mang|facebook|zalo|tiktok|game|online)\b.*\b(nguoi la|lam quen|ket ban|ru gap|hen gap|nap the|tang qua)\b/.test(p)) {
+      add('nguoi-la-tren-mang', 2.3);
+    }
+    if (/\b(mang|facebook|lop|nhom)\b.*\b(noi xau|boc phot|beu reu|beu xau|gia mao|nick gia|chui)\b/.test(p)) {
+      add('bat-nat-tren-mang', 2.4);
+    }
+    if (/\b(nguoi yeu|ban trai|ban gai|hen ho|yeu duong)\b.*\b(ep|doi|kiem soat|ghen|danh|doa|chia tay|dong y|dong thuan)\b/.test(p)) {
+      add('tinh-yeu-an-toan', 2.4);
+    }
+    if (/\b(ban than|ban minh|ban em|ban cung lop|ban be)\b.*\b(bi|ke|xam hai|danh|quay roi|sam so)\b/.test(p)) {
+      add('ban-be-ke', 2.4);
+    }
+    if (/\b(bo|me|ba|ma|nguoi nha|gia dinh|duong)\b.*\b(danh|chui|mang|nhot|say ruou|bao hanh|bao luc)\b/.test(p)) {
+      add('bi-danh-o-nha', 2.3);
+    }
+    if (/\b(bat nat|tay chay|co lap|danh hoi dong|treu choc|xin deu|bao luc hoc duong)\b/.test(p)) {
+      add('bat-nat', 2.4);
+    }
+    if (/\b(111|tong dai|duong day nong|hotline)\b/.test(p)) add('goi-111', 2.3);
+    if (/\b(113|115|cong an|canh sat|cap cuu)\b/.test(p) && /\b(goi|so|khi nao|bao)\b/.test(p)) add('khi-nao-goi-113-115', 2.3);
+    if (/\b(di tu|bi phat|muc an|xu ly hinh su|bo luat hinh su|co bi bat|bao nhieu nam tu)\b/.test(p)) add('phap-luat-hinh-su', 2.3);
+    if (/\b(quyen tre em|luat tre em|bao nhieu tuoi la tre em|duoi 16 tuoi)\b/.test(p)) add('quyen-tre-em', 2.2);
+
+    return boosts;
+  }
+
   function retrieve(A, age, r) {
     const out = [];
+    const boosts = analyzeIntent(A, age, r);
     for (const e of KB.list) {
       if (!isServable(e, age)) continue;
       const ks = [];
       for (const kw of e._k) {
-        const m = matchKw(A, kw);
-        if (m.pos.length) ks.push(kw.w * (1 + 0.45 * (kw.n - 1)) * (m.mode === 'plain' ? (A.accented ? 0.6 : 0.9) : 1));
+        const m = matchKw(A, kw, true);
+        if (m.pos.length) ks.push(kw.w * (m.factor || 1) * (1 + 0.45 * (kw.n - 1)) * (m.mode === 'plain' ? (A.accented ? 0.65 : 0.9) : 1));
       }
       ks.sort((a, b) => b - a);
       const kwScore = (ks[0] || 0) + 0.5 * (ks[1] || 0) + 0.25 * (ks[2] || 0);
       let qScore = 0;
       for (const qs of e._q) qScore = Math.max(qScore, dice(A.set, qs));
-      let s = kwScore + 2.6 * qScore;
-      if (e.small && A.accT.length > 5) s *= 0.3; // câu dài thì không coi là chào hỏi
+      const intentScore = boosts[e.id] || 0;
+      let s = kwScore + 2.6 * qScore + intentScore;
+      if (e.small && A.accT.length > 7 && !intentScore) s *= 0.35; // câu dài thì không coi là chào hỏi xã giao trừ khi đúng ý định
       if (r && r.tp && HELPER.has(e.id) && s > 0) s += 1.5; // đang hỏi để giúp người khác
-      if (s > 0) out.push({ e, s, kwScore, qScore });
+      if (s > 0) out.push({ e, s, kwScore, qScore, intentScore });
     }
     out.sort((a, b) => b.s - a.s);
     return out;
@@ -2620,11 +2845,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
 
     // 2) Đang lắng nghe (người dùng đang kể)
     if (S.mode === 'listening' || S.mode === 'safety') {
-      if (top && top.s >= thr * 1.4 && !top.e.small && !top.e.action && r.level === 0 && isQuestion(A)) {
-        await answerEntry(top.e);
-        return;
-      }
-      if (top && top.e.small && A.accT.length <= 3 && top.s >= thr && r.level < 1) {
+      if (top && top.s >= thr && r.level === 0 && (top.e.topic === 'ung-dung' || top.e.small || isQuestion(A) || top.s >= thr * 1.3)) {
         if (top.e.id === 'tam-biet') { S.mode = 'normal'; setQuick(); }
         await answerEntry(top.e);
         return;
@@ -2642,16 +2863,24 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     // 4) Có dấu hiệu bị xâm hại → chuyển sang lắng nghe, hỏi về an toàn
     if (r.level >= 2 || level >= 2 && r.level >= 1) return startDisclosure('detected', r);
 
-    // 5) Trả lời theo kho kiến thức
-    if (top && top.s >= thr) {
+    // 5) Trả lời theo kho kiến thức & phân tích ý định
+    if (top && top.s >= thr * 0.72) {
       const second = matches[1];
       const alt = (second && second.s >= thr && second.s >= top.s * 0.82 && !second.e.small && !second.e.action) ? second.e : null;
       let prefix = null;
       if (r.level === 1 && !top.e.action && !top.e.small) prefix = r.cats['cam-xuc'] ? MSG.prefix1['cam-xuc'] : MSG.prefix1.generic;
       return answerEntry(top.e, { prefix, alt });
     }
+
+    // 6) Câu hỏi nối tiếp theo ngữ cảnh chủ đề vừa trao đổi
+    if (S.lastEntry && /\b(con gi nua|tiep theo|noi ro hon|cu the hon|vay phai lam sao|vay nen lam gi|the thi sao|roi sao nua)\b/.test(A.plain)) {
+      const prev = KB.byId.get(S.lastEntry);
+      const nextId = prev && (prev.next || []).find((id) => KB.byId.get(id) && isServable(KB.byId.get(id), age));
+      if (nextId) return answerEntry(KB.byId.get(nextId));
+    }
+
     if (r.cats['cam-xuc'] && KB.byId.get('cam-xuc')) return answerEntry(KB.byId.get('cam-xuc'), { prefix: MSG.prefix1['cam-xuc'] });
-    return fallback(text, r);
+    return fallback(text, r, matches);
   }
 
   async function answerEntry(e, opts = {}) {
@@ -2682,15 +2911,20 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     return fallback();
   }
 
-  async function fallback(text, r) {
+  async function fallback(text, r, matches) {
     const age = ageOf();
     if (text && ADMIN.logUnanswered) {
       const log = store.get('unanswered', []);
       log.unshift({ ts: Date.now(), age, text: scrub(text).slice(0, 200) });
       store.set('unanswered', log.slice(0, 300));
     }
-    const chips = chipsFrom(POPULAR[age]).slice(0, 4);
-    return botSay(kidOr(MSG.fallback, age), { chips, alert: r && r.level >= 1 ? 'manual' : null });
+    const suggested = (matches || []).filter((m) => m.s >= 0.32 && !m.e.small && !m.e.action).slice(0, 3)
+      .map((m) => ({ label: titleFor(m.e, age), act: 'entry', val: m.e.id }));
+    const chips = suggested.length ? [...suggested, ...chipsFrom(POPULAR[age]).slice(0, 2)] : chipsFrom(POPULAR[age]).slice(0, 4);
+    const msg = suggested.length
+      ? 'Mình phân tích thấy câu hỏi của bạn có thể liên quan đến các chủ đề bên dưới. Bạn bấm vào nội dung muốn xem, hoặc diễn đạt cụ thể hơn nhé:'
+      : kidOr(MSG.fallback, age);
+    return botSay(msg, { chips, alert: r && r.level >= 1 ? 'manual' : null });
   }
 
   async function startDisclosure(trigger, r) {
