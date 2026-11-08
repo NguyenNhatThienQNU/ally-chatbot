@@ -178,9 +178,10 @@ a { color: var(--brand-strong); }
 .bubble strong { font-weight: 700; }
 .bubble .tel-inline { font-weight: 700; color: inherit; }
 .msg-meta { font-size: .72rem; color: var(--ink-3); padding-inline: 4px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-.speak-btn { border: 0; background: none; padding: 2px 4px; color: var(--ink-3); display: inline-flex; align-items: center; gap: 3px; font-size: .72rem; border-radius: 6px; }
+.speak-btn { border: 0; background: none; padding: 2px 7px; color: var(--ink-3); display: inline-flex; align-items: center; gap: 4px; font-size: .74rem; border-radius: 6px; transition: all .15s; }
 .speak-btn svg { width: 14px; height: 14px; }
-.speak-btn:hover { color: var(--brand); }
+.speak-btn:hover { color: var(--brand); background: var(--bg-2); }
+.speak-btn.speaking { color: var(--sos-strong); background: var(--sos-soft); font-weight: 700; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip { border: 1.5px solid var(--brand); color: var(--brand-strong); background: var(--surface); border-radius: 999px; padding: 7px 14px; font-size: .9rem; font-weight: 600; line-height: 1.25; text-align: left; }
@@ -1909,6 +1910,7 @@ Nếu bạn dùng chung điện thoại với người khác, hãy bấm Thoát 
     lock: '<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
     install: '<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M12 7v7M9 11l3 3 3-3"/>',
     chat: '<path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L3.5 21l1.4-4.6A8.5 8.5 0 1 1 21 12z"/>',
+    square: '<rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor"/>',
     exit: '<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/>'
   };
   function icon(name, extra) {
@@ -2512,7 +2514,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     const meta = h('div', { class: 'msg-meta' }, fmtTime(Date.now()));
     if (TTS.ok) {
       const sp = h('button', { type: 'button', class: 'speak-btn', 'aria-label': 'Đọc to câu trả lời' }, icon('speaker'), 'Đọc to');
-      sp.addEventListener('click', () => speak(plainText(text), true));
+      sp.addEventListener('click', () => speak(plainText(text), true, sp));
       meta.append(sp);
     }
     if (opts.entry && opts.feedback) {
@@ -2811,9 +2813,29 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
   }
 
   /* ---------------------------------------------------------------------
-     11. ĐỌC TO & NÓI (Giọng đọc tiếng Việt tự nhiên ALLY)
+     11. ĐỌC TO & NÓI (Giọng nữ Tiếng Việt tự nhiên & truyền cảm ALLY)
      --------------------------------------------------------------------- */
-  const TTS = { ok: false, voice: null, speaking: false };
+  const TTS = { ok: true, voice: null, speaking: false };
+  let activeAudio = null;
+  let activeBtn = null;
+
+  function stopSpeech() {
+    if (activeAudio) {
+      try { activeAudio.pause(); activeAudio.currentTime = 0; } catch (e) { /* bỏ qua */ }
+      activeAudio = null;
+    }
+    if ('speechSynthesis' in window) {
+      try { speechSynthesis.cancel(); } catch (e) { /* bỏ qua */ }
+    }
+    TTS.speaking = false;
+    if (activeBtn) {
+      activeBtn.classList.remove('speaking');
+      activeBtn.innerHTML = '';
+      activeBtn.append(icon('speaker'), ' Đọc to');
+      activeBtn = null;
+    }
+  }
+
   function pickVoice() {
     try {
       if (!('speechSynthesis' in window)) return;
@@ -2826,44 +2848,144 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
       TTS.voice = vi[0] || null;
     } catch (e) { /* bỏ qua */ }
   }
+
   function initTTS() {
     try {
-      if (!('speechSynthesis' in window)) return;
       TTS.ok = true;
-      pickVoice();
-      speechSynthesis.onvoiceschanged = pickVoice;
-      if (speechSynthesis.addEventListener) speechSynthesis.addEventListener('voiceschanged', pickVoice);
-    } catch (e) { /* không hỗ trợ */ }
+      if ('speechSynthesis' in window) {
+        pickVoice();
+        speechSynthesis.onvoiceschanged = pickVoice;
+        if (speechSynthesis.addEventListener) speechSynthesis.addEventListener('voiceschanged', pickVoice);
+      }
+    } catch (e) { /* bỏ qua */ }
   }
+
   function cleanSpeechText(text) {
     return String(text || '')
+      .replace(/[*#_~`>]/g, '')
       .replace(/\b(111|113|115)\b/g, (m) => m.split('').join(' '))
       .replace(/24\/7/g, '24 trên 7')
       .replace(/[•·]/g, ', ')
       .replace(/\s+/g, ' ')
       .trim();
   }
+
+  function chunkText(text, maxLen = 140) {
+    const clean = cleanSpeechText(text);
+    const sents = clean.split(/(?<=[.!?;\n])\s+/);
+    const chunks = [];
+    let cur = '';
+    for (const s of sents) {
+      if (!s) continue;
+      if (s.length > maxLen) {
+        const parts = s.split(/(?<=[,])\s+/);
+        for (const p of parts) {
+          if (!p) continue;
+          if (p.length > maxLen) {
+            const words = p.split(/\s+/);
+            for (const w of words) {
+              if ((cur + ' ' + w).trim().length > maxLen) {
+                if (cur.trim()) chunks.push(cur.trim());
+                cur = w;
+              } else {
+                cur = (cur + ' ' + w).trim();
+              }
+            }
+          } else {
+            if ((cur + ' ' + p).trim().length > maxLen) {
+              if (cur.trim()) chunks.push(cur.trim());
+              cur = p;
+            } else {
+              cur = (cur ? cur + ' ' : '') + p;
+            }
+          }
+        }
+      } else {
+        if ((cur + ' ' + s).trim().length > maxLen) {
+          if (cur.trim()) chunks.push(cur.trim());
+          cur = s;
+        } else {
+          cur = (cur ? cur + ' ' : '') + s;
+        }
+      }
+    }
+    if (cur.trim()) chunks.push(cur.trim());
+    return chunks;
+  }
+
   function updateTtsBtn() {
     const b = $('#ttsQuickBtn');
     if (!b) return;
     b.setAttribute('aria-pressed', String(!!SET.tts));
     b.classList.toggle('active-tts', !!SET.tts);
   }
-  function speak(text, force) {
-    if (!TTS.ok || (!SET.tts && !force)) return;
+
+  function speak(text, force, btn) {
+    if (activeBtn && btn && activeBtn === btn && TTS.speaking) {
+      stopSpeech();
+      return;
+    }
+    stopSpeech();
+    if (!force && !SET.tts) return;
+    const clean = cleanSpeechText(text);
+    if (!clean) return;
+
+    if (btn) {
+      activeBtn = btn;
+      btn.classList.add('speaking');
+      btn.innerHTML = '';
+      btn.append(icon('square'), ' Dừng');
+    }
+    TTS.speaking = true;
+
+    const onDone = () => { stopSpeech(); };
+
+    // Ưu tiên phát bằng giọng nữ tự nhiên online (Google Tiếng Việt chuẩn, truyền cảm, dễ thiện cảm)
+    if (navigator.onLine !== false) {
+      const chunks = chunkText(clean, 140);
+      let idx = 0;
+      function playNext() {
+        if (!TTS.speaking) return;
+        if (idx >= chunks.length) { onDone(); return; }
+        const part = chunks[idx++];
+        const url = 'https://translate.google.com/translate_tts?ie=UTF-8&q=' + encodeURIComponent(part) + '&tl=vi&client=tw-ob';
+        const a = new Audio(url);
+        activeAudio = a;
+        a.onended = () => { playNext(); };
+        a.onerror = () => {
+          fallbackSpeech(clean, onDone);
+        };
+        a.play().catch(() => {
+          fallbackSpeech(clean, onDone);
+        });
+      }
+      playNext();
+    } else {
+      fallbackSpeech(clean, onDone);
+    }
+  }
+
+  function fallbackSpeech(clean, onDone) {
+    if (!('speechSynthesis' in window)) { onDone(); return; }
+    pickVoice();
+    // TUYỆT ĐỐI KHÔNG DÙNG GIỌNG TIẾNG ANH (David/Zira) ĐỂ ĐỌC TIẾNG VIỆT
+    if (!TTS.voice) {
+      toast('Thiết bị chưa có giọng đọc Tiếng Việt ngoại tuyến. Vui lòng kết nối mạng để nghe giọng nữ ALLY nhé.');
+      onDone();
+      return;
+    }
     try {
-      speechSynthesis.cancel();
-      if (!TTS.voice) pickVoice();
-      const u = new SpeechSynthesisUtterance(cleanSpeechText(text));
-      if (TTS.voice) { u.voice = TTS.voice; u.lang = TTS.voice.lang || 'vi-VN'; }
-      else u.lang = 'vi-VN';
+      const u = new SpeechSynthesisUtterance(clean);
+      u.voice = TTS.voice;
+      u.lang = TTS.voice.lang || 'vi-VN';
       const age = ageOf();
       u.rate = age === 'nho' ? 0.94 : age === 'thcs' ? 0.98 : 1.0;
       u.pitch = age === 'nho' ? 1.06 : 1.02;
-      TTS.speaking = true;
-      u.onend = u.onerror = () => { TTS.speaking = false; };
+      u.onend = u.onerror = () => onDone();
       speechSynthesis.speak(u);
-    } catch (e) { /* bỏ qua */ }
+    } catch (e) {
+      onDone();
+    }
   }
   function initMic() {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -3252,7 +3374,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     if (e.tool) art.append(toolEl(e.tool, 'a-'));
     art.append(h('div', { class: 'actions' },
       h('button', { type: 'button', class: 'btn', onclick: () => { goTab('tro-chuyen'); handleChip({ label: titleFor(e, age), act: 'entry', val: e.id }); } }, icon('chat'), 'Hỏi ALLY về chủ đề này'),
-      TTS.ok && res ? h('button', { type: 'button', class: 'btn secondary', onclick: () => speak(plainText(res.text), true) }, icon('speaker'), 'Đọc to') : null));
+      TTS.ok && res ? h('button', { type: 'button', class: 'btn secondary', onclick: (ev) => speak(plainText(res.text), true, ev.currentTarget) }, icon('speaker'), 'Đọc to') : null));
     const src = (e.src || []).map((k) => DATA.sources[k]).filter(Boolean);
     if (src.length) art.append(h('div', { class: 'box' }, h('h3', null, 'Nguồn tham khảo'), h('ul', { class: 'src-list' }, src.map((s) => h('li', null, h('a', { href: s.u, target: '_blank', rel: 'noopener' }, s.t), h('div', { class: 'pub' }, s.by))))));
     const rel = (e.next || []).map((id) => KB.byId.get(id)).filter((x) => x && !x.hidden && isServable(x, age));
@@ -3567,7 +3689,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
       ios ? null : h('p', { class: 'note' }, 'Ứng dụng cần được mở từ địa chỉ web có “https://” (ví dụ GitHub Pages, Netlify) mới cài được. Khi đã cài, các phần kiến thức, tình huống vẫn dùng được khi không có mạng.')
     ]);
   }
-  function wipeAll() { try { speechSynthesis.cancel(); } catch (e) { /* bỏ qua */ } store.clearAll(); S.transcript = []; }
+  function wipeAll() { stopSpeech(); store.clearAll(); S.transcript = []; }
   function quickExit() {
     try { wipeAllChat(); } catch (e) { /* bỏ qua */ }
     document.body.innerHTML = '';
@@ -3575,7 +3697,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     try { document.title = 'Trang mới'; } catch (e) { /* bỏ qua */ }
     if (!inFrame) { try { location.replace(CONFIG.exitUrl); } catch (e) { /* bỏ qua */ } }
   }
-  function wipeAllChat() { try { speechSynthesis.cancel(); } catch (e) { /* bỏ qua */ } store.del('chat'); S.transcript = []; try { history.replaceState(null, '', location.pathname); } catch (e) { /* bỏ qua */ } }
+  function wipeAllChat() { stopSpeech(); store.del('chat'); S.transcript = []; try { history.replaceState(null, '', location.pathname); } catch (e) { /* bỏ qua */ } }
 
   /* ---------------------------------------------------------------------
      19. QUẢN TRỊ NỘI DUNG
@@ -4179,10 +4301,10 @@ em muốn tự tử | 3 |`;
     if (ttsBtn) ttsBtn.addEventListener('click', () => {
       SET.tts = !SET.tts; saveSettings(); updateTtsBtn();
       if (SET.tts) {
-        toast('Đã bật giọng đọc tự nhiên của ALLY.');
-        speak('Chào bạn, ALLY sẽ tự động đọc to các câu trả lời để tâm sự cùng bạn.', true);
+        toast('Đã bật giọng đọc nữ truyền cảm của ALLY.');
+        speak('Chào bạn, ALLY là người bạn đồng hành của bạn. Mình sẽ đọc to các câu trả lời cho bạn nhé.', true);
       } else {
-        try { speechSynthesis.cancel(); } catch (e) { /* bỏ qua */ }
+        stopSpeech();
         toast('Đã tắt tự động đọc giọng nói.');
       }
     });

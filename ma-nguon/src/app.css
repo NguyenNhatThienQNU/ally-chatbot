@@ -146,9 +146,10 @@ a { color: var(--brand-strong); }
 .bubble strong { font-weight: 700; }
 .bubble .tel-inline { font-weight: 700; color: inherit; }
 .msg-meta { font-size: .72rem; color: var(--ink-3); padding-inline: 4px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-.speak-btn { border: 0; background: none; padding: 2px 4px; color: var(--ink-3); display: inline-flex; align-items: center; gap: 3px; font-size: .72rem; border-radius: 6px; }
+.speak-btn { border: 0; background: none; padding: 2px 7px; color: var(--ink-3); display: inline-flex; align-items: center; gap: 4px; font-size: .74rem; border-radius: 6px; transition: all .15s; }
 .speak-btn svg { width: 14px; height: 14px; }
-.speak-btn:hover { color: var(--brand); }
+.speak-btn:hover { color: var(--brand); background: var(--bg-2); }
+.speak-btn.speaking { color: var(--sos-strong); background: var(--sos-soft); font-weight: 700; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip { border: 1.5px solid var(--brand); color: var(--brand-strong); background: var(--surface); border-radius: 999px; padding: 7px 14px; font-size: .9rem; font-weight: 600; line-height: 1.25; text-align: left; }
