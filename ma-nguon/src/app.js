@@ -294,6 +294,7 @@
      4. TRẠNG THÁI & CÀI ĐẶT
      --------------------------------------------------------------------- */
   const SET = Object.assign({ age: null, font: 1, tts: false, theme: 'auto', saveChat: false }, store.get('settings', {}));
+  SET.tts = false;
   const ADMIN = Object.assign({ pin: CONFIG.defaultPin, threshold: CONFIG.defaultThreshold, remoteUrl: '', feedbackUrl: '', demoRisk: true, logUnanswered: false, autoSync: true, lastSync: null }, store.get('admin', {}));
   function saveSettings() { store.set('settings', SET); }
   function saveAdmin() { store.set('admin', ADMIN); }
@@ -713,7 +714,6 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     chatLog().append(m);
     S.transcript.push({ role: 'bot', text, ts: Date.now(), entry: opts.entry ? opts.entry.id : undefined });
     persistChat(); scrollChat();
-    if (SET.tts && opts.speak !== false) speak(plainText(text));
     return m;
   }
   let typingEl = null;
@@ -1100,20 +1100,13 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     return chunks;
   }
 
-  function updateTtsBtn() {
-    const b = $('#ttsQuickBtn');
-    if (!b) return;
-    b.setAttribute('aria-pressed', String(!!SET.tts));
-    b.classList.toggle('active-tts', !!SET.tts);
-  }
-
   function speak(text, force, btn) {
     if (activeBtn && btn && activeBtn === btn && TTS.speaking) {
       stopSpeech();
       return;
     }
     stopSpeech();
-    if (!force && !SET.tts) return;
+    if (!force) return;
     const clean = cleanSpeechText(text);
     if (!clean) return;
 
@@ -1841,8 +1834,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
         seg((DATA.ages || []).map((a) => [a.id, a.label.replace(' tuổi', '')]), SET.age, (v) => { setAge(v); toast('Đã chuyển sang nhóm ' + ageLabel(v)); })),
       h('div', { class: 'setting' }, h('span', { class: 't' }, 'Cỡ chữ'), seg([[0.9, 'A−'], [1, 'A'], [1.15, 'A+'], [1.3, 'A++']], SET.font, (v) => { SET.font = v; saveSettings(); applyFont(); })),
       h('div', { class: 'setting' }, h('span', { class: 't' }, 'Giao diện'), seg([['auto', 'Theo máy'], ['light', 'Sáng'], ['dark', 'Tối']], SET.theme, (v) => { SET.theme = v; saveSettings(); applyTheme(); })),
-      h('div', { class: 'setting' }, h('label', { class: 't', for: 'setTts' }, 'Tự đọc to câu trả lời (Giọng tự nhiên ALLY)', h('span', { class: 's' }, TTS.ok ? 'Ưu tiên giọng đọc tiếng Việt tự nhiên có sẵn trên thiết bị' : 'Thiết bị này chưa hỗ trợ đọc giọng nói')),
-        switchEl('setTts', SET.tts && TTS.ok, (v) => { SET.tts = v; saveSettings(); updateTtsBtn(); if (v) speak('Chào bạn, ALLY sẽ đọc to các câu trả lời cho bạn nhé.', true); }, 'Tự đọc to câu trả lời')),
+      h('div', { class: 'setting' }, h('span', { class: 't' }, 'Giọng đọc câu trả lời', h('span', { class: 's' }, 'Chỉ phát âm thanh khi bạn bấm nút "Đọc to" bên dưới mỗi câu trả lời (giọng nữ tiếng Việt truyền cảm, dễ nghe).'))),
       h('div', { class: 'setting' }, h('label', { class: 't', for: 'setSave' }, 'Lưu cuộc trò chuyện trên máy này', h('span', { class: 's' }, 'Mặc định tắt để giữ kín. Chỉ bật nếu máy là của riêng bạn.')),
         switchEl('setSave', SET.saveChat, (v) => { SET.saveChat = v; saveSettings(); if (v) persistChat(); else store.del('chat'); }, 'Lưu cuộc trò chuyện')),
       h('div', { class: 'setting' }, h('span', { class: 't' }, 'Màn hình ngụy trang nhanh (ALLY Study)', h('span', { class: 's' }, 'Đổi ngay giao diện thành sổ tay từ vựng Tiếng Anh khi có người đi ngang qua')),
@@ -2497,17 +2489,7 @@ em muốn tự tử | 3 |`;
     $('#settingsBtn').addEventListener('click', openSettings);
     $('#agePill').addEventListener('click', openSettings);
     $('#brandBtn').addEventListener('click', () => goTab('tro-chuyen'));
-    const ttsBtn = $('#ttsQuickBtn');
-    if (ttsBtn) ttsBtn.addEventListener('click', () => {
-      SET.tts = !SET.tts; saveSettings(); updateTtsBtn();
-      if (SET.tts) {
-        toast('Đã bật giọng đọc nữ truyền cảm của ALLY.');
-        speak('Chào bạn, ALLY là người bạn đồng hành của bạn. Mình sẽ đọc to các câu trả lời cho bạn nhé.', true);
-      } else {
-        stopSpeech();
-        toast('Đã tắt tự động đọc giọng nói.');
-      }
-    });
+
     const camoBtn = $('#camoBtn');
     if (camoBtn) camoBtn.addEventListener('click', openCamouflage);
     let lastEsc = 0;
@@ -2550,7 +2532,7 @@ em muốn tự tử | 3 |`;
   function init() {
     loadData();
     applyFont(); applyTheme();
-    initTTS(); updateTtsBtn();
+    initTTS();
     bindUI(); initMic();
     updateAgePill(); setQuick(); refreshQuizDot();
     const t = location.hash.slice(1);
