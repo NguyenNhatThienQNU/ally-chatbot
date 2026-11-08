@@ -1539,8 +1539,30 @@ Nếu bạn dùng chung điện thoại với người khác, hãy bấm Thoát 
     {
       id: "chao", topic: "ung-dung", title: "Chào hỏi", hidden: true, action: "greet",
       ages: ["nho", "thcs", "thpt", "lon"],
-      k: ["xin chào", "chào bạn", "chào ally", "hi ally", "hello ally", "ally ơi", "chào an", "chào", "hello", "hi", "alo", "hế lô", "chào buổi sáng", "chào buổi tối"],
-      q: ["Xin chào", "Chào ALLY"], a: { chung: "" }, src: [], next: []
+      k: [
+        "bạn ơi", "ban oi", "ally ơi", "ally oi", "chào bạn", "chao ban", "chào ally", "chao ally",
+        "xin chào", "xin chao", "chào", "chao", "hello", "hi", "alo", "hế lô", "he lo", "cậu ơi", "cau oi",
+        "chào cậu", "chao cau", "bạn ơi cho mình hỏi", "cho mình hỏi", "cho em hỏi", "bạn có đó không",
+        "ban co do khong", "có ai ở đó không", "co ai o do khong", "có ai không", "co ai khong", "có đó không",
+        "co do khong", "bạn có ở đây không", "nói chuyện với mình đi", "tâm sự với mình đi", "nói chuyện với em đi",
+        "chào em", "chào anh", "chào chị", "chào cháu", "chào buổi sáng", "chào buổi tối"
+      ],
+      q: [
+        "Bạn ơi", "ALLY ơi", "Chào bạn", "Xin chào", "Chào ALLY", "Cậu ơi",
+        "Có ai ở đó không?", "Bạn có ở đó không?", "Cho mình hỏi một chút", "Cho em hỏi"
+      ],
+      a: { chung: "" }, src: [], next: []
+    },
+    {
+      id: "khoe", topic: "ung-dung", title: "Hỏi thăm ALLY", hidden: true,
+      ages: ["nho", "thcs", "thpt", "lon"],
+      k: ["bạn khỏe không", "ban khoe khong", "khoe khong", "bạn có khỏe không", "dạo này thế nào", "bạn thế nào rồi", "bạn ổn không", "ban on khong"],
+      q: ["Bạn có khỏe không?", "Bạn khỏe không?", "Dạo này bạn thế nào?"],
+      a: {
+        nho: `Mình khỏe lắm, cảm ơn bạn nhiều nhé! Mình là ALLY, luôn ở đây sẵn sàng lắng nghe và bảo vệ bạn. Bạn có chuyện gì muốn kể với mình không?`,
+        chung: `Cảm ơn bạn đã hỏi thăm! Mình là ALLY và mình luôn sẵn sàng đồng hành, lắng nghe bạn. Bạn đang có điều gì muốn tâm sự hay tìm hiểu cùng mình không?`
+      },
+      src: [], next: ["ve-ban-an", "khi-bi-xam-hai"]
     },
     {
       id: "cam-on", topic: "ung-dung", title: "Cảm ơn", hidden: true,
