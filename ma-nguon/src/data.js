@@ -8,7 +8,7 @@
    - Từ khóa có thể kèm trọng số: "nên làm gì|0.5".
    ========================================================================= */
 window.ALLY_DEFAULT = window.BANAN_DEFAULT = {
-  version: "2026-11-08T22:35:00+07:00",
+  version: "2026-11-13T20:50:00+07:00",
   meta: {
     ten: "ALLY",
     moTa: "Chatbot hỗ trợ phòng, chống xâm hại trẻ em",
@@ -77,27 +77,24 @@ window.ALLY_DEFAULT = window.BANAN_DEFAULT = {
       k: ["xâm hại", "xâm hại trẻ em", "xâm hại là gì", "lạm dụng trẻ em", "bị xâm hại là sao", "thế nào là xâm hại", "các hình thức xâm hại", "xâm hại nghĩa là gì"],
       q: ["Xâm hại trẻ em là gì?", "Thế nào là bị xâm hại?", "Xâm hại gồm những hình thức nào?"],
       a: {
-        nho: `Xâm hại là khi có người làm đau cơ thể bạn, làm bạn sợ hãi hay buồn tủi, hoặc chạm vào vùng riêng tư của bạn.
+        nho: `Xâm hại là khi có ai đó làm đau cơ thể bạn, làm bạn sợ hãi hay đụng vào vùng riêng tư của bạn.
 
-Người đó có thể là người lạ, cũng có thể là người quen. Dù là ai thì làm vậy cũng là **sai**. Bạn có quyền nói KHÔNG, chạy đi, rồi kể ngay cho người lớn mà bạn tin.`,
-        thcs: `Xâm hại trẻ em là bất kỳ hành vi nào làm tổn hại đến cơ thể, cảm xúc, tâm lý, danh dự hay nhân phẩm của trẻ em.
+Dù người đó là người lạ hay người quen thì làm thế đều là **sai**. Cơ thể của bạn là của riêng bạn. Bạn luôn có quyền nói KHÔNG, chạy đến chỗ an toàn và kể ngay cho người lớn bạn tin.`,
+        thcs: `Xâm hại là bất kỳ hành vi nào làm tổn thương cơ thể, tinh thần, danh dự hay sự an toàn của bạn. Đó có thể là đụng chạm khó chịu, bạo lực, bắt nạt, ép buộc qua mạng hay bóc lột.
 
-Các hình thức thường gặp:
-- **Bạo lực**: đánh đập, hành hạ, lăng mạ, cô lập, xua đuổi.
-- **Xâm hại tình dục**: ép buộc, đe dọa, dụ dỗ trẻ vào các hành vi liên quan đến tình dục, kể cả qua mạng.
-- **Bóc lột**: bắt làm việc trái quy định, lợi dụng trẻ để kiếm lợi.
-- **Bỏ rơi, bỏ mặc**: không chăm sóc, nuôi dưỡng trẻ.
-- **Mua bán, bắt cóc** trẻ em.
+Điều quan trọng nhất bạn cần nhớ:
+- **Đó không bao giờ là lỗi của bạn**, dù người làm là người lạ hay người quen.
+- Bạn hoàn toàn có quyền được bảo vệ và có quyền từ chối bất kỳ ai làm bạn thấy bất an.
+- Khi gặp chuyện, đừng giữ trong lòng một mình. Hãy tìm người lớn tin cậy hoặc cùng ALLY tìm cách gỡ rối nhé.`,
+        thpt: `Xâm hại là hành vi gây tổn hại đến thân thể, tâm lý, danh dự hoặc sự riêng tư của bạn (như bạo lực, quấy rối, ép buộc tình dục, đe dọa qua mạng hay bóc lột).
 
-Người xâm hại có thể là người quen, thậm chí người trong gia đình. Dù là ai, bạn vẫn có quyền được bảo vệ.`,
-        thpt: `Theo Luật Trẻ em 2016, xâm hại trẻ em là hành vi gây tổn hại về thể chất, tình cảm, tâm lý, danh dự, nhân phẩm của trẻ em, dưới các hình thức: bạo lực, bóc lột, xâm hại tình dục, mua bán, bỏ rơi, bỏ mặc và các hình thức gây tổn hại khác.
-
-Luật này áp dụng cho người dưới 16 tuổi. Nếu bạn từ 16 đến dưới 18 tuổi, bạn là người chưa thành niên và vẫn được pháp luật bảo vệ trước bạo lực, quấy rối, xâm hại.
-
-Xâm hại có thể xảy ra trực tiếp hoặc qua mạng, và người gây ra có thể là người lạ, bạn bè, người yêu hay người thân.`,
+Nếu bạn đang cảm thấy bất an hay bị xâm phạm:
+- **Hãy tin vào cảm giác của mình**: Bất cứ điều gì làm bạn nghẹt thở, sợ hãi hay khó chịu đều là dấu hiệu bạn cần tự bảo vệ.
+- **Trách nhiệm hoàn toàn thuộc về kẻ gây hại**, không phụ thuộc vào trang phục hay hoàn cảnh của bạn.
+- Pháp luật luôn bảo vệ quyền bất khả xâm phạm về thân thể của bạn. Bạn không phải chịu đựng một mình.`,
         lon: `Khoản 5 Điều 4 Luật Trẻ em 2016 quy định: “Xâm hại trẻ em là hành vi gây tổn hại về thể chất, tình cảm, tâm lý, danh dự, nhân phẩm của trẻ em dưới các hình thức bạo lực, bóc lột, xâm hại tình dục, mua bán, bỏ rơi, bỏ mặc trẻ em và các hình thức gây tổn hại khác.”
 
-Trẻ em theo luật này là người dưới 16 tuổi (Điều 1). Nhiều vụ việc do chính người quen của trẻ gây ra, nên việc trò chuyện cởi mở trong gia đình và dạy trẻ kỹ năng tự bảo vệ là lớp bảo vệ đầu tiên.`
+Nhiều vụ việc do chính người quen của trẻ gây ra. Người lớn cần lắng nghe không phán xét, không đổ lỗi, tạo điểm tựa an toàn để trẻ dám lên tiếng và trang bị cho trẻ kỹ năng tự bảo vệ.`
       },
       src: ["LTE", "TN_QUEN"], next: ["xam-hai-tinh-duc", "bao-luc", "khi-bi-xam-hai"]
     },
@@ -107,31 +104,30 @@ Trẻ em theo luật này là người dưới 16 tuổi (Điều 1). Nhiều v�
       k: ["xâm hại tình dục", "lạm dụng tình dục", "quấy rối tình dục", "dâm ô là gì", "ấu dâm", "sàm sỡ", "quấy rối", "xâm hại tình dục là gì", "gạ gẫm"],
       q: ["Xâm hại tình dục là gì?", "Thế nào là bị quấy rối tình dục?", "Dâm ô là gì?"],
       a: {
-        nho: `Nếu có ai làm những điều sau với bạn thì đó là **sai**:
-- Chạm vào vùng riêng tư của bạn.
-- Bắt bạn chạm vào vùng riêng tư của họ.
-- Bắt bạn cởi quần áo.
-- Cho bạn xem hình ảnh làm bạn khó chịu.
+        nho: `Cơ thể bạn rất quý giá. Nếu có ai làm những việc này thì họ đã làm **sai**:
+- Chạm vào vùng riêng tư (chỗ mặc đồ bơi, đồ lót, miệng) của bạn.
+- Bắt bạn chạm vào người họ.
+- Bắt bạn cởi quần áo hoặc cho bạn xem hình ảnh xấu.
 
-Điều đó vẫn sai dù người đó là người quen, cho bạn quà hay bảo bạn giữ bí mật.
+Dù người đó dọa nạt hay bảo giữ bí mật, bạn cũng không có lỗi gì cả. Hãy nói KHÔNG thật to, chạy đi và kể ngay với người lớn bạn tin nhé.`,
+        thcs: `Xâm hại tình dục là khi ai đó ép buộc, dụ dỗ hoặc lôi kéo bạn vào những hành vi liên quan đến tình dục mà bạn không muốn (đụng chạm vùng kín, gạ gẫm, xin ảnh nhạy cảm, dọa tung ảnh...).
 
-Hãy nói KHÔNG, chạy đi và kể ngay cho người lớn bạn tin.`,
-        thcs: `Xâm hại tình dục là khi ai đó dùng vũ lực, đe dọa, ép buộc, lôi kéo hoặc dụ dỗ trẻ em tham gia vào các hành vi liên quan đến tình dục.
+Nếu bạn đang gặp phải tình huống này, hãy nhớ:
+1. **Bạn hoàn toàn vô tội**: Trách nhiệm 100% thuộc về kẻ có hành vi xấu.
+2. **Hành động ngay**: Nói "Dừng lại", rời khỏi chỗ vắng, không gửi bất kỳ ảnh hay tin nhắn nào nữa.
+3. **Lưu chứng cứ & chia sẻ**: Giữ lại tin nhắn làm bằng chứng, tâm sự với người bạn tin nhất để không phải sợ hãi một mình.`,
+        thpt: `Xâm hại tình dục bao gồm đụng chạm thân thể không mong muốn, quấy rối bằng lời nói, ép buộc quan hệ, gạ tình hay tống tiền bằng ảnh/clip nhạy cảm (kể cả qua mạng).
 
-Ví dụ:
-- Đụng chạm, sờ vào vùng riêng tư, hoặc bắt bạn chạm vào người họ.
-- Bắt bạn xem, chụp hoặc gửi hình ảnh, video nhạy cảm.
-- Nói chuyện, nhắn tin gạ gẫm, khiến bạn khó chịu.
+Nếu bạn đang là nạn nhân hoặc gặp nguy cơ:
+- **Thấu hiểu cảm xúc**: Cảm giác ghê sợ, hoang mang hay tự trách lúc này là phản ứng tâm lý bình thường. Nhưng xin bạn nhớ: Bạn là nạn nhân, bạn không có lỗi.
+- **Giải pháp bảo vệ**: Cắt đứt sự thao túng của đối phương, tuyệt đối không làm theo các yêu cầu ép buộc, lưu lại mọi bằng chứng và tìm người hỗ trợ tin cậy.
+- **Pháp luật nghiêm trị**: Mọi hành vi xâm phạm tình dục người dưới 16 tuổi (và cưỡng ép người dưới 18 tuổi) đều là tội phạm hình sự nghiêm trọng.`,
+        lon: `Xâm hại tình dục trẻ em bao gồm mọi hành vi dùng vũ lực, đe dọa, ép buộc hay dụ dỗ trẻ tham gia vào các hành vi tình dục (kể cả qua mạng như gạ gẫm, xin ảnh nhạy cảm, đe dọa phát tán).
 
-Hành vi này có thể xảy ra trực tiếp hoặc trên mạng, do người lạ hoặc người quen gây ra. Đó luôn là lỗi của người làm, **không bao giờ** là lỗi của bạn.`,
-        thpt: `Xâm hại tình dục là việc dùng vũ lực, đe dọa, ép buộc, lôi kéo, dụ dỗ người khác tham gia hành vi liên quan đến tình dục mà họ không muốn, hoặc chưa đủ tuổi để đồng ý.
-
-Nó bao gồm: đụng chạm, sàm sỡ; ép quan hệ; gạ gẫm qua tin nhắn; xin, ép gửi hoặc phát tán ảnh, video nhạy cảm; dùng ảnh để đe dọa, tống tiền.
-
-Nếu một người từ đủ 18 tuổi có hành vi dâm ô hoặc quan hệ tình dục với người dưới 16 tuổi thì có thể bị xử lý hình sự, kể cả khi người dưới 16 tuổi nói là “đồng ý”.`,
-        lon: `Khoản 8 Điều 4 Luật Trẻ em 2016: “Xâm hại tình dục trẻ em là việc dùng vũ lực, đe dọa dùng vũ lực, ép buộc, lôi kéo, dụ dỗ trẻ em tham gia vào các hành vi liên quan đến tình dục, bao gồm hiếp dâm, cưỡng dâm, giao cấu, dâm ô với trẻ em và sử dụng trẻ em vào mục đích mại dâm, khiêu dâm dưới mọi hình thức.”
-
-Xâm hại qua mạng (gạ gẫm, xin ảnh nhạy cảm, đe dọa phát tán) đang tăng và không chỉ đến từ người lạ. Xem thêm mục “Pháp luật xử lý thế nào?”.`
+Người lớn cần lưu ý để bảo vệ trẻ:
+- **Thấu hiểu tâm lý**: Trẻ bị xâm hại thường rất sợ hãi, xấu hổ và tự trách mình. Hãy luôn tin tưởng và trấn an trẻ trước tiên: “Đây không phải lỗi của con”.
+- **Không tra vấn dồn dập**: Tránh bắt trẻ kể đi kể lại nhiều lần gây tái chấn thương tâm lý.
+- **Bảo vệ và can thiệp kịp thời**: Cách ly trẻ khỏi người gây hại, đưa trẻ đi khám y tế và liên hệ Tổng đài **111** để được hỗ trợ chuyên môn an toàn nhất.`
       },
       src: ["LTE", "TN_MANG", "CAND_KN"], next: ["vung-rieng-tu", "khi-bi-xam-hai", "phap-luat-hinh-su"]
     },
@@ -141,15 +137,15 @@ Xâm hại qua mạng (gạ gẫm, xin ảnh nhạy cảm, đe dọa phát tán)
       k: ["bạo lực", "bạo hành", "bạo lực trẻ em", "đánh đập", "đánh mắng", "mắng chửi", "chửi mắng", "lăng mạ", "xúc phạm", "hành hạ", "ngược đãi", "bị chửi"],
       q: ["Bạo lực trẻ em là gì?", "Bị đánh mắng có phải là bạo lực không?", "Thế nào là bạo hành trẻ em?"],
       a: {
-        nho: `Bạo lực là khi có người đánh, đá, tát, làm đau bạn, hoặc chửi mắng, đe dọa làm bạn sợ hãi.
+        nho: `Bạo lực là khi có người đánh, tát, làm đau bạn, hoặc chửi mắng làm bạn sợ hãi.
 
-Không ai được phép làm đau bạn, kể cả người lớn trong nhà. Nếu bị như vậy, hãy kể với người lớn bạn tin như thầy cô, ông bà, hoặc gọi **111**.`,
-        chung: `Bạo lực trẻ em gồm:
-- Đánh đập, hành hạ, ngược đãi, làm tổn thương cơ thể.
-- Lăng mạ, chửi bới, xúc phạm, làm nhục.
-- Cô lập, xua đuổi, đe dọa.
+Không ai được phép làm đau bạn, kể cả người lớn trong nhà. Nếu bạn đang bị đau hay sợ hãi, hãy chạy ra chỗ an toàn và kể ngay cho người lớn bạn tin nhé.`,
+        chung: `Bạo lực (dù là đòn roi thể xác hay chửi bới, lăng mạ, cô lập tinh thần) đều là hành vi sai trái và để lại tổn thương sâu sắc.
 
-Dạy dỗ không có nghĩa là được đánh đập hay sỉ nhục. Nếu bạn thường xuyên bị đánh hoặc bị xúc phạm nặng nề, ở nhà hay ở trường, đó là bạo lực và bạn có quyền được giúp đỡ. Bạn có thể gọi **111** (miễn phí, 24/7) để được tư vấn.`,
+Nếu bạn đang phải đối mặt với bạo lực:
+- **Ưu tiên sự an toàn**: Không đôi co kích động kẻ đang hung hăng. Lánh ngay sang nơi an toàn có người khác.
+- **Xóa bỏ suy nghĩ cam chịu**: Đừng nghĩ rằng “chắc tại mình hư nên mới bị đánh”. Không có lý do nào biện minh cho hành vi bạo lực.
+- **Tìm kiếm sự trợ giúp**: Nói chuyện với thầy cô, người thân tin cậy hoặc kết nối với Tổng đài **111** để được can thiệp bảo vệ.`,
         lon: `Khoản 6 Điều 4 Luật Trẻ em 2016: “Bạo lực trẻ em là hành vi hành hạ, ngược đãi, đánh đập; xâm hại thân thể, sức khỏe; lăng mạ, xúc phạm danh dự, nhân phẩm; cô lập, xua đuổi và các hành vi cố ý khác gây tổn hại về thể chất, tinh thần của trẻ em.”
 
 Đánh đòn, sỉ nhục với lý do “dạy con” vẫn có thể là bạo lực. Nếu biết trẻ đang bị bạo lực, hãy báo Tổng đài 111 hoặc công an, chính quyền nơi gần nhất.`
@@ -187,15 +183,26 @@ Khi phát hiện, hãy báo Tổng đài 111 hoặc chính quyền, công an c�
     {
       id: "nguoi-xam-hai", topic: "kien-thuc", title: "Ai có thể là người xâm hại?",
       ages: ["nho", "thcs", "thpt", "lon"],
-      k: ["ai có thể xâm hại", "người xâm hại là ai", "kẻ xâm hại", "người quen xâm hại", "người thân xâm hại", "thủ phạm", "yêu râu xanh", "kẻ xấu", "người quen có thể"],
-      q: ["Ai có thể là người xâm hại trẻ em?", "Người quen có thể xâm hại không?", "Kẻ xâm hại thường là ai?"],
+      k: [
+        "ai có thể xâm hại", "người xâm hại là ai", "kẻ xâm hại", "người quen xâm hại", "người thân xâm hại",
+        "thủ phạm", "yêu râu xanh", "kẻ xấu", "người quen có thể", "người nhà sàm sỡ", "người quen sàm sỡ",
+        "họ hàng sàm sỡ", "người thân sàm sỡ", "bị người nhà", "người quen đụng chạm", "người thân đụng chạm",
+        "chú sàm sỡ", "bác sàm sỡ", "anh họ sàm sỡ", "dượng sàm sỡ", "người trong nhà sàm sỡ"
+      ],
+      q: ["Ai có thể là người xâm hại trẻ em?", "Người quen có thể xâm hại không?", "Bị người nhà, họ hàng sàm sỡ thì phải làm sao?", "Người quen đụng chạm vào người mình thì làm gì?"],
       a: {
-        nho: `Người làm hại trẻ em có thể là người lạ. Nhưng cũng có thể là người quen: hàng xóm, họ hàng, thậm chí người trong nhà.
+        nho: `Người làm bạn sợ có thể là người lạ, nhưng cũng có thể là người quen hay họ hàng.
 
-Vì vậy, nếu ai làm bạn thấy sợ, khó chịu, hay bảo bạn giữ bí mật xấu, hãy kể với người lớn bạn tin.`,
-        chung: `Người xâm hại có thể là bất kỳ ai: người lạ, hàng xóm, họ hàng, người trong gia đình, thầy cô, huấn luyện viên, bạn bè, người yêu hay người quen trên mạng.
+Nếu ai đó chạm vào bạn làm bạn khó chịu hay bảo bạn giữ bí mật xấu:
+- Bạn hãy né tránh ngay, nói KHÔNG.
+- Kể cho bố mẹ hoặc cô giáo biết. Kể ra là bạn đang làm việc rất đúng.`,
+        chung: `Rất nhiều trường hợp xâm hại đến từ người quen, họ hàng hoặc người thân trong gia đình. Đây là tình huống khó xử nhất vì bạn sợ không ai tin mình, sợ bị mắng hoặc sợ làm gia đình xáo trộn.
 
-Nhiều vụ việc do chính người quen của trẻ gây ra, vì họ dễ tiếp cận và dễ khiến trẻ tin tưởng. Vì vậy hãy để ý **hành vi**, không chỉ để ý người đó là ai: ai làm bạn thấy sợ, khó chịu, ép bạn giữ bí mật hay vượt qua ranh giới của bạn, đều cần được kể cho người lớn tin cậy.`
+Hãy nhớ những điều này để bảo vệ mình:
+1. **Cơ thể bạn là trên hết**: Không ai – dù là người lớn, họ hàng hay người có ơn – có quyền chạm vào vùng riêng tư hay bắt bạn chịu đựng sự quấy rối.
+2. **Cách né tránh an toàn**: Tuyệt đối không ở một mình trong phòng kín với người đó. Khi người đó đến gần, hãy luôn kiếm cớ đi ra ngoài: *“Con phải đi phụ mẹ”, “Cháu có bài học nhóm”*.
+3. **Thái độ rõ ràng**: Né tránh dứt khoát, không cười trừ, không nhận quà hay tiền kèm lời dặn “bí mật”.
+4. **Cách lên tiếng**: Hãy chọn người mà bạn thấy tin tưởng nhất trong nhà (mẹ, chị gái, dì) để tâm sự riêng, hoặc chia sẻ với giáo viên tâm lý ở trường để tìm cách can thiệp tế nhị mà an toàn cho bạn.`
       },
       src: ["TN_QUEN", "TN_MANG"], next: ["dau-hieu-canh-giac", "bi-mat", "ban-tay-tin-cay"]
     },
@@ -239,12 +246,12 @@ Hãy gọi đúng tên các bộ phận cơ thể, dạy trẻ rằng cơ thể 
 Cái chạm **không an toàn** làm bạn thấy sợ, đau, xấu hổ hay khó chịu. Chạm vào vùng riêng tư, hay bị dặn phải giữ bí mật, cũng là cái chạm không an toàn.
 
 Khi gặp cái chạm không an toàn: nói to “KHÔNG!”, chạy đi, rồi kể ngay cho người lớn bạn tin.`,
-        chung: `Hãy tin vào cảm giác của bạn:
+        chung: `Hãy tin vào cảm giác của cơ thể bạn:
 - Cái chạm **an toàn**: bạn thấy thoải mái, được tôn trọng, có thể từ chối mà không bị ép.
-- Cái chạm **không an toàn**: làm bạn sợ, đau, xấu hổ, bối rối; chạm vào vùng riêng tư; đi kèm lời dặn giữ bí mật, quà tặng hay đe dọa.
-- Cái chạm **gây bối rối**: lúc đầu bình thường rồi dần khác đi. Bạn vẫn có quyền nói dừng lại.
+- Cái chạm **không an toàn**: làm bạn sợ hãi, bối rối, ngột ngạt; đụng chạm vào vùng riêng tư; đi kèm quà tặng hoặc lời dặn giữ bí mật.
+- Cái chạm **gây bối rối**: lúc đầu có vẻ bình thường nhưng dần vượt ranh giới.
 
-Bạn có quyền từ chối ôm, hôn, đụng chạm từ bất kỳ ai, kể cả người quen, họ hàng.`
+**Cách giải quyết**: Bạn hoàn toàn có quyền nói: *“Cháu/em không thích như vậy, xin dừng lại”*. Đừng sợ làm mất lòng người khác khi họ đang làm bạn khó chịu.`
       },
       src: ["CAND_KN", "CAND_DAY"], next: ["vung-rieng-tu", "sau-vong-tron", "khi-bi-xam-hai"]
     },
@@ -259,12 +266,13 @@ Bạn có quyền từ chối ôm, hôn, đụng chạm từ bất kỳ ai, kể
 - Bí mật **xấu**: làm bạn sợ, buồn, khó chịu, hoặc người lớn dặn “đừng nói với bố mẹ”.
 
 Bí mật xấu thì **không phải giữ**. Hãy kể ngay cho người lớn bạn tin, kể cả khi bạn đã lỡ hứa.`,
-        chung: `Người có ý xấu thường yêu cầu trẻ giữ bí mật, đôi khi bằng quà tặng, lời khen hoặc lời đe dọa (“nếu kể ra thì sẽ…”).
+        chung: `Người có ý đồ xấu thường dùng lời dặn “đây là bí mật của hai chúng mình” để khiến bạn sợ hãi không dám nói ra.
 
-- Bí mật an toàn: mang lại niềm vui và sớm được nói ra (ví dụ quà sinh nhật bất ngờ).
-- Bí mật không an toàn: khiến bạn lo lắng, sợ hãi, xấu hổ, hoặc bị dặn không được nói với cha mẹ, thầy cô.
+Bạn cần phân biệt rõ:
+- Bí mật an toàn: mang lại niềm vui bất ngờ và sẽ sớm được chia sẻ cùng mọi người.
+- Bí mật không an toàn: làm bạn lo âu, xấu hổ, tội lỗi, hoặc bị dọa nếu nói ra sẽ bị phạt.
 
-Bạn **không có nghĩa vụ** giữ bí mật không an toàn, kể cả khi đã hứa. Kể ra không phải là “mách lẻo”, mà là bảo vệ bản thân.`
+**Giải pháp**: Bạn **tuyệt đối không có nghĩa vụ phải giữ** bí mật xấu, kể cả khi bạn đã trót hứa hay nhận quà. Lên tiếng kể cho người lớn tin cậy là hành động tự cứu lấy mình, không phải là “mách lẻo”.`
       },
       src: ["CAND_DAY", "TN_DAY"], next: ["dau-hieu-canh-giac", "ke-cho-ai", "ban-tay-tin-cay"]
     },
@@ -323,21 +331,19 @@ Bạn có thể lưu danh sách ở mục **Hỗ trợ → Bàn tay tin cậy**.
       k: ["dấu hiệu cảnh giác", "cảnh giác", "dụ dỗ", "lôi kéo", "tặng quà", "cho tiền", "quan tâm đặc biệt", "nhận biết kẻ xấu", "rủ đi chơi riêng", "thao túng", "gặp riêng"],
       q: ["Làm sao nhận biết người có ý xấu?", "Dấu hiệu dụ dỗ là gì?", "Có người hay cho mình quà có sao không?"],
       a: {
-        nho: `Hãy cẩn thận khi có người:
-- Cho bạn quà, tiền hay đồ ăn rồi dặn “đừng kể với ai”.
-- Muốn ở riêng với bạn ở chỗ vắng, trong phòng kín.
-- Chạm vào bạn làm bạn khó chịu, rồi nói đó là trò chơi.
-- Rủ bạn đi đâu đó mà không xin phép bố mẹ.
+        nho: `Hãy cẩn thận và tránh xa khi có người:
+- Cho bạn quà, bánh hay tiền rồi dặn “giữ bí mật, đừng kể với bố mẹ”.
+- Rủ bạn vào chỗ vắng, phòng kín một mình.
+- Chạm vào bạn làm bạn khó chịu rồi bảo “đây là trò chơi”.
 
-Khi đó, hãy từ chối, tránh xa và kể với người lớn bạn tin.`,
-        chung: `Kẻ xâm hại thường đi từng bước để lấy lòng tin rồi kiểm soát. Một số dấu hiệu cần cảnh giác:
-- Quan tâm, khen ngợi, tặng quà, cho tiền một cách đặc biệt, khác thường.
-- Tìm cách ở riêng với bạn; tách bạn khỏi bạn bè, gia đình.
-- Thử vượt ranh giới từng chút: đùa cợt, đụng chạm “vô tình”, nói chuyện về cơ thể, tình dục.
-- Yêu cầu giữ bí mật, nói rằng không ai hiểu bạn bằng họ.
-- Trên mạng: rủ chuyển sang nhắn tin riêng, xin ảnh, hẹn gặp ngoài đời.
+Khi thấy những điều này, bạn hãy chạy đi và kể ngay với người lớn bạn tin nhé.`,
+        chung: `Kẻ xâm hại thường không xuất hiện như một kẻ xấu rõ ràng, mà thường tiếp cận từng bước để lấy lòng tin (quá trình grooming):
+- Tặng quà, cho tiền, nạp thẻ game bất thường; tỏ ra quan tâm chiều chuộng bạn hơn hẳn người khác.
+- Tìm cách tạo không gian riêng: rủ đi chơi riêng, vào phòng kín, tách bạn khỏi bạn bè và gia đình.
+- Thử thách ranh giới: bắt đầu bằng những cái chạm “vô tình”, đùa cợt nhạy cảm, rồi dần lấn tới.
+- Thao túng tâm lý: nói rằng “chỉ có hai chúng ta hiểu nhau”, “kể ra bố mẹ sẽ mắng đấy”.
 
-Nếu thấy những dấu hiệu này, hãy dừng liên lạc, giữ lại bằng chứng và kể với người lớn tin cậy.`
+**Cách xử lý**: Hãy tin vào linh cảm của bạn. Ngay khi cảm thấy có điều bất thường, hãy giữ khoảng cách, từ chối dứt khoát và chia sẻ ngay với người lớn tin cậy.`
       },
       src: ["TN_MANG", "TN_QUEN"], next: ["bi-mat", "nguoi-la-tren-mang", "ke-cho-ai"]
     },
@@ -366,18 +372,18 @@ Nếu thấy những dấu hiệu này, hãy dừng liên lạc, giữ lại b�
       k: ["người yêu ép", "bạn trai ép", "bạn gái ép", "người yêu bắt", "người yêu đánh", "người yêu kiểm soát", "ép quan hệ", "yêu đương", "hẹn hò", "người yêu đòi", "người yêu cũ dọa", "đồng thuận", "sự đồng ý", "chia tay bị dọa"],
       q: ["Người yêu ép mình làm điều mình không muốn thì sao?", "Thế nào là đồng ý thật sự?", "Người yêu kiểm soát điện thoại có bình thường không?"],
       a: {
-        thcs: `Một mối quan hệ tốt phải có sự tôn trọng. Không ai được ép bạn làm điều bạn không muốn, kể cả người bạn thích hay người yêu.
+        thcs: `Tình yêu tuổi học trò đẹp nhất khi hai bạn biết tôn trọng và giúp nhau cùng tiến bộ. Một người thật lòng thích bạn sẽ không bao giờ ép bạn làm điều bạn không muốn.
 
-Dấu hiệu không ổn: kiểm soát điện thoại, cấm bạn chơi với bạn bè, giận dữ, đe dọa, đòi ảnh riêng tư, bắt bạn giữ bí mật với gia đình.
+Nếu bạn gặp phải tình huống này:
+- **Khi bị đòi hỏi chuyện thân mật**: Hãy nhìn thẳng và nói: *“Mình chưa sẵn sàng, nếu bạn thật sự quý mình thì hãy tôn trọng mình.”*
+- **Nếu bạn ấy giận dỗi hay dọa chia tay**: Đó là dấu hiệu ép buộc ích kỷ. Một mối quan hệ tốt không bao giờ bắt đầu bằng sự sợ hãi hay nhượng bộ mù quáng.
+- **Tuyệt đối không gửi ảnh riêng tư**: Dù có tin tưởng đến đâu, ảnh một khi gửi đi sẽ không thể thu hồi.`,
+        thpt: `Tình cảm chân thành luôn dựa trên sự tự nguyện, tin tưởng và tôn trọng ranh giới của nhau. Sự đồng ý phải xuất phát từ sự thoải mái thật sự, không phải vì bị ép, bị dọa hay vì sợ mất người yêu.
 
-Bạn luôn có quyền nói “không” và kết thúc mối quan hệ. Hãy kể với người lớn tin cậy hoặc gọi **111** để được tư vấn.`,
-        thpt: `Một mối quan hệ lành mạnh có sự tôn trọng, tin tưởng và quyền nói “không”.
-
-Dấu hiệu không lành mạnh: kiểm soát điện thoại, cấm bạn gặp bạn bè, ghen tuông quá mức, đe dọa, đánh, ép bạn làm điều bạn không muốn, đòi ảnh riêng tư, dọa tung ảnh khi chia tay.
-
-- Sự đồng ý phải rõ ràng, tự nguyện và có thể rút lại bất cứ lúc nào. Im lặng hay sợ hãi không phải là đồng ý.
-- Bạn có quyền từ chối và rời khỏi mối quan hệ khiến bạn sợ hãi.
-- Kể với người lớn tin cậy, giáo viên tư vấn; gọi **111** để được tư vấn, **113** khi bị đe dọa, tấn công.`,
+Cách xử lý các tình huống khó xử trong tình cảm:
+1. **Khi đối phương ép quan hệ**: Hãy giữ vững lập trường: *“Không là không”*. Người yêu bạn thật lòng sẽ kiên nhẫn chờ đợi bạn sẵn sàng và tôn trọng sức khỏe, tương lai của bạn.
+2. **Khi bị thao túng tâm lý (“Nếu yêu anh thì phải cho”, “Không cho là không yêu”)**: Đây là hành vi thao túng độc hại. Bạn không có nghĩa vụ phải chứng minh tình yêu bằng cơ thể hay ảnh riêng tư.
+3. **Khi bị kiểm soát điện thoại, cấm đoán bạn bè**: Hãy thẳng thắn đặt lại ranh giới. Nếu đối phương đe dọa hay bạo lực khi bạn từ chối, hãy dừng mối quan hệ và tìm sự hỗ trợ ngay từ người lớn.`,
         lon: `Bạo lực trong quan hệ yêu đương ở tuổi vị thành niên thường bắt đầu bằng kiểm soát (theo dõi điện thoại, cô lập khỏi bạn bè), rồi đến đe dọa, ép buộc, đòi ảnh riêng tư và dọa phát tán khi chia tay.
 
 Cha mẹ, thầy cô nên trò chuyện với trẻ về sự tôn trọng và sự đồng ý; lắng nghe, không chế giễu chuyện tình cảm của trẻ, để trẻ dám kể khi gặp nguy hiểm.`
@@ -407,20 +413,20 @@ Cha mẹ, thầy cô nên trò chuyện với trẻ về sự tôn trọng và s
       k: ["làm gì khi bị xâm hại", "bị xâm hại thì làm gì", "nên làm gì|0.6", "phải làm sao|0.6", "cần làm gì|0.6", "làm gì bây giờ|0.6", "ứng phó", "tự vệ", "có người định", "bị sàm sỡ thì làm gì", "bị quấy rối thì làm gì", "làm sao để thoát", "nói không chạy đi kể ngay"],
       q: ["Khi bị xâm hại phải làm gì?", "Có người định làm hại mình thì làm sao?", "Bị sàm sỡ thì nên làm gì?"],
       a: {
-        nho: `Hãy nhớ 3 bước:
-1. **Nói KHÔNG** thật to và dứt khoát.
-2. **Chạy đi** đến chỗ có người lớn, chỗ đông người.
-3. **Kể ngay** cho người lớn bạn tin, dù người kia dọa hay bảo giữ bí mật.
+        nho: `Nếu có ai định làm đau hay đụng chạm vào bạn, bạn hãy làm ngay 3 bước này nhé:
+1. **Nói KHÔNG thật to**: hét to để người xung quanh nghe thấy.
+2. **Chạy thật nhanh**: chạy đến chỗ đông người hoặc chỗ có thầy cô, bác bảo vệ.
+3. **Kể ngay lập tức**: kể với người lớn bạn tin trong nhà hoặc thầy cô.
 
-Nếu đang gặp nguy hiểm, hãy nhờ người lớn gọi **113**. Bạn đã làm đúng khi tìm cách giữ an toàn cho mình.`,
-        chung: `Hãy ưu tiên an toàn của bạn:
-1. **Nói KHÔNG** rõ ràng, dứt khoát. Bạn không cần lịch sự với người đang làm hại mình.
-2. **Rời đi** ngay đến nơi an toàn, đông người. Nếu bị giữ lại, la to để gây chú ý.
-3. **Kể** với người lớn tin cậy càng sớm càng tốt.
-4. **Gọi** 113 nếu đang nguy hiểm, hoặc 111 (miễn phí, 24/7) để được tư vấn, hỗ trợ.
-5. Nếu chuyện xảy ra trên mạng: **giữ bằng chứng** (chụp màn hình tin nhắn, tên tài khoản), đừng xóa, đừng đáp trả.
+Dù người kia có dọa dẫm gì thì bạn cũng đã làm rất đúng khi bảo vệ bản thân.`,
+        chung: `Khi bạn cảm thấy có người đang vượt quá giới hạn hoặc định làm hại bạn:
 
-Nếu lúc đó bạn sợ quá không phản ứng được, điều đó là bình thường và không phải lỗi của bạn. Bạn vẫn có thể kể và được giúp bất cứ lúc nào.`
+1. **Phản ứng dứt khoát tại chỗ**:
+   - Lùi lại, giữ khoảng cách và nói to: *“Dừng lại! Anh/chị đang làm cái gì đấy?”*. Nói to sẽ làm kẻ xấu giật mình và thu hút sự chú ý của người xung quanh.
+   - Không cần phải tỏ ra ngại ngùng hay lịch sự với người đang xâm phạm bạn.
+2. **Rời khỏi khu vực nguy hiểm**: Di chuyển ngay tới nơi đông người, trạm bảo vệ, quầy thu ngân hoặc đứng cạnh người lớn khác.
+3. **Nếu lúc đó bạn quá sợ và bị 'đóng băng'**: Rất nhiều bạn khi hoảng loạn không thể hét hay chạy được. Điều đó hoàn toàn tự nhiên và không phải lỗi của bạn. Bạn vẫn có thể lên tiếng và tìm người bảo vệ sau đó.
+4. **Tìm điểm tựa**: Kể lại với người lớn tin cậy nhất. Nếu cần hướng dẫn cụ thể cho tình huống bạn vừa gặp, bạn cứ chia sẻ thêm với ALLY nhé.`
       },
       src: ["CAND_KN", "CAND_BV"], next: ["ke-cho-ai", "goi-111", "sau-khi-bi-xam-hai"]
     },
@@ -430,19 +436,20 @@ Nếu lúc đó bạn sợ quá không phản ứng được, điều đó là b
       k: ["sợ kể", "không dám kể", "sợ bố mẹ không tin", "sợ bị mắng", "kể với ai", "có nên kể", "sợ bị trả thù", "bố mẹ không tin", "sợ bố mẹ buồn", "ngại kể", "không dám nói", "không ai tin", "nói với bố mẹ thế nào"],
       q: ["Mình sợ kể với bố mẹ thì sao?", "Kể với ai bây giờ?", "Sợ không ai tin mình thì làm sao?"],
       a: {
-        nho: `Mình hiểu là bạn đang sợ. Nhưng kể ra là việc **đúng** và **dũng cảm**.
+        nho: `Mình biết bạn đang sợ bị mắng hoặc sợ bố mẹ buồn. Nhưng bạn đừng lo nhé, kể ra là việc làm rất dũng cảm.
 
-- Bạn có thể bắt đầu bằng câu: “Con có chuyện muốn kể, nhưng con hơi sợ.”
-- Nếu người lớn đầu tiên chưa tin, hãy kể với người khác trong bàn tay tin cậy.
-- Bạn cũng có thể gọi **111**, các cô chú ở đó sẽ lắng nghe bạn.`,
-        chung: `Sợ hãi, ngại ngùng khi kể là cảm giác rất bình thường. Một vài cách giúp bạn dễ bắt đầu hơn:
-- Chọn người bạn tin nhất và lúc chỉ có hai người.
-- Mở đầu bằng: “Con/em có chuyện khó nói, mong mọi người nghe hết rồi hãy nói.”
-- Nếu khó nói thành lời, hãy viết ra giấy hoặc nhắn tin.
-- Nhờ một người bạn thân đi cùng.
-- Nếu người đầu tiên không tin, đừng dừng lại, hãy kể với người khác.
+Bạn có thể bắt đầu bằng câu này:
+- *“Bố mẹ ơi, con có chuyện này khó nói và con hơi sợ, bố mẹ nghe con kể nhé.”*
 
-Bạn cũng có thể gọi **111** trước để được tư vấn cách nói với gia đình. Tổng đài viên được đào tạo để lắng nghe trẻ em. Bạn có thể hỏi họ thông tin của bạn sẽ được xử lý thế nào.`
+Nếu người đầu tiên chưa hiểu, bạn hãy kể với cô giáo hoặc người lớn khác mà bạn tin nhé.`,
+        chung: `Cảm giác sợ hãi, xấu hổ, sợ bố mẹ mắng hay sợ người khác không tin là tâm lý rất bình thường của nạn nhân. Kẻ xấu thường lợi dụng chính nỗi sợ này để bạn im lặng.
+
+Các cách mở lời giúp bạn bớt sợ và được lắng nghe:
+1. **Kịch bản nói trực tiếp**: Hãy chọn lúc chỉ có hai người và nói:
+   *“Bố mẹ/Cô ơi, con đang gặp một chuyện rất rắc rối và con đang rất sợ hãi. Con muốn kể cho bố mẹ nghe, mong bố mẹ bình tĩnh lắng nghe và giúp con với nhé.”*
+2. **Nếu quá run không nói thành lời**: Hãy viết ra giấy, nhắn tin hoặc đưa cho người lớn xem màn hình tin nhắn làm bạn bất an.
+3. **Nhờ một người bạn thân đi cùng**: Có bạn thân đứng cạnh sẽ giúp bạn có thêm can đảm để nói ra.
+4. **Nếu người đầu tiên phản ứng chưa đúng ý**: Đừng nản lòng hay tự trách. Hãy tìm một người lớn khác trong trường (cô giáo chủ nhiệm, chuyên viên tâm lý) hoặc gọi **111** để được chuyên gia lắng nghe và hướng dẫn cách giãi bày với gia đình.`
       },
       src: ["CAND_DAY"], next: ["ban-tay-tin-cay", "goi-111", "khong-phai-loi"]
     },
@@ -474,26 +481,22 @@ Bạn cũng có thể gọi **111** trước để được tư vấn cách nói
       k: ["vừa bị xâm hại", "vừa bị hiếp", "sau khi bị xâm hại", "bị xâm hại xong", "có nên tắm", "đi khám", "giữ chứng cứ", "giữ bằng chứng", "72 giờ", "thuốc tránh thai khẩn cấp", "bị cưỡng ép quan hệ", "khám sau khi bị xâm hại"],
       q: ["Vừa bị xâm hại thì phải làm gì?", "Có nên tắm sau khi bị xâm hại không?", "Cần đi khám trong bao lâu?"],
       a: {
-        nho: `Nếu có ai vừa làm đau hay chạm vào vùng riêng tư của bạn:
-- Hãy đến ngay chỗ an toàn, ở gần người lớn bạn tin.
-- Kể ngay cho người lớn đó biết. Người lớn sẽ đưa bạn đi khám và báo công an.
-- Nếu chưa tìm được ai, hãy gọi **111** hoặc **113**.
+        nho: `Nếu có ai vừa làm đau hay đụng vào vùng riêng tư của bạn:
+- Hãy đến ngay cạnh người lớn bạn tin như bố mẹ, cô giáo.
+- Kể cho người lớn biết bạn đang bị đau ở đâu để người lớn đưa bạn đi bác sĩ.
+- Bạn không làm gì sai cả. Bạn luôn là một đứa trẻ ngoan và được mọi người yêu thương.`,
+        thcs: `Mình vô cùng đau lòng và muốn ở bên cạnh bạn lúc này. Hãy thở thật chậm, bạn đang an toàn.
 
-Bạn không có lỗi gì cả.`,
-        thcs: `Mình rất tiếc vì điều đó đã xảy ra. Những việc nên làm:
-1. Đến nơi an toàn và kể ngay với người lớn tin cậy, hoặc gọi **113**, **111**.
-2. Nếu có thể, **chưa tắm, chưa thay hay giặt quần áo** trước khi đi khám, vì điều này giúp giữ bằng chứng. Nếu bạn đã làm rồi cũng không sao, bạn vẫn được giúp đỡ.
-3. Đi khám ở cơ sở y tế càng sớm càng tốt, tốt nhất trong vòng 72 giờ, để được chăm sóc và phòng ngừa các nguy cơ cho sức khỏe.
-4. Giữ lại tin nhắn, hình ảnh liên quan.
+Những việc quan trọng cần làm ngay để bảo vệ bạn:
+1. **Chăm sóc y tế trước tiên**: Hãy kể ngay với mẹ hoặc người lớn bạn tin nhất để đến bệnh viện khám trong vòng **72 giờ**. Bác sĩ sẽ giúp bạn điều trị vết thương và uống thuốc phòng ngừa các bệnh lây nhiễm.
+2. **Cố gắng giữ chứng cứ**: Dù bạn rất muốn tắm gội ngay, nhưng nếu có thể, hãy cố gắng chưa tắm và chưa giặt bộ quần áo lúc đó, để trong túi giấy. Đây là bằng chứng quan trọng nhất để bắt kẻ xấu chịu tội.
+3. **Đừng ở một mình**: Hãy ở cạnh người bạn tin tưởng để có cảm giác an tâm. Bạn không hề có lỗi trong chuyện này.`,
+        thpt: `Mình chia sẻ sâu sắc nỗi đau và sự hoang mang bạn đang phải chịu đựng. Ngay lúc này, điều quan trọng nhất là bảo vệ sức khỏe và tương lai của bạn.
 
-Đây không phải lỗi của bạn. Bạn xứng đáng được chăm sóc.`,
-        thpt: `Mình rất tiếc vì điều đó đã xảy ra với bạn. Trước hết hãy đến nơi an toàn.
-1. **Tìm người hỗ trợ**: người lớn tin cậy, hoặc gọi **113** (công an), **111** (miễn phí, 24/7).
-2. **Đi khám sớm**, tốt nhất trong vòng 72 giờ: bác sĩ có thể điều trị tổn thương, dự phòng mang thai ngoài ý muốn và các bệnh lây truyền.
-3. **Giữ bằng chứng nếu có thể**: chưa tắm, chưa giặt quần áo, cho quần áo vào túi giấy; lưu tin nhắn, hình ảnh. Nếu đã tắm rửa rồi, bạn vẫn có thể trình báo.
-4. **Chăm sóc tinh thần**: phản ứng sốc, sợ hãi, tê liệt cảm xúc là bình thường. Hãy tìm hỗ trợ tâm lý.
-
-Dù bạn đã làm gì hay chưa làm gì, đây không phải lỗi của bạn.`,
+Các việc sống còn cần làm trong vòng 72 giờ:
+1. **Đến cơ sở y tế gần nhất (Ưu tiên số 1)**: Bạn cần được bác sĩ khám điều trị tổn thương, kê đơn thuốc điều trị dự phòng phơi nhiễm HIV (PEP) và thuốc tránh thai khẩn cấp càng sớm càng tốt (hiệu quả cao nhất trong 72 giờ đầu).
+2. **Lưu giữ dấu vết pháp lý**: Hạn chế tắm rửa, không giặt hoặc vứt bỏ quần áo mặc lúc xảy ra sự việc (hãy cất vào túi giấy khô). Lưu lại mọi tin nhắn, cuộc gọi của kẻ gây hại.
+3. **Tìm điểm tựa tâm lý**: Bạn có thể bị sốc, run rẩy, tự trách hoặc cảm thấy tê liệt cảm xúc. Hãy tìm đến một người thân tin cậy hoặc gọi Tổng đài **111** (hoàn toàn miễn phí, ẩn danh) để chuyên viên hỗ trợ bạn từng bước an toàn.`,
         lon: `Ưu tiên theo thứ tự:
 1. **An toàn**: đưa trẻ ra khỏi nơi có người gây hại; gọi 113 nếu khẩn cấp.
 2. **Y tế**: đưa trẻ đi khám càng sớm càng tốt, lý tưởng trong 72 giờ, để được điều trị tổn thương, dự phòng mang thai và các bệnh lây truyền (theo chỉ định của bác sĩ).
@@ -510,19 +513,18 @@ Dù bạn đã làm gì hay chưa làm gì, đây không phải lỗi của bạ
       k: ["bố đánh", "mẹ đánh", "bị bố đánh", "bị mẹ đánh", "ba đánh", "má đánh", "bố mẹ đánh", "bị đánh ở nhà", "bố mẹ chửi", "bố say rượu", "bố nhậu", "bạo lực gia đình", "bố đánh mẹ", "dượng đánh", "bị chửi mắng", "bị nhốt ở nhà", "người nhà đánh"],
       q: ["Bị bố mẹ đánh thì phải làm sao?", "Bố say rượu hay đánh mình thì sao?", "Bạo lực gia đình phải làm gì?"],
       a: {
-        nho: `Không ai được đánh đập hay làm đau bạn, kể cả bố mẹ hay người lớn trong nhà.
+        nho: `Không ai được phép đánh đập hay làm bạn bị thương, kể cả người lớn trong nhà. Đòn roi không phải là cách dạy ngoan.
 
-- Khi người lớn đang nổi giận, hãy tránh ra chỗ an toàn: sang nhà hàng xóm thân, nhà ông bà.
-- Kể với thầy cô hoặc người lớn bạn tin.
-- Gọi **111** để được giúp. Nếu đang bị đánh và rất nguy hiểm, gọi **113**.`,
-        chung: `Mình rất tiếc nếu bạn đang phải trải qua điều này. Bị đánh đập, chửi mắng nặng nề, đe dọa ở nhà là bạo lực, dù người làm là cha mẹ hay người thân. Đó không phải là cách dạy dỗ đúng, và không phải lỗi của bạn.
+Khi bố mẹ hay người lớn đang nổi giận:
+- Bạn hãy lánh sang nhà ông bà, nhà bác hàng xóm hoặc chỗ an toàn nhé.
+- Kể với thầy cô giáo chủ nhiệm ở trường.
+- Bạn cũng có thể gọi **111** để các cô chú giúp bạn an toàn.`,
+        chung: `Mình rất đồng cảm và chia sẻ với sự bất an của bạn. Đòn roi, sỉ nhục hay trút giận lên con cái không phải là dạy dỗ, mà là bạo lực gia đình. Bạn hoàn toàn không đáng phải chịu đựng những tổn thương đó.
 
-- Khi có xung đột, hãy tránh đến nơi an toàn (phòng có khóa, nhà hàng xóm, người thân).
-- Lên trước một kế hoạch: mang theo điện thoại, nhớ số 111 và 113, biết nhà ai có thể chạy sang.
-- Kể với thầy cô chủ nhiệm, giáo viên tư vấn hoặc người lớn tin cậy.
-- Gọi **111** (miễn phí, 24/7) để được tư vấn và hỗ trợ. Gọi **113** khi đang nguy hiểm.
-
-Nếu bạn chứng kiến bạo lực giữa bố mẹ, điều đó cũng ảnh hưởng đến bạn, và bạn cũng xứng đáng được giúp.`
+Cách xử lý cụ thể để tự bảo vệ mình:
+1. **Khi xung đột đang dâng cao**: Tuyệt đối không cãi tay đôi hay phản kháng kích động kẻ say xỉn/giận dữ. Hãy tìm cớ thoát ra ngoài (nhà người thân, hàng xóm tin cậy, phòng có chốt trong).
+2. **Lập sẵn kế hoạch an toàn**: Luôn để điện thoại có đủ pin, ghi nhớ địa chỉ an toàn có thể nương tựa khi đêm hôm, và nhớ số **111** (bảo vệ trẻ em) hoặc **113** (khi bị đe dọa tính mạng).
+3. **Tìm sự can thiệp từ bên ngoài**: Hãy tâm sự với giáo viên chủ nhiệm, cán bộ tư vấn tâm lý ở trường hoặc tổ trưởng dân phố. Nhà trường và đoàn thể có trách nhiệm can thiệp để bảo vệ bạn.`
       },
       src: ["LTE", "TN_BH"], next: ["goi-111", "cam-xuc", "khi-nao-goi-113-115"]
     },
@@ -532,20 +534,19 @@ Nếu bạn chứng kiến bạo lực giữa bố mẹ, điều đó cũng ản
       k: ["bắt nạt", "bị bắt nạt", "bạo lực học đường", "bị bạn đánh", "bị đánh hội đồng", "bị cô lập", "bị tẩy chay", "bị trêu chọc", "bị chế giễu", "bị xin đểu", "bị đe dọa ở trường", "bị bạn bè chửi"],
       q: ["Bị bắt nạt ở trường thì làm sao?", "Bị cả lớp tẩy chay phải làm gì?", "Bị bạn đánh có nên đánh lại không?"],
       a: {
-        nho: `Bị bạn trêu chọc, đánh, giấu đồ, không cho chơi cùng nhiều lần là bị **bắt nạt**. Đó không phải lỗi của bạn.
+        nho: `Nếu bạn bị bạn bè đánh, giấu đồ, trêu chọc hay không cho chơi cùng, đó là bị bắt nạt. Bạn không làm gì sai để bị đối xử như thế.
 
-- Nói to: “Dừng lại! Mình không thích thế!” rồi đi chỗ khác.
-- Chơi gần bạn bè và gần thầy cô.
-- Kể ngay với thầy cô chủ nhiệm và bố mẹ.`,
-        chung: `Bắt nạt là khi một người hoặc một nhóm cố ý làm tổn thương bạn nhiều lần: đánh, đe dọa, chế giễu, tẩy chay, xin tiền, tung tin đồn, kể cả trên mạng.
+Bạn hãy làm thế này nhé:
+- Nhìn thẳng vào bạn đó và nói to: *“Dừng lại, mình không thích!”* rồi đi ra chỗ khác.
+- Luôn chơi ở chỗ đông bạn bè và gần phòng thầy cô.
+- Kể ngay với cô giáo chủ nhiệm và bố mẹ để cô giải quyết cho bạn.`,
+        chung: `Cảm giác mỗi ngày đến trường phải đối mặt với sự cô lập, trêu chọc ác ý hay đe dọa đánh đập thật sự rất mệt mỏi và ức chế. Kẻ bắt nạt thường nhắm vào người hiền lành để thị uy.
 
-- Giữ bình tĩnh, nói rõ “Dừng lại”, rồi rời đi; tránh đánh trả vì có thể khiến bạn gặp nguy hiểm hơn.
-- Đi cùng bạn bè, ở nơi có thầy cô, camera.
-- Ghi lại sự việc: ngày, giờ, ai, chuyện gì; chụp màn hình nếu xảy ra trên mạng.
-- Báo với giáo viên chủ nhiệm, giáo viên tư vấn tâm lý, ban giám hiệu và gia đình.
-- Gọi **111** nếu bạn cần tư vấn, hoặc **113** khi bị đe dọa nghiêm trọng.
-
-Nếu bạn chứng kiến bạn khác bị bắt nạt, hãy đứng về phía bạn ấy và báo người lớn.`
+Cách xử lý tình huống thực tế:
+1. **Phản ứng lúc bị trêu/đe dọa**: Giữ nét mặt bình tĩnh, mắt nhìn thẳng, nói câu ngắn gọn dứt khoát: *“Chuyện này chẳng có gì vui cả, dừng lại đi”* rồi bước đi. Kẻ bắt nạt thường chán nản nếu không thấy bạn hoảng sợ hay phát khóc.
+2. **Không đi một mình ở góc khuất**: Tránh đi một mình ở nhà vệ sinh vắng, gầm cầu thang hay cổng trường lúc vắng người. Luôn đi chung với nhóm bạn hoặc gần phòng giáo viên, bảo vệ.
+3. **Thu thập chứng cứ**: Ghi lại ngày giờ, tên những người tham gia, chụp lại tin nhắn đe dọa (nếu có).
+4. **Báo cáo dứt điểm**: Nói chuyện với giáo viên chủ nhiệm, phụ huynh hoặc phòng tư vấn tâm lý học đường. Đây là bảo vệ quyền lợi chính đáng của bạn, không phải là “mách lẻo”.`
       },
       src: ["TN_BH"], next: ["bat-nat-tren-mang", "cam-xuc", "ke-cho-ai"]
     },
@@ -628,19 +629,15 @@ Khi thấy bất an, hãy dừng lại và kể với người lớn tin cậy.`
       k: ["xin ảnh", "đòi ảnh", "gửi ảnh", "ảnh nóng", "ảnh nhạy cảm", "ảnh khỏa thân", "ảnh riêng tư", "gửi clip", "gọi video", "bật camera", "chụp ảnh gửi", "lỡ gửi ảnh", "đã gửi ảnh"],
       q: ["Có người xin ảnh nhạy cảm thì sao?", "Mình lỡ gửi ảnh rồi phải làm gì?", "Người yêu đòi ảnh riêng tư"],
       a: {
-        nho: `Nếu có ai xin ảnh bạn không mặc quần áo, hay ảnh vùng riêng tư, hãy **từ chối**.
+        nho: `Nếu có ai xin ảnh bạn không mặc đồ, bạn hãy từ chối ngay nhé.
+- Không gửi bất kỳ tấm ảnh nào của bạn cho người khác qua mạng.
+- Dừng nhắn tin với người đó và cho bố mẹ hoặc cô giáo xem ngay. Bạn sẽ không bị mắng đâu.`,
+        chung: `Tuyệt đối **KHÔNG gửi** ảnh, clip nhạy cảm cho bất kỳ ai, kể cả người yêu hay bạn thân. Khi ảnh đã gửi đi, bạn sẽ hoàn toàn mất quyền kiểm soát nó.
 
-Đừng trả lời người đó nữa. Hãy cho bố mẹ, thầy cô xem tin nhắn đó ngay.
-
-Bạn sẽ không bị mắng vì đã kể.`,
-        chung: `**Không gửi** ảnh, video nhạy cảm cho bất kỳ ai, kể cả bạn thân, người yêu. Khi đã gửi đi, bạn không còn kiểm soát được hình ảnh đó.
-
-Nếu có người xin hoặc ép bạn gửi:
-- Từ chối dứt khoát, ngừng trò chuyện, chặn tài khoản.
-- Chụp màn hình tin nhắn, lưu tên tài khoản làm bằng chứng.
-- Kể với người lớn tin cậy, báo cáo tài khoản với nền tảng mạng xã hội.
-
-Nếu bạn **đã lỡ gửi**: đừng hoảng sợ và đừng tự trách. Bạn không có lỗi khi bị lừa. Đừng gửi thêm, đừng chuyển tiền. Hãy kể với người lớn tin cậy và gọi **111** hoặc **113** để được giúp.`
+Xử lý từng tình huống cụ thể:
+- **Nếu đối phương đòi hỏi/năn nỉ**: Hãy từ chối dứt khoát: *“Mình không đồng ý chụp hay gửi những hình ảnh này, mong bạn tôn trọng mình.”*
+- **Nếu đối phương dọa chia tay**: Đó là dấu hiệu ép buộc ích kỷ, bạn không nên duy trì một mối quan hệ thiếu tôn trọng như vậy.
+- **Nếu bạn ĐÃ LỠ GỬI RỒI**: Đừng hoảng loạn và đừng tự căm ghét bản thân. Hãy thu hồi tin nhắn nếu có thể. Dứt khoát không gửi thêm ảnh khác, chụp lại tin nhắn làm bằng chứng và chặn kẻ đó. Nếu bị đe dọa tống tiền, hãy xem hướng dẫn tại mục “Bị dọa tung ảnh”.`
       },
       src: ["TN_MANG"], next: ["bi-de-doa-anh", "nguoi-la-tren-mang"]
     },
@@ -650,17 +647,17 @@ Nếu bạn **đã lỡ gửi**: đừng hoảng sợ và đừng tự trách. B
       k: ["dọa tung ảnh", "tung ảnh", "phát tán ảnh", "dọa đăng ảnh", "tống tiền", "đòi tiền", "bị đe dọa", "bị dọa", "bị tống tiền", "nếu không gửi tiền", "bị cắt ghép ảnh", "ghép ảnh", "dọa gửi cho bố mẹ", "bị hack tài khoản"],
       q: ["Bị dọa tung ảnh thì làm sao?", "Có người đòi tiền nếu không sẽ đăng ảnh", "Bị cắt ghép ảnh nhạy cảm phải làm gì?"],
       a: {
-        nho: `Nếu có ai dọa đăng ảnh của bạn hay bắt bạn làm điều gì đó, bạn **không phải sợ một mình**.
+        nho: `Nếu có ai dọa đăng ảnh của bạn lên mạng hay đòi tiền bạn:
+- Bạn hãy hít thở thật sâu, **bạn không có lỗi gì cả**.
+- **Tuyệt đối không gửi thêm ảnh** và không làm theo lời người đó.
+- Hãy đưa ngay tin nhắn đó cho bố mẹ hoặc thầy cô xem. Người lớn sẽ có cách xử lý kẻ xấu giúp bạn.`,
+        chung: `Hít một hơi thật sâu cùng mình nhé. Bạn đang vô cùng hoảng sợ và lo lắng, nhưng xin bạn hãy nhớ: **Kẻ đe dọa tống tiền/ảnh là kẻ phạm tội, bạn hoàn toàn là nạn nhân và không có lỗi.**
 
-Hãy cho bố mẹ, thầy cô xem ngay tin nhắn đó. Đừng làm theo lời người đó. Người lớn sẽ giúp bạn.`,
-        chung: `Đe dọa tung ảnh là hành vi phạm tội, và người có lỗi là kẻ đe dọa, không phải bạn.
-
-1. **Không làm theo**: không gửi thêm ảnh, không chuyển tiền. Làm theo thường khiến kẻ xấu đòi thêm.
-2. **Giữ bằng chứng**: chụp màn hình tin nhắn, tên tài khoản, đường link, số tài khoản ngân hàng (nếu có). Không xóa cuộc trò chuyện.
-3. **Chặn và báo cáo** tài khoản với mạng xã hội, sau khi đã lưu bằng chứng.
-4. **Kể** với người lớn tin cậy và gọi **113** hoặc **111** để được hỗ trợ.
-
-Bạn không đơn độc. Chuyện này có thể giải quyết được.`
+Hãy làm chính xác 4 bước này ngay lúc này:
+1. **Tuyệt đối KHÔNG làm theo**: Không chuyển tiền, không gửi thêm bất kỳ ảnh nào. Kẻ tống tiền sẽ không bao giờ dừng lại nếu bạn nhượng bộ.
+2. **Chụp lưu toàn bộ bằng chứng**: Chụp màn hình tin nhắn đe dọa, trang cá nhân của kẻ xấu, đường link, số tài khoản ngân hàng kẻ đó cung cấp.
+3. **Bảo vệ tài khoản ngay**: Đổi mật khẩu, cài đặt trang cá nhân về chế độ Riêng tư (chỉ bạn bè), tạm thời khóa danh sách bạn bè để kẻ xấu không gửi tin nhắn quấy rối người thân của bạn.
+4. **Vượt qua nỗi sợ bị bố mẹ biết**: Kẻ xấu lợi dụng tâm lý sợ bố mẹ của bạn để khống chế. Hãy nói với người lớn bạn tin: *“Con bị kẻ xấu trên mạng lừa và đe dọa, con cần sự giúp đỡ của gia đình.”* Gia đình sẽ là lá chắn bảo vệ bạn. Bạn cũng có thể gọi **111** để chuyên gia an ninh mạng hướng dẫn gỡ ảnh.`
       },
       src: ["TN_MANG", "BYT_111", "CAND_UC"], next: ["xin-anh", "cam-xuc"]
     },
@@ -671,11 +668,13 @@ Bạn không đơn độc. Chuyện này có thể giải quyết được.`
       q: ["Bị nói xấu trên mạng thì sao?", "Có người lập tài khoản giả mạo mình", "Bị bắt nạt trên mạng phải làm gì?"],
       a: {
         nho: `Nếu có ai nói xấu, đăng ảnh xấu về bạn trên mạng, đừng trả lời lại. Hãy cho bố mẹ, thầy cô xem ngay để được giúp.`,
-        chung: `- Không đáp trả, không đôi co, vì có thể làm sự việc căng thẳng hơn.
-- Chụp màn hình, lưu đường link, ghi lại thời gian.
-- Chặn, báo cáo bài viết, tài khoản với mạng xã hội; nhờ bạn bè cùng báo cáo.
-- Báo với giáo viên chủ nhiệm, gia đình; nếu bị cắt ghép ảnh, đe dọa, hãy báo công an hoặc gọi **111**.
-- Tạm nghỉ mạng xã hội nếu thấy quá áp lực. Những gì người khác viết không quyết định con người bạn.`
+        chung: `Bị công kích, bêu xấu hay lập nhóm tẩy chay trên mạng xã hội có thể làm bạn thấy nghẹt thở và bất an tột cùng. Nhưng hãy nhớ rằng những lời lẽ ác ý trên mạng không quyết định giá trị thật của bạn.
+
+Các bước dập tắt bắt nạt mạng:
+1. **Quy tắc vàng: Không đôi co, không đáp trả**: Kẻ bắt nạt mạng muốn nhìn thấy bạn tức giận, phân bua để tiếp tục kéo dài câu chuyện. Sự im lặng và thu thập chứng cứ là đòn phản kháng mạnh nhất.
+2. **Chụp màn hình và lưu bằng chứng**: Lưu lại link bài viết, bình luận, tin nhắn, tên tài khoản kẻ bắt nạt kèm ngày giờ cụ thể.
+3. **Chặn & Báo cáo (Report)**: Dùng tính năng báo cáo quấy rối của Facebook, TikTok, Zalo; nhờ bạn bè thân thiết cùng báo cáo bài viết vi phạm để nền tảng gỡ bỏ.
+4. **Tạm thời ngắt kết nối mạng xã hội**: Tắt thông báo, dành thời gian nghỉ ngơi, gặp gỡ những người bạn ngoài đời thật để lấy lại sự cân bằng.`
       },
       src: ["BYT_111", "CAND_SO"], next: ["bi-de-doa-anh", "cam-xuc", "bat-nat"]
     },
@@ -687,14 +686,17 @@ Bạn không đơn độc. Chuyện này có thể giải quyết được.`
       k: ["lỗi của em", "lỗi của mình", "lỗi của con", "tại em", "tại mình", "có phải lỗi", "em có lỗi", "mình có lỗi", "tự trách", "đáng bị", "em thấy bẩn", "mình thấy bẩn", "ghê tởm bản thân", "xấu hổ quá"],
       q: ["Có phải lỗi của mình không?", "Mình thấy xấu hổ và tự trách", "Tại mình nên mới bị như vậy?"],
       a: {
-        nho: `Đó **không phải** lỗi của bạn. Không bao giờ là lỗi của bạn.
+        nho: `Đó **không bao giờ** là lỗi của bạn. Bạn không làm gì sai cả.
 
-Người lớn làm sai thì người lớn phải chịu trách nhiệm. Bạn đã rất dũng cảm khi nói ra. Hãy kể cho người lớn bạn tin để được giúp nhé.`,
-        chung: `Nếu ai đó làm tổn thương bạn, đó **không phải** lỗi của bạn, dù bạn đã mặc gì, đã đi đâu, đã tin ai, đã im lặng hay chưa kể ngay.
+Người làm hại bạn mới là người có lỗi. Bạn là một đứa trẻ dũng cảm và đáng yêu. Hãy kể cho người lớn bạn tin để được ôm và bảo vệ nhé.`,
+        chung: `Mình muốn gửi đến bạn một cái ôm thật ấm áp và khẳng định: **ĐÓ HOÀN TOÀN KHÔNG PHẢI LỖI CỦA BẠN.**
 
-Nhiều người bị xâm hại cảm thấy xấu hổ hoặc tự trách mình. Cảm giác đó là bình thường, nhưng không có nghĩa là bạn có lỗi. Trách nhiệm hoàn toàn thuộc về người đã làm hại bạn.
+Dù trong bất kỳ hoàn cảnh nào:
+- Dù bạn đã mặc trang phục gì, đi đến đâu, hay tin tưởng ai.
+- Dù lúc đó bạn im lặng, sợ hãi không dám hét, hay không kịp chống cự.
+- Dù người gây hại là ai và họ có đổ lỗi cho bạn thế nào.
 
-Bạn xứng đáng được lắng nghe và giúp đỡ. Nếu muốn, hãy kể với mình thêm, hoặc gọi **111** để nói chuyện với người thật.`
+Trách nhiệm 100% thuộc về kẻ đã làm tổn thương bạn. Bạn không hề dơ bẩn, không hư hỏng, và bạn xứng đáng được yêu thương, tôn trọng và chữa lành. Hãy mở lòng chia sẻ cùng ALLY hoặc người bạn tin cậy nhé.`
       },
       src: ["CAND_BV"], next: ["cam-xuc", "ke-cho-ai", "goi-111"]
     },
@@ -704,22 +706,19 @@ Bạn xứng đáng được lắng nghe và giúp đỡ. Nếu muốn, hãy k�
       k: ["buồn", "sợ hãi", "lo lắng", "căng thẳng", "mất ngủ", "ác mộng", "khóc", "cô đơn", "không ai hiểu", "tâm lý", "trầm cảm", "áp lực", "hoảng loạn", "không vui", "mệt mỏi", "tủi thân", "muốn khóc"],
       q: ["Mình thấy buồn và sợ quá", "Mình hay gặp ác mộng, không ngủ được", "Làm sao để bớt lo lắng?"],
       a: {
-        nho: `Khi gặp chuyện đáng sợ, bạn có thể thấy buồn, sợ, muốn khóc, khó ngủ. Điều đó là **bình thường**.
+        nho: `Khi gặp chuyện sợ hãi, bạn có thể thấy buồn, muốn khóc hay khó ngủ. Điều đó là rất bình thường.
 
-- Hãy thử hít thật sâu, thở ra thật chậm vài lần.
-- Ôm một món đồ bạn thích, ở gần người bạn tin.
-- Kể cho người lớn nghe cảm giác của bạn.
+Bạn hãy thử làm thế này nhé:
+- Hít thở thật sâu cùng ALLY vài lần.
+- Ôm một chú gấu bông hoặc đồ vật bạn thích.
+- Kể cho người lớn bạn tin nghe bạn đang sợ điều gì. Mình luôn ở đây cùng bạn.`,
+        chung: `Sau khi trải qua chuyện đau lòng hoặc đáng sợ, việc bạn mất ngủ, giật mình, run rẩy, hay khóc hay lo lắng tột độ là phản ứng tự nhiên của cơ thể để tự vệ. Bạn không hề yếu đuối.
 
-Bạn có muốn thử bài tập hít thở cùng mình không?`,
-        chung: `Sau một chuyện đáng sợ, nhiều người thấy lo âu, buồn bã, giận dữ, xấu hổ, khó ngủ, hay giật mình, khó tập trung. Đó là phản ứng bình thường của cơ thể và tâm trí, không phải vì bạn yếu đuối.
-
-Những điều có thể giúp:
-- Chia sẻ với người bạn tin, hoặc giáo viên tư vấn tâm lý ở trường.
-- Giữ nếp sinh hoạt: ăn uống, ngủ nghỉ đều đặn; vận động nhẹ.
-- Thử bài tập hít thở trong mục **Hỗ trợ**.
-- Viết ra giấy những gì bạn cảm thấy.
-
-Nếu cảm giác này kéo dài, ngày càng nặng hoặc bạn có ý nghĩ làm hại bản thân, hãy nói ngay với người lớn và gọi **111**. Tổng đài cũng hỗ trợ cả những bạn đang khủng hoảng tâm lý.`
+Những việc giúp bạn xoa dịu cảm xúc lúc này:
+1. **Lấy lại cảm giác an toàn cơ thể**: Uống một ngụm nước ấm, quấn chăn ấm, ôm một chiếc gối hoặc ngồi dựa lưng vào tường.
+2. **Thực hành bài tập thở 4-2-6**: Hít sâu bằng mũi đếm 4, giữ 2 nhịp, thở ra từ từ đếm 6 (bạn có thể mở mục **Hỗ trợ → Hít thở cùng ALLY**).
+3. **Viết nhật ký xả cảm xúc**: Viết tất cả nỗi sợ ra một trang giấy rồi xé nhỏ nó đi.
+4. **Không chịu đựng một mình**: Hãy ở cạnh người bạn thấy bình yên nhất. Nếu nỗi sợ quá lớn, hãy gọi **111** để được chuyên viên tâm lý đồng hành cùng bạn.`
       },
       src: ["BYT_111"], next: ["hit-tho", "khong-phai-loi", "goi-111"]
     },
@@ -751,17 +750,15 @@ Lặp lại 5 lần. Bạn có thể mở **Hỗ trợ → Hít thở cùng ALLY
       k: ["quyền trẻ em", "quyền của trẻ em", "quyền được bảo vệ", "trẻ em có quyền", "luật trẻ em", "quyền bí mật đời sống riêng tư", "quyền riêng tư của trẻ"],
       q: ["Trẻ em có những quyền gì?", "Luật Trẻ em bảo vệ trẻ thế nào?"],
       a: {
-        nho: `Mọi trẻ em đều có quyền được an toàn, được yêu thương, được đi học, được vui chơi và được bảo vệ khỏi những người làm hại mình.
+        nho: `Mọi trẻ em đều có quyền được an toàn, được yêu thương, được đi học và được bảo vệ khỏi những người làm hại mình.
 
 Khi bị làm hại, bạn có quyền được giúp đỡ. Người lớn và các cô chú ở số **111** có trách nhiệm giúp bạn.`,
-        chung: `Luật Trẻ em 2016 quy định trẻ em có các quyền được bảo vệ, trong đó có:
-- Quyền bí mật đời sống riêng tư (Điều 21).
-- Quyền được bảo vệ để không bị xâm hại tình dục (Điều 25).
-- Quyền được bảo vệ để không bị bóc lột sức lao động (Điều 26).
-- Quyền được bảo vệ để không bị bạo lực, bỏ rơi, bỏ mặc (Điều 27).
-- Quyền được bảo vệ để không bị mua bán, bắt cóc, đánh tráo, chiếm đoạt (Điều 28).
+        chung: `Mọi trẻ em và người chưa thành niên đều có quyền bất khả xâm phạm về thân thể, danh dự và đời sống riêng tư.
 
-Gia đình, nhà trường, cơ quan, tổ chức và mọi người đều có trách nhiệm bảo vệ các quyền này.`
+Pháp luật quy định rõ:
+- Bạn có quyền được bảo vệ khỏi bạo lực, bóc lột và mọi hình thức xâm hại tình dục.
+- Không ai có quyền nhân danh “dạy dỗ” hay “tình cảm” để ép buộc, đánh đập hay sàm sỡ bạn.
+- Khi quyền của bạn bị xâm phạm, bạn có quyền yêu cầu cơ quan chức năng, nhà trường và gia đình can thiệp bảo vệ.`
       },
       src: ["LTE"], next: ["trach-nhiem-bao-tin", "bao-mat-thong-tin"]
     },
@@ -771,20 +768,19 @@ Gia đình, nhà trường, cơ quan, tổ chức và mọi người đều có 
       k: ["bị phạt", "đi tù", "bao nhiêu năm tù", "xử lý hình sự", "bộ luật hình sự", "điều 146", "điều 142", "điều 145", "tội dâm ô", "tội hiếp dâm", "khung hình phạt", "mức án", "có bị bắt không", "bị xử lý thế nào", "pháp luật xử lý"],
       q: ["Xâm hại tình dục trẻ em bị phạt thế nào?", "Tội dâm ô bị đi tù bao nhiêu năm?", "Kẻ xâm hại có bị bắt không?"],
       a: {
-        nho: `Người làm hại trẻ em là làm sai pháp luật và sẽ bị công an xử lý.
+        nho: `Người làm hại trẻ em là làm sai pháp luật và công an sẽ xử phạt rất nghiêm.
 
-Việc quan trọng nhất của bạn là kể với người lớn bạn tin, để người lớn và công an bảo vệ bạn.`,
-        thcs: `Có. Xâm hại tình dục trẻ em là **tội phạm**. Người làm có thể bị công an điều tra và bị phạt tù nhiều năm, có trường hợp bị phạt rất nặng.
+Bạn không phải sợ kẻ xấu trả thù. Việc của bạn là kể với người lớn để người lớn và công an bảo vệ bạn.`,
+        thcs: `Pháp luật Việt Nam trừng trị rất nghiêm khắc mọi hành vi xâm hại trẻ em. Kẻ làm hại bạn có thể bị phạt tù nhiều năm tù giam.
 
-Vì vậy, việc bạn kể ra không phải là “làm lớn chuyện”, mà là giúp bảo vệ bạn và những bạn khác.`,
-        chung: `Bộ luật Hình sự 2015 (sửa đổi, bổ sung năm 2017 và 2025) có nhóm tội xâm hại tình dục người dưới 16 tuổi:
-- Điều 142: Tội hiếp dâm người dưới 16 tuổi. Mức cao nhất là tù chung thân hoặc tử hình.
-- Điều 144: Tội cưỡng dâm người từ đủ 13 tuổi đến dưới 16 tuổi.
-- Điều 145: Tội giao cấu hoặc thực hiện hành vi quan hệ tình dục khác với người từ đủ 13 tuổi đến dưới 16 tuổi.
-- Điều 146: Tội dâm ô đối với người dưới 16 tuổi. Mức cao nhất là 12 năm tù.
-- Điều 147: Tội sử dụng người dưới 16 tuổi vào mục đích khiêu dâm.
+Vì vậy:
+- Việc bạn lên tiếng không phải là “làm lớn chuyện” hay “phá hoại ai”, mà là hành động chính nghĩa để bảo vệ bản thân và ngăn kẻ xấu làm hại người khác.
+- Pháp luật và cơ quan chức năng luôn đứng về phía nạn nhân để bảo vệ sự an toàn và danh tính cho bạn.`,
+        chung: `Bộ luật Hình sự quy định các khung hình phạt rất nghiêm khắc đối với tội phạm xâm hại tình dục và bạo lực người dưới 16 tuổi (từ phạt tù nhiều năm đến chung thân, tử hình tùy mức độ nghiêm trọng).
 
-Các hành vi hành hạ, đánh đập, xúc phạm trẻ em cũng có thể bị xử phạt hành chính hoặc xử lý hình sự tùy mức độ. Mức hình phạt cụ thể do tòa án quyết định; hãy tra cứu văn bản đầy đủ ở nguồn bên dưới.`
+Những điều bạn cần an tâm:
+- **Pháp luật luôn bảo vệ nạn nhân**: Bạn có quyền yêu cầu giữ kín danh tính, bảo mật đời tư và được trợ giúp pháp lý miễn phí.
+- **Kẻ phạm tội phải chịu trách nhiệm trước pháp luật**: Sự im lặng của nạn nhân chỉ làm kẻ xấu lấn tới. Lên tiếng với sự hỗ trợ của người lớn và cơ quan bảo vệ trẻ em là con đường đúng đắn để chấm dứt sự đe dọa.`
       },
       src: ["BLHS"], next: ["trach-nhiem-bao-tin", "quyen-tre-em"]
     },
@@ -1036,16 +1032,19 @@ Nếu bạn dùng chung điện thoại với người khác, hãy bấm Thoát 
       ],
       q: ["Bạo lực tinh thần là gì?", "Bị miệt thị ngoại hình (body shaming) phải làm sao?", "Lời nói xúc phạm có phải là xâm hại không?"],
       a: {
-        nho: `Không ai được dùng lời nói ác ý để chê bai cơ thể bạn, chửi mắng hay làm bạn xấu hổ trước mặt người khác.
+        nho: `Nếu có bạn nào trêu chọc, chê bai ngoại hình hay đặt biệt danh xấu làm bạn buồn, đó là hành vi xấu.
 
-Nếu có người thường xuyên trêu chọc làm bạn buồn khóc, bạn hãy nói với thầy cô và bố mẹ nhé.`,
-        chung: `**Bạo lực tinh thần và ngôn từ** (bao gồm cả miệt thị ngoại hình – *body shaming*, lăng mạ, sỉ nhục, cô lập, so sánh ác ý) được Luật Trẻ em 2016 xếp vào hành vi bạo lực, xâm hại trẻ em.
+Bạn hãy nhớ:
+- Bạn luôn đẹp và đáng yêu theo cách riêng của mình.
+- Hãy nói to: “Mình không thích bạn nói thế, dừng lại đi!” rồi đi ra chỗ khác.
+- Kể cho cô giáo chủ nhiệm hoặc bố mẹ để cô nhắc nhở bạn đó nhé.`,
+        chung: `Bị miệt thị ngoại hình (*body shaming*), lăng mạ, sỉ nhục, cô lập hay xúc phạm danh dự là một dạng bạo lực tinh thần. Nó có thể để lại vết thương sâu sắc không kém gì bạo lực thể xác.
 
-Cách ứng phó khi bị miệt thị, xúc phạm:
-- Hiểu rõ giá trị của bản thân: ngoại hình hay điểm số không cho phép bất kỳ ai xúc phạm nhân phẩm của bạn.
-- Bày tỏ thái độ rõ ràng: “Mình không thích cách nói đó, hãy dừng lại.”
-- Không hùa theo đám đông chê bai người khác; lưu lại bằng chứng nếu xảy ra trên mạng.
-- Chia sẻ với giáo viên chủ nhiệm, phòng tư vấn tâm lý học đường hoặc gọi **111** khi bạn cảm thấy quá áp lực.`
+Cách giúp bạn lấy lại sức mạnh và vượt qua:
+1. **Nhận thức đúng về bản thân**: Những lời chê bai cay độc của người khác chỉ phản ánh sự thiếu tế nhị của họ, không quyết định giá trị con người bạn. Bạn đẹp và đáng quý theo cách riêng của mình.
+2. **Phản ứng thông minh khi bị trêu chọc**: Có thể mỉm cười nhẹ và nói: *“Cơ thể này là của mình và mình thấy hoàn toàn ổn. Cảm ơn bạn đã quan tâm”*. Sự điềm tĩnh sẽ làm kẻ miệt thị mất hứng trêu chọc.
+3. **Thanh lọc môi trường xung quanh**: Tránh xa các hội nhóm độc hại; hủy theo dõi hoặc chặn những người thường xuyên buông lời cay nghiệt.
+4. **Tâm sự & Giải tỏa**: Hãy nói chuyện với những người bạn tích cực, yêu thương bạn thật lòng, hoặc thử bài tập hít thở cùng ALLY để làm dịu tâm trạng.`
       },
       src: ["LTE", "TVPL_BL"], next: ["bat-nat", "bat-nat-tren-mang", "cam-xuc"]
     },
@@ -1059,14 +1058,20 @@ Cách ứng phó khi bị miệt thị, xúc phạm:
       ],
       q: ["Bị sàm sỡ trên xe buýt hoặc nơi công cộng thì làm gì?", "Phát hiện bị quay lén, nhìn lén phải xử lý thế nào?"],
       a: {
-        nho: `Khi đi thang máy, xe buýt hay ở chỗ đông người, nếu có ai cố tình chạm vào người bạn hoặc nhìn lén trong nhà vệ sinh:
-- Hãy tránh ra xa ngay lập tức và đứng gần người lớn đáng tin.
-- Nói to lên để bác tài xế, bác bảo vệ và mọi người xung quanh giúp bạn.`,
-        chung: `Khi gặp hành vi **quấy rối nơi công cộng** (cố tình cọ sát, sờ mó trên xe buýt, thang máy) hoặc **nhìn lén, quay lén** trong nhà vệ sinh, phòng thay đồ:
+        nho: `Khi đi xe buýt hay ở chỗ đông người, nếu có ai cố tình chạm vào người bạn làm bạn sợ:
+- Hãy lùi lại và nói to: “Đứng dịch ra xa cháu!” để mọi người xung quanh nghe thấy.
+- Chạy ngay lại gần bác tài xế hoặc đứng cạnh người lớn khác.
+- Tuyệt đối không đi vào góc tối hay nhà vệ sinh vắng một mình nhé.`,
+        chung: `Cảm giác bị đụng chạm, cọ sát lén lút trên xe buýt, thang máy hay phát hiện bị quay lén là cực kỳ kinh tởm và phẫn nộ. Bạn không việc gì phải chịu đựng trong im lặng.
 
-1. **Lên tiếng dứt khoát**: nói to “Anh/chị đang làm gì đấy? Đứng dịch ra!” để kẻ xấu chùn bước và thu hút sự chú ý của người xung quanh.
-2. **Di chuyển ngay** đến gần tài xế, phụ xe, bảo vệ hoặc nhóm đông người và nhờ họ hỗ trợ giữ khoảng cách.
-3. **Khi phát hiện bị quay lén, chụp lén**: giữ khoảng cách an toàn, hô hoán nhờ bảo vệ/người xung quanh giữ đối tượng, **không tự ý giằng co ở nơi vắng** và báo ngay công an (**113**).`
+Cách xử lý dứt khoát tại hiện trường:
+1. **Trên xe buýt / tàu điện / nơi đông người**:
+   - Lùi lại một bước, nhìn thẳng vào mặt kẻ đó và nói thật to: *“Anh/chị đang làm cái gì đấy? Đứng dịch ra xa tôi!”*. Kẻ biến thái chỉ dám làm lén lút và rất sợ bị đám đông chú ý.
+   - Di chuyển ngay đến gần tài xế, phụ xe hoặc đứng cạnh nhóm người lớn/phụ nữ để nhờ hỗ trợ.
+2. **Trong thang máy**: Đứng tựa lưng vào vách cạnh bảng nút bấm, không đứng quay lưng lại kẻ đáng ngờ; bấm tầng gần nhất để thoát ra ngoài ngay.
+3. **Phát hiện nhìn lén, quay lén (nhà vệ sinh, phòng trọ, phòng thay đồ)**:
+   - Giữ khoảng cách an toàn, hô to để bảo vệ hoặc mọi người xung quanh giữ đối tượng, không tự giằng co một mình ở nơi vắng.
+   - Yêu cầu xóa dữ liệu trước sự chứng kiến của bảo vệ/công an và báo ngay cho cơ quan chức năng.`
       },
       src: ["CAND_KN"], next: ["dong-cham", "khi-bi-xam-hai", "khi-nao-goi-113-115"]
     },
@@ -1269,10 +1274,10 @@ Một vài cách giúp bạn nhẹ lòng hơn:
       q: "Người yêu cũ dọa tung ảnh riêng tư nếu bạn không quay lại. Bạn nên làm gì?",
       o: ["Quay lại để giữ an toàn", "Không làm theo, lưu bằng chứng, báo người lớn tin cậy và công an (113) hoặc gọi 111", "Đe dọa lại người đó"], a: 1,
       e: "Đe dọa phát tán ảnh là hành vi vi phạm pháp luật. Làm theo không làm bạn an toàn hơn. Hãy giữ bằng chứng và tìm hỗ trợ." },
-    { id: "p3", ages: ["thpt"], kind: "kt", ref: "xam-hai-la-gi",
-      q: "Theo Luật Trẻ em 2016, trẻ em là người:",
-      o: ["Dưới 16 tuổi", "Dưới 18 tuổi", "Dưới 14 tuổi"], a: 0,
-      e: "Điều 1 Luật Trẻ em 2016: trẻ em là người dưới 16 tuổi. Người từ 16 đến dưới 18 tuổi là người chưa thành niên, vẫn được pháp luật bảo vệ." },
+    { id: "p3", ages: ["thpt"], kind: "up", ref: "nguoi-xam-hai",
+      q: "Một người quen của gia đình đến chơi, khi chỉ có hai người trong phòng thì người đó có hành vi ôm chặt và sờ vào đùi bạn làm bạn sợ hãi. Bạn nên xử lý thế nào?",
+      o: ["Cố gắng nhịn vì sợ nói ra gia đình sẽ mất vui", "Né tránh dứt khoát, kiếm cớ chạy ngay ra ngoài và kể riêng với mẹ hoặc người lớn bạn tin nhất", "Nhận quà người đó đưa để người đó không làm phiền nữa"], a: 1,
+      e: "Cơ thể bạn là bất khả xâm phạm. Tuyệt đối không ở trong phòng kín với người đó, né tránh dứt khoát và chia sẻ ngay với người thân tin cậy để được bảo vệ." },
     { id: "p4", ages: ["thpt"], kind: "up", ref: "mua-ban-nguoi",
       q: "Một người mới quen qua mạng mời bạn “việc nhẹ lương cao” ở tỉnh khác, yêu cầu đi ngay và giữ kín. Bạn nên làm gì?",
       o: ["Đi ngay kẻo lỡ cơ hội", "Từ chối, bàn với gia đình và gọi 111 nếu nghi ngờ mua bán người", "Đi nhưng không mang điện thoại"], a: 1,
@@ -1289,10 +1294,10 @@ Một vài cách giúp bạn nhẹ lòng hơn:
       q: "Nếu vừa bị xâm hại tình dục, điều nào sau đây là đúng?",
       o: ["Nên tắm rửa, giặt sạch quần áo ngay", "Nếu có thể, chưa tắm, chưa giặt quần áo và đi khám sớm, tốt nhất trong 72 giờ", "Chờ vài tuần xem có sao không"], a: 1,
       e: "Đi khám sớm giúp được điều trị và phòng ngừa kịp thời; giữ nguyên quần áo giúp giữ bằng chứng. Nếu đã tắm rồi, bạn vẫn có thể được giúp và trình báo." },
-    { id: "p8", ages: ["thpt"], kind: "kt", ref: "phap-luat-hinh-su",
-      q: "Tội dâm ô đối với người dưới 16 tuổi được quy định tại điều nào của Bộ luật Hình sự?",
-      o: ["Điều 146", "Điều 51", "Điều 21"], a: 0,
-      e: "Điều 146 Bộ luật Hình sự 2015 quy định tội dâm ô đối với người dưới 16 tuổi, mức cao nhất là 12 năm tù." },
+    { id: "p8", ages: ["thpt"], kind: "up", ref: "quay-roi-cong-cong",
+      q: "Giờ tan tầm trên xe buýt đông đúc, bạn phát hiện người đứng sau cố tình áp sát và đụng chạm vào cơ thể bạn. Hành động nào giúp bạn thoát hiểm và xử lý tốt nhất?",
+      o: ["Im lặng chịu đựng và hy vọng người đó sẽ dừng lại", "Lùi lại, nhìn thẳng mặt nói to: “Anh đang làm gì đấy? Đứng tránh xa ra!”, rồi bước ngay về phía tài xế", "Chờ đến trạm dừng tiếp theo mới dám xuống xe"], a: 1,
+      e: "Kẻ quấy rối rất sợ bị lộ giữa đám đông. Nói to dứt khoát và di chuyển về phía tài xế hoặc nhóm người lớn sẽ khiến kẻ xấu chùn bước và bạn được bảo vệ ngay lập tức." },
     { id: "p9", ages: ["thpt"], kind: "up", ref: "trach-nhiem-bao-tin",
       q: "Bạn thấy một em lớp dưới thường xuyên có vết bầm và có vẻ sợ hãi khi về nhà. Bạn nên làm gì?",
       o: ["Coi như không biết", "Báo giáo viên chủ nhiệm, giáo viên tư vấn hoặc gọi 111", "Quay video em đó đăng lên mạng"], a: 1,
@@ -1319,10 +1324,10 @@ Một vài cách giúp bạn nhẹ lòng hơn:
       q: "Bạn nghi ngờ một học sinh bị bạo hành ở nhà. Việc nào KHÔNG nên làm?",
       o: ["Ghi lại những gì quan sát được", "Báo Tổng đài 111 hoặc ban giám hiệu", "Đăng ảnh vết thương của em lên mạng để kêu gọi"], a: 2,
       e: "Không đăng tải hình ảnh, thông tin của trẻ lên mạng. Hãy báo qua kênh chính thức như Tổng đài 111, nhà trường, công an." },
-    { id: "l5", ages: ["lon"], kind: "kt", ref: "phap-luat-hinh-su",
-      q: "Tội dâm ô đối với người dưới 16 tuổi (Điều 146 BLHS) có mức hình phạt cao nhất là:",
-      o: ["Phạt tiền", "12 năm tù", "Cảnh cáo"], a: 1,
-      e: "Khung cao nhất của Điều 146 là phạt tù từ 7 đến 12 năm." },
+    { id: "l5", ages: ["lon"], kind: "up", ref: "khi-tre-ke",
+      q: "Khi con tâm sự bị một người họ hàng đụng chạm vào vùng nhạy cảm nhưng sợ bị bố mẹ mắng, phản ứng ban đầu nào của cha mẹ là đúng đắn nhất?",
+      o: ["Trách con tại sao không la lên hay chống cự ngay lúc đó", "Ôm con, khẳng định con không có lỗi, cảm ơn con đã dũng cảm kể và cam kết luôn bảo vệ con", "Lập tức gọi điện đối chất to tiếng với người họ hàng trước mặt con"], a: 1,
+      e: "Trấn an tâm lý và tin tưởng con là ưu tiên số một. Việc trách mắng hay tra hỏi dồn dập sẽ khiến trẻ hoảng sợ, mặc cảm tội lỗi và khép kín cánh cửa chia sẻ." },
     { id: "l6", ages: ["lon"], kind: "up", ref: "sau-khi-bi-xam-hai",
       q: "Trẻ vừa bị xâm hại tình dục. Thứ tự ưu tiên nào hợp lý?",
       o: ["Đăng lên mạng tìm thủ phạm", "Bảo đảm an toàn, đưa đi khám sớm (trong 72 giờ), giữ chứng cứ, báo công an và 111", "Tắm rửa sạch sẽ cho trẻ rồi để trẻ nghỉ ngơi vài ngày"], a: 1,

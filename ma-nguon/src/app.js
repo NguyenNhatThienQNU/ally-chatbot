@@ -716,9 +716,9 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
 
 Để mình nói chuyện phù hợp nhất, bạn thuộc nhóm tuổi nào?`,
     discloseDetected: {
-      nho: 'Cảm ơn bạn đã kể với mình. Bạn rất dũng cảm. Chuyện đó **không phải lỗi của bạn**.\n\nBây giờ bạn có đang ở chỗ an toàn không?',
-      chung: 'Cảm ơn bạn đã tin tưởng chia sẻ với mình. Mình biết nói ra điều này không dễ chút nào. Dù chuyện gì đã xảy ra, đó **không phải lỗi của bạn**.\n\nNgay lúc này, bạn có đang an toàn không?',
-      lon: 'Cảm ơn bạn đã chia sẻ. Đây là chuyện nghiêm trọng và bạn đã làm đúng khi tìm cách hỗ trợ.\n\nTrước hết: người cần được bảo vệ hiện có đang an toàn không?'
+      nho: `Mình nghe thấy bạn đang gặp chuyện không vui hoặc làm bạn sợ. Bạn đừng sợ nhé, có mình ở đây với bạn.\n\nBây giờ bạn có đang ở chỗ an toàn không?`,
+      chung: `Cảm ơn bạn đã can đảm chia sẻ với mình. Mình biết khi gặp chuyện này, bạn đang rất bối rối và hoang mang. Xin bạn hãy nhớ: **Bạn không làm gì sai cả.**\n\nNgay lúc này, bạn có đang ở một nơi an toàn không?`,
+      lon: `Cảm ơn bạn đã tin tưởng chia sẻ. Đây là vấn đề nghiêm trọng và bạn đã hành động rất đúng đắn khi tìm cách hỗ trợ.\n\nTrước hết: người cần được bảo vệ hiện có đang ở nơi an toàn không?`
     },
     discloseManual: {
       nho: 'Mình đang nghe đây. Trước khi bạn kể, cho mình hỏi: bây giờ bạn có đang ở chỗ an toàn không?',
@@ -750,20 +750,60 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     },
     crisisOther: 'Cảm ơn bạn đã quan tâm đến người đó. Nếu một người đang có ý nghĩ tự làm hại bản thân:\n- Ở bên họ, đừng để họ một mình nếu bạn thấy nguy cơ cao.\n- Lắng nghe, không phán xét, không hứa giữ bí mật.\n- Cất xa những vật có thể gây nguy hiểm nếu bạn làm được một cách an toàn.\n- Gọi **115** nếu họ đã tự làm tổn thương hoặc đang nguy hiểm.\n- Gọi **111** (miễn phí, 24/7) để được tư vấn, và báo cho người lớn có trách nhiệm như cha mẹ, giáo viên chủ nhiệm, giáo viên tư vấn.',
     listen: {
-      'tinh-duc': { nho: 'Người đó đã làm **sai**. Bạn không có lỗi gì cả. Cảm ơn bạn đã kể cho mình.', chung: 'Điều bạn kể là **sai**, và không ai được phép làm vậy với bạn. Đó hoàn toàn không phải lỗi của bạn. Bạn đã rất dũng cảm khi nói ra.' },
-      'bao-luc': { nho: 'Không ai được đánh hay làm đau bạn đâu. Mình rất tiếc vì bạn bị như vậy.', chung: 'Không ai được phép đánh hay làm đau bạn, kể cả người trong gia đình. Mình rất tiếc vì bạn phải chịu điều đó.' },
-      'de-doa': { nho: 'Bị dọa như vậy chắc bạn sợ lắm. Đừng làm theo lời người đó, hãy cho người lớn bạn tin xem tin nhắn nhé.', chung: 'Bị đe dọa như vậy chắc bạn sợ lắm. Kẻ đe dọa mới là người làm sai. Đừng làm theo yêu cầu của họ, và hãy giữ lại tin nhắn làm bằng chứng nhé.' },
-      'bo-mac': { nho: 'Bạn cần được ăn no, được chăm sóc và được đi học. Có những người lớn có thể giúp bạn.', chung: 'Bạn xứng đáng được chăm sóc, được ăn no, được đi học. Điều bạn đang gặp là không ổn, và có những người có thể giúp bạn.' },
-      'bi-mat': { nho: 'Bí mật làm bạn sợ là bí mật xấu. Bạn không cần giữ nó đâu.', chung: 'Nếu ai đó bắt bạn giữ bí mật làm bạn sợ hay khó chịu, bạn không cần phải giữ. Kể ra là đúng.' },
-      'ranh-gioi': { nho: 'Nếu ai đó làm bạn thấy khó chịu, bạn có quyền nói KHÔNG và kể với người lớn.', chung: 'Cảm giác khó chịu của bạn là đáng tin. Không ai được vượt qua ranh giới cơ thể của bạn khi bạn không muốn.' },
-      'cam-xuc': { nho: 'Mình hiểu, chắc bạn buồn và sợ lắm. Bạn không phải một mình đâu.', chung: 'Mình hiểu, cảm giác đó thật nặng nề. Bạn không phải chịu đựng một mình đâu.' },
-      'can-giup': { nho: 'Mình ở đây với bạn. Mình sẽ chỉ cho bạn cách tìm người giúp nhé.', chung: 'Mình ở đây. Mình sẽ cùng bạn tìm cách để có người giúp bạn.' },
-      generic: { nho: ['Mình đang nghe đây. Bạn kể tiếp nhé.', 'Cảm ơn bạn đã kể cho mình.'], chung: ['Mình đang nghe đây. Bạn có muốn kể thêm không?', 'Cảm ơn bạn đã chia sẻ. Mình ở đây với bạn.', 'Mình hiểu. Bạn cứ từ từ, không cần vội.'] }
+      'tinh-duc': {
+        nho: 'Người đó đã làm **sai**. Bạn không có lỗi gì cả. Mình ở đây với bạn, bạn không phải sợ nhé.',
+        chung: 'Mình lắng nghe và ở bên bạn. Điều người đó làm là **hoàn toàn sai trái**, và không ai được phép làm tổn thương bạn như thế. Bạn tuyệt đối không có lỗi gì cả. Hãy hít thở thật chậm nhé, bạn đã rất dũng cảm khi chia sẻ với mình.'
+      },
+      'bao-luc': {
+        nho: 'Không ai được đánh hay làm đau bạn đâu. Mình rất thương bạn. Bạn có đang ở chỗ an toàn không?',
+        chung: 'Không một ai có quyền đánh đập hay làm tổn thương bạn, kể cả người thân trong nhà. Mình rất thương bạn và chia sẻ với những đau đớn bạn phải chịu. Hãy nhớ bạn không có lỗi và bạn xứng đáng được an toàn.'
+      },
+      'de-doa': {
+        nho: 'Bị dọa như vậy chắc bạn sợ lắm. Nhưng bạn đừng lo một mình nhé, kẻ dọa mới là kẻ sai. Mình sẽ cùng bạn tìm cách giải quyết.',
+        chung: 'Mình hiểu bạn đang rất hoảng sợ và lo lắng. Kẻ đe dọa đang dùng nỗi sợ để thao túng bạn. Đừng làm theo yêu cầu của họ, hãy chụp lại tin nhắn làm bằng chứng và chúng mình sẽ cùng nhau từng bước tháo gỡ chuyện này.'
+      },
+      'bo-mac': {
+        nho: 'Bạn cần được ăn no, được chăm sóc và được yêu thương. Bạn không đơn độc đâu.',
+        chung: 'Bạn xứng đáng được yêu thương, chăm sóc và được đi học đầy đủ. Hoàn cảnh khó khăn này không phải lỗi của bạn, và luôn có những người sẵn sàng chìa tay giúp đỡ bạn.'
+      },
+      'bi-mat': {
+        nho: 'Bí mật làm bạn sợ là bí mật xấu. Bạn không cần phải giữ nó đâu nhé.',
+        chung: 'Nếu ai đó bắt bạn giữ một bí mật làm bạn bất an, ngột ngạt hay sợ hãi, bạn không hề có nghĩa vụ phải giữ nó. Nói ra là hành động đúng đắn và dũng cảm để bảo vệ chính mình.'
+      },
+      'ranh-gioi': {
+        nho: 'Cơ thể là của bạn. Nếu ai làm bạn khó chịu, bạn có quyền nói KHÔNG và kể với người lớn.',
+        chung: 'Linh cảm khó chịu của bạn luôn đúng. Không một ai được phép vượt qua ranh giới cơ thể của bạn khi bạn chưa đồng ý. Bạn hoàn toàn có quyền từ chối và bảo vệ bản thân.'
+      },
+      'cam-xuc': {
+        nho: 'Mình hiểu, chắc bạn buồn và lo lắm. Mình ngồi đây nghe bạn tâm sự nhé.',
+        chung: 'Mình hiểu cảm giác nặng nề, ngột ngạt mà bạn đang gánh chịu. Bạn không phải gồng mình chịu đựng một mình đâu, nếu muốn khóc bạn cứ khóc nhé, mình luôn ở đây lắng nghe bạn.'
+      },
+      'can-giup': {
+        nho: 'Mình ở đây với bạn. Mình sẽ cùng bạn tìm người lớn tốt bụng giúp bạn nhé.',
+        chung: 'Bạn đã tìm đến đúng nơi rồi. Mình ở đây để đồng hành, cùng bạn gỡ rối và tìm ra cách giải quyết an toàn nhất cho bạn.'
+      },
+      generic: {
+        nho: ['Mình đang nghe đây. Bạn cứ từ từ kể nhé, mình ở bên bạn.', 'Cảm ơn bạn đã tin tưởng mình.'],
+        chung: ['Mình đang lắng nghe bạn đây. Bạn cứ chia sẻ những gì bạn thấy thoải mái nhất nhé.', 'Cảm ơn bạn đã tin tưởng giãi bày. Bạn không đơn độc đâu.', 'Mình hiểu điều này không dễ nói. Bạn cứ thong thả nhé, mình luôn ở đây.']
+      }
     },
     nextSteps: {
-      nho: 'Bạn hãy làm thế này nhé:\n1. Nếu người đó vẫn ở gần, hãy đến chỗ có người lớn khác.\n2. Kể ngay cho một người lớn bạn tin{names}.\n3. Nhờ người lớn gọi **111**, hoặc tự gọi nếu chưa tìm được ai. Gọi không mất tiền.',
-      chung: 'Một vài bước bạn có thể làm:\n1. **An toàn trước**: nếu đang nguy hiểm, gọi 113 hoặc đến nơi đông người.\n2. **Kể với người lớn tin cậy**{names}.\n3. **Gọi 111** (miễn phí, 24/7): tổng đài viên sẽ lắng nghe và cùng bạn tìm cách giúp, kể cả kết nối hỗ trợ ở địa phương.\n4. **Giữ bằng chứng** nếu có: tin nhắn, hình ảnh. Đừng xóa.\n5. **Chăm sóc bản thân**: bạn có thể thử bài hít thở trong mục Hỗ trợ.\n\nMình có thể giúp bạn chuẩn bị những điều cần nói khi gọi 111.',
-      lon: 'Các bước nên làm:\n1. **Bảo đảm an toàn** cho trẻ; gọi 113 nếu khẩn cấp.\n2. **Gọi 111** (miễn phí, 24/7) để được tư vấn và kết nối can thiệp tại địa phương.\n3. **Đưa trẻ đi khám** nếu có tổn thương hoặc nghi xâm hại tình dục (tốt nhất trong 72 giờ).\n4. **Giữ chứng cứ**, ghi lại những gì trẻ tự kể.\n5. **Không đăng tải** thông tin của trẻ lên mạng xã hội.'
+      nho: `Mình cùng làm các bước này để bạn luôn an toàn nhé:
+1. Đến ngay chỗ đông người hoặc ở cạnh người lớn bạn tin.
+2. Kể cho người lớn bạn tin nhất nghe{names}.
+3. Người lớn sẽ giúp bạn gọi **111** để được bảo vệ. Gọi không mất tiền đâu.`,
+      chung: `Kế hoạch từng bước giúp bạn tháo gỡ tình huống này một cách an toàn:
+1. **Giữ an toàn ngay trước mắt**: Rời khỏi người làm bạn sợ, đến nơi đông người hoặc phòng có khóa.
+2. **Lưu giữ chứng cứ**: Chụp ảnh màn hình tin nhắn, vết thương, không xóa bằng chứng.
+3. **Mở lời với người tin cậy**{names}: Chọn lúc yên tĩnh, dùng mẫu câu: *“Con đang gặp rắc rối và rất sợ, con cần bố mẹ giúp con”*.
+4. **Kết nối Tổng đài 111 (miễn phí, 24/7)**: Chuyên gia bảo vệ trẻ em sẽ hướng dẫn bảo mật danh tính và cùng bạn xử lý triệt để.
+5. **Chăm sóc cảm xúc**: Hít thở sâu và nhớ rằng chuyện này hoàn toàn có thể giải quyết được.`,
+      lon: `Các bước can thiệp an toàn và bài bản:
+1. **Bảo đảm an toàn trước mắt**: Cách ly trẻ khỏi người bị nghi ngờ; gọi 113 nếu khẩn cấp.
+2. **Lắng nghe & Trấn an**: Tuyệt đối tin trẻ, không trách mắng, khẳng định trẻ không có lỗi.
+3. **Chăm sóc y tế**: Đưa trẻ đi khám sớm (tốt nhất trong 72 giờ nếu nghi xâm hại tình dục) để dự phòng sức khỏe.
+4. **Lưu giữ chứng cứ**: Không giặt quần áo, ghi lại lời trẻ kể nguyên văn kèm mốc thời gian.
+5. **Báo tin & Hỗ trợ**: Gọi Tổng đài 111 để được kết nối mạng lưới can thiệp tại địa phương; không đăng tải lên mạng xã hội.`
     },
     stop: {
       nho: 'Không sao cả. Bạn có thể quay lại kể tiếp bất cứ lúc nào. Mình luôn ở đây.',
@@ -1547,7 +1587,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     const close = () => closeSheet(wrap);
     const head = h('div', { class: 'sheet-head' }, h('h2', { id: 'sh-' + uid() }, title), h('button', { type: 'button', class: 'icon-btn', 'aria-label': 'Đóng', onclick: close }, icon('x')));
     const body = h('div', { class: 'sheet-body' }, bodyNodes);
-    const sheet = h('div', { class: 'sheet' + (opts.cls ? ' ' + opts.cls : ''), role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': head.firstChild.id }, head, body);
+    const sheet = h('div', { class: 'sheet' + (opts.cls ? ' ' + opts.cls : ''), role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': (head.firstChild && head.firstChild.id) || '' }, head, body);
     const wrap = h('div', { class: 'sheet-wrap' }, sheet);
     wrap.addEventListener('click', (ev) => { if (ev.target === wrap && !opts.sticky) close(); });
     wrap._prevFocus = document.activeElement;
