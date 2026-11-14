@@ -1961,8 +1961,6 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     let overlay = $('#lockOverlay');
     if (overlay) overlay.remove();
 
-    const isDefault = ((SET.appLock && SET.appLock.pin) || '1234') === '1234';
-
     overlay = h('div', { class: 'lock-fullscreen', id: 'lockOverlay' },
       h('div', { class: 'lock-box' },
         h('div', { class: 'lock-icon-wrap' },
@@ -1973,7 +1971,6 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
         ),
         h('h2', { class: 'lock-title' }, 'Bảo vệ riêng tư'),
         h('p', { class: 'lock-sub' }, 'Nhập mã PIN 4 số để vào ứng dụng ALLY'),
-        isDefault ? h('p', { class: 'lock-hint', style: 'font-size:0.78rem;color:var(--brand-strong);margin:0 0 14px;font-weight:600;background:var(--brand-soft);padding:4px 10px;border-radius:8px;' }, 'Mã PIN mặc định: 1234') : null,
         h('div', { class: 'pin-dots', id: 'pinDots' },
           h('div', { class: 'pin-dot', id: 'pdot0' }),
           h('div', { class: 'pin-dot', id: 'pdot1' }),

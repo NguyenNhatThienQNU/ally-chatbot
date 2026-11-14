@@ -8,7 +8,7 @@
    - Từ khóa có thể kèm trọng số: "nên làm gì|0.5".
    ========================================================================= */
 window.ALLY_DEFAULT = window.BANAN_DEFAULT = {
-  version: "2026-11-15T00:30:00+07:00",
+  version: "2026-11-15T00:31:00+07:00",
   meta: {
     ten: "ALLY",
     moTa: "Chatbot hỗ trợ phòng, chống xâm hại trẻ em",
