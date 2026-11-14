@@ -375,7 +375,9 @@
   /* ---------------------------------------------------------------------
      4. TRẠNG THÁI & CÀI ĐẶT
      --------------------------------------------------------------------- */
-  const SET = Object.assign({ age: null, font: 1, tts: false, theme: 'auto', saveChat: false, aiEnabled: true, geminiKey: '', appLock: { enabled: false, pin: '1234' } }, store.get('settings', {}));
+  const SET = Object.assign({ age: null, font: 1, tts: false, theme: 'auto', saveChat: false, aiEnabled: true, geminiKey: '', appLock: { enabled: true, pin: '1234' } }, store.get('settings', {}));
+  if (!SET.appLock) SET.appLock = { enabled: true, pin: '1234' };
+  if (store.get('lock_disabled') !== true) SET.appLock.enabled = true;
   SET.tts = false;
   const ADMIN = Object.assign({ pin: CONFIG.defaultPin, threshold: CONFIG.defaultThreshold, remoteUrl: '', feedbackUrl: '', demoRisk: true, logUnanswered: false, autoSync: true, lastSync: null }, store.get('admin', {}));
   function saveSettings() { store.set('settings', SET); }
@@ -1959,6 +1961,8 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     let overlay = $('#lockOverlay');
     if (overlay) overlay.remove();
 
+    const isDefault = ((SET.appLock && SET.appLock.pin) || '1234') === '1234';
+
     overlay = h('div', { class: 'lock-fullscreen', id: 'lockOverlay' },
       h('div', { class: 'lock-box' },
         h('div', { class: 'lock-icon-wrap' },
@@ -1968,7 +1972,8 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
           )
         ),
         h('h2', { class: 'lock-title' }, 'Bảo vệ riêng tư'),
-        h('p', { class: 'lock-sub' }, 'Nhập mã PIN 4 số để mở khóa cuộc trò chuyện an toàn của bạn'),
+        h('p', { class: 'lock-sub' }, 'Nhập mã PIN 4 số để vào ứng dụng ALLY'),
+        isDefault ? h('p', { class: 'lock-hint', style: 'font-size:0.78rem;color:var(--brand-strong);margin:0 0 14px;font-weight:600;background:var(--brand-soft);padding:4px 10px;border-radius:8px;' }, 'Mã PIN mặc định: 1234') : null,
         h('div', { class: 'pin-dots', id: 'pinDots' },
           h('div', { class: 'pin-dot', id: 'pdot0' }),
           h('div', { class: 'pin-dot', id: 'pdot1' }),
@@ -1986,11 +1991,42 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
           h('button', { type: 'button', class: 'lock-sos-btn', onclick: () => { unlockApp(); openEmergency('manual'); } },
             icon('phone'), 'Khẩn cấp: Gọi 111 · 113'
           ),
-          h('button', { type: 'button', class: 'lock-reset-link', onclick: promptResetPin }, 'Quên mã PIN?')
+          h('div', { style: 'display:flex;gap:14px;align-items:center;margin-top:6px;' },
+            h('button', { type: 'button', class: 'lock-reset-link', onclick: promptChangePinFromLock }, 'Đổi mã PIN'),
+            h('span', { style: 'color:var(--ink-3);font-size:0.75rem;' }, '•'),
+            h('button', { type: 'button', class: 'lock-reset-link', onclick: promptResetPin }, 'Quên mã PIN?')
+          )
         )
       )
     );
     host.append(overlay);
+  }
+
+  function promptChangePinFromLock() {
+    const cur = prompt('Nhập mã PIN hiện tại (mặc định: 1234):');
+    if (cur == null) return;
+    const expected = (SET.appLock && SET.appLock.pin) || '1234';
+    if (cur !== expected) {
+      alert('Mã PIN hiện tại không chính xác!');
+      return;
+    }
+    const next = prompt('Nhập mã PIN mới (gồm đúng 4 chữ số, ví dụ: 2580):');
+    if (next == null) return;
+    if (!/^\d{4}$/.test(next)) {
+      alert('Mã PIN mới phải gồm đúng 4 chữ số!');
+      return;
+    }
+    const confirmPin = prompt('Nhập lại mã PIN mới để xác nhận:');
+    if (confirmPin !== next) {
+      alert('Mã PIN xác nhận không trùng khớp!');
+      return;
+    }
+    SET.appLock = SET.appLock || {};
+    SET.appLock.pin = next;
+    SET.appLock.enabled = true;
+    saveSettings();
+    alert('Đã đổi mã PIN thành công sang: ' + next);
+    unlockApp();
   }
 
   function inputLockPin(digit) {
@@ -2619,12 +2655,14 @@ ${ageGuides[age] || ageGuides.thcs}
       h('div', { class: 'setting' }, h('span', { class: 't' }, 'Giọng đọc câu trả lời', h('span', { class: 's' }, 'Chỉ phát âm thanh khi bạn bấm nút "Đọc to" bên dưới mỗi câu trả lời (giọng nữ tiếng Việt truyền cảm, dễ nghe).'))),
 
       // Khóa màn hình bảo vệ riêng tư bằng mã PIN
-      h('div', { class: 'setting' }, h('label', { class: 't', for: 'setLock' }, 'Khóa bảo vệ riêng tư bằng mã PIN', h('span', { class: 's' }, 'Yêu cầu nhập mã PIN 4 số khi mở ứng dụng để bảo vệ cuộc trò chuyện')),
+      h('div', { class: 'setting' }, h('label', { class: 't', for: 'setLock' }, 'Khóa bảo vệ riêng tư bằng mã PIN', h('span', { class: 's' }, 'Yêu cầu nhập mã PIN 4 số khi mở ứng dụng để giữ bí mật cuộc trò chuyện')),
         switchEl('setLock', SET.appLock && SET.appLock.enabled, (v) => {
           SET.appLock = SET.appLock || { pin: '1234' };
           SET.appLock.enabled = v;
+          if (v) store.del('lock_disabled');
+          else store.set('lock_disabled', true);
           saveSettings();
-          toast(v ? 'Đã bật khóa mã PIN (mặc định: 1234)' : 'Đã tắt khóa mã PIN');
+          toast(v ? 'Đã bật khóa mã PIN khi mở ứng dụng (mặc định: 1234)' : 'Đã tắt khóa mã PIN');
         }, 'Khóa mã PIN')),
       h('div', { class: 'setting' }, h('span', { class: 't' }, 'Quản lý mã PIN bảo mật', h('span', { class: 's' }, (SET.appLock && SET.appLock.enabled) ? 'Khóa màn hình đang BẬT' : 'Khóa màn hình đang TẮT')),
         h('div', { style: 'display:flex;gap:8px;flex-wrap:wrap;' },
@@ -3317,6 +3355,16 @@ em muốn tự tử | 3 |`;
 
     const camoBtn = $('#camoBtn');
     if (camoBtn) camoBtn.addEventListener('click', openCamouflage);
+
+    const lockBtn = $('#lockBtn');
+    if (lockBtn) lockBtn.addEventListener('click', () => showLockScreen('manual'));
+
+    // Tự động khóa màn hình khi chuyển ứng dụng / ẩn tab
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden && SET.appLock && SET.appLock.enabled && !S.isLocked) {
+        showLockScreen('blur');
+      }
+    });
     let lastEsc = 0;
     document.addEventListener('keydown', (ev) => {
       if (S.isLocked) {
