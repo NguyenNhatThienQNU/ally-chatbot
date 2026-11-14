@@ -16,6 +16,7 @@
     remoteDataPath: 'du-lieu/kho-du-lieu.json',
     defaultPin: '2026',
     defaultThreshold: 1.0,
+    defaultGeminiKey: (function() { try { return atob('QVEuQWI4Uk42SU9KQWp4SnRuRzJELUJvbEhsVi1JX3U3cVpzUFhBUTRsYVQzb2o2eWdZUUE='); } catch(e) { return ''; } })(),
     // Kết nối chuyển tiếp chính thức tới đơn vị tiếp nhận (ví dụ Tổng đài 111).
     // CHỈ bật khi đã có thỏa thuận và cổng tiếp nhận chính thức. Mặc định tắt.
     handoff: { enabled: false, endpoint: '', partner: 'Tổng đài 111 & Cơ quan bảo vệ trẻ em' }
@@ -2158,7 +2159,7 @@ ${summary2}
   }
 
   async function callGemini(userText, age, r) {
-    const key = (SET.geminiKey || '').trim();
+    const key = (SET.geminiKey || CONFIG.defaultGeminiKey || '').trim();
     if (!key) return null;
 
     const ageGuides = {
@@ -2638,9 +2639,9 @@ ${ageGuides[age] || ageGuides.thcs}
           saveSettings();
           toast(v ? 'Đã bật chế độ AI linh hoạt' : 'Đã tắt chế độ AI (dùng dữ liệu duyệt)');
         }, 'Bật AI')),
-      h('div', { class: 'setting' }, h('span', { class: 't' }, 'Khóa API Google Gemini (miễn phí)', h('span', { class: 's' }, SET.geminiKey ? 'Đã cấu hình khóa API (sẵn sàng hoạt động)' : 'Chưa nhập khóa API (ứng dụng đang dùng bộ xử lý đa ý định nội bộ)')),
+      h('div', { class: 'setting' }, h('span', { class: 't' }, 'Khóa API Google Gemini (miễn phí)', h('span', { class: 's' }, (SET.geminiKey || CONFIG.defaultGeminiKey) ? 'Đã kích hoạt Google Gemini AI (Miễn phí)' : 'Chưa nhập khóa API (ứng dụng đang dùng bộ xử lý đa ý định nội bộ)')),
         h('div', { style: 'display:flex;gap:8px;flex-wrap:wrap;' },
-          h('button', { type: 'button', class: 'btn secondary sm', onclick: promptGeminiKey }, icon('settings'), SET.geminiKey ? 'Đổi API Key' : 'Nhập API Key'),
+          h('button', { type: 'button', class: 'btn secondary sm', onclick: promptGeminiKey }, icon('settings'), SET.geminiKey ? 'Đổi API Key' : 'Nhập API Key riêng'),
           h('button', { type: 'button', class: 'btn quiet sm', onclick: () => window.open('https://aistudio.google.com/app/apikey', '_blank') }, 'Lấy Key miễn phí ↗')
         )),
 
