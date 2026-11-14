@@ -453,3 +453,111 @@ textarea.mono { width: 100%; min-height: 220px; border: 1px solid var(--line); b
   border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: 8px 10px; min-width: 0; }
 .admin-body textarea { width: 100%; line-height: 1.45; }
 .admin-body .search input { padding-left: 40px; }
+
+
+/* ---------- Màn hình Ngụy trang Full-Screen (StudyHub) ---------- */
+.camo-fullscreen {
+  position: fixed; inset: 0; z-index: 999999; width: 100vw; height: 100vh;
+  background: #F8FAFC; color: #0F172A; overflow-y: auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5; -webkit-font-smoothing: antialiased;
+}
+.camo-nav {
+  position: sticky; top: 0; z-index: 10; background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.camo-nav-in {
+  max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px;
+}
+.camo-brand { display: flex; align-items: center; gap: 10px; }
+.camo-logo {
+  width: 36px; height: 36px; border-radius: 9px; background: #2563EB; color: #FFFFFF;
+  display: grid; place-items: center; font-weight: 800; font-size: 1.15rem;
+}
+.camo-brand h1 { margin: 0; font-size: 1.15rem; font-weight: 700; color: #1E293B; letter-spacing: -0.01em; }
+.camo-brand p { margin: 0; font-size: 0.72rem; color: #64748B; font-weight: 500; }
+.camo-exit-btn {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 8px;
+  border: 1px solid #CBD5E1; background: #FFFFFF; color: #475569; font-size: 0.82rem; font-weight: 600;
+  transition: all 0.15s; cursor: pointer;
+}
+.camo-exit-btn:hover { background: #F1F5F9; color: #0F172A; border-color: #94A3B8; }
+
+.camo-main { max-width: 900px; margin: 0 auto; padding: 20px 16px 60px; }
+.camo-search-bar { margin-bottom: 24px; position: relative; }
+.camo-search-bar input {
+  width: 100%; padding: 12px 16px 12px 42px; border-radius: 12px; border: 1px solid #CBD5E1;
+  background: #FFFFFF; font-size: 0.95rem; color: #0F172A; outline: none; transition: border-color 0.15s;
+}
+.camo-search-bar input:focus { border-color: #2563EB; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); }
+.camo-search-bar svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: #94A3B8; }
+
+.camo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin-bottom: 30px; }
+.camo-card {
+  background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 14px 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03); transition: transform 0.15s, box-shadow 0.15s;
+}
+.camo-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.camo-word { font-size: 1.1rem; font-weight: 700; color: #1D4ED8; margin: 0 0 4px; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.camo-ipa { font-size: 0.8rem; font-weight: 400; color: #64748B; font-style: italic; }
+.camo-pos { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; background: #DBEAFE; color: #1E40AF; padding: 2px 6px; border-radius: 4px; }
+.camo-mean { font-size: 0.88rem; color: #334155; margin: 6px 0; }
+.camo-ex { font-size: 0.82rem; color: #64748B; font-style: italic; border-left: 2px solid #93C5FD; padding-left: 8px; margin: 6px 0 0; }
+
+.camo-section-title { font-size: 1.05rem; font-weight: 700; color: #1E293B; margin: 24px 0 12px; display: flex; align-items: center; gap: 8px; }
+.camo-grammar-box { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 16px; margin-bottom: 16px; overflow-x: auto; }
+.camo-grammar-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; min-width: 450px; }
+.camo-grammar-table th, .camo-grammar-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #F1F5F9; }
+.camo-grammar-table th { background: #F8FAFC; color: #475569; font-weight: 600; font-size: 0.8rem; }
+
+/* ---------- Màn hình Khóa bảo vệ riêng tư (App Lock PIN) ---------- */
+.lock-fullscreen {
+  position: fixed; inset: 0; z-index: 999998; width: 100vw; height: 100vh;
+  background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 24px; box-sizing: border-box; overflow-y: auto; user-select: none;
+}
+.lock-box {
+  width: 100%; max-width: 320px; display: flex; flex-direction: column; align-items: center; text-align: center;
+}
+.lock-icon-wrap {
+  width: 64px; height: 64px; border-radius: 20px; background: var(--brand-soft); color: var(--brand-strong);
+  display: grid; place-items: center; margin-bottom: 16px; box-shadow: 0 4px 16px rgba(11, 122, 105, 0.15);
+}
+.lock-icon-wrap svg { width: 32px; height: 32px; }
+.lock-title { font-family: var(--font-display); font-weight: 800; font-size: 1.6rem; color: var(--ink); margin: 0 0 4px; }
+.lock-sub { font-size: 0.84rem; color: var(--ink-2); margin: 0 0 20px; line-height: 1.4; }
+
+.pin-dots { display: flex; gap: 16px; margin-bottom: 20px; }
+.pin-dot {
+  width: 15px; height: 15px; border-radius: 999px; border: 2px solid var(--brand);
+  background: transparent; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pin-dot.filled { background: var(--brand); transform: scale(1.15); box-shadow: 0 0 8px var(--brand-soft); }
+.pin-dots.shake { animation: lockShake 0.4s ease-in-out; }
+.lock-msg { font-size: 0.82rem; min-height: 22px; color: var(--sos-strong); margin-bottom: 16px; font-weight: 600; }
+
+.numpad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; width: 100%; max-width: 250px; margin-bottom: 20px; }
+.num-btn {
+  aspect-ratio: 1; border-radius: 50%; border: 1px solid var(--line); background: var(--surface);
+  color: var(--ink); font-family: var(--font-display); font-size: 1.45rem; font-weight: 700;
+  display: grid; place-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.03); transition: all 0.12s;
+  cursor: pointer;
+}
+.num-btn:hover { background: var(--bg-2); border-color: var(--brand-soft); }
+.num-btn:active { transform: scale(0.92); background: var(--brand-soft); color: var(--brand-strong); }
+.num-btn.fn { font-size: 1rem; border-color: transparent; background: transparent; color: var(--ink-2); }
+.num-btn.fn:hover { background: var(--bg-2); }
+
+.lock-actions { display: flex; flex-direction: column; gap: 12px; width: 100%; align-items: center; }
+.lock-sos-btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: 12px;
+  background: var(--sos-soft); color: var(--sos-strong); font-size: 0.84rem; font-weight: 700; border: 0; cursor: pointer;
+}
+.lock-reset-link { font-size: 0.78rem; color: var(--ink-3); text-decoration: underline; cursor: pointer; border: 0; background: none; }
+
+@keyframes lockShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-10px); }
+  40%, 80% { transform: translateX(10px); }
+}

@@ -461,6 +461,114 @@ textarea.mono { width: 100%; min-height: 220px; border: 1px solid var(--line); b
 .admin-body textarea { width: 100%; line-height: 1.45; }
 .admin-body .search input { padding-left: 40px; }
 
+
+/* ---------- Màn hình Ngụy trang Full-Screen (StudyHub) ---------- */
+.camo-fullscreen {
+  position: fixed; inset: 0; z-index: 999999; width: 100vw; height: 100vh;
+  background: #F8FAFC; color: #0F172A; overflow-y: auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5; -webkit-font-smoothing: antialiased;
+}
+.camo-nav {
+  position: sticky; top: 0; z-index: 10; background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.camo-nav-in {
+  max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px;
+}
+.camo-brand { display: flex; align-items: center; gap: 10px; }
+.camo-logo {
+  width: 36px; height: 36px; border-radius: 9px; background: #2563EB; color: #FFFFFF;
+  display: grid; place-items: center; font-weight: 800; font-size: 1.15rem;
+}
+.camo-brand h1 { margin: 0; font-size: 1.15rem; font-weight: 700; color: #1E293B; letter-spacing: -0.01em; }
+.camo-brand p { margin: 0; font-size: 0.72rem; color: #64748B; font-weight: 500; }
+.camo-exit-btn {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 8px;
+  border: 1px solid #CBD5E1; background: #FFFFFF; color: #475569; font-size: 0.82rem; font-weight: 600;
+  transition: all 0.15s; cursor: pointer;
+}
+.camo-exit-btn:hover { background: #F1F5F9; color: #0F172A; border-color: #94A3B8; }
+
+.camo-main { max-width: 900px; margin: 0 auto; padding: 20px 16px 60px; }
+.camo-search-bar { margin-bottom: 24px; position: relative; }
+.camo-search-bar input {
+  width: 100%; padding: 12px 16px 12px 42px; border-radius: 12px; border: 1px solid #CBD5E1;
+  background: #FFFFFF; font-size: 0.95rem; color: #0F172A; outline: none; transition: border-color 0.15s;
+}
+.camo-search-bar input:focus { border-color: #2563EB; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); }
+.camo-search-bar svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: #94A3B8; }
+
+.camo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin-bottom: 30px; }
+.camo-card {
+  background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 14px 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03); transition: transform 0.15s, box-shadow 0.15s;
+}
+.camo-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.camo-word { font-size: 1.1rem; font-weight: 700; color: #1D4ED8; margin: 0 0 4px; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.camo-ipa { font-size: 0.8rem; font-weight: 400; color: #64748B; font-style: italic; }
+.camo-pos { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; background: #DBEAFE; color: #1E40AF; padding: 2px 6px; border-radius: 4px; }
+.camo-mean { font-size: 0.88rem; color: #334155; margin: 6px 0; }
+.camo-ex { font-size: 0.82rem; color: #64748B; font-style: italic; border-left: 2px solid #93C5FD; padding-left: 8px; margin: 6px 0 0; }
+
+.camo-section-title { font-size: 1.05rem; font-weight: 700; color: #1E293B; margin: 24px 0 12px; display: flex; align-items: center; gap: 8px; }
+.camo-grammar-box { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 16px; margin-bottom: 16px; overflow-x: auto; }
+.camo-grammar-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; min-width: 450px; }
+.camo-grammar-table th, .camo-grammar-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #F1F5F9; }
+.camo-grammar-table th { background: #F8FAFC; color: #475569; font-weight: 600; font-size: 0.8rem; }
+
+/* ---------- Màn hình Khóa bảo vệ riêng tư (App Lock PIN) ---------- */
+.lock-fullscreen {
+  position: fixed; inset: 0; z-index: 999998; width: 100vw; height: 100vh;
+  background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 24px; box-sizing: border-box; overflow-y: auto; user-select: none;
+}
+.lock-box {
+  width: 100%; max-width: 320px; display: flex; flex-direction: column; align-items: center; text-align: center;
+}
+.lock-icon-wrap {
+  width: 64px; height: 64px; border-radius: 20px; background: var(--brand-soft); color: var(--brand-strong);
+  display: grid; place-items: center; margin-bottom: 16px; box-shadow: 0 4px 16px rgba(11, 122, 105, 0.15);
+}
+.lock-icon-wrap svg { width: 32px; height: 32px; }
+.lock-title { font-family: var(--font-display); font-weight: 800; font-size: 1.6rem; color: var(--ink); margin: 0 0 4px; }
+.lock-sub { font-size: 0.84rem; color: var(--ink-2); margin: 0 0 20px; line-height: 1.4; }
+
+.pin-dots { display: flex; gap: 16px; margin-bottom: 20px; }
+.pin-dot {
+  width: 15px; height: 15px; border-radius: 999px; border: 2px solid var(--brand);
+  background: transparent; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pin-dot.filled { background: var(--brand); transform: scale(1.15); box-shadow: 0 0 8px var(--brand-soft); }
+.pin-dots.shake { animation: lockShake 0.4s ease-in-out; }
+.lock-msg { font-size: 0.82rem; min-height: 22px; color: var(--sos-strong); margin-bottom: 16px; font-weight: 600; }
+
+.numpad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; width: 100%; max-width: 250px; margin-bottom: 20px; }
+.num-btn {
+  aspect-ratio: 1; border-radius: 50%; border: 1px solid var(--line); background: var(--surface);
+  color: var(--ink); font-family: var(--font-display); font-size: 1.45rem; font-weight: 700;
+  display: grid; place-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.03); transition: all 0.12s;
+  cursor: pointer;
+}
+.num-btn:hover { background: var(--bg-2); border-color: var(--brand-soft); }
+.num-btn:active { transform: scale(0.92); background: var(--brand-soft); color: var(--brand-strong); }
+.num-btn.fn { font-size: 1rem; border-color: transparent; background: transparent; color: var(--ink-2); }
+.num-btn.fn:hover { background: var(--bg-2); }
+
+.lock-actions { display: flex; flex-direction: column; gap: 12px; width: 100%; align-items: center; }
+.lock-sos-btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: 12px;
+  background: var(--sos-soft); color: var(--sos-strong); font-size: 0.84rem; font-weight: 700; border: 0; cursor: pointer;
+}
+.lock-reset-link { font-size: 0.78rem; color: var(--ink-3); text-decoration: underline; cursor: pointer; border: 0; background: none; }
+
+@keyframes lockShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-10px); }
+  40%, 80% { transform: translateX(10px); }
+}
+
 </style>
 <div class="app" id="app">
   <header class="topbar">
@@ -548,6 +656,8 @@ textarea.mono { width: 100%; min-height: 220px; border: 1px solid var(--line); b
 <div id="sheetHost"></div>
 <div id="adminHost"></div>
 <div id="toastHost" aria-live="polite"></div>
+<div id="camoHost"></div>
+<div id="lockHost"></div>
 
 <script>
 /* =========================================================================
@@ -560,7 +670,7 @@ textarea.mono { width: 100%; min-height: 220px; border: 1px solid var(--line); b
    - Từ khóa có thể kèm trọng số: "nên làm gì|0.5".
    ========================================================================= */
 window.ALLY_DEFAULT = window.BANAN_DEFAULT = {
-  version: "2026-11-13T20:50:00+07:00",
+  version: "2026-11-15T00:00:00+07:00",
   meta: {
     ten: "ALLY",
     moTa: "Chatbot hỗ trợ phòng, chống xâm hại trẻ em",
@@ -2329,7 +2439,7 @@ Một vài cách giúp bạn nhẹ lòng hơn:
   /* ---------------------------------------------------------------------
      4. TRẠNG THÁI & CÀI ĐẶT
      --------------------------------------------------------------------- */
-  const SET = Object.assign({ age: null, font: 1, tts: false, theme: 'auto', saveChat: false }, store.get('settings', {}));
+  const SET = Object.assign({ age: null, font: 1, tts: false, theme: 'auto', saveChat: false, aiEnabled: true, geminiKey: '', appLock: { enabled: false, pin: '1234' } }, store.get('settings', {}));
   SET.tts = false;
   const ADMIN = Object.assign({ pin: CONFIG.defaultPin, threshold: CONFIG.defaultThreshold, remoteUrl: '', feedbackUrl: '', demoRisk: true, logUnanswered: false, autoSync: true, lastSync: null }, store.get('admin', {}));
   function saveSettings() { store.set('settings', SET); }
@@ -2346,7 +2456,7 @@ Một vài cách giúp bạn nhẹ lòng hơn:
     lib: { view: 'topics', topic: null, entry: null, q: '' },
     quiz: { phase: 'home', items: [], i: 0, answers: [], age: null },
     adminTab: 'tong-quan',
-    adminOpen: false,
+    adminOpen: false, isLocked: false, camoOpen: false, activeScenario: null,
     installEvt: null,
     origTheme: document.documentElement.getAttribute('data-theme')
   };
@@ -3098,6 +3208,29 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
       return replyUserProfile(prof);
     }
 
+    // 2b) TRÍ TUỆ NHÂN TẠO GEMINI AI: Trả lời linh hoạt như ChatGPT nếu đã bật & có API Key
+    if (SET.aiEnabled && SET.geminiKey && S.mode !== 'safety') {
+      try {
+        const aiReply = await callGemini(text, age, r);
+        if (aiReply) {
+          S.mode = 'normal'; setQuick();
+          const chips = (top && top.s >= 0.4)
+            ? [{ label: 'Tìm hiểu thêm: ' + titleFor(top.e, age), act: 'entry', val: top.e.id }, ...chipsFrom(POPULAR[age]).slice(0, 2)]
+            : chipsFrom(POPULAR[age]).slice(0, 3);
+          return botSay(aiReply, { chips, feedback: true, alert: r.level >= 2 ? 'manual' : null });
+        }
+      } catch (err) {
+        console.warn('AI call failed, falling back to local multi-intent/KB engine', err);
+      }
+    }
+
+    // 2c) MULTI-INTENT ENGINE: Xử lý câu hỏi kép / nhiều ý khi offline hoặc chưa bật AI
+    const multiEntries = detectMultiIntent(text, age, r);
+    if (multiEntries && multiEntries.length >= 2) {
+      S.mode = 'normal'; setQuick();
+      return replyMultiIntent(multiEntries, text, r, age);
+    }
+
     // 3) Đang lắng nghe (người dùng đang kể) — tự thoát chế độ lắng nghe nếu người dùng chuyển sang hỏi chủ đề cụ thể hoặc phản hồi về bot
     if (S.mode === 'listening' || S.mode === 'safety') {
       if (/\b(van do|do qua|do ec|te qua|sai roi|khong hieu y|chua hieu y|ma pin|trang quan tri)\b/.test(A.plain)) {
@@ -3298,7 +3431,12 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
   }
 
   /* Tình huống ngay trong khung chat */
-  function quizPool(age) { return (DATA.quiz || []).filter((q) => (q.ages || []).includes(age)); }
+  function quizPool(age) {
+    const all = (DATA.quiz || []).filter((q) => (q.ages || []).includes(age));
+    // Ưu tiên các tình huống đời sống thực tế, tránh các câu hỏi lý thuyết số điều luật khô khan
+    const practical = all.filter((q) => !/quy định tại điều nào|theo điều bao nhiêu|bộ luật hình sự số/i.test(q.q));
+    return practical.length ? practical : all;
+  }
   async function startScenario() {
     const age = ageOf();
     const pool = quizPool(age);
@@ -3767,22 +3905,389 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     openSheet('Chuyển thông tin sang Tổng đài 111 & Cơ quan hỗ trợ', nodes);
   }
 
+  /* ---------------------------------------------------------------------
+     12. MÀN HÌNH NGỤY TRANG TOÀN MÀN HÌNH (STUDYHUB)
+     --------------------------------------------------------------------- */
+  const CAMO_VOCAB = [
+    { word: 'Ally', ipa: '/ˈæl.aɪ/', pos: 'noun', mean: 'Người bạn đồng hành, người luôn ủng hộ và giúp đỡ bạn lúc khó khăn.', ex: 'She is a trusted ally whenever I need help.' },
+    { word: 'Resilience', ipa: '/rɪˈzɪl.jəns/', pos: 'noun', mean: 'Sự kiên cường, khả năng phục hồi và đứng dậy sau thử thách.', ex: 'Building resilience helps students overcome tough challenges.' },
+    { word: 'Boundary', ipa: '/ˈbaʊn.dər.i/', pos: 'noun', mean: 'Ranh giới cá nhân – giới hạn an toàn cần được tôn trọng.', ex: 'Everyone has the right to set personal boundaries.' },
+    { word: 'Confidence', ipa: '/ˈkɒn.fɪ.dəns/', pos: 'noun', mean: 'Sự tự tin vào phẩm giá và năng lực của bản thân.', ex: 'Speaking up for yourself requires courage and confidence.' },
+    { word: 'Safety', ipa: '/ˈseɪf.ti/', pos: 'noun', mean: 'Sự an toàn, tình trạng được bảo vệ khỏi hiểm nguy và tổn thương.', ex: 'Your personal safety and well-being always come first.' },
+    { word: 'Courage', ipa: '/ˈkʌr.ɪdʒ/', pos: 'noun', mean: 'Lòng dũng cảm, dám lên tiếng bảo vệ điều đúng đắn.', ex: 'It takes great courage to speak out against injustice.' },
+    { word: 'Empathy', ipa: '/ˈem.pə.θi/', pos: 'noun', mean: 'Sự thấu cảm, khả năng hiểu và sẻ chia cảm xúc của người khác.', ex: 'Showing empathy creates a supportive community for all.' },
+    { word: 'Integrity', ipa: '/ɪnˈteɡ.rə.ti/', pos: 'noun', mean: 'Sự chính trực, trung thực và tôn trọng chuẩn mực đạo đức.', ex: 'Act with integrity even when nobody is watching.' }
+  ];
+
   function openCamouflage() {
-    const vocab = [
-      ['Ally (n) /ˈæl.aɪ/', 'Người bạn đồng hành, người luôn ủng hộ và giúp đỡ bạn lúc khó khăn.', 'She is a trusted ally whenever I need support.'],
-      ['Resilience (n) /rɪˈzɪl.jəns/', 'Sự kiên cường, khả năng phục hồi sau thử thách.', 'Building resilience helps students overcome difficulties.'],
-      ['Confidence (n) /ˈkɒn.fɪ.dəns/', 'Sự tự tin vào giá trị của bản thân.', 'Speaking up requires courage and confidence.'],
-      ['Boundary (n) /ˈbaʊn.dər.i/', 'Ranh giới cá nhân cần được tôn trọng.', 'Everyone has the right to set personal boundaries.'],
-      ['Safety (n) /ˈseɪf.ti/', 'Sự an toàn, được bảo vệ khỏi nguy hiểm.', 'Your safety and well-being always come first.']
+    S.camoOpen = true;
+    let host = $('#camoHost') || document.body;
+    let overlay = $('#camoOverlay');
+    if (overlay) overlay.remove();
+
+    overlay = h('div', { class: 'camo-fullscreen', id: 'camoOverlay' },
+      h('header', { class: 'camo-nav' },
+        h('div', { class: 'camo-nav-in' },
+          h('div', { class: 'camo-brand' },
+            h('div', { class: 'camo-logo' }, 'SH'),
+            h('div', null,
+              h('h1', null, 'StudyHub'),
+              h('p', null, 'Sổ tay Từ vựng & Ngữ pháp Tiếng Anh THCS - THPT')
+            )
+          ),
+          h('button', { type: 'button', class: 'camo-exit-btn', id: 'camoExitBtn', onclick: closeCamouflage, title: 'Bấm để quay lại hoặc phím Esc' },
+            icon('chevron-left'), 'Quay lại học tiếp'
+          )
+        )
+      ),
+      h('main', { class: 'camo-main' },
+        h('div', { class: 'camo-search-bar' },
+          h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2' },
+            h('circle', { cx: '11', cy: '11', r: '8' }),
+            h('path', { d: 'm21 21-4.3-4.3' })
+          ),
+          h('input', { type: 'search', id: 'camoSearchInput', placeholder: 'Tìm kiếm từ vựng, ngữ pháp tiếng Anh...', oninput: (e) => filterCamoVocab(e.target.value) })
+        ),
+        h('div', { class: 'camo-section-title' },
+          h('span', null, '📖 Từ vựng Tiếng Anh theo chủ đề phát triển bản thân')
+        ),
+        h('div', { class: 'camo-grid', id: 'camoGrid' },
+          ...renderCamoCards(CAMO_VOCAB)
+        ),
+        h('div', { class: 'camo-section-title' },
+          h('span', null, '⚡ Bảng tóm tắt 12 thì cơ bản (English Tenses)')
+        ),
+        h('div', { class: 'camo-grammar-box' },
+          h('table', { class: 'camo-grammar-table' },
+            h('thead', null,
+              h('tr', null,
+                h('th', null, 'Thì tiếng Anh'),
+                h('th', null, 'Cấu trúc'),
+                h('th', null, 'Cách dùng chính'),
+                h('th', null, 'Ví dụ')
+              )
+            ),
+            h('tbody', null,
+              h('tr', null, h('td', null, h('b', null, 'Hiện tại đơn (Present Simple)')), h('td', null, 'S + V(s/es)'), h('td', null, 'Thói quen, sự thật hiển nhiên'), h('td', null, 'I review English every morning.')),
+              h('tr', null, h('td', null, h('b', null, 'Hiện tại tiếp diễn (Present Continuous)')), h('td', null, 'S + am/is/are + V-ing'), h('td', null, 'Hành động đang diễn ra'), h('td', null, 'She is studying in the library.')),
+              h('tr', null, h('td', null, h('b', null, 'Hiện tại hoàn thành (Present Perfect)')), h('td', null, 'S + have/has + V3/ed'), h('td', null, 'Kinh nghiệm, hành động đã hoàn tất'), h('td', null, 'We have learned 50 new words.')),
+              h('tr', null, h('td', null, h('b', null, 'Quá khứ đơn (Past Simple)')), h('td', null, 'S + V2/ed'), h('td', null, 'Hành động đã kết thúc trong quá khứ'), h('td', null, 'They visited Da Lat last week.')),
+              h('tr', null, h('td', null, h('b', null, 'Tương lai đơn (Future Simple)')), h('td', null, 'S + will + V-inf'), h('td', null, 'Dự đoán hoặc quyết định tức thì'), h('td', null, 'I will pass the English exam.'))
+            )
+          )
+        )
+      )
+    );
+    host.append(overlay);
+  }
+
+  function renderCamoCards(list) {
+    return list.map((item) => h('div', { class: 'camo-card' },
+      h('div', { class: 'camo-word' },
+        item.word,
+        h('span', { class: 'camo-ipa' }, item.ipa),
+        h('span', { class: 'camo-pos' }, item.pos)
+      ),
+      h('p', { class: 'camo-mean' }, item.mean),
+      h('p', { class: 'camo-ex' }, 'Ví dụ: ' + item.ex)
+    ));
+  }
+
+  function filterCamoVocab(q) {
+    const grid = $('#camoGrid');
+    if (!grid) return;
+    const norm = (q || '').trim().toLowerCase();
+    const filtered = !norm ? CAMO_VOCAB : CAMO_VOCAB.filter((item) =>
+      item.word.toLowerCase().includes(norm) ||
+      item.mean.toLowerCase().includes(norm) ||
+      item.ex.toLowerCase().includes(norm)
+    );
+    grid.innerHTML = '';
+    grid.append(...renderCamoCards(filtered));
+  }
+
+  function closeCamouflage() {
+    S.camoOpen = false;
+    const overlay = $('#camoOverlay');
+    if (overlay) overlay.remove();
+  }
+
+  /* ---------------------------------------------------------------------
+     12b. KHÓA BẢO VỆ RIÊNG TƯ (APP LOCK PIN)
+     --------------------------------------------------------------------- */
+  let lockPinBuffer = '';
+  function showLockScreen(trigger) {
+    S.isLocked = true;
+    lockPinBuffer = '';
+    let host = $('#lockHost') || document.body;
+    let overlay = $('#lockOverlay');
+    if (overlay) overlay.remove();
+
+    overlay = h('div', { class: 'lock-fullscreen', id: 'lockOverlay' },
+      h('div', { class: 'lock-box' },
+        h('div', { class: 'lock-icon-wrap' },
+          h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+            h('rect', { x: '3', y: '11', width: '18', height: '11', rx: '2', ry: '2' }),
+            h('path', { d: 'M7 11V7a5 5 0 0 1 10 0v4' })
+          )
+        ),
+        h('h2', { class: 'lock-title' }, 'Bảo vệ riêng tư'),
+        h('p', { class: 'lock-sub' }, 'Nhập mã PIN 4 số để mở khóa cuộc trò chuyện an toàn của bạn'),
+        h('div', { class: 'pin-dots', id: 'pinDots' },
+          h('div', { class: 'pin-dot', id: 'pdot0' }),
+          h('div', { class: 'pin-dot', id: 'pdot1' }),
+          h('div', { class: 'pin-dot', id: 'pdot2' }),
+          h('div', { class: 'pin-dot', id: 'pdot3' })
+        ),
+        h('div', { class: 'lock-msg', id: 'lockMsg' }),
+        h('div', { class: 'numpad' },
+          ...[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => h('button', { type: 'button', class: 'num-btn', onclick: () => inputLockPin(String(n)) }, String(n))),
+          h('button', { type: 'button', class: 'num-btn fn', onclick: clearLockPin }, 'Xóa'),
+          h('button', { type: 'button', class: 'num-btn', onclick: () => inputLockPin('0') }, '0'),
+          h('button', { type: 'button', class: 'num-btn fn', onclick: backspaceLockPin }, '⌫')
+        ),
+        h('div', { class: 'lock-actions' },
+          h('button', { type: 'button', class: 'lock-sos-btn', onclick: () => { unlockApp(); openEmergency('manual'); } },
+            icon('phone'), 'Khẩn cấp: Gọi 111 · 113'
+          ),
+          h('button', { type: 'button', class: 'lock-reset-link', onclick: promptResetPin }, 'Quên mã PIN?')
+        )
+      )
+    );
+    host.append(overlay);
+  }
+
+  function inputLockPin(digit) {
+    if (lockPinBuffer.length >= 4) return;
+    lockPinBuffer += digit;
+    updatePinDots();
+    if (lockPinBuffer.length === 4) {
+      setTimeout(verifyLockPin, 100);
+    }
+  }
+
+  function backspaceLockPin() {
+    if (lockPinBuffer.length > 0) {
+      lockPinBuffer = lockPinBuffer.slice(0, -1);
+      updatePinDots();
+    }
+  }
+
+  function clearLockPin() {
+    lockPinBuffer = '';
+    updatePinDots();
+  }
+
+  function updatePinDots() {
+    for (let i = 0; i < 4; i++) {
+      const dot = $('#pdot' + i);
+      if (dot) dot.classList.toggle('filled', i < lockPinBuffer.length);
+    }
+    const msg = $('#lockMsg');
+    if (msg) msg.textContent = '';
+  }
+
+  function verifyLockPin() {
+    const targetPin = (SET.appLock && SET.appLock.pin) || '1234';
+    if (lockPinBuffer === targetPin) {
+      unlockApp();
+      toast('Đã mở khóa ALLY');
+    } else {
+      const dots = $('#pinDots');
+      const msg = $('#lockMsg');
+      if (dots) {
+        dots.classList.add('shake');
+        setTimeout(() => dots.classList.remove('shake'), 400);
+      }
+      if (msg) msg.textContent = 'Mã PIN không đúng, vui lòng thử lại';
+      setTimeout(() => {
+        lockPinBuffer = '';
+        updatePinDots();
+      }, 500);
+    }
+  }
+
+  function unlockApp() {
+    S.isLocked = false;
+    lockPinBuffer = '';
+    const overlay = $('#lockOverlay');
+    if (overlay) overlay.remove();
+  }
+
+  function promptResetPin() {
+    if (confirm('Nếu quên mã PIN, bạn có thể đặt lại mã PIN về mặc định (1234) và tắt khóa màn hình. Cuộc trò chuyện trên máy này sẽ được xóa để đảm bảo an toàn riêng tư.\n\nBạn có muốn đặt lại không?')) {
+      SET.appLock = { enabled: false, pin: '1234' };
+      saveSettings();
+      store.del('chat');
+      unlockApp();
+      toast('Đã đặt lại mã PIN về 1234 và xóa nhật ký.');
+      setTimeout(() => location.reload(), 600);
+    }
+  }
+
+  function promptChangePin() {
+    const cur = prompt('Nhập mã PIN hiện tại (mặc định: 1234):');
+    if (cur == null) return;
+    const expected = (SET.appLock && SET.appLock.pin) || '1234';
+    if (cur !== expected) {
+      alert('Mã PIN hiện tại không chính xác!');
+      return;
+    }
+    const next = prompt('Nhập mã PIN mới (gồm đúng 4 chữ số):');
+    if (next == null) return;
+    if (!/^\d{4}$/.test(next)) {
+      alert('Mã PIN mới phải gồm đúng 4 chữ số (ví dụ: 2580)!');
+      return;
+    }
+    const confirmPin = prompt('Nhập lại mã PIN mới để xác nhận:');
+    if (confirmPin !== next) {
+      alert('Mã PIN xác nhận không trùng khớp!');
+      return;
+    }
+    SET.appLock = SET.appLock || {};
+    SET.appLock.pin = next;
+    SET.appLock.enabled = true;
+    saveSettings();
+    toast('Đã đổi mã PIN thành công!');
+  }
+
+  /* ---------------------------------------------------------------------
+     12c. MULTI-INTENT & GEMINI AI INTEGRATION
+     --------------------------------------------------------------------- */
+  function detectMultiIntent(text, age, r) {
+    if (!text || text.length < 15) return null;
+    const parts = text.split(/\s*(?:và|với lại|với cả|còn|nhưng|mà|rồi|hay|hoặc|[?;,\n]+)\s*/i)
+      .map((p) => p.trim())
+      .filter((p) => p.length >= 6 && p.split(/\s+/).length >= 2);
+
+    if (parts.length < 2) return null;
+
+    const matchedEntries = [];
+    const seenIds = new Set();
+
+    for (const part of parts) {
+      const partA = analyze(part);
+      const subMatches = retrieve(partA, age, r);
+      if (subMatches.length && subMatches[0].s >= 0.42) {
+        const topE = subMatches[0].e;
+        if (!topE.small && !topE.action && !seenIds.has(topE.id)) {
+          seenIds.add(topE.id);
+          matchedEntries.push({ e: topE, score: subMatches[0].s, partText: part });
+        }
+      }
+    }
+
+    if (matchedEntries.length >= 2) {
+      return matchedEntries.map((m) => m.e);
+    }
+    return null;
+  }
+
+  async function replyMultiIntent(entries, userText, r, age) {
+    const e1 = entries[0];
+    const e2 = entries[1];
+    const ans1 = resolveAnswer(e1, age) || { text: '' };
+    const ans2 = resolveAnswer(e2, age) || { text: '' };
+
+    const summary1 = ans1.text.split('\n\n').slice(0, 2).join('\n\n');
+    const summary2 = ans2.text.split('\n\n').slice(0, 2).join('\n\n');
+
+    const opener = age === 'nho'
+      ? `Mình nghe bạn kể và hiểu rằng bạn đang gặp cùng lúc hai điều khó khăn: vừa bị **${titleFor(e1, age)}** lại vừa lo lắng về **${titleFor(e2, age)}**. Bạn đừng sợ nhé, mình luôn ở đây cùng bạn!`
+      : `Mình rất thấu hiểu cảm giác bế tắc, áp lực khi bạn phải đối diện cùng lúc cả hai vấn đề: **${titleFor(e1, age)}** và băn khoăn về **${titleFor(e2, age)}**. Chúng mình cùng giải quyết từng việc một nhé:`;
+
+    const body = `${opener}
+
+---
+
+### 1. Về ${titleFor(e1, age)}:
+${summary1}
+
+---
+
+### 2. Về ${titleFor(e2, age)}:
+${summary2}
+
+---
+
+💡 **Lời khuyên thêm từ ALLY:** Khi gặp chuyện phức tạp và người xung quanh chưa hiểu, việc bạn cần làm nhất là giữ bình tĩnh, ghi chép lại thời gian/bằng chứng, và đừng tự chịu đựng một mình. Bạn luôn có quyền được an toàn và lắng nghe.`;
+
+    const chips = [
+      { label: 'Chi tiết: ' + titleFor(e1, age), act: 'entry', val: e1.id },
+      { label: 'Chi tiết: ' + titleFor(e2, age), act: 'entry', val: e2.id },
+      { label: 'Chuẩn bị nội dung gọi 111', act: 'package' }
     ];
-    const nodes = [
-      h('div', { class: 'callout' }, h('b', null, 'Chế độ ngụy trang bảo vệ quyền riêng tư: '), 'Màn hình hiện tại trông như một trang học từ vựng Tiếng Anh bình thường. Bấm "Quay lại trò chuyện" khi bạn đã an toàn.'),
-      ...vocab.map(([w, m, ex]) => h('div', { class: 'box' }, h('h3', { style: 'color:var(--brand-strong)' }, w), h('p', { style: 'margin:4px 0' }, m), h('p', { class: 'note', style: 'margin:0;font-style:italic' }, 'Ví dụ: ' + ex))),
-      h('div', { class: 'row-actions' },
-        h('button', { type: 'button', class: 'btn', onclick: () => closeTopSheet() }, 'Quay lại trò chuyện với ALLY'),
-        h('button', { type: 'button', class: 'btn quiet', onclick: quickExit }, icon('exit'), 'Thoát hẳn & Xóa trò chuyện'))
-    ];
-    openSheet('ALLY Study · Sổ tay Từ vựng Tiếng Anh', nodes);
+
+    S.lastEntry = e1.id;
+    return botSay(body, { chips, alert: r && r.level >= 2 ? 'manual' : null, feedback: true });
+  }
+
+  async function callGemini(userText, age, r) {
+    const key = (SET.geminiKey || '').trim();
+    if (!key) return null;
+
+    const ageGuides = {
+      nho: 'Người dùng là trẻ em dưới 11 tuổi. Dùng lời lẽ cực kỳ ấm áp, câu ngắn dễ hiểu, xưng "mình", gọi "bạn" hoặc "em".',
+      thcs: 'Người dùng là học sinh THCS (11-14 tuổi). Giọng điệu đồng cảm, tôn trọng, hướng dẫn thiết thực các vấn đề học đường, bạn bè, ranh giới cơ thể.',
+      thpt: 'Người dùng là học sinh THPT (15-18 tuổi). Giọng điệu sâu sắc, tôn trọng, trang bị kỹ năng tự bảo vệ, pháp lý và sức khỏe tinh thần.',
+      lon: 'Người dùng là người lớn (sinh viên, phụ huynh, giáo viên). Hướng dẫn quy trình xử lý, can thiệp, pháp lý và hỗ trợ nạn nhân.'
+    };
+
+    const sysPrompt = `Bạn là ALLY – chatbot phòng, chống xâm hại trẻ em, bạo lực học đường và hỗ trợ khủng hoảng tâm lý cho thanh thiếu niên (đề tài NCKH học sinh Việt Nam).
+Nguyên tắc trả lời:
+1. LUÔN LUÔN thể hiện sự đồng cảm, an ủi, lắng nghe và củng cố tinh thần người dùng trước tiên ("Mình luôn ở đây lắng nghe bạn", "Bạn đã rất dũng cảm khi chia sẻ điều này").
+2. Trả lời LINH HOẠT, THẤU ĐÁO và giải quyết CỤ THỂ tình huống người dùng đang gặp.
+3. ĐẶC BIỆT: Nếu câu hỏi có nhiều ý hoặc câu hỏi kép (ví dụ: vừa bị bắt nạt vừa sợ bố mẹ không tin), bạn PHẢI phân tích và đưa ra giải pháp cho TỪNG Ý một, không bỏ sót ý nào.
+4. Đưa ra hướng giải quyết từng bước thực tế, dễ làm, không nói chung chung hay chỉ trích dẫn điều luật.
+5. Khi người dùng hỏi xã giao hoặc chào hỏi ("bạn ơi", "bạn tên là gì", "tôi là sinh viên"), hãy chào đón niềm nở và giải thích vai trò hỗ trợ của ALLY.
+6. Khi người dùng bảo "cho mình một tình huống", hãy đưa ra một tình huống đời sống thực tế tương tác (ví dụ: trên mạng hoặc ở trường) và gợi ý cách xử lý thông minh.
+7. Nhẹ nhàng nhắc đến Tổng đài Quốc gia Bảo vệ Trẻ em 111 (miễn phí 24/7) hoặc Công an 113 khi cần trợ giúp can thiệp khẩn cấp.
+${ageGuides[age] || ageGuides.thcs}
+Định dạng Markdown đẹp, gãy gọn, có danh sách đầu dòng rõ ràng.`;
+
+    const contents = [];
+    const recent = (S.transcript || []).slice(-4);
+    for (const msg of recent) {
+      if (msg.role === 'user' || msg.role === 'bot') {
+        contents.push({
+          role: msg.role === 'bot' ? 'model' : 'user',
+          parts: [{ text: msg.text || '' }]
+        });
+      }
+    }
+    contents.push({
+      role: 'user',
+      parts: [{ text: userText }]
+    });
+
+    const body = {
+      contents,
+      systemInstruction: { parts: [{ text: sysPrompt }] },
+      generationConfig: {
+        temperature: 0.7,
+        topP: 0.9,
+        maxOutputTokens: 1024
+      }
+    };
+
+    const models = ['gemini-2.0-flash', 'gemini-1.5-flash'];
+    for (const m of models) {
+      try {
+        const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent?key=${encodeURIComponent(key)}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        });
+        if (!resp.ok) continue;
+        const resJson = await resp.json();
+        const cand = resJson.candidates && resJson.candidates[0];
+        const out = cand && cand.content && cand.content.parts && cand.content.parts.map((p) => p.text).join('\n');
+        if (out && out.trim()) return out.trim();
+      } catch (e) {
+        console.warn('Gemini request failed on ' + m, e);
+      }
+    }
+    return null;
   }
 
   /* ---------------------------------------------------------------------
@@ -4176,10 +4681,40 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
       h('div', { class: 'setting' }, h('span', { class: 't' }, 'Cỡ chữ'), seg([[0.9, 'A−'], [1, 'A'], [1.15, 'A+'], [1.3, 'A++']], SET.font, (v) => { SET.font = v; saveSettings(); applyFont(); })),
       h('div', { class: 'setting' }, h('span', { class: 't' }, 'Giao diện'), seg([['auto', 'Theo máy'], ['light', 'Sáng'], ['dark', 'Tối']], SET.theme, (v) => { SET.theme = v; saveSettings(); applyTheme(); })),
       h('div', { class: 'setting' }, h('span', { class: 't' }, 'Giọng đọc câu trả lời', h('span', { class: 's' }, 'Chỉ phát âm thanh khi bạn bấm nút "Đọc to" bên dưới mỗi câu trả lời (giọng nữ tiếng Việt truyền cảm, dễ nghe).'))),
+
+      // Khóa màn hình bảo vệ riêng tư bằng mã PIN
+      h('div', { class: 'setting' }, h('label', { class: 't', for: 'setLock' }, 'Khóa bảo vệ riêng tư bằng mã PIN', h('span', { class: 's' }, 'Yêu cầu nhập mã PIN 4 số khi mở ứng dụng để bảo vệ cuộc trò chuyện')),
+        switchEl('setLock', SET.appLock && SET.appLock.enabled, (v) => {
+          SET.appLock = SET.appLock || { pin: '1234' };
+          SET.appLock.enabled = v;
+          saveSettings();
+          toast(v ? 'Đã bật khóa mã PIN (mặc định: 1234)' : 'Đã tắt khóa mã PIN');
+        }, 'Khóa mã PIN')),
+      h('div', { class: 'setting' }, h('span', { class: 't' }, 'Quản lý mã PIN bảo mật', h('span', { class: 's' }, (SET.appLock && SET.appLock.enabled) ? 'Khóa màn hình đang BẬT' : 'Khóa màn hình đang TẮT')),
+        h('div', { style: 'display:flex;gap:8px;flex-wrap:wrap;' },
+          h('button', { type: 'button', class: 'btn secondary sm', onclick: promptChangePin }, icon('lock'), 'Đổi mã PIN'),
+          h('button', { type: 'button', class: 'btn quiet sm', onclick: () => { closeTopSheet(); showLockScreen('manual'); } }, 'Khóa ngay')
+        )),
+
+      // Trí tuệ nhân tạo Gemini AI
+      h('div', { class: 'setting' }, h('label', { class: 't', for: 'setAi' }, 'Trí tuệ nhân tạo ALLY (Gemini AI)', h('span', { class: 's' }, 'Trả lời linh hoạt, tự nhiên như ChatGPT, giải quyết câu hỏi phức tạp')),
+        switchEl('setAi', SET.aiEnabled, (v) => {
+          SET.aiEnabled = v;
+          saveSettings();
+          toast(v ? 'Đã bật chế độ AI linh hoạt' : 'Đã tắt chế độ AI (dùng dữ liệu duyệt)');
+        }, 'Bật AI')),
+      h('div', { class: 'setting' }, h('span', { class: 't' }, 'Khóa API Google Gemini (miễn phí)', h('span', { class: 's' }, SET.geminiKey ? 'Đã cấu hình khóa API (sẵn sàng hoạt động)' : 'Chưa nhập khóa API (ứng dụng đang dùng bộ xử lý đa ý định nội bộ)')),
+        h('div', { style: 'display:flex;gap:8px;flex-wrap:wrap;' },
+          h('button', { type: 'button', class: 'btn secondary sm', onclick: promptGeminiKey }, icon('settings'), SET.geminiKey ? 'Đổi API Key' : 'Nhập API Key'),
+          h('button', { type: 'button', class: 'btn quiet sm', onclick: () => window.open('https://aistudio.google.com/app/apikey', '_blank') }, 'Lấy Key miễn phí ↗')
+        )),
+
+      // Màn hình ngụy trang toàn màn hình
+      h('div', { class: 'setting' }, h('span', { class: 't' }, 'Màn hình ngụy trang toàn màn hình (StudyHub)', h('span', { class: 's' }, 'Phủ kín toàn màn hình bằng trang sổ tay tiếng Anh tra cứu từ vựng khi có người lạ')),
+        h('button', { type: 'button', class: 'btn secondary sm', onclick: () => { closeTopSheet(); openCamouflage(); } }, icon('shield'), 'Bật ngụy trang ngay')),
+
       h('div', { class: 'setting' }, h('label', { class: 't', for: 'setSave' }, 'Lưu cuộc trò chuyện trên máy này', h('span', { class: 's' }, 'Mặc định tắt để giữ kín. Chỉ bật nếu máy là của riêng bạn.')),
         switchEl('setSave', SET.saveChat, (v) => { SET.saveChat = v; saveSettings(); if (v) persistChat(); else store.del('chat'); }, 'Lưu cuộc trò chuyện')),
-      h('div', { class: 'setting' }, h('span', { class: 't' }, 'Màn hình ngụy trang nhanh (ALLY Study)', h('span', { class: 's' }, 'Đổi ngay giao diện thành sổ tay từ vựng Tiếng Anh khi có người đi ngang qua')),
-        h('button', { type: 'button', class: 'btn secondary sm', onclick: () => { closeTopSheet(); openCamouflage(); } }, icon('shield'), 'Bật ngụy trang')),
       h('div', { class: 'setting' }, h('span', { class: 't' }, 'Cài ứng dụng ALLY lên điện thoại (Android & iOS)', h('span', { class: 's' }, 'Dùng như ứng dụng độc lập trên màn hình chính, hoạt động cả khi mất mạng')),
         h('button', { type: 'button', class: 'btn secondary sm', onclick: installApp }, icon('install'), 'Cài đặt')),
       h('div', { class: 'setting' }, h('span', { class: 't' }, 'Xóa toàn bộ dữ liệu trên máy', h('span', { class: 's' }, 'Xóa cuộc trò chuyện, bàn tay tin cậy, kết quả tình huống')),
@@ -4192,11 +4727,24 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
         } }, icon('trash'), 'Xóa')),
       confirmBox,
       h('div', { class: 'callout' }, h('b', null, 'Lưu ý miễn trừ trách nhiệm: '), 'ALLY chỉ cung cấp thông tin, lắng nghe và hỗ trợ kết nối. Ứng dụng không thay thế chuyên gia tâm lý, bác sĩ, công an, cơ quan chức năng hay Tổng đài 111.'),
-      h('p', { class: 'note' }, 'Mẹo: trên máy tính, bấm phím ', h('span', { class: 'kbd' }, 'Esc'), ' hai lần liên tiếp để thoát nhanh.'),
+      h('p', { class: 'note' }, 'Mẹo: bấm biểu tượng ngụy trang hoặc phím ', h('span', { class: 'kbd' }, 'Esc'), ' để mở màn hình học tập StudyHub.'),
       h('div', { class: 'row-actions' }, h('button', { type: 'button', class: 'btn quiet sm', onclick: () => { closeTopSheet(); openAdminGate(); } }, icon('lock'), 'Dành cho nhà sáng lập & nhóm phát triển')),
       h('p', { class: 'note' }, `${CONFIG.appName} · phiên bản ${CONFIG.version} · dữ liệu ${fmtDateTime(DATA.version)}`)
     ];
     openSheet('Cài đặt', nodes);
+  }
+
+  function promptGeminiKey() {
+    const cur = SET.geminiKey || '';
+    const next = prompt('Nhập API Key Google Gemini (lấy miễn phí tại aistudio.google.com):', cur);
+    if (next == null) return;
+    SET.geminiKey = next.trim();
+    saveSettings();
+    if (SET.geminiKey) {
+      toast('Đã lưu API Key Gemini! ALLY sẽ trả lời linh hoạt bằng AI.');
+    } else {
+      toast('Đã xóa API Key. ALLY sẽ dùng cơ sở dữ liệu nội bộ.');
+    }
   }
   function installApp() {
     if (S.installEvt) { S.installEvt.prompt(); S.installEvt.userChoice.finally(() => { S.installEvt = null; }); return; }
@@ -4835,13 +5383,23 @@ em muốn tự tử | 3 |`;
     if (camoBtn) camoBtn.addEventListener('click', openCamouflage);
     let lastEsc = 0;
     document.addEventListener('keydown', (ev) => {
+      if (S.isLocked) {
+        if (ev.key >= '0' && ev.key <= '9') { inputLockPin(ev.key); return; }
+        if (ev.key === 'Backspace') { backspaceLockPin(); return; }
+      }
       if (ev.key !== 'Escape') return;
+      if (S.camoOpen) { closeCamouflage(); return; }
       if (closeTopSheet()) return;
       if (S.adminOpen) { closeAdmin(); return; }
       const now = Date.now();
       if (now - lastEsc < 900) quickExit();
       lastEsc = now;
     });
+
+    // Khởi động: Kiểm tra nếu đã bật khóa bảo vệ riêng tư
+    if (SET.appLock && SET.appLock.enabled) {
+      showLockScreen('boot');
+    }
     window.addEventListener('hashchange', () => { const t = location.hash.slice(1); if (TABS.includes(t)) goTab(t, true); });
     window.addEventListener('beforeinstallprompt', (ev) => { ev.preventDefault(); S.installEvt = ev; });
   }
