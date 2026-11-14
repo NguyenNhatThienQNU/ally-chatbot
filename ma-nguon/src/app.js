@@ -375,14 +375,56 @@
   /* ---------------------------------------------------------------------
      4. TRẠNG THÁI & CÀI ĐẶT
      --------------------------------------------------------------------- */
-  const SET = Object.assign({ age: null, font: 1, tts: false, theme: 'auto', saveChat: false, aiEnabled: true, geminiKey: '', appLock: { enabled: true, pin: null } }, store.get('settings', {}));
-  if (!SET.appLock) SET.appLock = { enabled: true, pin: null };
-  if (SET.appLock.pin === '1234') SET.appLock.pin = null;
+  let userPin = store.get('app_pin', null);
+  // Dọn dẹp mã mặc định 1234 cũ nếu chưa được người dùng tự xác nhận
+  if (userPin === '1234' && !store.get('user_pin_confirmed')) {
+    userPin = null;
+    store.del('app_pin');
+  }
+
+  const SET = Object.assign({
+    age: null,
+    font: 1,
+    tts: false,
+    theme: 'auto',
+    saveChat: false,
+    aiEnabled: true,
+    geminiKey: '',
+    appLock: { enabled: true, pin: userPin }
+  }, store.get('settings', {}));
+
+  if (!SET.appLock) SET.appLock = { enabled: true, pin: userPin };
+  if (userPin) SET.appLock.pin = userPin;
+  else if (SET.appLock.pin === '1234' && !store.get('user_pin_confirmed')) SET.appLock.pin = null;
+
   if (store.get('lock_disabled') !== true) SET.appLock.enabled = true;
   SET.tts = false;
   const ADMIN = Object.assign({ pin: CONFIG.defaultPin, threshold: CONFIG.defaultThreshold, remoteUrl: '', feedbackUrl: '', demoRisk: true, logUnanswered: false, autoSync: true, lastSync: null }, store.get('admin', {}));
   function saveSettings() { store.set('settings', SET); }
   function saveAdmin() { store.set('admin', ADMIN); }
+
+  function getUserPin() {
+    return store.get('app_pin') || (SET.appLock && SET.appLock.pin) || null;
+  }
+  function hasUserPin() {
+    const p = getUserPin();
+    return Boolean(p && typeof p === 'string' && /^\d{4}$/.test(p));
+  }
+  function saveUserPin(pin) {
+    store.set('app_pin', pin);
+    store.set('user_pin_confirmed', true);
+    store.del('lock_disabled');
+    SET.appLock = SET.appLock || {};
+    SET.appLock.pin = pin;
+    SET.appLock.enabled = true;
+    saveSettings();
+  }
+  function clearUserPin() {
+    store.del('app_pin');
+    store.del('user_pin_confirmed');
+    if (SET.appLock) SET.appLock.pin = null;
+    saveSettings();
+  }
 
   const S = {
     tab: 'tro-chuyen',
@@ -1952,7 +1994,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
   }
 
   /* ---------------------------------------------------------------------
-     12b. KHÓA BẢO VỆ RIÊNG TƯ (APP LOCK PIN TỰ ĐẶT)
+     12b. KHÓA BẢO VỆ RIÊNG TƯ (APP LOCK PIN TỰ ĐẶT & GHI NHỚ)
      --------------------------------------------------------------------- */
   let lockPinBuffer = '';
   let lockSetupStep = 1; // 1: nhập mã mới, 2: xác nhận lại
@@ -1968,7 +2010,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     let overlay = $('#lockOverlay');
     if (overlay) overlay.remove();
 
-    const hasPin = Boolean(SET.appLock && SET.appLock.pin && SET.appLock.pin !== '1234');
+    const hasPin = hasUserPin();
 
     overlay = h('div', { class: 'lock-fullscreen', id: 'lockOverlay' },
       h('div', { class: 'lock-box' },
@@ -1979,7 +2021,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
           )
         ),
         h('h2', { class: 'lock-title', id: 'lockTitle' }, hasPin ? 'Bảo vệ riêng tư' : 'Tạo mã PIN riêng tư'),
-        h('p', { class: 'lock-sub', id: 'lockSub' }, hasPin ? 'Nhập mã PIN của bạn để vào ứng dụng ALLY' : 'Nhập 4 số bạn muốn đặt làm mật khẩu bảo vệ'),
+        h('p', { class: 'lock-sub', id: 'lockSub' }, hasPin ? 'Nhập 4 số mã PIN bạn đã đặt để mở khóa ALLY' : 'Nhập 4 số bạn muốn đặt làm mật khẩu bảo vệ'),
         h('div', { class: 'pin-dots', id: 'pinDots' },
           h('div', { class: 'pin-dot', id: 'pdot0' }),
           h('div', { class: 'pin-dot', id: 'pdot1' }),
@@ -2011,6 +2053,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
   }
 
   function skipLockSetup() {
+    clearUserPin();
     SET.appLock = { enabled: false, pin: null };
     store.set('lock_disabled', true);
     saveSettings();
@@ -2021,7 +2064,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
   function promptChangePinFromLock() {
     const cur = prompt('Nhập mã PIN hiện tại của bạn:');
     if (cur == null) return;
-    const expected = SET.appLock && SET.appLock.pin;
+    const expected = getUserPin();
     if (cur !== expected) {
       alert('Mã PIN hiện tại không chính xác!');
       return;
@@ -2037,11 +2080,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
       alert('Mã PIN xác nhận không trùng khớp!');
       return;
     }
-    SET.appLock = SET.appLock || {};
-    SET.appLock.pin = next;
-    SET.appLock.enabled = true;
-    store.del('lock_disabled');
-    saveSettings();
+    saveUserPin(next);
     alert('Đã đổi mã PIN thành công sang: ' + next);
     unlockApp();
   }
@@ -2077,11 +2116,11 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
   }
 
   function verifyOrSetupPin() {
-    const hasPin = Boolean(SET.appLock && SET.appLock.pin && SET.appLock.pin !== '1234');
+    const hasPin = hasUserPin();
 
-    // 1. Nếu đã có mã PIN: Xác thực mở khóa
+    // 1. Nếu đã có mã PIN: Xác thực mở khóa bằng mã PIN người dùng đã đặt
     if (hasPin) {
-      if (lockPinBuffer === SET.appLock.pin) {
+      if (lockPinBuffer === getUserPin()) {
         unlockApp();
         toast('Đã mở khóa ALLY');
       } else {
@@ -2110,11 +2149,9 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
 
     if (lockSetupStep === 2) {
       if (lockPinBuffer === lockFirstPin) {
-        SET.appLock = { enabled: true, pin: lockFirstPin };
-        store.del('lock_disabled');
-        saveSettings();
+        saveUserPin(lockFirstPin);
         unlockApp();
-        toast('Đã cài đặt mã PIN bảo vệ riêng tư thành công!');
+        toast('Đã lưu mã PIN của bạn! Từ nay ứng dụng sẽ ghi nhớ mã này.');
       } else {
         shakeLockDots('Mã xác nhận không khớp, vui lòng tạo lại từ đầu');
         lockSetupStep = 1;
@@ -2153,8 +2190,9 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
 
   function promptResetPin() {
     if (confirm('Nếu quên mã PIN, bạn có thể xóa mã PIN cũ để tự tạo lại mã mới. Cuộc trò chuyện trên máy này sẽ được xóa để đảm bảo an toàn riêng tư.\n\nBạn có muốn đặt lại không?')) {
-      SET.appLock = { enabled: true, pin: null };
+      clearUserPin();
       store.del('lock_disabled');
+      SET.appLock = { enabled: true, pin: null };
       saveSettings();
       store.del('chat');
       toast('Đã xóa mã PIN cũ, mời bạn tự tạo mã PIN mới.');
@@ -2163,14 +2201,14 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
   }
 
   function promptChangePin() {
-    if (!SET.appLock || !SET.appLock.pin) {
+    if (!hasUserPin()) {
       closeTopSheet();
       showLockScreen('setup');
       return;
     }
     const cur = prompt('Nhập mã PIN hiện tại của bạn:');
     if (cur == null) return;
-    if (cur !== SET.appLock.pin) {
+    if (cur !== getUserPin()) {
       alert('Mã PIN hiện tại không chính xác!');
       return;
     }
@@ -2185,10 +2223,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
       alert('Mã PIN xác nhận không trùng khớp!');
       return;
     }
-    SET.appLock.pin = next;
-    SET.appLock.enabled = true;
-    store.del('lock_disabled');
-    saveSettings();
+    saveUserPin(next);
     toast('Đã đổi mã PIN thành công sang: ' + next);
   }
 
@@ -2726,12 +2761,12 @@ ${ageGuides[age] || ageGuides.thcs}
       // Khóa màn hình bảo vệ riêng tư bằng mã PIN
       h('div', { class: 'setting' }, h('label', { class: 't', for: 'setLock' }, 'Khóa bảo vệ riêng tư bằng mã PIN', h('span', { class: 's' }, 'Yêu cầu nhập mã PIN 4 số khi mở ứng dụng để giữ bí mật cuộc trò chuyện')),
         switchEl('setLock', SET.appLock && SET.appLock.enabled, (v) => {
-          SET.appLock = SET.appLock || { pin: null };
+          SET.appLock = SET.appLock || { pin: getUserPin() };
           SET.appLock.enabled = v;
           if (v) {
             store.del('lock_disabled');
             saveSettings();
-            if (!SET.appLock.pin) {
+            if (!hasUserPin()) {
               closeTopSheet();
               showLockScreen('setup');
             } else {
@@ -2743,9 +2778,9 @@ ${ageGuides[age] || ageGuides.thcs}
             toast('Đã tắt khóa mã PIN');
           }
         }, 'Khóa mã PIN')),
-      h('div', { class: 'setting' }, h('span', { class: 't' }, 'Quản lý mã PIN bảo mật', h('span', { class: 's' }, (SET.appLock && SET.appLock.enabled && SET.appLock.pin) ? 'Đã cài mã PIN riêng tư' : (SET.appLock && SET.appLock.enabled ? 'Chưa thiết lập mã PIN' : 'Khóa màn hình đang TẮT'))),
+      h('div', { class: 'setting' }, h('span', { class: 't' }, 'Quản lý mã PIN bảo mật', h('span', { class: 's' }, (SET.appLock && SET.appLock.enabled && hasUserPin()) ? 'Đã lưu mã PIN riêng tư' : (SET.appLock && SET.appLock.enabled ? 'Chưa thiết lập mã PIN' : 'Khóa màn hình đang TẮT'))),
         h('div', { style: 'display:flex;gap:8px;flex-wrap:wrap;' },
-          (SET.appLock && SET.appLock.pin)
+          hasUserPin()
             ? h('button', { type: 'button', class: 'btn secondary sm', onclick: promptChangePin }, icon('lock'), 'Đổi mã PIN')
             : h('button', { type: 'button', class: 'btn secondary sm', onclick: () => { closeTopSheet(); showLockScreen('setup'); } }, icon('lock'), 'Đặt mã PIN riêng tư'),
           h('button', { type: 'button', class: 'btn quiet sm', onclick: () => { closeTopSheet(); showLockScreen('manual'); } }, 'Khóa ngay')
@@ -3491,7 +3526,7 @@ em muốn tự tử | 3 |`;
   function registerSW() {
     if (!('serviceWorker' in navigator) || inFrame) return;
     if (!/^https:$/.test(location.protocol) && !/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) return;
-    navigator.serviceWorker.register('sw.js').catch(() => { /* không có service worker */ });
+    navigator.serviceWorker.register('sw.js').then((reg) => { try { reg.update(); } catch (e) {} }).catch(() => { /* không có service worker */ });
   }
   function init() {
     loadData();
