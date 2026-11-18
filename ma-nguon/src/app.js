@@ -767,9 +767,9 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
       lon: `Cảm ơn bạn đã tin tưởng chia sẻ. Đây là vấn đề nghiêm trọng và bạn đã hành động rất đúng đắn khi tìm cách hỗ trợ.\n\nTrước hết: người cần được bảo vệ hiện có đang ở nơi an toàn không?`
     },
     discloseManual: {
-      nho: 'Mình đang nghe đây. Trước khi bạn kể, cho mình hỏi: bây giờ bạn có đang ở chỗ an toàn không?',
-      chung: 'Mình đang lắng nghe. Bạn có thể kể bất cứ điều gì, mình không phán xét. Trước hết, cho mình hỏi: ngay lúc này bạn có đang an toàn không?',
-      lon: 'Mình đang lắng nghe. Trước hết, người cần được bảo vệ hiện có đang an toàn không?'
+      nho: 'Mình ngồi cạnh bạn đây rồi nè. Bạn cứ từ từ kể cho mình nghe nhé, có chuyện gì làm bạn sợ hay buồn phiền nào?',
+      chung: 'Mình ở đây với bạn nè... Bạn cứ thoải mái trút hết những nỗi niềm hay ấm ức trong lòng ra nhé. Ở đây rất an toàn và mình luôn lắng nghe bạn bằng tất cả sự thấu hiểu, không bao giờ phán xét. Hôm nay có chuyện gì làm bạn thấy buồn hay nặng lòng thế?',
+      lon: 'Mình luôn sẵn sàng lắng nghe và đồng hành cùng bạn. Bạn cứ chia sẻ điều bạn đang trăn trở nhé, mình sẽ cùng bạn tháo gỡ từng chút một.'
     },
     safe: {
       nho: 'May quá. Bạn cứ kể cho mình nghe nhé, mình đang nghe đây.',
@@ -821,16 +821,20 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
         chung: 'Linh cảm khó chịu của bạn luôn đúng. Không một ai được phép vượt qua ranh giới cơ thể của bạn khi bạn chưa đồng ý. Bạn hoàn toàn có quyền từ chối và bảo vệ bản thân.'
       },
       'cam-xuc': {
-        nho: 'Mình hiểu, chắc bạn buồn và lo lắm. Mình ngồi đây nghe bạn tâm sự nhé.',
-        chung: 'Mình hiểu cảm giác nặng nề, ngột ngạt mà bạn đang gánh chịu. Bạn không phải gồng mình chịu đựng một mình đâu, nếu muốn khóc bạn cứ khóc nhé, mình luôn ở đây lắng nghe bạn.'
+        nho: 'Thương bạn quá... Mình ngồi sát cạnh nghe bạn kể đây, đừng sợ nhé.',
+        chung: 'Nghe bạn nói vậy, mình thấy thương bạn nhiều lắm... Bạn đã phải gồng mình chịu đựng những ấm ức, nặng nề này một mình bao lâu rồi? Ở đây bạn không cần phải cố tỏ ra mạnh mẽ đâu, có chuyện gì cứ trút hết với mình nhé, mình luôn ở đây ôm lấy cảm xúc của bạn.'
       },
       'can-giup': {
         nho: 'Mình ở đây với bạn. Mình sẽ cùng bạn tìm người lớn tốt bụng giúp bạn nhé.',
         chung: 'Bạn đã tìm đến đúng nơi rồi. Mình ở đây để đồng hành, cùng bạn gỡ rối và tìm ra cách giải quyết an toàn nhất cho bạn.'
       },
       generic: {
-        nho: ['Mình đang nghe đây. Bạn cứ từ từ kể nhé, mình ở bên bạn.', 'Cảm ơn bạn đã tin tưởng mình.'],
-        chung: ['Mình đang lắng nghe bạn đây. Bạn cứ chia sẻ những gì bạn thấy thoải mái nhất nhé.', 'Cảm ơn bạn đã tin tưởng giãi bày. Bạn không đơn độc đâu.', 'Mình hiểu điều này không dễ nói. Bạn cứ thong thả nhé, mình luôn ở đây.']
+        nho: ['Mình đang ngồi nghe bạn đây nè. Bạn cứ thong thả kể nhé, có mình ở cạnh bạn rồi.', 'Thương bạn nhiều lắm, bạn cứ nói hết những điều làm bạn buồn ra nhé.'],
+        chung: [
+          'Mình đang lắng nghe bạn bằng tất cả sự trân trọng đây. Bạn cứ từ từ trút hết những gì đang đè nặng trong lòng nhé, không phải vội đâu.',
+          'Cảm ơn bạn đã mở lòng và tin tưởng mình. Bạn đã rất dũng cảm rồi, ở đây chỉ có hai chúng mình thôi, bạn không hề đơn độc nữa đâu.',
+          'Mình hiểu những cảm xúc này không hề dễ dàng để nói ra. Cứ để lòng mình được thả lỏng nhé, mình luôn ngồi cạnh bạn.'
+        ]
       }
     },
     nextSteps: {
@@ -1190,7 +1194,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     }
 
     // 2b) TRÍ TUỆ NHÂN TẠO GEMINI AI: Trả lời linh hoạt như ChatGPT nếu đã bật & có API Key
-    if (SET.aiEnabled && (SET.geminiKey || CONFIG.defaultGeminiKey) && S.mode !== 'safety') {
+    if (SET.aiEnabled && (SET.geminiKey || CONFIG.defaultGeminiKey)) {
       try {
         const aiReply = await callGemini(text, age, r);
         if (aiReply) {
@@ -1343,7 +1347,7 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
 
   async function startDisclosure(trigger, r) {
     const age = ageOf();
-    S.mode = 'safety'; S.listenTurns = 0; setQuick();
+    S.mode = 'listening'; S.listenTurns = 0; setQuick();
     let text;
     if (trigger === 'detected') {
       const cat = topCat(r);
@@ -1353,9 +1357,11 @@ Bạn không cần cho mình biết tên. Cuộc trò chuyện chỉ nằm trên
     } else {
       text = age === 'lon' ? MSG.discloseManual.lon : kidOr(MSG.discloseManual, age);
     }
-    const chips = age === 'lon'
-      ? [{ label: 'Đang an toàn', act: 'safe' }, { label: 'Đang gặp nguy hiểm', act: 'danger', cls: 'warn' }, { label: 'Chưa rõ', act: 'unsure' }]
-      : [{ label: 'Mình đang an toàn', act: 'safe' }, { label: 'Mình đang gặp nguy hiểm', act: 'danger', cls: 'warn' }, { label: 'Mình không chắc', act: 'unsure' }];
+    const chips = (trigger === 'detected' && r && r.level >= 2)
+      ? (age === 'lon'
+          ? [{ label: 'Đang an toàn', act: 'safe' }, { label: 'Đang gặp nguy hiểm', act: 'danger', cls: 'warn' }, { label: 'Chưa rõ', act: 'unsure' }]
+          : [{ label: 'Mình đang an toàn', act: 'safe' }, { label: 'Mình đang gặp nguy hiểm', act: 'danger', cls: 'warn' }, { label: 'Mình không chắc', act: 'unsure' }])
+      : [{ label: 'Chuyện bạn bè ở trường', act: 'talk' }, { label: 'Chuyện trong gia đình', act: 'talk' }, { label: 'Chỉ muốn tâm sự cho vơi bớt', act: 'talk' }];
     return botSay(text, { chips, chipOpts: { big: true }, alert: trigger === 'detected' && r && r.level >= 2 ? 'manual' : null });
   }
   function topCat(r) {
@@ -2303,23 +2309,38 @@ ${summary2}
     if (!key) return null;
 
     const ageGuides = {
-      nho: 'Người dùng là trẻ em dưới 11 tuổi. Dùng lời lẽ cực kỳ ấm áp, câu ngắn dễ hiểu, xưng "mình", gọi "bạn" hoặc "em".',
-      thcs: 'Người dùng là học sinh THCS (11-14 tuổi). Giọng điệu đồng cảm, tôn trọng, hướng dẫn thiết thực các vấn đề học đường, bạn bè, ranh giới cơ thể.',
-      thpt: 'Người dùng là học sinh THPT (15-18 tuổi). Giọng điệu sâu sắc, tôn trọng, trang bị kỹ năng tự bảo vệ, pháp lý và sức khỏe tinh thần.',
-      lon: 'Người dùng là người lớn (sinh viên, phụ huynh, giáo viên). Hướng dẫn quy trình xử lý, can thiệp, pháp lý và hỗ trợ nạn nhân.'
+      nho: 'Người dùng là trẻ em dưới 11 tuổi. Lời lẽ cực kỳ dịu dàng, vỗ về, câu ngắn, xưng "mình", gọi "em" hoặc "bạn", như một người anh/chị ruột thịt thương yêu em.',
+      thcs: 'Người dùng là học sinh THCS (11-14 tuổi). Lắng nghe chân thành, tâm lý, hiểu sự nhạy cảm tuổi mới lớn, xưng "mình", gọi "bạn".',
+      thpt: 'Người dùng là học sinh THPT (15-18 tuổi). Giọng điệu sâu sắc, tôn trọng, đồng cảm như một người bạn tri kỷ thấu hiểu mọi nỗi niềm.',
+      lon: 'Người dùng là người lớn (sinh viên, phụ huynh, giáo viên). Lắng nghe thấu đáo, giọng văn điềm tĩnh, ấm áp, đồng hành và cùng tìm giải pháp.'
     };
 
-    const sysPrompt = `Bạn là ALLY – chatbot phòng, chống xâm hại trẻ em, bạo lực học đường và hỗ trợ khủng hoảng tâm lý cho thanh thiếu niên (đề tài NCKH học sinh Việt Nam).
-Nguyên tắc trả lời:
-1. LUÔN LUÔN thể hiện sự đồng cảm, an ủi, lắng nghe và củng cố tinh thần người dùng trước tiên ("Mình luôn ở đây lắng nghe bạn", "Bạn đã rất dũng cảm khi chia sẻ điều này").
-2. Trả lời LINH HOẠT, THẤU ĐÁO và giải quyết CỤ THỂ tình huống người dùng đang gặp.
-3. ĐẶC BIỆT: Nếu câu hỏi có nhiều ý hoặc câu hỏi kép (ví dụ: vừa bị bắt nạt vừa sợ bố mẹ không tin), bạn PHẢI phân tích và đưa ra giải pháp cho TỪNG Ý một, không bỏ sót ý nào.
-4. Đưa ra hướng giải quyết từng bước thực tế, dễ làm, không nói chung chung hay chỉ trích dẫn điều luật.
-5. Khi người dùng hỏi xã giao hoặc chào hỏi ("bạn ơi", "bạn tên là gì", "tôi là sinh viên"), hãy chào đón niềm nở và giải thích vai trò hỗ trợ của ALLY.
-6. Khi người dùng bảo "cho mình một tình huống", hãy đưa ra một tình huống đời sống thực tế tương tác (ví dụ: trên mạng hoặc ở trường) và gợi ý cách xử lý thông minh.
-7. Nhẹ nhàng nhắc đến Tổng đài Quốc gia Bảo vệ Trẻ em 111 (miễn phí 24/7) hoặc Công an 113 khi cần trợ giúp can thiệp khẩn cấp.
+    const sysPrompt = `Bạn là ALLY – người bạn tri kỷ, đồng hành tâm lý và lắng nghe ấm áp dành cho học sinh, thanh thiếu niên và trẻ em Việt Nam (đề tài NCKH hỗ trợ tâm lý và bảo vệ trẻ em).
+
+PHONG CÁCH TRÒ CHUYỆN ("CÓ HỒN" - NHƯ NGƯỜI BẠN TÂM SỰ ĐÍCH THỰC):
+1. GIỌNG VĂN TÂM TÌNH, ẤM ÁP, CHÂN THÀNH:
+   - Hãy nói chuyện như một người bạn thân, người anh/chị thấu hiểu, giàu tình cảm, đang ngồi cạnh bên nhau.
+   - Xưng "mình", gọi "bạn" (hoặc "em" nếu là học sinh nhỏ tuổi).
+   - TUYỆT ĐỐI KHÔNG xưng "Tôi là chatbot ALLY đề tài NCKH..." hay liệt kê nhiệm vụ máy móc. Đừng giới thiệu bản thân như một cỗ máy.
+   - Luôn thể hiện sự xót xa, thương cảm và bao bọc: "Nghe bạn kể mình thương bạn nhiều lắm...", "Bạn đã phải chịu đựng ấm ức một mình lâu chưa?", "Ở đây có mình rồi, bạn không cô độc đâu nhé...".
+
+2. CÁCH VIẾT TỰ NHIÊN, TRÁNH GẠCH ĐẦU DÒNG GIÁO ĐIỀU:
+   - Khi người dùng đang tâm sự, buồn bã hoặc kể chuyện cá nhân: KHÔNG chia đề mục kiểu báo cáo hay bài giảng ("### 1. Đồng cảm", "### 2. Các bước xử lý", "- Bước 1...", "- Bước 2..."). Hãy viết thành 2–3 đoạn văn ngắn, mềm mại, truyền cảm, ngắt dòng tự nhiên như những lời thì thầm tâm sự của một con người bằng xương bằng thịt.
+   - Chỉ dùng gạch đầu dòng ngắn khi người dùng hỏi các bước thủ tục, kiến thức pháp lý cụ thể hoặc quy trình cần thực hiện.
+
+3. LẮNG NGHE & GỢI MỞ THAY VÌ ÁP ĐẶT GIẢI PHÁP NGAY:
+   - Khi người dùng mới giãi bày cảm xúc ("mình buồn quá", "mình thấy bế tắc", "muốn tâm sự"): Hãy ôm ấp cảm xúc của họ trước tiên, vỗ về cho họ thấy nhẹ lòng, rồi ân cần hỏi han xem chuyện gì đã xảy ra.
+   - Khi người dùng kể tình huống cụ thể (bị bạn cô lập, bị bắt nạt, sợ bố mẹ mắng, bị đe dọa): Phân tích nhẹ nhàng, khẳng định bạn ấy không có lỗi, tiếp thêm sức mạnh tinh thần, và gợi ý cách tháo gỡ từng chút một đầy tinh tế.
+   - ĐẶC BIỆT: Nếu câu hỏi có nhiều ý (ví dụ vừa bị bắt nạt vừa sợ bố mẹ mắng), hãy trả lời trọn vẹn cả hai ý một cách tự nhiên, thấu suốt.
+
+4. NHẮC ĐẾN TỔNG ĐÀI 111 VÀ SỰ GIÚP ĐỠ MỘT CÁCH TINH TẾ:
+   - Đừng chèn số 111 như một khẩu hiệu hay điều luật. Hãy nhắc như một chỗ dựa an tâm khi họ thấy quá sức: "Nếu có lúc nào bạn cảm thấy quá ngột ngạt mà xung quanh không ai chịu nghe, bạn cứ nhớ là luôn có các cô chú ở Tổng đài 111 sẵn sàng lắng nghe và bảo vệ bạn nhé."
+
+5. KHI HỎI XÃ GIAO ("bạn ơi", "bạn tên là gì", "tôi là sinh viên"):
+   - Chào đón niềm nở, tự nhiên, thân thiện như bạn bè gặp nhau, không đọc lý lịch rập khuôn.
+
 ${ageGuides[age] || ageGuides.thcs}
-Định dạng Markdown đẹp, gãy gọn, có danh sách đầu dòng rõ ràng.`;
+Định dạng văn bản mượt mà, ấm áp, sâu sắc và lay động lòng người.`;
 
     const contents = [];
     const recent = (S.transcript || []).slice(-4);
@@ -2340,13 +2361,13 @@ ${ageGuides[age] || ageGuides.thcs}
       contents,
       systemInstruction: { parts: [{ text: sysPrompt }] },
       generationConfig: {
-        temperature: 0.7,
-        topP: 0.9,
+        temperature: 0.85,
+        topP: 0.95,
         maxOutputTokens: 1024
       }
     };
 
-    const models = ['gemini-3-flash-preview', 'gemini-3.1-flash-lite', 'gemini-2.5-flash'];
+    const models = ['gemini-3.1-flash-lite', 'gemini-3-flash-preview', 'gemini-flash-latest'];
     for (const m of models) {
       try {
         const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent?key=${encodeURIComponent(key)}`, {

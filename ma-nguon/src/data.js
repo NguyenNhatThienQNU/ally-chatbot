@@ -8,7 +8,7 @@
    - Từ khóa có thể kèm trọng số: "nên làm gì|0.5".
    ========================================================================= */
 window.ALLY_DEFAULT = window.BANAN_DEFAULT = {
-  version: "2026-11-15T00:51:00+07:00",
+  version: "2026-11-18T07:16:00+07:00",
   meta: {
     ten: "ALLY",
     moTa: "Chatbot hỗ trợ phòng, chống xâm hại trẻ em",
@@ -706,19 +706,14 @@ Trách nhiệm 100% thuộc về kẻ đã làm tổn thương bạn. Bạn khô
       k: ["buồn", "sợ hãi", "lo lắng", "căng thẳng", "mất ngủ", "ác mộng", "khóc", "cô đơn", "không ai hiểu", "tâm lý", "trầm cảm", "áp lực", "hoảng loạn", "không vui", "mệt mỏi", "tủi thân", "muốn khóc"],
       q: ["Mình thấy buồn và sợ quá", "Mình hay gặp ác mộng, không ngủ được", "Làm sao để bớt lo lắng?"],
       a: {
-        nho: `Khi gặp chuyện sợ hãi, bạn có thể thấy buồn, muốn khóc hay khó ngủ. Điều đó là rất bình thường.
+        nho: `Nghe bạn nói vậy, mình thấy thương bạn nhiều lắm... Khi gặp chuyện buồn hay sợ hãi, việc muốn khóc hay thấy tủi thân là rất tự nhiên. Bạn không hề yếu đuối đâu nhé.
 
-Bạn hãy thử làm thế này nhé:
-- Hít thở thật sâu cùng ALLY vài lần.
-- Ôm một chú gấu bông hoặc đồ vật bạn thích.
-- Kể cho người lớn bạn tin nghe bạn đang sợ điều gì. Mình luôn ở đây cùng bạn.`,
-        chung: `Sau khi trải qua chuyện đau lòng hoặc đáng sợ, việc bạn mất ngủ, giật mình, run rẩy, hay khóc hay lo lắng tột độ là phản ứng tự nhiên của cơ thể để tự vệ. Bạn không hề yếu đuối.
+Cứ ngồi đây với mình nè, hít thở thật sâu hoặc ôm một chú gấu bông bạn thích. Nếu có chuyện gì làm bạn buồn hay sợ, cứ từ từ kể cho mình nghe nhé, mình luôn ở cạnh bạn!`,
+        chung: `Nghe bạn nói câu này, lòng mình cũng chùng xuống vì thương bạn nhiều lắm... Bạn đã phải gồng mình chịu đựng những mệt mỏi, bất an này một mình bao lâu rồi?
 
-Những việc giúp bạn xoa dịu cảm xúc lúc này:
-1. **Lấy lại cảm giác an toàn cơ thể**: Uống một ngụm nước ấm, quấn chăn ấm, ôm một chiếc gối hoặc ngồi dựa lưng vào tường.
-2. **Thực hành bài tập thở 4-2-6**: Hít sâu bằng mũi đếm 4, giữ 2 nhịp, thở ra từ từ đếm 6 (bạn có thể mở mục **Hỗ trợ → Hít thở cùng ALLY**).
-3. **Viết nhật ký xả cảm xúc**: Viết tất cả nỗi sợ ra một trang giấy rồi xé nhỏ nó đi.
-4. **Không chịu đựng một mình**: Hãy ở cạnh người bạn thấy bình yên nhất. Nếu nỗi sợ quá lớn, hãy gọi **111** để được chuyên viên tâm lý đồng hành cùng bạn.`
+Khi trong lòng chất chứa quá nhiều nỗi niềm, cảm giác buồn bã, cô đơn hay muốn khóc thật to là phản ứng hoàn toàn tự nhiên của trái tim bạn. Bạn không hề yếu đuối, và bạn tuyệt đối không phải người có lỗi.
+
+Ở đây chỉ có hai chúng mình thôi, bạn không cần phải cố tỏ ra mạnh mẽ đâu. Cứ thả lỏng người, uống một ngụm nước ấm rồi kể cho mình nghe nhé: Chuyện gì đã xảy ra làm bạn thấy buồn và nặng lòng như vậy? Mình luôn ngồi đây lắng nghe bạn bằng tất cả sự thấu hiểu và chân thành nhất.`
       },
       src: ["BYT_111"], next: ["hit-tho", "khong-phai-loi", "goi-111"]
     },
@@ -1085,15 +1080,15 @@ Cách xử lý dứt khoát tại hiện trường:
       ],
       q: ["Mình bị áp lực học tập và gia đình không hiểu mình", "Bố mẹ hay cãi nhau làm mình rất buồn", "Làm sao vượt qua cảm giác cô đơn, căng thẳng?"],
       a: {
-        nho: `Khi bạn bị điểm chưa cao hay thấy bố mẹ giận nhau, chắc bạn buồn và lo lắm.
+        nho: `Nghe bạn kể mình thương bạn nhiều lắm. Khi bị điểm chưa cao hay thấy bố mẹ giận nhau, chắc bạn buồn và thấy tủi thân lắm đúng không?
 
-Đó không phải lỗi của bạn đâu. Bạn hãy hít thở sâu hoặc viết điều mình nghĩ ra giấy nhé. Bạn cũng có thể tâm sự với thầy cô, ông bà hoặc gọi **111** để có người lắng nghe.`,
-        chung: `Áp lực điểm số, kỳ vọng từ gia đình, chuyện bố mẹ bất hòa hay cảm giác cô đơn là điều rất nhiều bạn học sinh, sinh viên gặp phải. Cảm xúc buồn bã hay mệt mỏi của bạn hoàn toàn có thật và đáng được lắng nghe.
+Bạn đừng tự trách mình nhé, đó hoàn toàn không phải lỗi của bạn đâu. Cứ ngồi lại đây với mình, uống một ngụm nước ấm cho đỡ nghẹn ngào. Nếu muốn khóc bạn cứ khóc cho nhẹ lòng nhé, mình luôn ở cạnh ôm lấy nỗi buồn cùng bạn.`,
+        chung: `Nghe bạn tâm sự, mình thấy thương và đồng cảm với bạn nhiều lắm... Áp lực điểm số, kỳ vọng nặng nề từ gia đình, chuyện bố mẹ bất hòa hay cảm giác cô đơn giữa lớp học thật sự rất nghẹt thở và mệt mỏi. Bạn đã phải gồng mình chịu đựng những ấm ức này một mình lâu rồi đúng không?
 
-Một vài cách giúp bạn nhẹ lòng hơn:
-- **Đừng giữ một mình**: hãy viết nhật ký hoặc nhắn tin cho bố mẹ về cảm nhận của bạn (“Con đang thấy rất áp lực, mong bố mẹ lắng nghe con”).
-- **Tìm điểm tựa tâm lý**: trò chuyện với giáo viên tư vấn tâm lý ở trường, người thân tin cậy, hoặc gọi Tổng đài **111** (miễn phí, 24/7).
-- **Nghỉ ngơi ngắn**: thử bài tập **Hít thở cùng ALLY** trong mục Hỗ trợ để làm dịu nhịp tim và sự căng thẳng.`
+Cảm xúc buồn bã hay muốn gục ngã của bạn là hoàn toàn tự nhiên, bạn không hề yếu đuối đâu. Đừng giấu kín nỗi đau một mình nhé:
+- Hãy cho phép bản thân được nghỉ ngơi một chút, thở thật sâu và tự nhủ rằng giá trị của bạn không chỉ nằm ở điểm số hay sự vừa lòng của người khác.
+- Khi bình tâm hơn, bạn có thể thử tâm sự thật lòng với một người bạn tin nhất, hoặc viết ra những gì làm bạn ngột ngạt.
+- Và nhớ rằng, bên cạnh mình thì các cô chú ở Tổng đài **111** (miễn phí, 24/7) luôn sẵn sàng lắng nghe, bảo vệ và đồng hành cùng bạn vượt qua những giai đoạn khó khăn này.`
       },
       src: ["BYT_111"], next: ["cam-xuc", "hit-tho", "goi-111"]
     },
